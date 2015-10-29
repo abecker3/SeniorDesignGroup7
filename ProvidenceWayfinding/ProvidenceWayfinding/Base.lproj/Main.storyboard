@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="n4i-50-tdY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map Places-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DirectionsViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CeN-sT-7wm">
+                                <rect key="frame" x="20" y="64" width="560" height="516"/>
+                                <animations/>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CeN-sT-7wm" secondAttribute="bottom" constant="31" id="GKe-Xu-scd"/>
+                            <constraint firstItem="CeN-sT-7wm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Z6G-8h-a7T"/>
+                            <constraint firstAttribute="trailing" secondItem="CeN-sT-7wm" secondAttribute="trailing" id="b8x-MQ-wKG"/>
+                            <constraint firstItem="CeN-sT-7wm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bYf-Lf-cJ8"/>
+                            <constraint firstAttribute="trailing" secondItem="CeN-sT-7wm" secondAttribute="trailing" constant="27" id="eB4-GD-tCm"/>
+                            <constraint firstAttribute="trailing" secondItem="CeN-sT-7wm" secondAttribute="trailing" constant="27" id="t50-Pf-wBa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map Places" id="zqe-bI-SdT">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="HIl-27-PD8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xED-ZP-jge">
+                                <rect key="frame" x="20" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="aQ2-SN-794" kind="unwind" unwindAction="unwindToViewController:" id="cFj-gY-JRc"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="G6M-7R-vo9">
+                            <connections>
+                                <action selector="showSearchBar:" destination="BYZ-38-t0r" id="j7r-Jw-BDO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="CeN-sT-7wm" id="u5b-dS-cAp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="aQ2-SN-794" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="715"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="ObN-4B-Gbj">
+            <objects>
+                <viewController id="n4i-50-tdY" customClass="MenuViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BRM-fK-AOh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mvd-yi-dBG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2FC-Bx-v8d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="providence_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="O9N-FG-aV2">
+                                <rect key="frame" x="20" y="28" width="167" height="41"/>
+                                <animations/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pkg-FF-QNF">
+                                <rect key="frame" x="0.0" y="100" width="600" height="485"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8O-td-Az1">
+                                        <rect key="frame" x="8" y="147" width="584" height="50"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Services">
+                                            <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pum-EV-7jJ">
+                                        <rect key="frame" x="8" y="205" width="584" height="50"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Parking">
+                                            <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-7Y-oz5">
+                                        <rect key="frame" x="8" y="263" width="584" height="50"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Floor Maps">
+                                            <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmc-aE-2G6">
+                                        <rect key="frame" x="8" y="321" width="584" height="50"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="More Help">
+                                            <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TR-kC-VPW">
+                                        <rect key="frame" x="8" y="415" width="584" height="50"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="Terms &amp; Conditions"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOd-Ew-YDy">
+                                        <rect key="frame" x="8" y="89" width="584" height="50"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Campus Map">
+                                            <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyo-Ka-1yT">
+                                        <rect key="frame" x="8" y="31" width="584" height="50"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="Directions to Hospital">
+                                            <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="9Hm-pL-kOD" kind="showDetail" id="95G-wh-DKH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="k0S-7Y-oz5" firstAttribute="centerX" secondItem="pkg-FF-QNF" secondAttribute="centerX" id="6a3-2K-NIT"/>
+                                    <constraint firstItem="DOd-Ew-YDy" firstAttribute="centerX" secondItem="pkg-FF-QNF" secondAttribute="centerX" id="CBd-ae-ECe"/>
+                                    <constraint firstItem="G8O-td-Az1" firstAttribute="centerX" secondItem="pkg-FF-QNF" secondAttribute="centerX" id="Tdf-cY-8hp"/>
+                                    <constraint firstItem="kyo-Ka-1yT" firstAttribute="centerX" secondItem="pkg-FF-QNF" secondAttribute="centerX" id="oQ5-Oy-T4Z"/>
+                                    <constraint firstItem="4TR-kC-VPW" firstAttribute="centerX" secondItem="pkg-FF-QNF" secondAttribute="centerX" id="odt-3p-65U"/>
+                                    <constraint firstItem="Pum-EV-7jJ" firstAttribute="centerX" secondItem="pkg-FF-QNF" secondAttribute="centerX" id="osT-gr-wxQ"/>
+                                    <constraint firstItem="Qmc-aE-2G6" firstAttribute="centerX" secondItem="pkg-FF-QNF" secondAttribute="centerX" id="pjc-R3-YvU"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="O9N-FG-aV2" secondAttribute="trailing" constant="113" id="3ud-zj-Byl"/>
+                            <constraint firstItem="O9N-FG-aV2" firstAttribute="leading" secondItem="2FC-Bx-v8d" secondAttribute="leadingMargin" id="ER2-Sl-bZv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pkg-FF-QNF" secondAttribute="trailing" id="JuO-hK-wKo"/>
+                            <constraint firstItem="O9N-FG-aV2" firstAttribute="top" secondItem="BRM-fK-AOh" secondAttribute="bottom" constant="8" id="QaY-Eg-2U3"/>
+                            <constraint firstItem="pkg-FF-QNF" firstAttribute="leading" secondItem="2FC-Bx-v8d" secondAttribute="leadingMargin" id="pxY-Xh-mDe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Logo" destination="O9N-FG-aV2" id="Aql-aP-GlD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1L-QG-30A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1556" y="697"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Tf-32-gzD">
+            <objects>
+                <navigationController id="9Hm-pL-kOD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="c5n-4E-dhr"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPe-tF-4Na">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UNL-6D-MQc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQY-DW-Xm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794" y="715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="providence_logo.png" width="349" height="81"/>
+    </resources>
+</document>
