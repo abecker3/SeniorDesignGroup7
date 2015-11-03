@@ -34,6 +34,23 @@ class DirectionsViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let location = CLLocationCoordinate2D(
+            latitude: 47.649375,
+            longitude: -117.412852
+        )
+        
+        let span = MKCoordinateSpanMake(0.01, 0.01)
+        let region = MKCoordinateRegion(center: location, span: span)
+        
+        mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = "Providence"
+        annotation.subtitle = "Sacred Heart"
+        
+        mapView.addAnnotation(annotation)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
