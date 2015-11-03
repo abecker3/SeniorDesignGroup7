@@ -104,14 +104,6 @@
                                             <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmc-aE-2G6">
-                                        <rect key="frame" x="8" y="321" width="584" height="50"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <state key="normal" title="More Help">
-                                            <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TR-kC-VPW">
                                         <rect key="frame" x="8" y="415" width="584" height="50"/>
                                         <animations/>
@@ -136,6 +128,14 @@
                                         <connections>
                                             <segue destination="9Hm-pL-kOD" kind="showDetail" id="95G-wh-DKH"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmc-aE-2G6">
+                                        <rect key="frame" x="8" y="321" width="584" height="50"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="More Help">
+                                            <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <animations/>
