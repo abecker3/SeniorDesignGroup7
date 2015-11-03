@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CeN-sT-7wm">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CeN-sT-7wm">
                                 <rect key="frame" x="0.0" y="64" width="600" height="516"/>
                                 <animations/>
                             </mapView>
@@ -25,14 +25,14 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CeN-sT-7wm" secondAttribute="bottom" constant="31" id="GKe-Xu-scd"/>
-                            <constraint firstItem="CeN-sT-7wm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Z6G-8h-a7T"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CeN-sT-7wm" secondAttribute="trailing" constant="-20" id="tAw-cw-8mX"/>
-                            <constraint firstItem="CeN-sT-7wm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="y48-fu-YR8"/>
+                            <constraint firstAttribute="trailing" secondItem="CeN-sT-7wm" secondAttribute="trailing" id="Kfs-NQ-b1m"/>
+                            <constraint firstAttribute="bottom" secondItem="CeN-sT-7wm" secondAttribute="bottom" constant="20" symbolic="YES" id="QQ1-Gl-6f8"/>
+                            <constraint firstItem="CeN-sT-7wm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ga6-IQ-uIS"/>
+                            <constraint firstItem="CeN-sT-7wm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lSZ-Yu-fGX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map Places" id="zqe-bI-SdT">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="HIl-27-PD8">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="HIl-27-PD8">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xED-ZP-jge">
                                 <rect key="frame" x="20" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
