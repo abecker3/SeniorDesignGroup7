@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2A80C5F1BE5E41A00644271 /* providence_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A80C5E1BE5E41A00644271 /* providence_logo.png */; };
+		D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */; };
+		D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49EA1BE2B58B00E79580 /* Main.storyboard */; };
+		D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */; };
+		D2CA49F11BE2B58C00E79580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49EF1BE2B58C00E79580 /* LaunchScreen.storyboard */; };
+		D2CA49FC1BE2B58C00E79580 /* ProvidenceWayfindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA49FB1BE2B58C00E79580 /* ProvidenceWayfindingTests.swift */; };
+		D2CA4A071BE2B58D00E79580 /* ProvidenceWayfindingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA4A061BE2B58D00E79580 /* ProvidenceWayfindingUITests.swift */; };
+		D2CA4A171BE2B72600E79580 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */; };
+		D2CA4A181BE2B72600E79580 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA4A151BE2B72600E79580 /* MenuViewController.swift */; };
+		D2CA4A191BE2B72600E79580 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA4A161BE2B72600E79580 /* TransitionManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2CA49F81BE2B58C00E79580 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2CA49DB1BE2B58B00E79580 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2CA49E21BE2B58B00E79580;
+			remoteInfo = ProvidenceWayfinding;
+		};
+		D2CA4A031BE2B58C00E79580 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2CA49DB1BE2B58B00E79580 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2CA49E21BE2B58B00E79580;
+			remoteInfo = ProvidenceWayfinding;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D2A80C5E1BE5E41A00644271 /* providence_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = providence_logo.png; sourceTree = "<group>"; };
+		D2CA49E31BE2B58B00E79580 /* ProvidenceWayfinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvidenceWayfinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2CA49EB1BE2B58B00E79580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2CA49F01BE2B58C00E79580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2CA49F21BE2B58C00E79580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2CA49F71BE2B58C00E79580 /* ProvidenceWayfindingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProvidenceWayfindingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2CA49FB1BE2B58C00E79580 /* ProvidenceWayfindingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidenceWayfindingTests.swift; sourceTree = "<group>"; };
+		D2CA49FD1BE2B58C00E79580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2CA4A021BE2B58C00E79580 /* ProvidenceWayfindingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProvidenceWayfindingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2CA4A061BE2B58D00E79580 /* ProvidenceWayfindingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidenceWayfindingUITests.swift; sourceTree = "<group>"; };
+		D2CA4A081BE2B58D00E79580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
+		D2CA4A151BE2B72600E79580 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		D2CA4A161BE2B72600E79580 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2CA49E01BE2B58B00E79580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2CA49F41BE2B58C00E79580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2CA49FF1BE2B58C00E79580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2CA49DA1BE2B58B00E79580 = {
+			isa = PBXGroup;
+			children = (
+				D2CA49E51BE2B58B00E79580 /* ProvidenceWayfinding */,
+				D2CA49FA1BE2B58C00E79580 /* ProvidenceWayfindingTests */,
+				D2CA4A051BE2B58D00E79580 /* ProvidenceWayfindingUITests */,
+				D2CA49E41BE2B58B00E79580 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2CA49E41BE2B58B00E79580 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2CA49E31BE2B58B00E79580 /* ProvidenceWayfinding.app */,
+				D2CA49F71BE2B58C00E79580 /* ProvidenceWayfindingTests.xctest */,
+				D2CA4A021BE2B58C00E79580 /* ProvidenceWayfindingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2CA49E51BE2B58B00E79580 /* ProvidenceWayfinding */ = {
+			isa = PBXGroup;
+			children = (
+				D2A80C5E1BE5E41A00644271 /* providence_logo.png */,
+				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
+				D2CA4A151BE2B72600E79580 /* MenuViewController.swift */,
+				D2CA4A161BE2B72600E79580 /* TransitionManager.swift */,
+				D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */,
+				D2CA49EA1BE2B58B00E79580 /* Main.storyboard */,
+				D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */,
+				D2CA49EF1BE2B58C00E79580 /* LaunchScreen.storyboard */,
+				D2CA49F21BE2B58C00E79580 /* Info.plist */,
+			);
+			path = ProvidenceWayfinding;
+			sourceTree = "<group>";
+		};
+		D2CA49FA1BE2B58C00E79580 /* ProvidenceWayfindingTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2CA49FB1BE2B58C00E79580 /* ProvidenceWayfindingTests.swift */,
+				D2CA49FD1BE2B58C00E79580 /* Info.plist */,
+			);
+			path = ProvidenceWayfindingTests;
+			sourceTree = "<group>";
+		};
+		D2CA4A051BE2B58D00E79580 /* ProvidenceWayfindingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D2CA4A061BE2B58D00E79580 /* ProvidenceWayfindingUITests.swift */,
+				D2CA4A081BE2B58D00E79580 /* Info.plist */,
+			);
+			path = ProvidenceWayfindingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2CA49E21BE2B58B00E79580 /* ProvidenceWayfinding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2CA4A0B1BE2B58D00E79580 /* Build configuration list for PBXNativeTarget "ProvidenceWayfinding" */;
+			buildPhases = (
+				D2CA49DF1BE2B58B00E79580 /* Sources */,
+				D2CA49E01BE2B58B00E79580 /* Frameworks */,
+				D2CA49E11BE2B58B00E79580 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProvidenceWayfinding;
+			productName = ProvidenceWayfinding;
+			productReference = D2CA49E31BE2B58B00E79580 /* ProvidenceWayfinding.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2CA49F61BE2B58C00E79580 /* ProvidenceWayfindingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2CA4A0E1BE2B58D00E79580 /* Build configuration list for PBXNativeTarget "ProvidenceWayfindingTests" */;
+			buildPhases = (
+				D2CA49F31BE2B58C00E79580 /* Sources */,
+				D2CA49F41BE2B58C00E79580 /* Frameworks */,
+				D2CA49F51BE2B58C00E79580 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2CA49F91BE2B58C00E79580 /* PBXTargetDependency */,
+			);
+			name = ProvidenceWayfindingTests;
+			productName = ProvidenceWayfindingTests;
+			productReference = D2CA49F71BE2B58C00E79580 /* ProvidenceWayfindingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D2CA4A011BE2B58C00E79580 /* ProvidenceWayfindingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2CA4A111BE2B58D00E79580 /* Build configuration list for PBXNativeTarget "ProvidenceWayfindingUITests" */;
+			buildPhases = (
+				D2CA49FE1BE2B58C00E79580 /* Sources */,
+				D2CA49FF1BE2B58C00E79580 /* Frameworks */,
+				D2CA4A001BE2B58C00E79580 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2CA4A041BE2B58C00E79580 /* PBXTargetDependency */,
+			);
+			name = ProvidenceWayfindingUITests;
+			productName = ProvidenceWayfindingUITests;
+			productReference = D2CA4A021BE2B58C00E79580 /* ProvidenceWayfindingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2CA49DB1BE2B58B00E79580 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = GU;
+				TargetAttributes = {
+					D2CA49E21BE2B58B00E79580 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = FT24NTBXEG;
+					};
+					D2CA49F61BE2B58C00E79580 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = FT24NTBXEG;
+						TestTargetID = D2CA49E21BE2B58B00E79580;
+					};
+					D2CA4A011BE2B58C00E79580 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = FT24NTBXEG;
+						TestTargetID = D2CA49E21BE2B58B00E79580;
+					};
+				};
+			};
+			buildConfigurationList = D2CA49DE1BE2B58B00E79580 /* Build configuration list for PBXProject "ProvidenceWayfinding" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2CA49DA1BE2B58B00E79580;
+			productRefGroup = D2CA49E41BE2B58B00E79580 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2CA49E21BE2B58B00E79580 /* ProvidenceWayfinding */,
+				D2CA49F61BE2B58C00E79580 /* ProvidenceWayfindingTests */,
+				D2CA4A011BE2B58C00E79580 /* ProvidenceWayfindingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2CA49E11BE2B58B00E79580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CA49F11BE2B58C00E79580 /* LaunchScreen.storyboard in Resources */,
+				D2A80C5F1BE5E41A00644271 /* providence_logo.png in Resources */,
+				D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */,
+				D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2CA49F51BE2B58C00E79580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2CA4A001BE2B58C00E79580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2CA49DF1BE2B58B00E79580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CA4A191BE2B72600E79580 /* TransitionManager.swift in Sources */,
+				D2CA4A171BE2B72600E79580 /* DirectionsViewController.swift in Sources */,
+				D2CA4A181BE2B72600E79580 /* MenuViewController.swift in Sources */,
+				D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2CA49F31BE2B58C00E79580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CA49FC1BE2B58C00E79580 /* ProvidenceWayfindingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2CA49FE1BE2B58C00E79580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CA4A071BE2B58D00E79580 /* ProvidenceWayfindingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2CA49F91BE2B58C00E79580 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2CA49E21BE2B58B00E79580 /* ProvidenceWayfinding */;
+			targetProxy = D2CA49F81BE2B58C00E79580 /* PBXContainerItemProxy */;
+		};
+		D2CA4A041BE2B58C00E79580 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2CA49E21BE2B58B00E79580 /* ProvidenceWayfinding */;
+			targetProxy = D2CA4A031BE2B58C00E79580 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2CA49EA1BE2B58B00E79580 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2CA49EB1BE2B58B00E79580 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D2CA49EF1BE2B58C00E79580 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2CA49F01BE2B58C00E79580 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2CA4A091BE2B58D00E79580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2CA4A0A1BE2B58D00E79580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2CA4A0C1BE2B58D00E79580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ProvidenceWayfinding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D2CA4A0D1BE2B58D00E79580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ProvidenceWayfinding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D2CA4A0F1BE2B58D00E79580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ProvidenceWayfindingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfindingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProvidenceWayfinding.app/ProvidenceWayfinding";
+			};
+			name = Debug;
+		};
+		D2CA4A101BE2B58D00E79580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ProvidenceWayfindingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfindingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProvidenceWayfinding.app/ProvidenceWayfinding";
+			};
+			name = Release;
+		};
+		D2CA4A121BE2B58D00E79580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ProvidenceWayfindingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfindingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ProvidenceWayfinding;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D2CA4A131BE2B58D00E79580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ProvidenceWayfindingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfindingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ProvidenceWayfinding;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2CA49DE1BE2B58B00E79580 /* Build configuration list for PBXProject "ProvidenceWayfinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2CA4A091BE2B58D00E79580 /* Debug */,
+				D2CA4A0A1BE2B58D00E79580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2CA4A0B1BE2B58D00E79580 /* Build configuration list for PBXNativeTarget "ProvidenceWayfinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2CA4A0C1BE2B58D00E79580 /* Debug */,
+				D2CA4A0D1BE2B58D00E79580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2CA4A0E1BE2B58D00E79580 /* Build configuration list for PBXNativeTarget "ProvidenceWayfindingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2CA4A0F1BE2B58D00E79580 /* Debug */,
+				D2CA4A101BE2B58D00E79580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2CA4A111BE2B58D00E79580 /* Build configuration list for PBXNativeTarget "ProvidenceWayfindingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2CA4A121BE2B58D00E79580 /* Debug */,
+				D2CA4A131BE2B58D00E79580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2CA49DB1BE2B58B00E79580 /* Project object */;
+}
