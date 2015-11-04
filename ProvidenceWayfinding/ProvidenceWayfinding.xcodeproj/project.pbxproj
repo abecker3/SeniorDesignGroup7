@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6CB678A1BE93CD800B8CCB3 /* providence_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B6CB67891BE93CD800B8CCB3 /* providence_logo.png */; };
+		3501ADD11BE97CEF00981151 /* providence_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3501ADD01BE97CEF00981151 /* providence_logo.png */; };
+		351906AD1BE9489200F1D343 /* TermsConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351906AC1BE9489200F1D343 /* TermsConditions.swift */; };
 		D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */; };
 		D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49EA1BE2B58B00E79580 /* Main.storyboard */; };
 		D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */; };
@@ -37,7 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B6CB67891BE93CD800B8CCB3 /* providence_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = providence_logo.png; sourceTree = "<group>"; };
+		3501ADD01BE97CEF00981151 /* providence_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = providence_logo.png; sourceTree = "<group>"; };
+		351906AC1BE9489200F1D343 /* TermsConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TermsConditions.swift; path = ../TermsConditions.swift; sourceTree = "<group>"; };
 		D2CA49E31BE2B58B00E79580 /* ProvidenceWayfinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvidenceWayfinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2CA49EB1BE2B58B00E79580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,11 +105,12 @@
 		D2CA49E51BE2B58B00E79580 /* ProvidenceWayfinding */ = {
 			isa = PBXGroup;
 			children = (
-				B6CB67891BE93CD800B8CCB3 /* providence_logo.png */,
+				3501ADD01BE97CEF00981151 /* providence_logo.png */,
 				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
 				D2CA4A151BE2B72600E79580 /* MenuViewController.swift */,
 				D2CA4A161BE2B72600E79580 /* TransitionManager.swift */,
 				D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */,
+				351906AC1BE9489200F1D343 /* TermsConditions.swift */,
 				D2CA49EA1BE2B58B00E79580 /* Main.storyboard */,
 				D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */,
 				D2CA49EF1BE2B58C00E79580 /* LaunchScreen.storyboard */,
@@ -242,7 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2CA49F11BE2B58C00E79580 /* LaunchScreen.storyboard in Resources */,
-				B6CB678A1BE93CD800B8CCB3 /* providence_logo.png in Resources */,
+				3501ADD11BE97CEF00981151 /* providence_logo.png in Resources */,
 				D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */,
 				D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */,
 			);
@@ -272,6 +275,7 @@
 				D2CA4A191BE2B72600E79580 /* TransitionManager.swift in Sources */,
 				D2CA4A171BE2B72600E79580 /* DirectionsViewController.swift in Sources */,
 				D2CA4A181BE2B72600E79580 /* MenuViewController.swift in Sources */,
+				351906AD1BE9489200F1D343 /* TermsConditions.swift in Sources */,
 				D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProvidenceWayfinding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,6 +429,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProvidenceWayfinding/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
 				PRODUCT_NAME = "$(TARGET_NAME)";

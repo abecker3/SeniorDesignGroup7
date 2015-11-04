@@ -13,10 +13,18 @@ class MenuViewController: UIViewController {
 
     @IBOutlet weak var Logo: UIImageView!
     @IBOutlet weak var DirectHospital: UIButton!
-    
+    @IBOutlet weak var scrollView: UIScrollView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //scrollView.contentSize = CGSizeMake(320, 520)
+        //scrollView.alwaysBounceVertical = true
+        //scrollView.showsVerticalScrollIndicator = true
+        //scrollView.decelerationRate = 0.99
+        
+        //scrollView.backgroundColor = UIColor.blackColor()
+        
+        
         // Do any additional setup after loading the view.
     }
 
