@@ -33,7 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Map Places" id="zqe-bI-SdT">
                         <barButtonItem key="leftBarButtonItem" style="done" id="HIl-27-PD8">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xED-ZP-jge">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xED-ZP-jge">
                                 <rect key="frame" x="20" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
