@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -116,19 +116,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="M47-9I-JNo">
-                                <rect key="frame" x="20" y="75" width="167" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TR-kC-VPW">
+                                <rect key="frame" x="20" y="540" width="560" height="50"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="fV1-WX-yGw"/>
-                                    <constraint firstAttribute="width" constant="167" id="nX0-jq-Tof"/>
+                                    <constraint firstAttribute="height" constant="50" id="VKT-7e-E5a"/>
                                 </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xxg-2Z-5H3">
-                                <rect key="frame" x="20" y="164" width="560" height="290"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Terms &amp; Conditions"/>
+                                <connections>
+                                    <segue destination="2Ph-4m-12w" kind="show" id="iRj-Sg-vWa"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xxg-2Z-5H3">
+                                <rect key="frame" x="0.0" y="99" width="600" height="406"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyo-Ka-1yT">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Directions to Hospital">
@@ -139,11 +143,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOd-Ew-YDy">
-                                        <rect key="frame" x="0.0" y="40" width="560" height="50"/>
+                                        <rect key="frame" x="0.0" y="68" width="600" height="67"/>
                                         <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="dJa-3n-lhp"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Campus Map">
                                             <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,11 +154,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8O-td-Az1">
-                                        <rect key="frame" x="0.0" y="90" width="560" height="50"/>
+                                        <rect key="frame" x="0.0" y="135" width="600" height="68"/>
                                         <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="oaK-GG-ryy"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Services">
                                             <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
@@ -167,11 +165,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pum-EV-7jJ">
-                                        <rect key="frame" x="0.0" y="140" width="560" height="50"/>
+                                        <rect key="frame" x="0.0" y="203" width="600" height="68"/>
                                         <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="WIg-yJ-DfC"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Parking">
                                             <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,11 +176,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0S-7Y-oz5">
-                                        <rect key="frame" x="0.0" y="190" width="560" height="50"/>
+                                        <rect key="frame" x="0.0" y="271" width="600" height="67"/>
                                         <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="KJF-Jg-EpS"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Floor Maps">
                                             <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
@@ -195,11 +187,8 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmc-aE-2G6">
-                                        <rect key="frame" x="0.0" y="240" width="560" height="50"/>
+                                        <rect key="frame" x="0.0" y="338" width="600" height="68"/>
                                         <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="SDp-Ar-1Lq"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="More Help">
                                             <color key="titleColor" red="0.23435609065754101" green="0.72223123912259091" blue="0.79602670020942401" alpha="1" colorSpace="calibratedRGB"/>
@@ -211,30 +200,17 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TR-kC-VPW">
-                                <rect key="frame" x="20" y="540" width="560" height="50"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="dTb-dc-6pG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <state key="normal" title="Terms &amp; Conditions"/>
-                                <connections>
-                                    <segue destination="2Ph-4m-12w" kind="show" id="iRj-Sg-vWa"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="M47-9I-JNo" firstAttribute="leading" secondItem="2FC-Bx-v8d" secondAttribute="leadingMargin" id="51d-av-10q"/>
-                            <constraint firstItem="4TR-kC-VPW" firstAttribute="leading" secondItem="2FC-Bx-v8d" secondAttribute="leadingMargin" id="6LG-0s-ARs"/>
-                            <constraint firstItem="xxg-2Z-5H3" firstAttribute="top" secondItem="BRM-fK-AOh" secondAttribute="bottom" constant="100" id="Cpd-ho-SFP"/>
-                            <constraint firstItem="xxg-2Z-5H3" firstAttribute="leading" secondItem="2FC-Bx-v8d" secondAttribute="leadingMargin" id="HPW-ia-guA"/>
-                            <constraint firstItem="Mvd-yi-dBG" firstAttribute="top" secondItem="4TR-kC-VPW" secondAttribute="bottom" constant="10" id="JZf-8U-J7f"/>
-                            <constraint firstItem="M47-9I-JNo" firstAttribute="top" secondItem="2FC-Bx-v8d" secondAttribute="topMargin" constant="75" id="W8r-mP-SHz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="xxg-2Z-5H3" secondAttribute="trailing" id="XnD-fp-mUa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4TR-kC-VPW" secondAttribute="trailing" id="i3o-c4-pb1"/>
+                            <constraint firstItem="4TR-kC-VPW" firstAttribute="leading" secondItem="2FC-Bx-v8d" secondAttribute="leadingMargin" id="69a-im-KXs"/>
+                            <constraint firstItem="xxg-2Z-5H3" firstAttribute="width" secondItem="2FC-Bx-v8d" secondAttribute="width" id="6M8-e3-sRo"/>
+                            <constraint firstItem="xxg-2Z-5H3" firstAttribute="top" secondItem="BRM-fK-AOh" secondAttribute="bottom" constant="35" id="CIB-hG-VAj"/>
+                            <constraint firstItem="4TR-kC-VPW" firstAttribute="trailing" secondItem="2FC-Bx-v8d" secondAttribute="trailingMargin" id="Rqr-Rj-3IC"/>
+                            <constraint firstItem="Mvd-yi-dBG" firstAttribute="top" secondItem="4TR-kC-VPW" secondAttribute="bottom" constant="10" id="Wte-30-9Op"/>
+                            <constraint firstItem="4TR-kC-VPW" firstAttribute="top" secondItem="xxg-2Z-5H3" secondAttribute="bottom" constant="35" id="ifr-0X-cv5"/>
+                            <constraint firstItem="4TR-kC-VPW" firstAttribute="centerX" secondItem="xxg-2Z-5H3" secondAttribute="centerX" id="wy7-RW-Zre"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="Jy1-VE-sgx"/>
