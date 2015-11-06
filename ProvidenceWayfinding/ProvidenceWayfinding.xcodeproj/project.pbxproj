@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3501ADD11BE97CEF00981151 /* providence_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3501ADD01BE97CEF00981151 /* providence_logo.png */; };
 		351906AD1BE9489200F1D343 /* TermsConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351906AC1BE9489200F1D343 /* TermsConditions.swift */; };
+		D2C6CD601BEC751700F2EE8C /* providence_logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C6CD5F1BEC751700F2EE8C /* providence_logo1.png */; };
 		D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */; };
 		D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49EA1BE2B58B00E79580 /* Main.storyboard */; };
 		D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		3501ADD01BE97CEF00981151 /* providence_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = providence_logo.png; sourceTree = "<group>"; };
 		351906AC1BE9489200F1D343 /* TermsConditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TermsConditions.swift; path = ../TermsConditions.swift; sourceTree = "<group>"; };
+		D2C6CD5F1BEC751700F2EE8C /* providence_logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = providence_logo1.png; sourceTree = "<group>"; };
 		D2CA49E31BE2B58B00E79580 /* ProvidenceWayfinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvidenceWayfinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2CA49EB1BE2B58B00E79580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3501ADD01BE97CEF00981151 /* providence_logo.png */,
+				D2C6CD5F1BEC751700F2EE8C /* providence_logo1.png */,
 				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
 				D2CA4A151BE2B72600E79580 /* MenuViewController.swift */,
 				D2CA4A161BE2B72600E79580 /* TransitionManager.swift */,
@@ -247,6 +250,7 @@
 				D2CA49F11BE2B58C00E79580 /* LaunchScreen.storyboard in Resources */,
 				3501ADD11BE97CEF00981151 /* providence_logo.png in Resources */,
 				D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */,
+				D2C6CD601BEC751700F2EE8C /* providence_logo1.png in Resources */,
 				D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
