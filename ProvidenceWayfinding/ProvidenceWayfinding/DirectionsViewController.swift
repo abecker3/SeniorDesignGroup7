@@ -35,6 +35,9 @@ class DirectionsViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.translucent = true
+
+        
         let location = CLLocationCoordinate2D(
             latitude: 47.649375,
             longitude: -117.412852

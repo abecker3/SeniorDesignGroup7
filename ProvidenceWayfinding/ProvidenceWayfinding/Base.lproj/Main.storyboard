@@ -18,25 +18,76 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CeN-sT-7wm">
-                                <rect key="frame" x="0.0" y="64" width="600" height="516"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </mapView>
+                            <visualEffectView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bwl-FL-bw1">
+                                <rect key="frame" x="0.0" y="552" width="600" height="48"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mfH-7o-hrC">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="48"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1P-nf-98G">
+                                            <rect key="frame" x="15" y="9" width="46" height="30"/>
+                                            <animations/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W0-Zg-0V8">
+                                            <rect key="frame" x="560" y="13" width="22" height="22"/>
+                                            <animations/>
+                                        </button>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="U1P-nf-98G" firstAttribute="centerY" secondItem="3W0-Zg-0V8" secondAttribute="centerY" id="9bX-by-1MY"/>
+                                        <constraint firstItem="U1P-nf-98G" firstAttribute="leading" secondItem="mfH-7o-hrC" secondAttribute="leadingMargin" constant="7" id="OVf-xa-8E4"/>
+                                        <constraint firstItem="3W0-Zg-0V8" firstAttribute="top" secondItem="mfH-7o-hrC" secondAttribute="top" constant="13" id="pad-ky-ggJ"/>
+                                        <constraint firstItem="3W0-Zg-0V8" firstAttribute="trailing" secondItem="mfH-7o-hrC" secondAttribute="trailingMargin" constant="-10" id="uNk-gG-51S"/>
+                                    </constraints>
+                                </view>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="uUP-h5-KJW"/>
+                                </constraints>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="CeN-sT-7wm" secondAttribute="trailing" id="Kfs-NQ-b1m"/>
-                            <constraint firstAttribute="bottom" secondItem="CeN-sT-7wm" secondAttribute="bottom" constant="20" symbolic="YES" id="QQ1-Gl-6f8"/>
-                            <constraint firstItem="CeN-sT-7wm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ga6-IQ-uIS"/>
-                            <constraint firstItem="CeN-sT-7wm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lSZ-Yu-fGX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bwl-FL-bw1" secondAttribute="bottom" id="1kw-XC-jTd"/>
+                            <constraint firstItem="CeN-sT-7wm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8zK-BW-z2k"/>
+                            <constraint firstAttribute="trailing" secondItem="Bwl-FL-bw1" secondAttribute="trailing" id="E4k-TI-OyH"/>
+                            <constraint firstItem="Bwl-FL-bw1" firstAttribute="leading" secondItem="CeN-sT-7wm" secondAttribute="leading" id="GXl-bi-UD2"/>
+                            <constraint firstItem="Bwl-FL-bw1" firstAttribute="trailing" secondItem="CeN-sT-7wm" secondAttribute="trailing" id="Qxs-eg-qjj"/>
+                            <constraint firstAttribute="trailing" secondItem="CeN-sT-7wm" secondAttribute="trailing" id="WIm-oe-DiL"/>
+                            <constraint firstItem="CeN-sT-7wm" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="n7u-uB-EjV"/>
+                            <constraint firstItem="Bwl-FL-bw1" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="oZY-2J-UfG"/>
+                            <constraint firstItem="CeN-sT-7wm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pvP-FW-bIe"/>
+                            <constraint firstItem="Bwl-FL-bw1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qLJ-OE-oI2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Map Places" id="RGd-PO-eXn"/>
+                    <navigationItem key="navigationItem" title="Directions" id="RGd-PO-eXn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="oxn-SC-QsF">
+                            <connections>
+                                <action selector="showSearchBar:" destination="BYZ-38-t0r" id="hWH-2U-BeL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="CeN-sT-7wm" id="u5b-dS-cAp"/>
+                        <outlet property="searchDisplayController" destination="5wG-9D-dIl" id="imp-5z-n59"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="5wG-9D-dIl">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Vkm-qC-b2P"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="q0t-1Q-2HT"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="eRA-q6-223"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="hMo-Vv-m5R"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-2419" y="1728"/>
         </scene>
@@ -340,6 +391,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zoy-g1-e6y" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0tP-2F-W5K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -376,7 +428,7 @@
                                 <rect key="frame" x="20" y="72" width="161" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsg-sI-46j">
