@@ -13,12 +13,12 @@ class ParkingViewController: UIViewController {
     
     //Variables
     let defaults = NSUserDefaults.standardUserDefaults()
-    
     let dateFormatter: NSDateFormatter = {
-        let df = NSDateFormatter()
-        df.dateStyle = .ShortStyle
-        return df
+        let df = NSDateFormatter();
+        df.dateStyle = NSDateFormatterStyle.ShortStyle;
+        return df;
     }()
+
     
     //Outlets
     @IBOutlet weak var textField: UITextField!

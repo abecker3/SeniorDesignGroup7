@@ -350,7 +350,7 @@
         <!--Floor Maps-->
         <scene sceneID="gtn-8Z-vFw">
             <objects>
-                <viewController title="Floor Maps" id="psN-cU-s3x" sceneMemberID="viewController">
+                <viewController title="Floor Maps" id="psN-cU-s3x" customClass="FloorMapsViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EvL-gr-ARO"/>
                         <viewControllerLayoutGuide type="bottom" id="g9s-26-tL7"/>
@@ -358,10 +358,118 @@
                     <view key="view" contentMode="scaleToFill" id="z94-OF-ZeK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6sl-J3-gUo">
+                                <rect key="frame" x="25" y="576" width="555" height="29"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="1Aa-2H-1C1"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Main"/>
+                                    <segment title="Children's"/>
+                                    <segment title="Women's"/>
+                                    <segment title="Heart"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControl:" destination="psN-cU-s3x" eventType="valueChanged" id="oV0-MG-1cp"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="64n-Gy-yfm">
+                                <rect key="frame" x="0.0" y="137" width="30" height="415"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ix1-m6-LrH">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="NA"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFI-6H-dhY">
+                                        <rect key="frame" x="0.0" y="55" width="30" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="NA"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMu-U0-rwe">
+                                        <rect key="frame" x="0.0" y="110" width="30" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="NA"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTd-hI-Xn1">
+                                        <rect key="frame" x="0.0" y="165" width="30" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="NA"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mu1-DV-YdX">
+                                        <rect key="frame" x="0.0" y="220" width="30" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="NA"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQY-iQ-SBl">
+                                        <rect key="frame" x="0.0" y="275" width="30" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="L3"/>
+                                        <connections>
+                                            <action selector="L3:" destination="psN-cU-s3x" eventType="touchUpInside" id="ehx-ln-W7I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSM-7W-BWR">
+                                        <rect key="frame" x="0.0" y="330" width="30" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="L2"/>
+                                        <connections>
+                                            <action selector="L2:" destination="psN-cU-s3x" eventType="touchUpInside" id="Jgh-At-vVj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNm-Na-xoP">
+                                        <rect key="frame" x="0.0" y="385" width="30" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="L1"/>
+                                        <connections>
+                                            <action selector="L1:" destination="psN-cU-s3x" eventType="touchUpInside" id="Z7U-EL-lt5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N9Y-N2-Al5">
+                                <rect key="frame" x="38" y="115" width="542" height="437"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Floor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAs-fL-cS0">
+                                <rect key="frame" x="501" y="84" width="39" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4G-8u-ilV">
+                                <rect key="frame" x="60" y="84" width="62" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k4G-8u-ilV" firstAttribute="leading" secondItem="z94-OF-ZeK" secondAttribute="leadingMargin" constant="40" id="1RT-OZ-Ulq"/>
+                            <constraint firstItem="N9Y-N2-Al5" firstAttribute="trailing" secondItem="z94-OF-ZeK" secondAttribute="trailingMargin" id="2Ys-TD-eNP"/>
+                            <constraint firstItem="6sl-J3-gUo" firstAttribute="leading" secondItem="z94-OF-ZeK" secondAttribute="leadingMargin" id="5Ja-Pu-Lbq"/>
+                            <constraint firstItem="k4G-8u-ilV" firstAttribute="top" secondItem="EvL-gr-ARO" secondAttribute="bottom" constant="20" id="GzG-w5-e22"/>
+                            <constraint firstItem="64n-Gy-yfm" firstAttribute="leading" secondItem="z94-OF-ZeK" secondAttribute="leadingMargin" constant="-20" id="QdC-B7-jVE"/>
+                            <constraint firstItem="6sl-J3-gUo" firstAttribute="trailing" secondItem="z94-OF-ZeK" secondAttribute="trailingMargin" id="Tbs-in-NDx"/>
+                            <constraint firstItem="N9Y-N2-Al5" firstAttribute="leading" secondItem="64n-Gy-yfm" secondAttribute="trailing" constant="10" id="WSi-HC-XYF"/>
+                            <constraint firstItem="oAs-fL-cS0" firstAttribute="trailing" secondItem="z94-OF-ZeK" secondAttribute="trailingMargin" constant="-40" id="fu2-oU-otW"/>
+                            <constraint firstItem="oAs-fL-cS0" firstAttribute="top" secondItem="EvL-gr-ARO" secondAttribute="bottom" constant="20" id="kzB-nW-GJe"/>
+                            <constraint firstItem="6sl-J3-gUo" firstAttribute="bottom" secondItem="g9s-26-tL7" secondAttribute="top" id="tpC-eD-OAk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Floor Maps" id="zZL-L5-U77"/>
+                    <connections>
+                        <outlet property="buildingLabel" destination="k4G-8u-ilV" id="uuX-0f-IRq"/>
+                        <outlet property="floorLabel" destination="oAs-fL-cS0" id="WnA-zd-H59"/>
+                        <outlet property="imageView" destination="N9Y-N2-Al5" id="lr2-Hx-hSK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWh-63-Rse" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
