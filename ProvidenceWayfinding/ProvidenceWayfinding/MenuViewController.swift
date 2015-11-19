@@ -17,6 +17,7 @@ class MenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.translucent = false
         //scrollView.contentSize = CGSizeMake(320, 520)
         //scrollView.alwaysBounceVertical = true
         //scrollView.showsVerticalScrollIndicator = true

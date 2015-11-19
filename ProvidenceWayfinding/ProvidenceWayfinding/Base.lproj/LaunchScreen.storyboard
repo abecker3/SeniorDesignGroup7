@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,16 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="providence_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="tpZ-7A-Kse">
-                                <rect key="frame" x="63" y="219" width="474" height="161"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="tpZ-7A-Kse">
+                                <rect key="frame" x="69" y="240" width="463" height="120"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tpZ-7A-Kse" secondAttribute="height" multiplier="463:120" id="1BD-Mx-16y"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tpZ-7A-Kse" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ddj-gc-bbP"/>
-                            <constraint firstItem="tpZ-7A-Kse" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nfV-Xl-YvN"/>
+                            <constraint firstItem="tpZ-7A-Kse" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="49" id="DFW-Iz-fA1"/>
+                            <constraint firstItem="tpZ-7A-Kse" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="HgL-uE-jF1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tpZ-7A-Kse" secondAttribute="trailing" constant="48" id="nNM-fm-CRr"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,6 +41,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="providence_logo.png" width="349" height="81"/>
+        <image name="providence_logo1.png" width="338" height="90"/>
     </resources>
 </document>
