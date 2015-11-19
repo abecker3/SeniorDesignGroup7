@@ -2,7 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Directions to Hospital-->
@@ -55,7 +57,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" ßsecondItem="Bwl-FL-bw1" secondAttribute="bottom" id="1kw-XC-jTd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondAttribute="bottom" id="1kw-XC-jTd"/>
                             <constraint firstItem="CeN-sT-7wm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8zK-BW-z2k"/>
                             <constraint firstAttribute="trailing" secondItem="Bwl-FL-bw1" secondAttribute="trailing" id="E4k-TI-OyH"/>
                             <constraint firstItem="Bwl-FL-bw1" firstAttribute="leading" secondItem="CeN-sT-7wm" secondAttribute="leading" id="GXl-bi-UD2"/>
@@ -131,7 +133,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Zoy-g1-e6y" kind="show" id="CAj-5e-8Tj"/>
+                                    <segue destination="8pL-G4-aBH" kind="showDetail" id="tkq-mM-L5f"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -153,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkZ-6W-xYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2667" y="387"/>
+            <point key="canvasLocation" x="1165" y="-56"/>
         </scene>
         <!--Menu-->
         <scene sceneID="ObN-4B-Gbj">
