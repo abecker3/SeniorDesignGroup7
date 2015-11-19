@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -96,7 +96,7 @@
         <!--Terms of Service-->
         <scene sceneID="K3h-Em-Ctb">
             <objects>
-                <viewController title="Terms of Service" id="13x-Rm-ago" sceneMemberID="viewController">
+                <viewController title="Terms of Service" id="13x-Rm-ago" customClass="ToSViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JRr-Ev-VtN"/>
                         <viewControllerLayoutGuide type="bottom" id="2de-hq-osz"/>
@@ -646,7 +646,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qph-AA-dky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="563" y="1493"/>
+            <point key="canvasLocation" x="1011" y="53"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cJd-9v-DoL">
@@ -665,12 +665,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGp-nb-rB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="563" y="2282"/>
+            <point key="canvasLocation" x="1011" y="898"/>
         </scene>
         <!--On Campus-->
         <scene sceneID="Ehq-Kz-Df6">
             <objects>
-                <viewController title="On Campus" id="JWc-UJ-WIP" sceneMemberID="viewController">
+                <viewController title="On Campus" id="JWc-UJ-WIP" customClass="OnCampusViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SZ2-Mv-AfC"/>
                         <viewControllerLayoutGuide type="bottom" id="pUQ-2j-KrD"/>
@@ -678,14 +678,34 @@
                     <view key="view" contentMode="scaleToFill" id="VPS-rD-Anx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zlp-0g-MnJ">
+                                <rect key="frame" x="0.0" y="28" width="600" height="313"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
+                                <rect key="frame" x="0.0" y="335" width="600" height="216"/>
+                            </pickerView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zlp-0g-MnJ" firstAttribute="top" secondItem="SZ2-Mv-AfC" secondAttribute="bottom" constant="8" symbolic="YES" id="1XW-oq-msC"/>
+                            <constraint firstAttribute="trailing" secondItem="SU9-dA-I5H" secondAttribute="trailing" id="CIg-nV-8C9"/>
+                            <constraint firstItem="SU9-dA-I5H" firstAttribute="bottom" secondItem="pUQ-2j-KrD" secondAttribute="top" id="NUv-Es-OOV"/>
+                            <constraint firstItem="Zlp-0g-MnJ" firstAttribute="leading" secondItem="SU9-dA-I5H" secondAttribute="leading" id="S4d-YX-irx"/>
+                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="Zlp-0g-MnJ" secondAttribute="bottom" constant="210" id="Sqk-a9-5LS"/>
+                            <constraint firstItem="SU9-dA-I5H" firstAttribute="trailing" secondItem="Zlp-0g-MnJ" secondAttribute="trailing" id="msf-dl-SLE"/>
+                            <constraint firstItem="SU9-dA-I5H" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leading" id="rFR-4G-3hq"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="On Campus" id="S4u-Me-5AF"/>
+                    <connections>
+                        <outlet property="picker" destination="SU9-dA-I5H" id="Zas-hC-qBT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNw-r9-6HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1295" y="1493"/>
+            <point key="canvasLocation" x="1767" y="-871"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="YNA-Iw-iCi">
@@ -705,7 +725,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOi-Wm-GaT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2035" y="1493"/>
+            <point key="canvasLocation" x="2499" y="-883"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="XEC-Mk-dHs">
@@ -725,7 +745,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5l-EC-xs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711" y="1493"/>
+            <point key="canvasLocation" x="3183" y="-871"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1Hm-0u-Tzn">
@@ -746,7 +766,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="398-Uk-KWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1905" y="-56"/>
+            <point key="canvasLocation" x="2145" y="-1694"/>
         </scene>
         <!--Off Campus-->
         <scene sceneID="cKE-JV-J1L">
@@ -766,7 +786,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuk-V9-bXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="563" y="785"/>
+            <point key="canvasLocation" x="1003" y="-871"/>
         </scene>
     </scenes>
     <resources>
