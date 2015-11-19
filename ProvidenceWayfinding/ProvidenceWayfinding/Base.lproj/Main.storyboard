@@ -143,17 +143,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlp-0g-MnJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zlp-0g-MnJ">
                                 <rect key="frame" x="0.0" y="28" width="600" height="313"/>
                             </imageView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
                                 <rect key="frame" x="0.0" y="335" width="600" height="216"/>
                             </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zlp-0g-MnJ" firstAttribute="top" secondItem="SZ2-Mv-AfC" secondAttribute="bottom" constant="8" symbolic="YES" id="1XW-oq-msC"/>
+                            <constraint firstAttribute="trailing" secondItem="SU9-dA-I5H" secondAttribute="trailing" id="CIg-nV-8C9"/>
+                            <constraint firstItem="SU9-dA-I5H" firstAttribute="bottom" secondItem="pUQ-2j-KrD" secondAttribute="top" id="NUv-Es-OOV"/>
+                            <constraint firstItem="Zlp-0g-MnJ" firstAttribute="leading" secondItem="SU9-dA-I5H" secondAttribute="leading" id="S4d-YX-irx"/>
+                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="Zlp-0g-MnJ" secondAttribute="bottom" constant="210" id="Sqk-a9-5LS"/>
+                            <constraint firstItem="SU9-dA-I5H" firstAttribute="trailing" secondItem="Zlp-0g-MnJ" secondAttribute="trailing" id="msf-dl-SLE"/>
+                            <constraint firstItem="SU9-dA-I5H" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leading" id="rFR-4G-3hq"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="On Campus" id="S4u-Me-5AF"/>
+                    <connections>
+                        <outlet property="picker" destination="SU9-dA-I5H" id="Zas-hC-qBT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNw-r9-6HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
