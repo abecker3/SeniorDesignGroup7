@@ -267,28 +267,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlp-0g-MnJ">
-                                <rect key="frame" x="0.0" y="28" width="600" height="313"/>
-                            </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
                                 <rect key="frame" x="0.0" y="335" width="600" height="216"/>
                             </pickerView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
+                                <rect key="frame" x="-5" y="0.0" width="605" height="333"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
+                                        <rect key="frame" x="15" y="8" width="582" height="317"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="582" id="cvM-Y7-4Pj"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="U83-MM-YIc" firstAttribute="trailing" secondItem="MTY-QF-jCz" secondAttribute="trailingMargin" id="5ul-HW-Cdh"/>
+                                    <constraint firstItem="U83-MM-YIc" firstAttribute="leading" secondItem="MTY-QF-jCz" secondAttribute="leading" constant="15" id="I2v-Lq-oba"/>
+                                    <constraint firstItem="U83-MM-YIc" firstAttribute="bottom" secondItem="MTY-QF-jCz" secondAttribute="bottomMargin" id="Rza-jS-eNR"/>
+                                    <constraint firstItem="U83-MM-YIc" firstAttribute="top" secondItem="MTY-QF-jCz" secondAttribute="topMargin" id="XM7-Kk-fbf"/>
+                                    <constraint firstItem="U83-MM-YIc" firstAttribute="centerY" secondItem="MTY-QF-jCz" secondAttribute="centerY" id="bPp-c2-dEc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="JWc-UJ-WIP" id="syI-9k-DXT"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Zlp-0g-MnJ" firstAttribute="top" secondItem="SZ2-Mv-AfC" secondAttribute="bottom" constant="8" symbolic="YES" id="1XW-oq-msC"/>
+                            <constraint firstItem="SU9-dA-I5H" firstAttribute="top" secondItem="MTY-QF-jCz" secondAttribute="bottom" constant="2" id="5NC-YP-PrS"/>
                             <constraint firstAttribute="trailing" secondItem="SU9-dA-I5H" secondAttribute="trailing" id="CIg-nV-8C9"/>
                             <constraint firstItem="SU9-dA-I5H" firstAttribute="bottom" secondItem="pUQ-2j-KrD" secondAttribute="top" id="NUv-Es-OOV"/>
-                            <constraint firstItem="Zlp-0g-MnJ" firstAttribute="leading" secondItem="SU9-dA-I5H" secondAttribute="leading" id="S4d-YX-irx"/>
-                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="Zlp-0g-MnJ" secondAttribute="bottom" constant="210" id="Sqk-a9-5LS"/>
-                            <constraint firstItem="SU9-dA-I5H" firstAttribute="trailing" secondItem="Zlp-0g-MnJ" secondAttribute="trailing" id="msf-dl-SLE"/>
+                            <constraint firstItem="MTY-QF-jCz" firstAttribute="top" secondItem="VPS-rD-Anx" secondAttribute="top" id="Ok9-QV-eyM"/>
+                            <constraint firstItem="MTY-QF-jCz" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leadingMargin" constant="-25" id="exM-F0-cYX"/>
+                            <constraint firstItem="MTY-QF-jCz" firstAttribute="trailing" secondItem="SU9-dA-I5H" secondAttribute="trailing" id="mk0-we-ocE"/>
                             <constraint firstItem="SU9-dA-I5H" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leading" id="rFR-4G-3hq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="On Campus" id="S4u-Me-5AF"/>
                     <connections>
+                        <outlet property="floorMap" destination="U83-MM-YIc" id="3f3-SI-y03"/>
                         <outlet property="picker" destination="SU9-dA-I5H" id="Zas-hC-qBT"/>
+                        <outlet property="scrollMap" destination="MTY-QF-jCz" id="c3B-UE-JcX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNw-r9-6HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
