@@ -12,6 +12,10 @@
 		351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351906AC1BE9489200F1D343 /* OnCampusViewController.swift */; };
 		354B98DB1C02747E0087E67C /* Campus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354B98DA1C02747E0087E67C /* Campus.jpg */; };
 		354B98DF1C0278470087E67C /* CampusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B98DE1C0278470087E67C /* CampusViewController.swift */; };
+		354B98E11C0281360087E67C /* Floor_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354B98E01C0281360087E67C /* Floor_1.jpg */; };
+		354B98E31C02813C0087E67C /* Floor_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354B98E21C02813C0087E67C /* Floor_2.jpg */; };
+		354B98E51C0281410087E67C /* Floor_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354B98E41C0281410087E67C /* Floor_3.jpg */; };
+		354B98E71C0281450087E67C /* LowerLevels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354B98E61C0281450087E67C /* LowerLevels.jpg */; };
 		B620917E1BF1E3080021C2BD /* CampusMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B620917D1BF1E3080021C2BD /* CampusMapViewController.swift */; };
 		B62091821BF3368C0021C2BD /* FloorMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62091811BF3368C0021C2BD /* FloorMapsViewController.swift */; };
 		D2C6CD661BED3BFA00F2EE8C /* providence_logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = D2C6CD651BED3BFA00F2EE8C /* providence_logo1.png */; };
@@ -49,6 +53,10 @@
 		351906AC1BE9489200F1D343 /* OnCampusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnCampusViewController.swift; path = ../OnCampusViewController.swift; sourceTree = "<group>"; };
 		354B98DA1C02747E0087E67C /* Campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Campus.jpg; path = ../../../../../Maps/Campus.jpg; sourceTree = "<group>"; };
 		354B98DE1C0278470087E67C /* CampusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CampusViewController.swift; path = ../CampusViewController.swift; sourceTree = "<group>"; };
+		354B98E01C0281360087E67C /* Floor_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Floor_1.jpg; path = ../../../../../Maps/Floor_1.jpg; sourceTree = "<group>"; };
+		354B98E21C02813C0087E67C /* Floor_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Floor_2.jpg; path = ../../../../../Maps/Floor_2.jpg; sourceTree = "<group>"; };
+		354B98E41C0281410087E67C /* Floor_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Floor_3.jpg; path = ../../../../../Maps/Floor_3.jpg; sourceTree = "<group>"; };
+		354B98E61C0281450087E67C /* LowerLevels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LowerLevels.jpg; path = ../../../../../Maps/LowerLevels.jpg; sourceTree = "<group>"; };
 		B620917D1BF1E3080021C2BD /* CampusMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusMapViewController.swift; sourceTree = "<group>"; };
 		B62091811BF3368C0021C2BD /* FloorMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapsViewController.swift; sourceTree = "<group>"; };
 		D2C6CD651BED3BFA00F2EE8C /* providence_logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = providence_logo1.png; sourceTree = "<group>"; };
@@ -120,6 +128,10 @@
 				3501ADD01BE97CEF00981151 /* providence_logo.png */,
 				D2C6CD651BED3BFA00F2EE8C /* providence_logo1.png */,
 				354B98DA1C02747E0087E67C /* Campus.jpg */,
+				354B98E01C0281360087E67C /* Floor_1.jpg */,
+				354B98E21C02813C0087E67C /* Floor_2.jpg */,
+				354B98E41C0281410087E67C /* Floor_3.jpg */,
+				354B98E61C0281450087E67C /* LowerLevels.jpg */,
 				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
 				D2CA4A151BE2B72600E79580 /* MenuViewController.swift */,
 				D2CA4A161BE2B72600E79580 /* TransitionManager.swift */,
@@ -260,10 +272,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354B98E71C0281450087E67C /* LowerLevels.jpg in Resources */,
 				354B98DB1C02747E0087E67C /* Campus.jpg in Resources */,
 				D2CA49F11BE2B58C00E79580 /* LaunchScreen.storyboard in Resources */,
 				3501ADD11BE97CEF00981151 /* providence_logo.png in Resources */,
 				D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */,
+				354B98E11C0281360087E67C /* Floor_1.jpg in Resources */,
+				354B98E31C02813C0087E67C /* Floor_2.jpg in Resources */,
+				354B98E51C0281410087E67C /* Floor_3.jpg in Resources */,
 				D2C6CD661BED3BFA00F2EE8C /* providence_logo1.png in Resources */,
 				D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */,
 			);

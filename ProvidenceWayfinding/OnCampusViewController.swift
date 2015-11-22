@@ -19,7 +19,7 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        floorMap.image = UIImage(named:"Campus.jpg")
+        floorMap.image = UIImage(named:"Floor_1.jpg")
         floorMap.contentMode = UIViewContentMode.ScaleAspectFit
         
         self.scrollMap.maximumZoomScale = 5.0
@@ -31,7 +31,7 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         // Input data into the Array:
         pickerData = [["None","Children Emergency", "Bone/Joint", "Cardiac", "Gynecology", "Fetal-Medicine", "Item 6"],
-                    ["None","Floor 1","Floor 2","Floor 3","Floor 4"]]
+                    ["None","Lower Levels","Floor 1","Floor 2","Floor 3"]]
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,6 +57,18 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
+        if component == 1{
+            //This is if the user chooses a specific floor
+            if (row == 1){floorMap.image = UIImage(named:"LowerLevels.jpg")}
+            else if (row == 2){floorMap.image = UIImage(named:"Floor_1.jpg")}
+            else if (row == 3){floorMap.image = UIImage(named:"Floor_2.jpg")}
+            else if (row == 4){floorMap.image = UIImage(named:"Floor_3.jpg")}
+        }
+        else if component == 0{
+            //This is if the user selects a department
+        }
+        
+        
     }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
