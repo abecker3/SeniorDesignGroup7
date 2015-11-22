@@ -70,6 +70,79 @@
             </objects>
             <point key="canvasLocation" x="1373" y="-1694"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="3he-Ad-0Dl">
+            <objects>
+                <viewController title="Home" id="Jbg-Av-W2a" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gdp-Wh-bsj"/>
+                        <viewControllerLayoutGuide type="bottom" id="fMd-z2-nUt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sF1-Fm-tx0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="fRc-rC-jgH">
+                                <rect key="frame" x="200" y="72" width="190" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="foM-te-vSb"/>
+                                    <constraint firstAttribute="width" constant="190" id="onz-98-1Ty"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Our Mission" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-Pr-KE4">
+                                <rect key="frame" x="20" y="144" width="560" height="79"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="TWr-ZD-Y2p"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.61449829410000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="As People of Providence, we reveal God's love for all, especially the poor and vunerable,through our compassionate service." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQD-ij-gPZ">
+                                <rect key="frame" x="0.0" y="241" width="600" height="211"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjH-BT-v5f">
+                                <rect key="frame" x="230" y="489" width="131" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.61449829410000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="IyO-Zz-FzL"/>
+                                    <constraint firstAttribute="width" constant="131" id="pV4-fT-qfs"/>
+                                </constraints>
+                                <state key="normal" title="Campus Map">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.61449829410000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jGC-EV-aTk" kind="show" id="z9g-pP-g5J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fRc-rC-jgH" firstAttribute="top" secondItem="gdp-Wh-bsj" secondAttribute="bottom" constant="8" symbolic="YES" id="2oD-Q0-uJy"/>
+                            <constraint firstItem="vQD-ij-gPZ" firstAttribute="centerX" secondItem="mdJ-Pr-KE4" secondAttribute="centerX" id="3Ak-xP-oaH"/>
+                            <constraint firstItem="TjH-BT-v5f" firstAttribute="centerX" secondItem="fRc-rC-jgH" secondAttribute="centerX" id="BMX-8v-vkD"/>
+                            <constraint firstItem="mdJ-Pr-KE4" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leadingMargin" id="III-Kf-wvy"/>
+                            <constraint firstAttribute="trailing" secondItem="vQD-ij-gPZ" secondAttribute="trailing" id="RWs-xO-dlF"/>
+                            <constraint firstItem="fRc-rC-jgH" firstAttribute="centerX" secondItem="sF1-Fm-tx0" secondAttribute="centerX" constant="-5" id="UzL-Z8-vXc"/>
+                            <constraint firstItem="TjH-BT-v5f" firstAttribute="top" secondItem="vQD-ij-gPZ" secondAttribute="bottom" constant="37" id="jjp-8j-20h"/>
+                            <constraint firstItem="vQD-ij-gPZ" firstAttribute="top" secondItem="mdJ-Pr-KE4" secondAttribute="bottom" constant="18" id="wiB-2Z-7jz"/>
+                            <constraint firstItem="vQD-ij-gPZ" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leading" id="xVE-P9-BnS"/>
+                            <constraint firstItem="mdJ-Pr-KE4" firstAttribute="top" secondItem="fRc-rC-jgH" secondAttribute="bottom" constant="23" id="y4s-ys-iDD"/>
+                            <constraint firstAttribute="bottom" secondItem="TjH-BT-v5f" secondAttribute="bottom" constant="20" symbolic="YES" id="zoQ-2L-4w3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eN9-MX-1Xa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CWQ-cu-k2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="53"/>
+        </scene>
         <!--Off Campus-->
         <scene sceneID="2GT-LN-Vl0">
             <objects>
@@ -112,6 +185,29 @@
             </objects>
             <point key="canvasLocation" x="1011" y="53"/>
         </scene>
+        <!--Campus Map-->
+        <scene sceneID="gEN-Ua-LsF">
+            <objects>
+                <viewController title="Campus Map" id="jGC-EV-aTk" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YWC-g3-q25"/>
+                        <viewControllerLayoutGuide type="bottom" id="0gP-Zk-9vD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WRy-gz-Hh2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Campus.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bqn-iP-hlZ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orc-6c-VGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="898"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="cJd-9v-DoL">
             <objects>
@@ -143,7 +239,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zlp-0g-MnJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zlp-0g-MnJ">
                                 <rect key="frame" x="0.0" y="28" width="600" height="313"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
@@ -222,15 +318,33 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="HfZ-Z0-ZM1" kind="relationship" relationship="viewControllers" id="cdh-Hf-ilo"/>
-                        <segue destination="kyx-oH-VSS" kind="relationship" relationship="viewControllers" id="D0u-6m-Qwq"/>
-                        <segue destination="6aU-l8-wLk" kind="relationship" relationship="viewControllers" id="QTa-au-KbR"/>
-                        <segue destination="JWc-UJ-WIP" kind="relationship" relationship="viewControllers" id="Ymi-wh-4v9"/>
+                        <segue destination="Weh-dA-egp" kind="relationship" relationship="viewControllers" id="UPT-fn-plc"/>
+                        <segue destination="6aU-l8-wLk" kind="relationship" relationship="viewControllers" id="qdO-53-83r"/>
+                        <segue destination="JWc-UJ-WIP" kind="relationship" relationship="viewControllers" id="31e-QP-ynO"/>
+                        <segue destination="kyx-oH-VSS" kind="relationship" relationship="viewControllers" id="Xay-Op-XiD"/>
+                        <segue destination="HfZ-Z0-ZM1" kind="relationship" relationship="viewControllers" id="PnA-JQ-VlS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="398-Uk-KWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2145" y="-1694"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="PyC-73-uNT">
+            <objects>
+                <navigationController title="Home" id="Weh-dA-egp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ZgA-TI-JB2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYh-YR-Pi9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Jbg-Av-W2a" kind="relationship" relationship="rootViewController" id="4Wc-VE-E1X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PuE-ty-iNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="-883"/>
         </scene>
         <!--Off Campus-->
         <scene sceneID="cKE-JV-J1L">
@@ -254,9 +368,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Campus.jpg" width="855" height="547"/>
         <image name="providence_logo1.png" width="338" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ymi-wh-4v9"/>
+        <segue reference="31e-QP-ynO"/>
     </inferredMetricsTieBreakers>
 </document>
