@@ -30,10 +30,20 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.picker.dataSource = self
         
         // Input data into the Array:
-        pickerData = [["None","Children Emergency", "Bone/Joint", "Cardiac", "Gynecology", "Fetal-Medicine", "Item 6"],
+        pickerData = [["None","Adult Psychiatry"," Birth Place", "Child Psychiatry","Emergency","ICU",
+                        "ICU Cardiac","ICU Neonatal","ICU Neuro","ICU Pediatrics","Maternity",
+                        "Medical Records","Pediatric Oncology","Pediatric Unit","Radiation Oncology","Radiology",
+                        "Surgery","Surgery Pediatric"],
                     ["None","Lower Levels","Floor 1","Floor 2","Floor 3"]]
+        /*
+        Floor 1:    ["Medical Records","Adult Psychiatry","Surgery","Maternity",
+        Floor 2:    "Birth Place","ICU Cardiac","ICU","ICU Neuro","Child Psychiatry",
+        Floor 3:    "ICU Pediactric","Pediactric Unit","ICU Neonatal","Pediatric Oncology",
+        LL1:        "Emergency","Surgery Pediatric","Radiology"
+        LL3:        "Radiation Oncology"]    = 17
+        */
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -63,9 +73,15 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             else if (row == 2){floorMap.image = UIImage(named:"Floor_1.jpg")}
             else if (row == 3){floorMap.image = UIImage(named:"Floor_2.jpg")}
             else if (row == 4){floorMap.image = UIImage(named:"Floor_3.jpg")}
+            picker.selectRow(0, inComponent: 0, animated: true)
         }
         else if component == 0{
             //This is if the user selects a department
+            if (row == 1 || row == 11 || row == 16 || row == 10)              {floorMap.image = UIImage(named:"Floor_1.jpg")}
+            else if (row == 2 || row == 6 || row == 5 || row == 8 || row == 3){floorMap.image = UIImage(named:"Floor_2.jpg")}
+            else if (row == 9 || row == 13 || row == 7 || row == 12)          {floorMap.image = UIImage(named:"Floor_3.jpg")}
+            else if (row == 4 || row == 17 || row == 15 || row == 14)         {floorMap.image = UIImage(named:"LowerLevels.jpg")}
+            picker.selectRow(0, inComponent: 1, animated: true)
         }
         
         
