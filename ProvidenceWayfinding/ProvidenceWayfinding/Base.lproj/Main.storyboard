@@ -238,7 +238,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orc-6c-VGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="898"/>
+            <point key="canvasLocation" x="298" y="850"/>
         </scene>
         <!--On Campus-->
         <scene sceneID="Ehq-Kz-Df6">
@@ -252,18 +252,18 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
-                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
+                                <rect key="frame" x="0.0" y="335" width="600" height="216"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="JIY-yd-2zC"/>
                                 </constraints>
                             </pickerView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
-                                <rect key="frame" x="-5" y="0.0" width="605" height="382"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
+                                <rect key="frame" x="-5" y="0.0" width="605" height="333"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
-                                        <rect key="frame" x="15" y="8" width="582" height="366"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
+                                        <rect key="frame" x="15" y="8" width="582" height="317"/>
                                         <animations/>
                                     </imageView>
                                 </subviews>
@@ -307,7 +307,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNw-r9-6HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="3153"/>
+            <point key="canvasLocation" x="1063" y="3189"/>
         </scene>
         <!--Item 2-->
         <scene sceneID="YNA-Iw-iCi">
@@ -568,7 +568,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBg-Kl-Wi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="898"/>
+            <point key="canvasLocation" x="1043" y="850"/>
         </scene>
         <!--Category-->
         <scene sceneID="WZL-Sg-fph">
@@ -618,7 +618,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0k-gQ-2WB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853" y="898"/>
+            <point key="canvasLocation" x="1841" y="850"/>
         </scene>
         <!--Location-->
         <scene sceneID="bfE-yk-vtl">
@@ -660,7 +660,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrb-Yz-i33" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2777" y="898"/>
+            <point key="canvasLocation" x="2729" y="850"/>
         </scene>
         <!--Directions-->
         <scene sceneID="mtt-Id-MDm">
@@ -792,7 +792,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyM-Xm-PEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="2364"/>
+            <point key="canvasLocation" x="1643" y="2404"/>
         </scene>
         <!--Directions to Hospital-->
         <scene sceneID="FgZ-2B-CWi">
@@ -869,7 +869,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHV-Re-EH4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="1624"/>
+            <point key="canvasLocation" x="559" y="1624"/>
         </scene>
         <!--Map-->
         <scene sceneID="dF5-2h-t5Q">
