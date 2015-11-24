@@ -86,11 +86,11 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         {
             if(currentLocation.name == "Off Campus")
             {
-                performSegueWithIdentifier("surveyToCampus", sender: self)
+                performSegueWithIdentifier("surveyToMap", sender: self)
             }
             else
             {
-                performSegueWithIdentifier("surveyToMap", sender: self)
+                performSegueWithIdentifier("surveyToCampus", sender: self)
             }
         }
         else
