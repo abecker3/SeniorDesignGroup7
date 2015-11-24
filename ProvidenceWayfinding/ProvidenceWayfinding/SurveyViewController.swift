@@ -30,6 +30,9 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         //Tags
         currentTextField.tag = 0
         destinationTextField.tag = 1
+        
+        //Init currentLocation
+        currentLocation = Location(name: "Off Campus", category: "NA", floor: "NA")
     }
     
     @IBAction func changedOnOff(sender: UISegmentedControl) {
@@ -79,9 +82,16 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func routeNowEvent(sender: AnyObject) {
         
-        if(currentLocation != nil && destinationLocation != nil)
+        if(currentLocation != nil && destinationLocation != nil && currentLocation.name != destinationLocation.name)
         {
-            performSegueWithIdentifier("surveyToMap", sender: self)
+            if(currentLocation.name == "Off Campus")
+            {
+                performSegueWithIdentifier("surveyToCampus", sender: self)
+            }
+            else
+            {
+                performSegueWithIdentifier("surveyToMap", sender: self)
+            }
         }
         else
         {
