@@ -249,21 +249,21 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <viewControllerLayoutGuide type="bottom" id="pUQ-2j-KrD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VPS-rD-Anx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
-                                <rect key="frame" x="0.0" y="384" width="600" height="216"/>
+                                <rect key="frame" x="0.0" y="335" width="600" height="216"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="JIY-yd-2zC"/>
                                 </constraints>
                             </pickerView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
-                                <rect key="frame" x="-5" y="0.0" width="605" height="382"/>
+                                <rect key="frame" x="-5" y="0.0" width="605" height="333"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
-                                        <rect key="frame" x="15" y="8" width="582" height="366"/>
+                                        <rect key="frame" x="15" y="8" width="582" height="317"/>
                                         <animations/>
                                     </imageView>
                                 </subviews>
@@ -563,6 +563,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <nil key="action"/>
                         </segue>
                         <segue destination="6JG-Ic-gLa" kind="show" identifier="surveyToMap" id="X0L-YN-wsO"/>
+                        <segue destination="JWc-UJ-WIP" kind="show" identifier="surveyToCampus" id="YCW-oQ-6O4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBg-Kl-Wi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -911,4 +912,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="buttonOrange.png" width="600" height="279"/>
         <image name="providence_logo1.png" width="338" height="90"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="YCW-oQ-6O4"/>
+    </inferredMetricsTieBreakers>
 </document>
