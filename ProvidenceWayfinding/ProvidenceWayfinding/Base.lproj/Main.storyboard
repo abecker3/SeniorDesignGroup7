@@ -29,13 +29,12 @@
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTb-Cx-xmn">
                                 <rect key="frame" x="205" y="498" width="190" height="52"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.0" green="0.81478721217105265" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="76u-Mi-ouW"/>
                                     <constraint firstAttribute="width" constant="190" id="ENB-j5-vZ7"/>
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Accept">
+                                <state key="normal" title="Accept" backgroundImage="buttonGreen.png">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -147,12 +146,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             </textView>
                             <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjH-BT-v5f">
                                 <rect key="frame" x="230" y="489" width="131" height="42"/>
-                                <color key="backgroundColor" red="1" green="0.61449829410000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="IyO-Zz-FzL"/>
                                     <constraint firstAttribute="width" constant="131" id="pV4-fT-qfs"/>
                                 </constraints>
-                                <state key="normal" title="Campus Map">
+                                <state key="normal" title="Campus Map" backgroundImage="buttonOrange.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="1" green="0.61449829410000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -462,6 +460,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
         </scene>
     </scenes>
     <resources>
+        <image name="buttonGreen.png" width="600" height="192"/>
+        <image name="buttonOrange.png" width="600" height="279"/>
         <image name="providence_logo1.png" width="338" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>
