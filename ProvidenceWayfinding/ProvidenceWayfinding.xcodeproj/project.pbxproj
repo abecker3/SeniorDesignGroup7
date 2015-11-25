@@ -25,6 +25,10 @@
 		B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650581C04F1EA00C8276A /* LocationTableViewController.swift */; };
 		B696505D1C04F1EA00C8276A /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650591C04F1EA00C8276A /* SurveyViewController.swift */; };
 		B696505F1C04F7E200C8276A /* ParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696505E1C04F7E200C8276A /* ParkingViewController.swift */; };
+		B69650641C05399500C8276A /* Car.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650601C05399500C8276A /* Car.png */; };
+		B69650651C05399500C8276A /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650611C05399500C8276A /* Home.png */; };
+		B69650661C05399500C8276A /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650621C05399500C8276A /* Map.png */; };
+		B69650671C05399500C8276A /* More.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650631C05399500C8276A /* More.png */; };
 		D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */; };
 		D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49EA1BE2B58B00E79580 /* Main.storyboard */; };
 		D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */; };
@@ -72,6 +76,10 @@
 		B69650581C04F1EA00C8276A /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		B69650591C04F1EA00C8276A /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		B696505E1C04F7E200C8276A /* ParkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingViewController.swift; sourceTree = "<group>"; };
+		B69650601C05399500C8276A /* Car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car.png; sourceTree = "<group>"; };
+		B69650611C05399500C8276A /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
+		B69650621C05399500C8276A /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
+		B69650631C05399500C8276A /* More.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = More.png; sourceTree = "<group>"; };
 		D2CA49E31BE2B58B00E79580 /* ProvidenceWayfinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvidenceWayfinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2CA49EB1BE2B58B00E79580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -145,6 +153,10 @@
 				354B98F31C04EF330087E67C /* Floor_3.jpg */,
 				354B98F41C04EF330087E67C /* LowerLevels.jpg */,
 				354B98F51C04EF330087E67C /* providence_logo1.png */,
+				B69650601C05399500C8276A /* Car.png */,
+				B69650611C05399500C8276A /* Home.png */,
+				B69650621C05399500C8276A /* Map.png */,
+				B69650631C05399500C8276A /* More.png */,
 				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
 				B696505E1C04F7E200C8276A /* ParkingViewController.swift */,
 				D2CA4A151BE2B72600E79580 /* MenuViewController.swift */,
@@ -290,15 +302,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69650641C05399500C8276A /* Car.png in Resources */,
 				354B98FC1C04EF330087E67C /* LowerLevels.jpg in Resources */,
 				354B98FD1C04EF330087E67C /* providence_logo1.png in Resources */,
 				354B98F81C04EF330087E67C /* Campus.jpg in Resources */,
+				B69650651C05399500C8276A /* Home.png in Resources */,
 				D2CA49F11BE2B58C00E79580 /* LaunchScreen.storyboard in Resources */,
+				B69650661C05399500C8276A /* Map.png in Resources */,
 				354B98F71C04EF330087E67C /* buttonOrange.png in Resources */,
 				D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */,
 				354B98F91C04EF330087E67C /* Floor_1.jpg in Resources */,
 				354B98FA1C04EF330087E67C /* Floor_2.jpg in Resources */,
 				354B98FB1C04EF330087E67C /* Floor_3.jpg in Resources */,
+				B69650671C05399500C8276A /* More.png in Resources */,
 				D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */,
 				354B98F61C04EF330087E67C /* buttonGreen.png in Resources */,
 			);
