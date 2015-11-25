@@ -309,7 +309,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
             </objects>
             <point key="canvasLocation" x="1063" y="3189"/>
         </scene>
-        <!--Item 1-->
+        <!--More-->
         <scene sceneID="XEC-Mk-dHs">
             <objects>
                 <viewController id="HfZ-Z0-ZM1" sceneMemberID="viewController">
@@ -323,7 +323,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="st2-TR-Kse"/>
+                    <tabBarItem key="tabBarItem" title="More" image="More.png" id="st2-TR-Kse"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5l-EC-xs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -354,7 +354,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="PyC-73-uNT">
             <objects>
                 <navigationController title="Home" id="Weh-dA-egp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="ZgA-TI-JB2"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home.png" id="ZgA-TI-JB2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYh-YR-Pi9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -646,7 +646,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="mtt-Id-MDm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w0u-Nb-dND" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Directions" id="IZF-R8-Kpe"/>
+                    <tabBarItem key="tabBarItem" title="Directions" image="Map.png" id="IZF-R8-Kpe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gC1-PJ-0Z9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -890,7 +890,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="dMI-V2-0p0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XCX-NU-mPr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Parking" id="t3b-ME-Ahh"/>
+                    <tabBarItem key="tabBarItem" title="Parking" image="Car.png" id="t3b-ME-Ahh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1od-qH-4KO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1008,6 +1008,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
         </scene>
     </scenes>
     <resources>
+        <image name="Car.png" width="25" height="25"/>
+        <image name="Home.png" width="25" height="25"/>
+        <image name="Map.png" width="25" height="25"/>
+        <image name="More.png" width="25" height="25"/>
         <image name="buttonGreen.png" width="600" height="192"/>
         <image name="buttonOrange.png" width="600" height="279"/>
         <image name="providence_logo1.png" width="338" height="90"/>
