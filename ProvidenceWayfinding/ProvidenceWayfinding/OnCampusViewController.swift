@@ -18,7 +18,7 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+
         floorMap.image = UIImage(named:"Floor_1.jpg")
         floorMap.contentMode = UIViewContentMode.ScaleAspectFit
         
