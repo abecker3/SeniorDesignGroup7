@@ -250,17 +250,17 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
                                 <rect key="frame" x="0.0" y="335" width="600" height="216"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="JIY-yd-2zC"/>
                                 </constraints>
                             </pickerView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
                                 <rect key="frame" x="-5" y="0.0" width="605" height="333"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
                                         <rect key="frame" x="15" y="8" width="582" height="317"/>
                                         <animations/>
                                         <gestureRecognizers/>
@@ -293,8 +293,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="SU9-dA-I5H" firstAttribute="top" secondItem="MTY-QF-jCz" secondAttribute="bottom" constant="2" id="ZVd-1x-yLA"/>
                             <constraint firstItem="MTY-QF-jCz" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leadingMargin" constant="-25" id="i49-Wh-Zr5"/>
                             <constraint firstItem="MTY-QF-jCz" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leadingMargin" constant="-25" id="oRa-id-TrH"/>
-                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="SU9-dA-I5H" secondAttribute="bottom" id="srv-4Z-aTp"/>
-                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="SU9-dA-I5H" secondAttribute="bottom" id="tG9-SD-2qK"/>
+                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="SU9-dA-I5H" secondAttribute="bottom" constant="5" id="srv-4Z-aTp"/>
+                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="SU9-dA-I5H" secondAttribute="bottom" constant="5" id="tG9-SD-2qK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SU9-dA-I5H" secondAttribute="trailing" constant="-20" id="vR7-p8-30m"/>
                         </constraints>
                     </view>
@@ -308,24 +308,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNw-r9-6HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063" y="3189"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="cQP-eD-5sd">
-            <objects>
-                <viewController id="DHk-PK-z1k" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3FR-gq-K26"/>
-                        <viewControllerLayoutGuide type="bottom" id="BzB-dS-5YL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="r63-vS-4hW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LkK-IV-tKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1841" y="3189"/>
         </scene>
         <!--More-->
         <scene sceneID="XEC-Mk-dHs">
