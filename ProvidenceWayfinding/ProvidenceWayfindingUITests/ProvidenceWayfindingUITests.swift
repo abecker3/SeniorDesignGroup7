@@ -33,4 +33,15 @@ class ProvidenceWayfindingUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testCampusMapOpens()
+    {
+        let app = XCUIApplication()
+        app.buttons["Accept"].tap()
+        app.buttons["Campus Map"].tap()
+    }
+    
+    func testSaveParking()
+    {
+        
+    }
 }
