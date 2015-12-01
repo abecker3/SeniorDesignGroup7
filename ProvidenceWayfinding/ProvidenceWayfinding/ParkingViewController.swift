@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ParkingViewController: UIViewController {
+class ParkingViewController: UIViewController, UITextFieldDelegate {
     
     //Variables
     let defaults = NSUserDefaults.standardUserDefaults()
@@ -42,5 +42,11 @@ class ParkingViewController: UIViewController {
         //Load Saved Parking Spot/Date
         savedParkingSpot.text = defaults.stringForKey("savedParkingSpot");
         savedParkingDate.text = defaults.stringForKey("savedParkingDate");
+        self.textField.delegate = self;
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
