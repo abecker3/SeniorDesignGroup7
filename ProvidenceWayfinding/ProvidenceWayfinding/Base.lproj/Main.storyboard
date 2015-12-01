@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -111,7 +111,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <!--Home-->
         <scene sceneID="3he-Ad-0Dl">
             <objects>
-                <viewController title="Home" id="Jbg-Av-W2a" sceneMemberID="viewController">
+                <viewController title="Home" id="Jbg-Av-W2a" customClass="HomeViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gdp-Wh-bsj"/>
                         <viewControllerLayoutGuide type="bottom" id="fMd-z2-nUt"/>
@@ -135,16 +135,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <constraints>
                                     <constraint firstAttribute="height" constant="79" id="TWr-ZD-Y2p"/>
                                 </constraints>
-                                <color key="textColor" red="1" green="0.61449829410000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.95686274509803915" green="0.52156862745098043" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="As People of Providence, we reveal God's love for all, especially the poor and vunerable,through our compassionate service." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQD-ij-gPZ">
-                                <rect key="frame" x="0.0" y="241" width="600" height="211"/>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjH-BT-v5f">
@@ -155,13 +147,20 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstAttribute="width" constant="131" id="pV4-fT-qfs"/>
                                 </constraints>
                                 <state key="normal" title="Campus Map" backgroundImage="buttonOrange.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="0.61449829410000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="jGC-EV-aTk" kind="show" id="z9g-pP-g5J"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="As People of Providence, we reveal God's love for all, especially the poor and vunerable,through our compassionate service." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQD-ij-gPZ">
+                                <rect key="frame" x="0.0" y="241" width="600" height="211"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -180,7 +179,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eN9-MX-1Xa"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWQ-cu-k2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,8 +199,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-5e-6Xd">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-VZ-6pk">
-                                        <rect key="frame" x="8" y="8" width="584" height="471"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-VZ-6pk">
+                                        <rect key="frame" x="8" y="72" width="584" height="471"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="471" id="AAU-iV-2uj"/>
@@ -238,7 +236,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orc-6c-VGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="898"/>
+            <point key="canvasLocation" x="298" y="850"/>
         </scene>
         <!--On Campus-->
         <scene sceneID="Ehq-Kz-Df6">
@@ -252,22 +250,24 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
                                 <rect key="frame" x="0.0" y="335" width="600" height="216"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="JIY-yd-2zC"/>
                                 </constraints>
                             </pickerView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
                                 <rect key="frame" x="-5" y="0.0" width="605" height="333"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
                                         <rect key="frame" x="15" y="8" width="582" height="317"/>
                                         <animations/>
+                                        <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
                                 <animations/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="U83-MM-YIc" firstAttribute="leading" secondItem="MTY-QF-jCz" secondAttribute="leading" constant="15" id="BGZ-Lg-U4F"/>
                                     <constraint firstItem="U83-MM-YIc" firstAttribute="top" secondItem="MTY-QF-jCz" secondAttribute="topMargin" id="CmG-Jl-xj8"/>
@@ -293,8 +293,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="SU9-dA-I5H" firstAttribute="top" secondItem="MTY-QF-jCz" secondAttribute="bottom" constant="2" id="ZVd-1x-yLA"/>
                             <constraint firstItem="MTY-QF-jCz" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leadingMargin" constant="-25" id="i49-Wh-Zr5"/>
                             <constraint firstItem="MTY-QF-jCz" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leadingMargin" constant="-25" id="oRa-id-TrH"/>
-                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="SU9-dA-I5H" secondAttribute="bottom" id="srv-4Z-aTp"/>
-                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="SU9-dA-I5H" secondAttribute="bottom" id="tG9-SD-2qK"/>
+                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="SU9-dA-I5H" secondAttribute="bottom" constant="5" id="srv-4Z-aTp"/>
+                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="SU9-dA-I5H" secondAttribute="bottom" constant="5" id="tG9-SD-2qK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SU9-dA-I5H" secondAttribute="trailing" constant="-20" id="vR7-p8-30m"/>
                         </constraints>
                     </view>
@@ -307,7 +307,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNw-r9-6HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="3153"/>
+            <point key="canvasLocation" x="1063" y="3189"/>
         </scene>
         <!--More-->
         <scene sceneID="XEC-Mk-dHs">
@@ -548,7 +548,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBg-Kl-Wi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="898"/>
+            <point key="canvasLocation" x="1043" y="850"/>
         </scene>
         <!--Category-->
         <scene sceneID="WZL-Sg-fph">
@@ -598,7 +598,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0k-gQ-2WB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853" y="898"/>
+            <point key="canvasLocation" x="1841" y="850"/>
         </scene>
         <!--Location-->
         <scene sceneID="bfE-yk-vtl">
@@ -640,7 +640,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrb-Yz-i33" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2777" y="898"/>
+            <point key="canvasLocation" x="2729" y="850"/>
         </scene>
         <!--Directions-->
         <scene sceneID="mtt-Id-MDm">
@@ -772,7 +772,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyM-Xm-PEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="2377"/>
+            <point key="canvasLocation" x="1643" y="2404"/>
         </scene>
         <!--Directions to Hospital-->
         <scene sceneID="FgZ-2B-CWi">
@@ -849,7 +849,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHV-Re-EH4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="1624"/>
+            <point key="canvasLocation" x="559" y="1624"/>
         </scene>
         <!--Map-->
         <scene sceneID="dF5-2h-t5Q">
