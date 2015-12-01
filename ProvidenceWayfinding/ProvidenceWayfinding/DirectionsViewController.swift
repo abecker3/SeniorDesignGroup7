@@ -13,13 +13,14 @@ import CoreLocation
 class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
 
     var destination: MKMapItem?
+    var desPlace: MKPlacemark!
     var annotation:MKAnnotation!
     var error:NSError!
     var pointAnnotation:MKPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
     var locationManager: CLLocationManager?
-    var destinationLocation: Location!
-    
+    var endLocation: Location!
+    var startLocation: Location!
     
     // Parking Location Coordinates
     let DoctorBuilding = CLLocationCoordinate2D(
@@ -64,17 +65,38 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         showRoute.showsUserLocation = true
         showRoute.mapType = .Standard
         showRoute.delegate = self
-
+        
 
     }
     
+    func setDestination(){
+        switch endLocation.category{
+            case "Heart Institute":
+                desPlace = MKPlacemark(coordinate: HeartInst, addressDictionary: nil)
+            case "Main Tower":
+                desPlace = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
+            case "Women's Health Center":
+                desPlace = MKPlacemark(coordinate: WomensHealth, addressDictionary: nil)
+            case "Doctors Building":
+                desPlace = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
+            case "Surgery Center":
+                desPlace = MKPlacemark(coordinate: WomensHealth, addressDictionary: nil)
+            case "Faith & Healing":
+                desPlace = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
+            case "Children's Hospital":
+                desPlace = MKPlacemark(coordinate: ChildrenHospital, addressDictionary: nil)
+            default:
+                desPlace = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
+        }
+    }
     
+    //Create the request for source and use destination to
     func getDirections(){
         let request = MKDirectionsRequest()
-
-        let destination = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
+        setDestination()
+        //let destination = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
         request.source = MKMapItem.mapItemForCurrentLocation()
-        request.destination = MKMapItem(placemark: destination)
+        request.destination = MKMapItem(placemark: desPlace)
 
         request.requestsAlternateRoutes = false
         

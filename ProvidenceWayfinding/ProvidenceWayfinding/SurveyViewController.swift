@@ -74,9 +74,9 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         }
         else if (segue.identifier == "surveyToMap")
         {
-            let nextViewController = segue.destinationViewController as! DirectionsViewController;
+            //let nextViewController = segue.destinationViewController as! MapViewController;
             //nextViewController.currentLocation = self.currentLocation
-            nextViewController.destinationLocation = self.destinationLocation
+            //nextViewController.destinationLocation = self.destinationLocation
         }
     }
     
