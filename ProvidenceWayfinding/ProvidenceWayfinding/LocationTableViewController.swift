@@ -57,12 +57,12 @@ class LocationTableViewController: UITableViewController {
         if(passInTextFieldTag == surveyViewController.currentTextField.tag)
         {
             surveyViewController.currentTextField.placeholder = locationOptions[indexPath.row].name
-            surveyViewController.currentLocation = locationOptions[indexPath.row]
+            surveyViewController.startLocation = locationOptions[indexPath.row]
         }
         else if(passInTextFieldTag == surveyViewController.destinationTextField.tag)
         {
             surveyViewController.destinationTextField.placeholder = locationOptions[indexPath.row].name
-            surveyViewController.destinationLocation = locationOptions[indexPath.row]
+            surveyViewController.endLocation = locationOptions[indexPath.row]
         }
         
         navController.popToViewController(surveyViewController, animated: true)

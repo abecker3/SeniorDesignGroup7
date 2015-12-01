@@ -17,8 +17,8 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     
     //Variables
     var passOutTextFieldTag: Int!
-    var currentLocation: Location!
-    var destinationLocation: Location!
+    var startLocation: Location!
+    var endLocation: Location!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         destinationTextField.tag = 1
         
         //Init currentLocation
-        currentLocation = Location(name: "Off Campus", category: "NA", floor: "NA")
+        startLocation = Location(name: "Off Campus", category: "NA", floor: "NA")
     }
     
     @IBAction func changedOnOff(sender: UISegmentedControl) {
@@ -41,13 +41,13 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         {
             currentTextField.placeholder = "Off Campus"
             currentTextField.enabled = false
-            currentLocation = Location(name: "Off Campus", category: "NA", floor: "NA")
+            startLocation = Location(name: "Off Campus", category: "NA", floor: "NA")
         }
         else if(title == "On")
         {
             currentTextField.placeholder = "Select Current Location"
             currentTextField.enabled = true
-            currentLocation = nil
+            endLocation = nil
         }
     }
     
@@ -74,17 +74,24 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         }
         else if (segue.identifier == "surveyToMap")
         {
-            //let nextViewController = segue.destinationViewController as! MapViewController;
-            //nextViewController.currentLocation = self.currentLocation
-            //nextViewController.destinationLocation = self.destinationLocation
+            let nextViewController = segue.destinationViewController as! DirectionsViewController;
+            nextViewController.startLocation = self.startLocation
+            nextViewController.endLocation = self.endLocation
         }
+        else if (segue.identifier == "surveyToCampus")
+        {
+            let nextViewController = segue.destinationViewController as! OnCampusViewController;
+            nextViewController.startLocation = self.startLocation
+            nextViewController.endLocation = self.endLocation
+        }
+        
     }
     
     @IBAction func routeNowEvent(sender: AnyObject) {
         
-        if(currentLocation != nil && destinationLocation != nil && currentLocation.name != destinationLocation.name)
+        if(startLocation != nil && endLocation != nil && startLocation.name != endLocation.name)
         {
-            if(currentLocation.name == "Off Campus")
+            if(startLocation.name == "Off Campus")
             {
                 performSegueWithIdentifier("surveyToMap", sender: self)
             }
