@@ -263,7 +263,6 @@
 				TargetAttributes = {
 					D2CA49E21BE2B58B00E79580 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = MX43X7CS28;
 					};
 					D2CA49F61BE2B58C00E79580 = {
 						CreatedOnToolsVersion = 7.1;
@@ -426,6 +425,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -472,6 +472,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -503,7 +504,7 @@
 				INFOPLIST_FILE = ProvidenceWayfinding/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding.Shaun;
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -519,7 +520,7 @@
 				INFOPLIST_FILE = ProvidenceWayfinding/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding.Shaun;
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
