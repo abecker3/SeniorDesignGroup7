@@ -366,6 +366,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Lost?"/>
+                                        <connections>
+                                            <segue destination="pnH-hp-NSH" kind="show" id="dNB-re-Lq0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -379,13 +382,101 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="More.png" id="st2-TR-Kse"/>
-                    <navigationItem key="navigationItem" id="gMq-7b-pJr"/>
+                    <navigationItem key="navigationItem" title="More" id="zYY-fV-con"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5l-EC-xs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4326" y="53"/>
         </scene>
-        <!--Hours View Controller-->
+        <!--Lost-->
+        <scene sceneID="Aio-mM-RVl">
+            <objects>
+                <viewController title="Lost" id="pnH-hp-NSH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w5m-Li-cl5"/>
+                        <viewControllerLayoutGuide type="bottom" id="utH-iv-bKR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vj7-sa-SNe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-fc-IIi">
+                                <rect key="frame" x="0.0" y="162" width="600" height="331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">1) Look around you for existing signs and follow one to an elevator.
+
+2) When in an elevator look around the back and side walls for the guide to what is on each floor.
+
+3) Ask an employee for help if you are in distress or none of these options help you.
+
+4) The skybridges to the Heart Institute are located in the Main Tower on floors LL1 and LL3.
+
+5) You can go between the Main Hospital, Children's Hopital, and Womens Center on floors: LL3, LL1, 1st, 3rd.
+
+6) If you parked in the wrong parking garage click below for predetermined routes to assist you in getting to the correct building.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dq-61-DuB">
+                                <rect key="frame" x="212" y="501" width="176" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="OKL-fB-JnJ"/>
+                                    <constraint firstAttribute="height" constant="42" id="V0l-Ik-2J0"/>
+                                </constraints>
+                                <state key="normal" title="More Help" backgroundImage="buttonOrange.png">
+                                    <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cSL-kv-iEL" kind="show" id="rTY-JN-mi6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="izM-xC-Mvz">
+                                <rect key="frame" x="179" y="83" width="190" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="Jv0-rU-m8S"/>
+                                    <constraint firstAttribute="height" constant="49" id="tx5-bP-Ngy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BTU-fc-IIi" secondAttribute="trailing" id="6IX-FA-G9q"/>
+                            <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" constant="-26" id="8z3-CI-TlT"/>
+                            <constraint firstItem="BTU-fc-IIi" firstAttribute="centerX" secondItem="2dq-61-DuB" secondAttribute="centerX" id="XMs-WF-Mry"/>
+                            <constraint firstItem="BTU-fc-IIi" firstAttribute="top" secondItem="izM-xC-Mvz" secondAttribute="bottom" constant="30" id="b2C-ml-Wcq"/>
+                            <constraint firstItem="izM-xC-Mvz" firstAttribute="top" secondItem="w5m-Li-cl5" secondAttribute="bottom" constant="19" id="kzl-am-ojk"/>
+                            <constraint firstItem="2dq-61-DuB" firstAttribute="top" secondItem="BTU-fc-IIi" secondAttribute="bottom" constant="8" id="nAf-mN-N6G"/>
+                            <constraint firstItem="utH-iv-bKR" firstAttribute="top" secondItem="2dq-61-DuB" secondAttribute="bottom" constant="8" symbolic="YES" id="nDU-HG-Tx7"/>
+                            <constraint firstItem="BTU-fc-IIi" firstAttribute="leading" secondItem="vj7-sa-SNe" secondAttribute="leading" id="tzZ-6C-9pV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lost" id="4yg-SR-gyh">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="h8p-Rh-Y5q"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gI-nA-3Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5056" y="850"/>
+        </scene>
+        <!--More Help-->
+        <scene sceneID="dwi-LD-jxZ">
+            <objects>
+                <viewController title="More Help" id="cSL-kv-iEL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BQY-UR-e7f"/>
+                        <viewControllerLayoutGuide type="bottom" id="eq8-Dc-cly"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Rm-Hr-8Ie">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hku-5b-HW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5056" y="1576"/>
+        </scene>
+        <!--Hours-->
         <scene sceneID="rZN-tT-zTk">
             <objects>
                 <viewController id="g5d-IB-9aA" customClass="HoursViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
@@ -422,19 +513,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <segue destination="T1W-vb-0gL" kind="embed" id="Agl-Lh-r4J"/>
                                 </connections>
                             </containerView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rmz-NT-uoY">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <animations/>
-                                <items>
-                                    <navigationItem title="Title" id="6eM-1c-PqA">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="Nq1-ds-cte">
-                                            <connections>
-                                                <segue destination="MiU-2s-wZy" kind="unwind" unwindAction="unwindToViewController:" id="Zfa-PJ-iKx"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -451,13 +529,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="H8C-N4-uQ2" firstAttribute="leading" secondItem="d9l-GJ-3Zc" secondAttribute="leadingMargin" id="swy-7E-Cv8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Hours" id="uF0-8L-Hga"/>
                     <connections>
                         <outlet property="concessionsView" destination="jud-Hh-x0s" id="sV7-Hg-QCb"/>
                         <outlet property="servicesView" destination="H8C-N4-uQ2" id="uZa-PZ-Mh1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ia9-hz-5hH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="MiU-2s-wZy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3516" y="850"/>
         </scene>
@@ -1207,14 +1285,14 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstAttribute="height" constant="49" id="xpP-te-v0O"/>
                                 </constraints>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yle-Kj-PUh">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yle-Kj-PUh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <animations/>
                                 <items>
                                     <navigationItem title="Title" id="Syb-hM-YOa"/>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" layoutMarginsFollowReadableWidth="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyF-A9-K3M">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" layoutMarginsFollowReadableWidth="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyF-A9-K3M">
                                 <rect key="frame" x="0.0" y="114" width="600" height="437"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1266,17 +1344,21 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="JcV-jw-WAV" firstAttribute="top" secondItem="leA-OB-Eiq" secondAttribute="bottom" id="0Al-mN-CqB"/>
                             <constraint firstItem="cyF-A9-K3M" firstAttribute="leading" secondItem="XTt-5u-QdV" secondAttribute="leadingMargin" constant="-20" id="Aos-7C-Vt3"/>
                             <constraint firstItem="cyF-A9-K3M" firstAttribute="centerX" secondItem="XTt-5u-QdV" secondAttribute="centerX" id="INR-to-amI"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="trailing" secondItem="yle-Kj-PUh" secondAttribute="trailing" id="My9-vh-C4h"/>
                             <constraint firstItem="cyF-A9-K3M" firstAttribute="top" secondItem="JcV-jw-WAV" secondAttribute="bottom" constant="1" id="WGN-1b-G3r"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="leading" secondItem="yle-Kj-PUh" secondAttribute="leading" id="X4F-na-Jid"/>
+                            <constraint firstItem="yle-Kj-PUh" firstAttribute="top" secondItem="XTt-5u-QdV" secondAttribute="top" id="Xl7-0R-RZU"/>
                             <constraint firstItem="JcV-jw-WAV" firstAttribute="centerX" secondItem="XTt-5u-QdV" secondAttribute="centerX" id="a0B-Hs-nou"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cyF-A9-K3M" secondAttribute="trailing" constant="-20" id="awB-uH-exV"/>
                             <constraint firstItem="cyF-A9-K3M" firstAttribute="centerX" secondItem="XTt-5u-QdV" secondAttribute="centerX" id="lEG-3F-SBh"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="bottom" secondItem="HzG-3m-x2K" secondAttribute="top" id="piw-qC-Zsg"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7t1-Fv-GCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4352" y="850"/>
+            <point key="canvasLocation" x="4326" y="850"/>
         </scene>
     </scenes>
     <resources>

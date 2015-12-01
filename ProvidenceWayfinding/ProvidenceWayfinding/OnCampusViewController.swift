@@ -15,13 +15,23 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var startLocation: Location!
     var endLocation: Location!
     
+    var defaultFloor = String()
     var pickerData: [[String]] = [[String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        floorMap.image = UIImage(named:"Floor_1.jpg")
+        switch endLocation.floor{
+            case "2": defaultFloor = "Floor_2.jpg"
+            case "3": defaultFloor = "Floor_3.jpg"
+            case "L1": defaultFloor = "LowerLevels.jpg"
+            case "L2": defaultFloor = "LowerLevels.jpg"
+            case "L3": defaultFloor = "LowerLevels.jpg"
+        default: defaultFloor = "Floor_1.jpg"
+        }
+ 
+        floorMap.image = UIImage(named: defaultFloor)
         floorMap.contentMode = UIViewContentMode.ScaleAspectFit
         
         self.scrollMap.maximumZoomScale = 5.0
@@ -36,7 +46,7 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                         "ICU Cardiac","ICU Neonatal","ICU Neuro","ICU Pediatrics","Maternity",
                         "Medical Records","Pediatric Oncology","Pediatric Unit","Radiation Oncology","Radiology",
                         "Surgery","Surgery Pediatric"],
-                    ["None","Lower Levels","Floor 1","Floor 2","Floor 3"]]
+                    ["None","Destination","Lower Levels","Floor 1","Floor 2","Floor 3"]]
         /*
         Floor 1:    ["Medical Records","Adult Psychiatry","Surgery","Maternity",
         Floor 2:    "Birth Place","ICU Cardiac","ICU","ICU Neuro","Child Psychiatry",
@@ -71,10 +81,11 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // The parameter named row and component represents what was selected.
         if component == 1{
             //This is if the user chooses a specific floor
-            if (row == 1){floorMap.image = UIImage(named:"LowerLevels.jpg")}
-            else if (row == 2){floorMap.image = UIImage(named:"Floor_1.jpg")}
-            else if (row == 3){floorMap.image = UIImage(named:"Floor_2.jpg")}
-            else if (row == 4){floorMap.image = UIImage(named:"Floor_3.jpg")}
+            if (row == 1){floorMap.image = UIImage(named: defaultFloor)}
+            else if (row == 2){floorMap.image = UIImage(named:"LowerLevels.jpg")}
+            else if (row == 3){floorMap.image = UIImage(named:"Floor_1.jpg")}
+            else if (row == 4){floorMap.image = UIImage(named:"Floor_2.jpg")}
+            else if (row == 5){floorMap.image = UIImage(named:"Floor_3.jpg")}
             picker.selectRow(0, inComponent: 0, animated: true)
         }
         else if component == 0{
@@ -85,7 +96,6 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             else if (row == 4 || row == 17 || row == 15 || row == 14)         {floorMap.image = UIImage(named:"LowerLevels.jpg")}
             picker.selectRow(0, inComponent: 1, animated: true)
         }
-        
         
     }
     
