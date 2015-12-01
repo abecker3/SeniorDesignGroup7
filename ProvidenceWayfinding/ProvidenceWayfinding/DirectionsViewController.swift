@@ -65,7 +65,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         showRoute.showsUserLocation = true
         showRoute.mapType = .Standard
         showRoute.delegate = self
-        viewCheck()
+        statusCheck()
 
     }
     
@@ -117,6 +117,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         
     }
     
+    // Create the route and output steps to text view
     func showRoute(response: MKDirectionsResponse) {
         var i = 1
         for route in response.routes {
@@ -137,6 +138,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         showRoute.setRegion(region, animated: true)
     }
     
+    // Renders the line for the directions
     func mapView(mapView: MKMapView, rendererForOverlay
         overlay: MKOverlay) -> MKOverlayRenderer {
             let renderer = MKPolylineRenderer(overlay: overlay)
@@ -181,9 +183,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     }
     
     /* Add the pin to the map and center the map around the pin */
-    func viewCheck() {
-        //super.viewDidAppear(animated)
-        
+    func statusCheck() {
         /* Are location services available on this device? */
         if CLLocationManager.locationServicesEnabled(){
             
