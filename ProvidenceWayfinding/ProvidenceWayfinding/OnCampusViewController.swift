@@ -12,6 +12,8 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var scrollMap: UIScrollView!
     @IBOutlet weak var floorMap: UIImageView!
     @IBOutlet weak var picker: UIPickerView!
+    var startLocation: Location!
+    var endLocation: Location!
     
     var pickerData: [[String]] = [[String]]()
     
