@@ -65,7 +65,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         showRoute.showsUserLocation = true
         showRoute.mapType = .Standard
         showRoute.delegate = self
-        
+        viewCheck()
 
     }
     
@@ -181,8 +181,8 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     }
     
     /* Add the pin to the map and center the map around the pin */
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    func viewCheck() {
+        //super.viewDidAppear(animated)
         
         /* Are location services available on this device? */
         if CLLocationManager.locationServicesEnabled(){
