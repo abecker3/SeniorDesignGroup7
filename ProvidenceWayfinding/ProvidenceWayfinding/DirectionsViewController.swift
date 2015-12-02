@@ -44,13 +44,22 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         longitude: -117.411494
     )
     
-    
+    //TODO - Add anotation at destination parking spot
+    //TODO - Add photo of parking garage entrance at destination pin
+    //TODO - Maybe change textview steps to table view
+    //TODO - Implement the tabls view with steps to change the region shown on map to that particular step
     
     //MARK - Outlets
     @IBOutlet var showRoute: MKMapView!
     @IBOutlet weak var DirectionsOutput: UITextView!
     
-    //MARK - Funtions
+    //MARK - Functions
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextViewController = segue.destinationViewController as! ParkingViewController
+        nextViewController.startLocation = self.startLocation
+        nextViewController.endLocation = self.endLocation
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,6 +78,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
 
     }
     
+    //Set desPlace based on the endLocation.category being passed through
     func setDestination(){
         switch endLocation.category{
             case "Heart Institute":
