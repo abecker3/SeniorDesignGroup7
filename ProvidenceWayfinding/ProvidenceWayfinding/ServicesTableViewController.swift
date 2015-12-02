@@ -55,7 +55,8 @@ class ServicesTableViewController: UITableViewController {
         
         // Configure the cell...
         let option = options[indexPath.row]
-        cell.textLabel!.text = option
+        cell.textLabel!.text = option + ":"
+        cell.detailTextLabel!.text = "11 AM to 8 PM"
         
         return cell
     }
