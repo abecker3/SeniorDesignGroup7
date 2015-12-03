@@ -494,7 +494,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8W9-P7-8us">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8W9-P7-8us">
                                 <rect key="frame" x="208" y="72" width="185" height="29"/>
                                 <animations/>
                                 <segments>
@@ -505,14 +505,14 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <action selector="showComponent:" destination="g5d-IB-9aA" eventType="valueChanged" id="keu-uv-Aie"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8C-N4-uQ2">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8C-N4-uQ2">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <animations/>
                                 <connections>
                                     <segue destination="8wJ-LP-M0f" kind="embed" id="SPb-H4-cYR"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jud-Hh-x0s">
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jud-Hh-x0s">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <animations/>
                                 <connections>
@@ -524,15 +524,15 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="H8C-N4-uQ2" firstAttribute="bottom" secondItem="jud-Hh-x0s" secondAttribute="bottom" id="2cm-by-HLW"/>
-                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="trailing" secondItem="d9l-GJ-3Zc" secondAttribute="trailingMargin" id="5QP-1o-xl7"/>
+                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="trailing" secondItem="d9l-GJ-3Zc" secondAttribute="trailingMargin" constant="20" id="5QP-1o-xl7"/>
                             <constraint firstItem="H8C-N4-uQ2" firstAttribute="top" secondItem="jud-Hh-x0s" secondAttribute="top" id="7E4-uf-VDC"/>
                             <constraint firstItem="H8C-N4-uQ2" firstAttribute="leading" secondItem="jud-Hh-x0s" secondAttribute="leading" id="G9Q-eC-UG0"/>
                             <constraint firstItem="H8C-N4-uQ2" firstAttribute="trailing" secondItem="jud-Hh-x0s" secondAttribute="trailing" id="LoZ-Lp-IEo"/>
                             <constraint firstItem="H8C-N4-uQ2" firstAttribute="centerX" secondItem="8W9-P7-8us" secondAttribute="centerX" id="TOO-eb-0eJ"/>
-                            <constraint firstAttribute="bottom" secondItem="H8C-N4-uQ2" secondAttribute="bottom" constant="20" symbolic="YES" id="dxW-vU-V8h"/>
-                            <constraint firstItem="8W9-P7-8us" firstAttribute="top" secondItem="rTH-W6-DtL" secondAttribute="bottom" constant="52" id="jCm-A1-A3Q"/>
+                            <constraint firstAttribute="bottom" secondItem="H8C-N4-uQ2" secondAttribute="bottom" constant="-49" id="dxW-vU-V8h"/>
+                            <constraint firstItem="8W9-P7-8us" firstAttribute="top" secondItem="rTH-W6-DtL" secondAttribute="bottom" constant="8" id="jCm-A1-A3Q"/>
                             <constraint firstItem="H8C-N4-uQ2" firstAttribute="top" secondItem="8W9-P7-8us" secondAttribute="bottom" constant="8" symbolic="YES" id="n3Y-3j-qzF"/>
-                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="leading" secondItem="d9l-GJ-3Zc" secondAttribute="leadingMargin" id="swy-7E-Cv8"/>
+                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="leading" secondItem="d9l-GJ-3Zc" secondAttribute="leadingMargin" constant="-20" id="swy-7E-Cv8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hours" id="uF0-8L-Hga"/>
@@ -1217,11 +1217,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="building" textLabel="VpD-UO-FX5" detailTextLabel="EJH-ZV-T8t" style="IBUITableViewCellStyleValue1" id="KHe-Ga-yBG">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="building" textLabel="VpD-UO-FX5" detailTextLabel="EJH-ZV-T8t" style="IBUITableViewCellStyleValue1" id="KHe-Ga-yBG">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KHe-Ga-yBG" id="l9s-5K-iYI">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VpD-UO-FX5">
@@ -1233,7 +1233,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EJH-ZV-T8t">
-                                            <rect key="frame" x="523" y="12" width="42" height="20"/>
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -1264,7 +1264,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeJ-tF-pjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
