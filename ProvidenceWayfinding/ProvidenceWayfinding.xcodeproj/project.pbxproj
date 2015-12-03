@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0300278C1C0FB29D00BB789F /* Concessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0300278B1C0FB29D00BB789F /* Concessions.swift */; };
 		3501ADD31BF27F6000981151 /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501ADD21BF27F6000981151 /* ToSViewController.swift */; };
 		351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351906AC1BE9489200F1D343 /* OnCampusViewController.swift */; };
 		354B98DF1C0278470087E67C /* CampusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B98DE1C0278470087E67C /* CampusViewController.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0300278B1C0FB29D00BB789F /* Concessions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concessions.swift; sourceTree = "<group>"; };
 		3501ADD21BF27F6000981151 /* ToSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToSViewController.swift; sourceTree = "<group>"; };
 		351906AC1BE9489200F1D343 /* OnCampusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnCampusViewController.swift; sourceTree = "<group>"; };
 		354B98DE1C0278470087E67C /* CampusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */,
 				B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */,
 				B69650571C04F1EA00C8276A /* Location.swift */,
+				0300278B1C0FB29D00BB789F /* Concessions.swift */,
 				B69650581C04F1EA00C8276A /* LocationTableViewController.swift */,
 				B69650591C04F1EA00C8276A /* SurveyViewController.swift */,
 				354B98DE1C0278470087E67C /* CampusViewController.swift */,
@@ -349,6 +352,7 @@
 				B696505B1C04F1EA00C8276A /* Location.swift in Sources */,
 				D2CA4A191BE2B72600E79580 /* TransitionManager.swift in Sources */,
 				D2CA4A171BE2B72600E79580 /* DirectionsViewController.swift in Sources */,
+				0300278C1C0FB29D00BB789F /* Concessions.swift in Sources */,
 				39DDF7BC1C0D6B9E00CC63A5 /* ServicesTableViewController.swift in Sources */,
 				39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */,
 				351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */,
@@ -529,6 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
