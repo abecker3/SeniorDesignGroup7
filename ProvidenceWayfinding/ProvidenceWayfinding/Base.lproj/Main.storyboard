@@ -311,6 +311,24 @@ Personal data should be relevant to the purposes for which it is to be used, and
             <point key="canvasLocation" x="1057" y="3223"/>
         </scene>
         <!--More-->
+        <scene sceneID="Ub4-Sa-2ef">
+            <objects>
+                <navigationController id="AdO-fJ-qNo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="More.png" id="Jg0-OT-gPW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MCX-yQ-PrL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HfZ-Z0-ZM1" kind="relationship" relationship="rootViewController" id="puG-Uh-LZg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p9A-Rz-y8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4326" y="-847"/>
+        </scene>
+        <!--More-->
         <scene sceneID="XEC-Mk-dHs">
             <objects>
                 <viewController id="HfZ-Z0-ZM1" customClass="MoreViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
