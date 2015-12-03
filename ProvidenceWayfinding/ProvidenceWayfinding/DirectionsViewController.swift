@@ -44,13 +44,22 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         longitude: -117.411494
     )
     
-    
+    //TODO - Add anotation at destination parking spot
+    //TODO - Add photo of parking garage entrance at destination pin
+    //TODO - Maybe change textview steps to table view
+    //TODO - Implement the tabls view with steps to change the region shown on map to that particular step
     
     //MARK - Outlets
     @IBOutlet var showRoute: MKMapView!
     @IBOutlet weak var DirectionsOutput: UITextView!
     
-    //MARK - Funtions
+    //MARK - Functions
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextViewController = segue.destinationViewController as! ParkingViewController
+        nextViewController.startLocation = self.startLocation
+        nextViewController.endLocation = self.endLocation
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,10 +74,11 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         showRoute.showsUserLocation = true
         showRoute.mapType = .Standard
         showRoute.delegate = self
-        
+        statusCheck()
 
     }
     
+    //Set desPlace based on the endLocation.category being passed through
     func setDestination(){
         switch endLocation.category{
             case "Heart Institute":
@@ -117,6 +127,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         
     }
     
+    // Create the route and output steps to text view
     func showRoute(response: MKDirectionsResponse) {
         var i = 1
         for route in response.routes {
@@ -137,6 +148,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         showRoute.setRegion(region, animated: true)
     }
     
+    // Renders the line for the directions
     func mapView(mapView: MKMapView, rendererForOverlay
         overlay: MKOverlay) -> MKOverlayRenderer {
             let renderer = MKPolylineRenderer(overlay: overlay)
@@ -181,9 +193,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     }
     
     /* Add the pin to the map and center the map around the pin */
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    func statusCheck() {
         /* Are location services available on this device? */
         if CLLocationManager.locationServicesEnabled(){
             

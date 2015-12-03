@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -313,22 +313,219 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <!--More-->
         <scene sceneID="XEC-Mk-dHs">
             <objects>
-                <viewController id="HfZ-Z0-ZM1" sceneMemberID="viewController">
+                <viewController id="HfZ-Z0-ZM1" customClass="MoreViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1fF-KX-8Hh"/>
-                        <viewControllerLayoutGuide type="bottom" id="LuQ-Ni-eaj"/>
+                        <viewControllerLayoutGuide type="top" id="3uT-u5-bV2"/>
+                        <viewControllerLayoutGuide type="bottom" id="dPz-fU-RR2"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vWp-IP-TxA">
+                    <view key="view" contentMode="scaleToFill" id="lqT-up-sYs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="center" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dPm-9X-qme">
+                                <rect key="frame" x="242" y="261" width="186" height="126"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hg-CB-UoP">
+                                        <rect key="frame" x="60" y="0.0" width="67" height="42"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Hours"/>
+                                        <connections>
+                                            <segue destination="g5d-IB-9aA" kind="show" id="VqF-Ew-awl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnH-Y9-62s">
+                                        <rect key="frame" x="0.0" y="42" width="186" height="42"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Terms of Service"/>
+                                        <connections>
+                                            <segue destination="lwr-6l-hyO" kind="show" id="UGc-Ru-c2y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWw-ON-UAF">
+                                        <rect key="frame" x="63" y="84" width="61" height="42"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Lost?"/>
+                                        <connections>
+                                            <segue destination="pnH-hp-NSH" kind="show" id="dNB-re-Lq0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dPm-9X-qme" firstAttribute="centerY" secondItem="lqT-up-sYs" secondAttribute="centerY" id="OhM-Pm-Vy0"/>
+                            <constraint firstItem="dPm-9X-qme" firstAttribute="centerX" secondItem="lqT-up-sYs" secondAttribute="centerX" id="m8F-Gq-Ne2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="More.png" id="st2-TR-Kse"/>
+                    <navigationItem key="navigationItem" title="More" id="zYY-fV-con"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5l-EC-xs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3995" y="-871"/>
+            <point key="canvasLocation" x="4326" y="53"/>
+        </scene>
+        <!--Lost-->
+        <scene sceneID="Aio-mM-RVl">
+            <objects>
+                <viewController title="Lost" id="pnH-hp-NSH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w5m-Li-cl5"/>
+                        <viewControllerLayoutGuide type="bottom" id="utH-iv-bKR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vj7-sa-SNe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-fc-IIi">
+                                <rect key="frame" x="0.0" y="162" width="600" height="331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">1) Look around you for existing signs and follow one to an elevator.
+
+2) When in an elevator look around the back and side walls for the guide to what is on each floor.
+
+3) Ask an employee for help if you are in distress or none of these options help you.
+
+4) The skybridges to the Heart Institute are located in the Main Tower on floors LL1 and LL3.
+
+5) You can go between the Main Hospital, Children's Hopital, and Womens Center on floors: LL3, LL1, 1st, 3rd.
+
+6) If you parked in the wrong parking garage click below for predetermined routes to assist you in getting to the correct building.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dq-61-DuB">
+                                <rect key="frame" x="212" y="501" width="176" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="OKL-fB-JnJ"/>
+                                    <constraint firstAttribute="height" constant="42" id="V0l-Ik-2J0"/>
+                                </constraints>
+                                <state key="normal" title="More Help" backgroundImage="buttonOrange.png">
+                                    <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cSL-kv-iEL" kind="show" id="rTY-JN-mi6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="izM-xC-Mvz">
+                                <rect key="frame" x="179" y="83" width="190" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="Jv0-rU-m8S"/>
+                                    <constraint firstAttribute="height" constant="49" id="tx5-bP-Ngy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BTU-fc-IIi" secondAttribute="trailing" id="6IX-FA-G9q"/>
+                            <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" constant="-26" id="8z3-CI-TlT"/>
+                            <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" id="UFe-5H-mDt"/>
+                            <constraint firstItem="BTU-fc-IIi" firstAttribute="centerX" secondItem="2dq-61-DuB" secondAttribute="centerX" id="XMs-WF-Mry"/>
+                            <constraint firstItem="BTU-fc-IIi" firstAttribute="top" secondItem="izM-xC-Mvz" secondAttribute="bottom" constant="30" id="b2C-ml-Wcq"/>
+                            <constraint firstItem="izM-xC-Mvz" firstAttribute="top" secondItem="w5m-Li-cl5" secondAttribute="bottom" constant="19" id="kzl-am-ojk"/>
+                            <constraint firstItem="2dq-61-DuB" firstAttribute="top" secondItem="BTU-fc-IIi" secondAttribute="bottom" constant="8" id="nAf-mN-N6G"/>
+                            <constraint firstItem="utH-iv-bKR" firstAttribute="top" secondItem="2dq-61-DuB" secondAttribute="bottom" constant="8" symbolic="YES" id="nDU-HG-Tx7"/>
+                            <constraint firstItem="BTU-fc-IIi" firstAttribute="leading" secondItem="vj7-sa-SNe" secondAttribute="leading" id="tzZ-6C-9pV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8z3-CI-TlT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lost" id="4yg-SR-gyh">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="h8p-Rh-Y5q"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gI-nA-3Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5056" y="850"/>
+        </scene>
+        <!--More Help-->
+        <scene sceneID="dwi-LD-jxZ">
+            <objects>
+                <viewController title="More Help" id="cSL-kv-iEL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BQY-UR-e7f"/>
+                        <viewControllerLayoutGuide type="bottom" id="eq8-Dc-cly"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Rm-Hr-8Ie">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hku-5b-HW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5056" y="1576"/>
+        </scene>
+        <!--Hours-->
+        <scene sceneID="rZN-tT-zTk">
+            <objects>
+                <viewController id="g5d-IB-9aA" customClass="HoursViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rTH-W6-DtL"/>
+                        <viewControllerLayoutGuide type="bottom" id="r5p-zp-nMB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d9l-GJ-3Zc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8W9-P7-8us">
+                                <rect key="frame" x="208" y="72" width="185" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="Services"/>
+                                    <segment title="Concessions"/>
+                                </segments>
+                                <connections>
+                                    <action selector="showComponent:" destination="g5d-IB-9aA" eventType="valueChanged" id="keu-uv-Aie"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8C-N4-uQ2">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="8wJ-LP-M0f" kind="embed" id="SPb-H4-cYR"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jud-Hh-x0s">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <animations/>
+                                <connections>
+                                    <segue destination="T1W-vb-0gL" kind="embed" id="Agl-Lh-r4J"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="bottom" secondItem="jud-Hh-x0s" secondAttribute="bottom" id="2cm-by-HLW"/>
+                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="trailing" secondItem="d9l-GJ-3Zc" secondAttribute="trailingMargin" constant="20" id="5QP-1o-xl7"/>
+                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="top" secondItem="jud-Hh-x0s" secondAttribute="top" id="7E4-uf-VDC"/>
+                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="leading" secondItem="jud-Hh-x0s" secondAttribute="leading" id="G9Q-eC-UG0"/>
+                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="trailing" secondItem="jud-Hh-x0s" secondAttribute="trailing" id="LoZ-Lp-IEo"/>
+                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="centerX" secondItem="8W9-P7-8us" secondAttribute="centerX" id="TOO-eb-0eJ"/>
+                            <constraint firstAttribute="bottom" secondItem="H8C-N4-uQ2" secondAttribute="bottom" constant="-49" id="dxW-vU-V8h"/>
+                            <constraint firstItem="8W9-P7-8us" firstAttribute="top" secondItem="rTH-W6-DtL" secondAttribute="bottom" constant="8" id="jCm-A1-A3Q"/>
+                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="top" secondItem="8W9-P7-8us" secondAttribute="bottom" constant="8" symbolic="YES" id="n3Y-3j-qzF"/>
+                            <constraint firstItem="H8C-N4-uQ2" firstAttribute="leading" secondItem="d9l-GJ-3Zc" secondAttribute="leadingMargin" constant="-20" id="swy-7E-Cv8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hours" id="uF0-8L-Hga"/>
+                    <connections>
+                        <outlet property="concessionsView" destination="jud-Hh-x0s" id="sV7-Hg-QCb"/>
+                        <outlet property="servicesView" destination="H8C-N4-uQ2" id="uZa-PZ-Mh1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ia9-hz-5hH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3516" y="850"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1Hm-0u-Tzn">
@@ -344,7 +541,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <segue destination="Weh-dA-egp" kind="relationship" relationship="viewControllers" id="UPT-fn-plc"/>
                         <segue destination="w0u-Nb-dND" kind="relationship" relationship="viewControllers" id="eRY-Nr-FLL"/>
                         <segue destination="XCX-NU-mPr" kind="relationship" relationship="viewControllers" id="Xay-Op-XiD"/>
-                        <segue destination="HfZ-Z0-ZM1" kind="relationship" relationship="viewControllers" id="PnA-JQ-VlS"/>
+                        <segue destination="AdO-fJ-qNo" kind="relationship" relationship="viewControllers" id="fyW-vb-Cfr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="398-Uk-KWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -925,7 +1122,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <rect key="frame" x="20" y="136" width="560" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-cD-9WC">
                                 <rect key="frame" x="20" y="275" width="560" height="21"/>
@@ -993,6 +1190,164 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgO-HW-7CA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2145" y="53"/>
+        </scene>
+        <!--Services Table View Controller-->
+        <scene sceneID="QsR-FM-1Er">
+            <objects>
+                <viewController id="8wJ-LP-M0f" customClass="ServicesTableViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6cd-6V-Taf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="building" textLabel="VpD-UO-FX5" detailTextLabel="EJH-ZV-T8t" style="IBUITableViewCellStyleValue1" id="KHe-Ga-yBG">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KHe-Ga-yBG" id="l9s-5K-iYI">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VpD-UO-FX5">
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EJH-ZV-T8t">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CFp-gk-fcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3123" y="1576"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hwY-6S-q7r">
+            <objects>
+                <viewController id="T1W-vb-0gL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0qg-cb-1cl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcF-Xw-Vv9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="40B-tV-ixB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JeJ-tF-pjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3855" y="1576"/>
+        </scene>
+        <!--Terms of Service-->
+        <scene sceneID="eI5-qp-bKj">
+            <objects>
+                <viewController title="Terms of Service" id="lwr-6l-hyO" customClass="ToSViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="leA-OB-Eiq"/>
+                        <viewControllerLayoutGuide type="bottom" id="HzG-3m-x2K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="XTt-5u-QdV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="JcV-jw-WAV">
+                                <rect key="frame" x="205" y="64" width="190" height="49"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="ehe-qu-Bz3"/>
+                                    <constraint firstAttribute="height" constant="49" id="xpP-te-v0O"/>
+                                </constraints>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yle-Kj-PUh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Title" id="Syb-hM-YOa"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" layoutMarginsFollowReadableWidth="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyF-A9-K3M">
+                                <rect key="frame" x="0.0" y="114" width="600" height="437"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">IF THIS IS AN EMERGENCY CLOSE THIS APP AND CALL 911
+
+1. Terms
+
+By accessing this app, you are agreeing to be bound by these Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this app. The materials contained in this app are protected by applicable copyright and trade mark law.
+
+2. Use License
+
+Permission is granted to download this app for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials; use the materials for any commercial purpose, or for any public display (commercial or non commercial); attempt to decompile or reverse engineer any software contained in Providence's app; remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or "mirror" the materials on any other server. This license shall automatically terminate if you violate any of these restrictions and may be terminated by Providence at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
+
+3. Disclaimer
+
+The materials on Providence's app are provided "as is". Providence makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, Providence does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its app.
+
+4. Limitations
+
+In no event shall Providence or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Providence's app, even if Providence or a Providence authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+
+5. Revisions and Errata
+
+The materials appearing on Providence's app could include technical, typographical, or photographic errors. Providence does not warrant that any of the materials on its app are accurate, complete, or current. Providence may make changes to the materials contained on its app at any time without notice. Providence does not, however, make any commitment to update the materials.
+
+6. App Terms of Use Modifications
+
+Providence may revise these terms of use for its app at any time without notice. By using this app you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
+
+7. Governing Law
+
+Any claim relating to Providence's app shall be governed by the laws of the State of Washington without regard to its conflict of law provisions.
+
+General Terms and Conditions applicable to Use of a App.
+
+Privacy Policy
+
+Your privacy is very important to us. Accordingly, we have developed this Policy in order for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.
+
+Before or at the time of collecting personal information, we will identify the purposes for which information is being collected. We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law. We will only retain personal information as long as necessary for the fulfillment of those purposes. We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.
+Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up-to-date. We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification. We will make readily available to customers information about our policies and practices relating to the management of personal information. We are committed to conducting our business in accordance with these principles in order to ensure that the confidentiality of personal information is protected and maintained.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JcV-jw-WAV" firstAttribute="top" secondItem="leA-OB-Eiq" secondAttribute="bottom" id="0Al-mN-CqB"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="leading" secondItem="XTt-5u-QdV" secondAttribute="leadingMargin" constant="-20" id="Aos-7C-Vt3"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="centerX" secondItem="XTt-5u-QdV" secondAttribute="centerX" id="INR-to-amI"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="trailing" secondItem="yle-Kj-PUh" secondAttribute="trailing" id="My9-vh-C4h"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="top" secondItem="JcV-jw-WAV" secondAttribute="bottom" constant="1" id="WGN-1b-G3r"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="leading" secondItem="yle-Kj-PUh" secondAttribute="leading" id="X4F-na-Jid"/>
+                            <constraint firstItem="yle-Kj-PUh" firstAttribute="top" secondItem="XTt-5u-QdV" secondAttribute="top" id="Xl7-0R-RZU"/>
+                            <constraint firstItem="JcV-jw-WAV" firstAttribute="centerX" secondItem="XTt-5u-QdV" secondAttribute="centerX" id="a0B-Hs-nou"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cyF-A9-K3M" secondAttribute="trailing" constant="-20" id="awB-uH-exV"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="centerX" secondItem="XTt-5u-QdV" secondAttribute="centerX" id="lEG-3F-SBh"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="bottom" secondItem="HzG-3m-x2K" secondAttribute="top" id="piw-qC-Zsg"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7t1-Fv-GCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4326" y="850"/>
         </scene>
     </scenes>
     <resources>
