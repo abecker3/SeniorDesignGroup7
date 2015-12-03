@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -248,20 +248,20 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <viewControllerLayoutGuide type="bottom" id="pUQ-2j-KrD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VPS-rD-Anx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
                                 <rect key="frame" x="0.0" y="335" width="600" height="216"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="JIY-yd-2zC"/>
                                 </constraints>
                             </pickerView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
                                 <rect key="frame" x="-5" y="0.0" width="605" height="333"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
                                         <rect key="frame" x="15" y="8" width="582" height="317"/>
                                         <animations/>
                                         <gestureRecognizers/>
@@ -402,6 +402,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-fc-IIi">
                                 <rect key="frame" x="0.0" y="162" width="600" height="331"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">1) Look around you for existing signs and follow one to an elevator.
 
@@ -419,6 +420,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dq-61-DuB">
                                 <rect key="frame" x="212" y="501" width="176" height="42"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="176" id="OKL-fB-JnJ"/>
                                     <constraint firstAttribute="height" constant="42" id="V0l-Ik-2J0"/>
@@ -432,12 +434,14 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="izM-xC-Mvz">
                                 <rect key="frame" x="179" y="83" width="190" height="49"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="Jv0-rU-m8S"/>
                                     <constraint firstAttribute="height" constant="49" id="tx5-bP-Ngy"/>
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="BTU-fc-IIi" secondAttribute="trailing" id="6IX-FA-G9q"/>
@@ -475,6 +479,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     <view key="view" contentMode="scaleToFill" id="8Rm-Hr-8Ie">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -970,7 +975,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Parking" id="hbY-RV-zF4">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="23A-QJ-urB">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yr0-Em-aFV">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yr0-Em-aFV">
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -990,7 +995,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyM-Xm-PEN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423" y="2421"/>
+            <point key="canvasLocation" x="1423" y="2405"/>
         </scene>
         <!--Directions to Hospital-->
         <scene sceneID="FgZ-2B-CWi">
@@ -1011,17 +1016,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-zO-42D">
                                 <rect key="frame" x="0.0" y="399" width="600" height="152"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a81-gj-Mfo">
-                                        <rect key="frame" x="558" y="122" width="34" height="22"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="dC8-L6-8wQ"/>
-                                        </constraints>
-                                        <state key="normal" title="Next"/>
-                                        <connections>
-                                            <segue destination="oig-4Y-mb5" kind="show" id="OK4-Cy-Xw5"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPP-zA-2kX">
                                         <rect key="frame" x="235" y="118" width="131" height="30"/>
                                         <animations/>
@@ -1046,9 +1040,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstItem="B1p-3Y-i3I" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leadingMargin" id="Ba0-Ac-ER7"/>
                                     <constraint firstAttribute="bottom" secondItem="B1p-3Y-i3I" secondAttribute="bottom" constant="4" id="HsN-Dl-Ohl"/>
                                     <constraint firstAttribute="width" secondItem="kfe-zO-42D" secondAttribute="height" multiplier="12:1" constant="-1224" id="NvU-Jn-rX9"/>
-                                    <constraint firstItem="a81-gj-Mfo" firstAttribute="baseline" secondItem="xPP-zA-2kX" secondAttribute="baseline" id="VCF-vN-PY1"/>
                                     <constraint firstItem="B1p-3Y-i3I" firstAttribute="baseline" secondItem="xPP-zA-2kX" secondAttribute="baseline" id="jsl-Id-TuB"/>
-                                    <constraint firstItem="a81-gj-Mfo" firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailingMargin" id="puz-Kp-Ja7"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-BC-5Oq">
@@ -1079,7 +1071,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstAttribute="trailing" secondItem="mcV-BC-5Oq" secondAttribute="trailing" id="yTh-Ps-Qtr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OyX-H1-3i0"/>
+                    <navigationItem key="navigationItem" title="Map" id="6kx-BQ-dhn">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="J6z-DR-bWR">
+                            <connections>
+                                <segue destination="oig-4Y-mb5" kind="show" id="kqp-EB-Hap"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="DirectionsOutput" destination="mcV-BC-5Oq" id="yBd-AU-gJL"/>
                         <outlet property="showRoute" destination="UEr-1l-6bj" id="BTE-9d-6SW"/>
@@ -1378,6 +1376,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="338" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YCW-oQ-6O4"/>
+        <segue reference="rUY-mn-GJG"/>
     </inferredMetricsTieBreakers>
 </document>
