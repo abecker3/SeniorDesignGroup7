@@ -21,8 +21,6 @@
 		39DDF7BA1C0D348A00CC63A5 /* HoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */; };
 		39DDF7BC1C0D6B9E00CC63A5 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */; };
 		39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E909351C0E30F500F81024 /* MoreViewController.swift */; };
-		B620917E1BF1E3080021C2BD /* CampusMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B620917D1BF1E3080021C2BD /* CampusMapViewController.swift */; };
-		B62091821BF3368C0021C2BD /* FloorMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62091811BF3368C0021C2BD /* FloorMapsViewController.swift */; };
 		B696505A1C04F1EA00C8276A /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */; };
 		B696505B1C04F1EA00C8276A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650571C04F1EA00C8276A /* Location.swift */; };
 		B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650581C04F1EA00C8276A /* LocationTableViewController.swift */; };
@@ -32,6 +30,7 @@
 		B69650651C05399500C8276A /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650611C05399500C8276A /* Home.png */; };
 		B69650661C05399500C8276A /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650621C05399500C8276A /* Map.png */; };
 		B69650671C05399500C8276A /* More.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650631C05399500C8276A /* More.png */; };
+		D29620E81C0EE1860026BBFB /* center_direction-100.png in Resources */ = {isa = PBXBuildFile; fileRef = D29620E71C0EE1860026BBFB /* center_direction-100.png */; };
 		D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */; };
 		D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49EA1BE2B58B00E79580 /* Main.storyboard */; };
 		D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */; };
@@ -74,8 +73,6 @@
 		39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HoursViewController.swift; path = ../HoursViewController.swift; sourceTree = "<group>"; };
 		39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		39E909351C0E30F500F81024 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		B620917D1BF1E3080021C2BD /* CampusMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusMapViewController.swift; sourceTree = "<group>"; };
-		B62091811BF3368C0021C2BD /* FloorMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorMapsViewController.swift; sourceTree = "<group>"; };
 		B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		B69650571C04F1EA00C8276A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		B69650581C04F1EA00C8276A /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +82,7 @@
 		B69650611C05399500C8276A /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
 		B69650621C05399500C8276A /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
 		B69650631C05399500C8276A /* More.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = More.png; sourceTree = "<group>"; };
+		D29620E71C0EE1860026BBFB /* center_direction-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center_direction-100.png"; sourceTree = "<group>"; };
 		D2CA49E31BE2B58B00E79580 /* ProvidenceWayfinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvidenceWayfinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2CA49EB1BE2B58B00E79580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -175,6 +173,7 @@
 				B69650581C04F1EA00C8276A /* LocationTableViewController.swift */,
 				B69650591C04F1EA00C8276A /* SurveyViewController.swift */,
 				354B98DE1C0278470087E67C /* CampusViewController.swift */,
+				D29620E71C0EE1860026BBFB /* center_direction-100.png */,
 				3501ADD21BF27F6000981151 /* ToSViewController.swift */,
 				D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */,
 				D2CA49EF1BE2B58C00E79580 /* LaunchScreen.storyboard */,
@@ -317,6 +316,7 @@
 				354B98F71C04EF330087E67C /* buttonOrange.png in Resources */,
 				D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */,
 				354B98F91C04EF330087E67C /* Floor_1.jpg in Resources */,
+				D29620E81C0EE1860026BBFB /* center_direction-100.png in Resources */,
 				354B98FA1C04EF330087E67C /* Floor_2.jpg in Resources */,
 				354B98FB1C04EF330087E67C /* Floor_3.jpg in Resources */,
 				B69650671C05399500C8276A /* More.png in Resources */,
@@ -351,7 +351,6 @@
 				D2CA4A171BE2B72600E79580 /* DirectionsViewController.swift in Sources */,
 				39DDF7BC1C0D6B9E00CC63A5 /* ServicesTableViewController.swift in Sources */,
 				39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */,
-				D2CA4A181BE2B72600E79580 /* MenuViewController.swift in Sources */,
 				351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */,
 				D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */,
 				B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */,
@@ -361,7 +360,6 @@
 				3501ADD31BF27F6000981151 /* ToSViewController.swift in Sources */,
 				354B98DF1C0278470087E67C /* CampusViewController.swift in Sources */,
 				B696505F1C04F7E200C8276A /* ParkingViewController.swift in Sources */,
-				354B99011C0540F70087E67C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

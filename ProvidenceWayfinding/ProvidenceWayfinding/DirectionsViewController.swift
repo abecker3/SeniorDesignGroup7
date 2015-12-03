@@ -21,6 +21,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var locationManager: CLLocationManager?
     var endLocation: Location!
     var startLocation: Location!
+    var counterForCurLocationButton = 0
     
     // Parking Location Coordinates
     let DoctorBuilding = CLLocationCoordinate2D(
@@ -50,7 +51,8 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     //TODO - Implement the tabls view with steps to change the region shown on map to that particular step
     
     //MARK - Outlets
-    @IBOutlet var showRoute: MKMapView!
+    @IBOutlet weak var curLocationButton: UIButton!
+    @IBOutlet var showMapView: MKMapView! //This is the mapView
     @IBOutlet weak var DirectionsOutput: UITextView!
     
     //MARK - Functions
@@ -62,7 +64,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //self.curLocationButton.tintColor = UIColor.blueColor()
         self.navigationController?.navigationBar.translucent = true //make top bar transluscent
         DirectionsOutput.editable = false
         DirectionsOutput.scrollEnabled = true
@@ -71,9 +73,9 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
 
         self.locationManager?.distanceFilter = kCLDistanceFilterNone
         self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        showRoute.showsUserLocation = true
-        showRoute.mapType = .Standard
-        showRoute.delegate = self
+        showMapView.showsUserLocation = true
+        showMapView.mapType = .Standard
+        showMapView.delegate = self
         statusCheck()
 
     }
@@ -122,17 +124,17 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
                 self.presentViewController(alertController, animated: true, completion: nil)
                 return
             }
-            self.showRoute(response)
+            self.showMapView(response)
         }
         
     }
     
     // Create the route and output steps to text view
-    func showRoute(response: MKDirectionsResponse) {
+    func showMapView(response: MKDirectionsResponse) {
         var i = 1
         for route in response.routes {
             
-            showRoute.addOverlay(route.polyline,
+            showMapView.addOverlay(route.polyline,
                 level: MKOverlayLevel.AboveRoads)
             
             for step in route.steps {
@@ -142,10 +144,10 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
                 print(step.instructions)
             }
         }
-        let userLocation = showRoute.userLocation.coordinate
+        let userLocation = showMapView.userLocation.coordinate
         let region = MKCoordinateRegionMakeWithDistance(userLocation, 2000, 2000)
         
-        showRoute.setRegion(region, animated: true)
+        showMapView.setRegion(region, animated: true)
     }
     
     // Renders the line for the directions
@@ -231,7 +233,37 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
 
     //MARK - Actions
     @IBAction func OpenAppleMaps(sender: AnyObject, forEvent event: UIEvent) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://maps.apple.com/?saddr=\(showRoute.userLocation.coordinate.latitude),\(showRoute.userLocation.coordinate.longitude)&daddr=\(DoctorBuilding.latitude),\(DoctorBuilding.longitude)&dirflg=d")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://maps.apple.com/?saddr=\(showMapView.userLocation.coordinate.latitude),\(showMapView.userLocation.coordinate.longitude)&daddr=\(desPlace.coordinate.latitude),\(desPlace.coordinate.longitude)&dirflg=d")!)
+    }
+    @IBAction func centerRegionToLocation(sender: AnyObject, forEvent event: UIEvent) {
+        print("pressed \n")
+        if counterForCurLocationButton == 1 {
+            showMapView.setUserTrackingMode(.FollowWithHeading, animated: true)
+            /*
+            let userLocation = showMapView.userLocation.coordinate
+            let region = MKCoordinateRegionMakeWithDistance(userLocation, 200, 200)
+            showMapView.setRegion(region, animated: true)*/
+            print("follow with heading \n")
+            counterForCurLocationButton = 2
+        /*}else if counterForCurLocationButton == 2 {
+            showMapView.setUserTrackingMode(.None, animated: true)
+            /*
+            let userLocation = showMapView.userLocation.coordinate
+            let region = MKCoordinateRegionMakeWithDistance(userLocation, 200, 200)
+            showMapView.setRegion(region, animated: true)*/
+            print("none \n")
+            counterForCurLocationButton = 0*/
+        }else {
+            showMapView.setUserTrackingMode(.Follow, animated: true)
+            /*
+            let userLocation = showMapView.userLocation.coordinate
+            let region = MKCoordinateRegionMakeWithDistance(userLocation, 200, 200)
+            showMapView.setRegion(region, animated: true)*/
+            print("follow \n")
+            counterForCurLocationButton = 1
+        }
+        
+        //showMapView.setUserTrackingMode(Follow, animated: YES)
     }
 
 }
