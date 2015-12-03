@@ -38,7 +38,9 @@ class ParkingViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         //Load Saved Parking Spot/Date
         savedParkingSpot.text = defaults.stringForKey("savedParkingSpot");
         savedParkingDate.text = defaults.stringForKey("savedParkingDate");
