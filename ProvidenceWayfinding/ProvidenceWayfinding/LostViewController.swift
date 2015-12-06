@@ -1,14 +1,14 @@
 //
-//  ToSViewController.swift
+//  LostViewController.swift
 //  ProvidenceWayfinding
 //
-//  Created by Becker, Andrew D on 11/10/15.
+//  Created by Becker, Andrew D on 12/6/15.
 //  Copyright © 2015 GU. All rights reserved.
 //
 
 import UIKit
 
-class ToSViewController: UIViewController {
+class LostViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     override func viewDidLoad() {
