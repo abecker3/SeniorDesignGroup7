@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -190,6 +190,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="textView" destination="6Gw-2G-VDc" id="2CU-hb-6yL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkZ-6W-xYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -736,20 +739,20 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-VZ-6pk">
-                                        <rect key="frame" x="8" y="72" width="584" height="471"/>
+                                        <rect key="frame" x="0.0" y="-30" width="600" height="487"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="471" id="AAU-iV-2uj"/>
+                                            <constraint firstAttribute="height" constant="487" id="xZa-ka-dia"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Iug-VZ-6pk" secondAttribute="bottom" constant="-56" id="A5K-PE-KGz"/>
-                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="centerX" secondItem="R7E-5e-6Xd" secondAttribute="centerX" id="FgC-1y-ge1"/>
-                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="top" secondItem="R7E-5e-6Xd" secondAttribute="top" constant="72" id="Qik-PX-4Kf"/>
-                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="trailing" secondItem="R7E-5e-6Xd" secondAttribute="trailingMargin" id="m0w-TO-nSo"/>
-                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="leading" secondItem="R7E-5e-6Xd" secondAttribute="leadingMargin" id="nCy-16-0p4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iug-VZ-6pk" secondAttribute="trailing" id="MSa-Os-gE0"/>
+                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="centerX" secondItem="R7E-5e-6Xd" secondAttribute="centerX" id="dIV-HG-e1i"/>
+                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="leading" secondItem="R7E-5e-6Xd" secondAttribute="leading" id="hbj-Xf-5dp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iug-VZ-6pk" secondAttribute="bottom" constant="-64" id="nhA-Ld-KYu"/>
+                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="centerY" secondItem="R7E-5e-6Xd" secondAttribute="centerY" constant="-30" id="pVg-wz-KlQ" userLabel="Campus Map.centerY = centerY"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="jGC-EV-aTk" id="aoQ-rg-ZAZ"/>
@@ -759,10 +762,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="bottom" secondItem="0gP-Zk-9vD" secondAttribute="top" id="0MX-FV-vVo"/>
-                            <constraint firstAttribute="trailing" secondItem="R7E-5e-6Xd" secondAttribute="trailing" id="6Kd-lO-z32"/>
-                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="top" secondItem="YWC-g3-q25" secondAttribute="bottom" id="PGI-eg-UAB"/>
-                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="leading" secondItem="WRy-gz-Hh2" secondAttribute="leading" id="wMO-xT-pIv"/>
+                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="top" secondItem="YWC-g3-q25" secondAttribute="bottom" id="2dE-MW-QSu"/>
+                            <constraint firstAttribute="trailing" secondItem="R7E-5e-6Xd" secondAttribute="trailing" id="TGr-TR-FPU"/>
+                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="bottom" secondItem="0gP-Zk-9vD" secondAttribute="top" id="gbf-Q4-wBN"/>
+                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="leading" secondItem="WRy-gz-Hh2" secondAttribute="leading" id="mDe-lO-MsW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -926,7 +929,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <!--Lost-->
         <scene sceneID="Aio-mM-RVl">
             <objects>
-                <viewController title="Lost" id="pnH-hp-NSH" sceneMemberID="viewController">
+                <viewController title="Lost" id="pnH-hp-NSH" customClass="LostViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w5m-Li-cl5"/>
                         <viewControllerLayoutGuide type="bottom" id="utH-iv-bKR"/>
@@ -939,34 +942,20 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <rect key="frame" x="0.0" y="162" width="600" height="331"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">1) Look around you for existing signs and follow one to an elevator.
+                                <mutableString key="text">1) Look around you for existing signs and follow one to an elevator.
 
 2) When in an elevator look around the back and side walls for the guide to what is on each floor.
 
-3) Ask an employee for help if you are in distress or none of these options help you.
+3) To get from the Heart Institute to any other building take the skybridge located on top floor of the Heart Institute. This will take you to LL1 in the main tower. To get to the Children's Hospital or the Women's Center you can get there on this floor.
 
 4) The skybridges to the Heart Institute are located in the Main Tower on floors LL1 and LL3.
 
 5) You can go between the Main Hospital, Children's Hopital, and Womens Center on floors: LL3, LL1, 1st, 3rd.
 
-6) If you parked in the wrong parking garage click below for predetermined routes to assist you in getting to the correct building.</string>
+6) Ask an employee for help if you are in distress or none of these options help you.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dq-61-DuB">
-                                <rect key="frame" x="212" y="501" width="176" height="42"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="OKL-fB-JnJ"/>
-                                    <constraint firstAttribute="height" constant="42" id="V0l-Ik-2J0"/>
-                                </constraints>
-                                <state key="normal" title="More Help" backgroundImage="buttonOrange.png">
-                                    <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="cSL-kv-iEL" kind="show" id="rTY-JN-mi6"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="izM-xC-Mvz">
                                 <rect key="frame" x="179" y="83" width="190" height="49"/>
                                 <animations/>
@@ -981,12 +970,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="BTU-fc-IIi" secondAttribute="trailing" id="6IX-FA-G9q"/>
                             <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" constant="-26" id="8z3-CI-TlT"/>
+                            <constraint firstItem="utH-iv-bKR" firstAttribute="top" secondItem="BTU-fc-IIi" secondAttribute="bottom" constant="58" id="EbY-0n-x91"/>
                             <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" id="UFe-5H-mDt"/>
-                            <constraint firstItem="BTU-fc-IIi" firstAttribute="centerX" secondItem="2dq-61-DuB" secondAttribute="centerX" id="XMs-WF-Mry"/>
                             <constraint firstItem="BTU-fc-IIi" firstAttribute="top" secondItem="izM-xC-Mvz" secondAttribute="bottom" constant="30" id="b2C-ml-Wcq"/>
                             <constraint firstItem="izM-xC-Mvz" firstAttribute="top" secondItem="w5m-Li-cl5" secondAttribute="bottom" constant="19" id="kzl-am-ojk"/>
-                            <constraint firstItem="2dq-61-DuB" firstAttribute="top" secondItem="BTU-fc-IIi" secondAttribute="bottom" constant="8" id="nAf-mN-N6G"/>
-                            <constraint firstItem="utH-iv-bKR" firstAttribute="top" secondItem="2dq-61-DuB" secondAttribute="bottom" constant="8" symbolic="YES" id="nDU-HG-Tx7"/>
                             <constraint firstItem="BTU-fc-IIi" firstAttribute="leading" secondItem="vj7-sa-SNe" secondAttribute="leading" id="tzZ-6C-9pV"/>
                         </constraints>
                         <variation key="default">
@@ -998,29 +985,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     <navigationItem key="navigationItem" title="Lost" id="4yg-SR-gyh">
                         <barButtonItem key="backBarButtonItem" title="Back" id="h8p-Rh-Y5q"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="BTU-fc-IIi" id="YA6-sj-sLf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gI-nA-3Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5056" y="850"/>
-        </scene>
-        <!--More Help-->
-        <scene sceneID="dwi-LD-jxZ">
-            <objects>
-                <viewController title="More Help" id="cSL-kv-iEL" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BQY-UR-e7f"/>
-                        <viewControllerLayoutGuide type="bottom" id="eq8-Dc-cly"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8Rm-Hr-8Ie">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hku-5b-HW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5056" y="1576"/>
         </scene>
         <!--Hours-->
         <scene sceneID="rZN-tT-zTk">
@@ -1123,43 +1094,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuE-ty-iNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="298" y="-871"/>
-        </scene>
-        <!--Directions-->
-        <scene sceneID="rDr-5X-cCL">
-            <objects>
-                <viewController id="0qK-Kg-0RZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SVB-eQ-5Zs"/>
-                        <viewControllerLayoutGuide type="bottom" id="65n-Zn-jVE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TwE-B8-b1v">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKu-sn-9yr">
-                                <rect key="frame" x="219" y="252" width="162" height="48"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Start Survey"/>
-                                <connections>
-                                    <segue destination="mJf-vX-dEY" kind="show" id="zDa-LQ-u9o">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="cKu-sn-9yr" firstAttribute="centerY" secondItem="TwE-B8-b1v" secondAttribute="centerY" id="Nkb-v4-ypD"/>
-                            <constraint firstItem="cKu-sn-9yr" firstAttribute="centerX" secondItem="TwE-B8-b1v" secondAttribute="centerX" id="qOK-d4-mzH"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Directions" id="KUo-aF-e37"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XNS-0N-OwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1023" y="53"/>
         </scene>
         <!--Survey-->
         <scene sceneID="9YK-HS-Gg7">
@@ -1413,7 +1347,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0qK-Kg-0RZ" kind="relationship" relationship="rootViewController" id="DVa-gX-EiE"/>
+                        <segue destination="mJf-vX-dEY" kind="relationship" relationship="rootViewController" id="y0Y-cl-C4G"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sm1-1T-xbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1808,7 +1742,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <!--Terms of Service-->
         <scene sceneID="eI5-qp-bKj">
             <objects>
-                <viewController title="Terms of Service" id="lwr-6l-hyO" customClass="ToSViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Terms of Service" id="lwr-6l-hyO" customClass="ToSMoreViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="leA-OB-Eiq"/>
                         <viewControllerLayoutGuide type="bottom" id="HzG-3m-x2K"/>
@@ -1895,6 +1829,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="textView2" destination="cyF-A9-K3M" id="4tC-0X-0U4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7t1-Fv-GCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
