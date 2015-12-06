@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -1010,67 +1009,74 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UEr-1l-6bj">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="483"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <animations/>
+                                <gestureRecognizers/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-zO-42D">
-                                <rect key="frame" x="0.0" y="450" width="600" height="101"/>
+                            <view opaque="NO" alpha="0.87" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-zO-42D">
+                                <rect key="frame" x="0.0" y="243" width="600" height="308"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a81-gj-Mfo">
-                                        <rect key="frame" x="558" y="71" width="34" height="22"/>
-                                        <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="dC8-L6-8wQ"/>
-                                        </constraints>
-                                        <state key="normal" title="Next"/>
-                                        <connections>
-                                            <segue destination="oig-4Y-mb5" kind="show" id="OK4-Cy-Xw5"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPP-zA-2kX">
-                                        <rect key="frame" x="235" y="67" width="131" height="30"/>
+                                        <rect key="frame" x="235" y="274" width="131" height="30"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="131" id="jAl-pU-F49"/>
+                                            <constraint firstAttribute="width" constant="131" id="2gN-qn-7OK"/>
                                         </constraints>
-                                        <state key="normal" title="Use Apple Maps"/>
+                                        <state key="normal" title="Use Apple Maps">
+                                            <color key="titleColor" red="0.0" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="OpenAppleMaps:forEvent:" destination="6JG-Ic-gLa" eventType="touchUpInside" id="feZ-1F-CLV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1p-3Y-i3I">
-                                        <rect key="frame" x="8" y="67" width="30" height="30"/>
+                                        <rect key="frame" x="8" y="274" width="30" height="30"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="0AM-3k-TNk"/>
-                                            <constraint firstAttribute="width" constant="30" id="rke-a7-1xE"/>
+                                            <constraint firstAttribute="width" constant="30" id="aWI-Zy-HRF"/>
+                                            <constraint firstAttribute="height" constant="30" id="csg-9b-Hko"/>
                                         </constraints>
-                                        <state key="normal" image="center_direction-100.png"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.0" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="centerRegionToLocation:forEvent:" destination="6JG-Ic-gLa" eventType="touchUpInside" id="VTb-U8-n5N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRf-9k-dfY">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4lu-xz-z8J"/>
+                                            <constraint firstAttribute="width" constant="600" id="zv0-6f-50C"/>
+                                        </constraints>
+                                        <state key="normal" title="Hide Details">
+                                            <color key="titleColor" red="0.0" green="0.36470588235294116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hideView:" destination="6JG-Ic-gLa" eventType="touchUpInside" id="98u-vQ-XM4"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="xPP-zA-2kX" firstAttribute="centerX" secondItem="kfe-zO-42D" secondAttribute="centerX" id="8zv-LT-Xp8"/>
-                                    <constraint firstAttribute="bottom" secondItem="B1p-3Y-i3I" secondAttribute="bottom" constant="4" id="Edr-Uf-N1b"/>
-                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leadingMargin" id="JoL-iV-kla"/>
-                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="top" secondItem="xPP-zA-2kX" secondAttribute="top" id="Km7-Hm-8Mu"/>
-                                    <constraint firstAttribute="width" secondItem="kfe-zO-42D" secondAttribute="height" multiplier="12:1" constant="-612" id="NvU-Jn-rX9"/>
-                                    <constraint firstItem="a81-gj-Mfo" firstAttribute="baseline" secondItem="xPP-zA-2kX" secondAttribute="baseline" id="VCF-vN-PY1"/>
-                                    <constraint firstItem="a81-gj-Mfo" firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailingMargin" id="puz-Kp-Ja7"/>
+                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="top" secondItem="xPP-zA-2kX" secondAttribute="top" id="JCC-2X-TRW"/>
+                                    <constraint firstAttribute="bottom" secondItem="B1p-3Y-i3I" secondAttribute="bottom" constant="4" id="Keh-Ht-AAs"/>
+                                    <constraint firstAttribute="trailing" secondItem="DRf-9k-dfY" secondAttribute="trailing" id="ZPp-Lr-jM5"/>
+                                    <constraint firstAttribute="height" constant="308" id="aHn-XB-Wop"/>
+                                    <constraint firstItem="xPP-zA-2kX" firstAttribute="centerX" secondItem="kfe-zO-42D" secondAttribute="centerX" id="fCS-9K-k8m"/>
+                                    <constraint firstAttribute="width" constant="600" id="j8x-k3-YoJ"/>
+                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leadingMargin" id="jZw-aK-33m"/>
+                                    <constraint firstItem="DRf-9k-dfY" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leading" id="lpJ-mY-bNY"/>
+                                    <constraint firstItem="DRf-9k-dfY" firstAttribute="top" secondItem="kfe-zO-42D" secondAttribute="top" id="p1t-so-Int"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-BC-5Oq">
-                                <rect key="frame" x="0.0" y="450" width="600" height="65"/>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-BC-5Oq">
+                                <rect key="frame" x="0.0" y="272" width="600" height="243"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="djT-aD-EZ5"/>
-                                    <constraint firstAttribute="height" constant="65" id="tNr-wJ-HFk"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1078,17 +1084,18 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UEr-1l-6bj" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leading" id="86x-N5-okY"/>
-                            <constraint firstItem="kfe-zO-42D" firstAttribute="leading" secondItem="2MZ-BW-pGz" secondAttribute="leading" id="9Le-H1-oPQ"/>
-                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="mcV-BC-5Oq" secondAttribute="bottom" constant="36" id="DiW-qQ-LHb"/>
-                            <constraint firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="Hrh-kZ-8NX"/>
-                            <constraint firstItem="UEr-1l-6bj" firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="MLw-8J-zWk"/>
+                            <constraint firstItem="kfe-zO-42D" firstAttribute="leading" secondItem="2MZ-BW-pGz" secondAttribute="leading" id="5aY-qs-rmN"/>
+                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leading" id="7ba-zm-PCU"/>
+                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="mcV-BC-5Oq" secondAttribute="bottom" constant="36" id="In3-nm-Lma"/>
                             <constraint firstItem="UEr-1l-6bj" firstAttribute="top" secondItem="2MZ-BW-pGz" secondAttribute="top" id="Obo-Ab-Kyl"/>
-                            <constraint firstItem="UEr-1l-6bj" firstAttribute="leading" secondItem="mcV-BC-5Oq" secondAttribute="leading" id="WhD-3r-Atu"/>
-                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="leading" secondItem="2MZ-BW-pGz" secondAttribute="leading" id="Wzx-LY-Vuy"/>
-                            <constraint firstItem="UEr-1l-6bj" firstAttribute="bottom" secondItem="DBD-Zv-4LM" secondAttribute="top" constant="-68" id="aMz-es-Ey7"/>
-                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="kfe-zO-42D" secondAttribute="bottom" id="tPy-5h-fJK"/>
-                            <constraint firstAttribute="trailing" secondItem="mcV-BC-5Oq" secondAttribute="trailing" id="yTh-Ps-Qtr"/>
+                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="top" secondItem="4Fq-8p-Ecb" secondAttribute="bottom" constant="208" id="U4Z-2u-WMh"/>
+                            <constraint firstItem="UEr-1l-6bj" firstAttribute="bottom" secondItem="DBD-Zv-4LM" secondAttribute="top" id="aMz-es-Ey7"/>
+                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="trailing" secondItem="UEr-1l-6bj" secondAttribute="trailing" id="e82-RM-UxZ"/>
+                            <constraint firstItem="kfe-zO-42D" firstAttribute="top" secondItem="4Fq-8p-Ecb" secondAttribute="bottom" constant="179" id="hlt-k7-Sf4"/>
+                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="kfe-zO-42D" secondAttribute="bottom" id="iua-RO-DW8"/>
+                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="kNf-jl-Ky8"/>
+                            <constraint firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="m9V-n8-fjP"/>
+                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="leading" secondItem="UEr-1l-6bj" secondAttribute="leading" id="saz-Lz-F1v"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="6kx-BQ-dhn">
@@ -1099,9 +1106,14 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="DetailsButton" destination="DRf-9k-dfY" id="WWn-4N-XNd"/>
                         <outlet property="DirectionsOutput" destination="mcV-BC-5Oq" id="yBd-AU-gJL"/>
                         <outlet property="curLocationButton" destination="B1p-3Y-i3I" id="KC8-0C-XpI"/>
+                        <outlet property="dirOutBottomHeight" destination="In3-nm-Lma" id="wAe-b5-Qcu"/>
+                        <outlet property="directionsOutputHeight" destination="U4Z-2u-WMh" id="vUP-h1-WhF"/>
                         <outlet property="showMapView" destination="UEr-1l-6bj" id="3iU-Va-Z5L"/>
+                        <outlet property="viewBottomHeight" destination="iua-RO-DW8" id="Wsv-DH-lii"/>
+                        <outlet property="viewHeight" destination="hlt-k7-Sf4" id="SSv-O0-iD4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHV-Re-EH4" sceneMemberID="firstResponder"/>
@@ -1394,7 +1406,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="More.png" width="25" height="25"/>
         <image name="buttonGreen.png" width="600" height="192"/>
         <image name="buttonOrange.png" width="600" height="279"/>
-        <image name="center_direction-100.png" width="100" height="100"/>
         <image name="providence_logo1.png" width="338" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>

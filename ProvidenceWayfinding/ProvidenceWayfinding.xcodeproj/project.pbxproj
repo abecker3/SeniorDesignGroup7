@@ -31,6 +31,9 @@
 		B69650651C05399500C8276A /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650611C05399500C8276A /* Home.png */; };
 		B69650661C05399500C8276A /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650621C05399500C8276A /* Map.png */; };
 		B69650671C05399500C8276A /* More.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650631C05399500C8276A /* More.png */; };
+		D2341F541C11610700F5ACBA /* NearMe100.png in Resources */ = {isa = PBXBuildFile; fileRef = D2341F511C11610700F5ACBA /* NearMe100.png */; };
+		D2341F551C11610700F5ACBA /* NearMeFilled100.png in Resources */ = {isa = PBXBuildFile; fileRef = D2341F521C11610700F5ACBA /* NearMeFilled100.png */; };
+		D2341F561C11610700F5ACBA /* NorthDirectionFilled100.png in Resources */ = {isa = PBXBuildFile; fileRef = D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */; };
 		D29620E81C0EE1860026BBFB /* center_direction-100.png in Resources */ = {isa = PBXBuildFile; fileRef = D29620E71C0EE1860026BBFB /* center_direction-100.png */; };
 		D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */; };
 		D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49EA1BE2B58B00E79580 /* Main.storyboard */; };
@@ -84,6 +87,9 @@
 		B69650611C05399500C8276A /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
 		B69650621C05399500C8276A /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
 		B69650631C05399500C8276A /* More.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = More.png; sourceTree = "<group>"; };
+		D2341F511C11610700F5ACBA /* NearMe100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NearMe100.png; sourceTree = "<group>"; };
+		D2341F521C11610700F5ACBA /* NearMeFilled100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NearMeFilled100.png; sourceTree = "<group>"; };
+		D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NorthDirectionFilled100.png; sourceTree = "<group>"; };
 		D29620E71C0EE1860026BBFB /* center_direction-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center_direction-100.png"; sourceTree = "<group>"; };
 		D2CA49E31BE2B58B00E79580 /* ProvidenceWayfinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvidenceWayfinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +155,9 @@
 		D2CA49E51BE2B58B00E79580 /* ProvidenceWayfinding */ = {
 			isa = PBXGroup;
 			children = (
+				D2341F511C11610700F5ACBA /* NearMe100.png */,
+				D2341F521C11610700F5ACBA /* NearMeFilled100.png */,
+				D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */,
 				354B98EE1C04EF330087E67C /* buttonGreen.png */,
 				354B98EF1C04EF330087E67C /* buttonOrange.png */,
 				354B98F01C04EF330087E67C /* Campus.jpg */,
@@ -271,6 +280,7 @@
 				TargetAttributes = {
 					D2CA49E21BE2B58B00E79580 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = FT24NTBXEG;
 					};
 					D2CA49F61BE2B58C00E79580 = {
 						CreatedOnToolsVersion = 7.1;
@@ -312,12 +322,15 @@
 				B69650641C05399500C8276A /* Car.png in Resources */,
 				354B98FC1C04EF330087E67C /* LowerLevels.jpg in Resources */,
 				354B98FD1C04EF330087E67C /* providence_logo1.png in Resources */,
+				D2341F551C11610700F5ACBA /* NearMeFilled100.png in Resources */,
 				354B98F81C04EF330087E67C /* Campus.jpg in Resources */,
+				D2341F541C11610700F5ACBA /* NearMe100.png in Resources */,
 				B69650651C05399500C8276A /* Home.png in Resources */,
 				D2CA49F11BE2B58C00E79580 /* LaunchScreen.storyboard in Resources */,
 				B69650661C05399500C8276A /* Map.png in Resources */,
 				354B98F71C04EF330087E67C /* buttonOrange.png in Resources */,
 				D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */,
+				D2341F561C11610700F5ACBA /* NorthDirectionFilled100.png in Resources */,
 				354B98F91C04EF330087E67C /* Floor_1.jpg in Resources */,
 				D29620E81C0EE1860026BBFB /* center_direction-100.png in Resources */,
 				354B98FA1C04EF330087E67C /* Floor_2.jpg in Resources */,
