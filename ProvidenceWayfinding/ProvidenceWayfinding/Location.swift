@@ -52,8 +52,8 @@ let locations = [
     Location(name: "Valet Parking (Main Tower)",                                        category: "Main Tower",                     floor: "Main"),
     Location(name: "Valet Parking (Surgery Center)",                                    category: "Surgery Center",                 floor: "L2"),
     Location(name: "Waiting Room (L1 Family)",                                          category: "Main Tower",                     floor: "L1"),
-    Location(name: "Waiting Room (Intensive Care)",                                     category: "Main Tower",                     floor: "2 South"),
+    Location(name: "Waiting Room (Intensive Care)",                                     category: "Main Tower",                     floor: "2"),
     Location(name: "Waiting Room (Pediatric Surgery/Family)",                           category: "Main Tower",                     floor: "L1"),
     Location(name: "Waiting Room (Skybridge)",                                          category: "Main Tower",                     floor: "L1"),
-    Location(name: "Waiting Room (Surgery)",                                            category: "Surgery Center",                 floor: "Main West"),
+    Location(name: "Waiting Room (Surgery)",                                            category: "Surgery Center",                 floor: "Main"),
 ]

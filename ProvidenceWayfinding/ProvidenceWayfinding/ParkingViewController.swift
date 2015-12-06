@@ -12,6 +12,9 @@ import Foundation
 class ParkingViewController: UIViewController, UITextFieldDelegate {
     
     //Variables
+    var endLocation: Location!
+    var startLocation: Location!
+    
     let defaults = NSUserDefaults.standardUserDefaults()
     let dateFormatter: NSDateFormatter = {
         let df = NSDateFormatter();
@@ -38,7 +41,9 @@ class ParkingViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         //Load Saved Parking Spot/Date
         savedParkingSpot.text = defaults.stringForKey("savedParkingSpot");
         savedParkingDate.text = defaults.stringForKey("savedParkingDate");
@@ -48,5 +53,11 @@ class ParkingViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextViewController = segue.destinationViewController as! OnCampusViewController
+        nextViewController.startLocation = self.startLocation
+        nextViewController.endLocation = self.endLocation
     }
 }
