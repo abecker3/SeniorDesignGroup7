@@ -36,7 +36,6 @@
 		D2341F541C11610700F5ACBA /* NearMe100.png in Resources */ = {isa = PBXBuildFile; fileRef = D2341F511C11610700F5ACBA /* NearMe100.png */; };
 		D2341F551C11610700F5ACBA /* NearMeFilled100.png in Resources */ = {isa = PBXBuildFile; fileRef = D2341F521C11610700F5ACBA /* NearMeFilled100.png */; };
 		D2341F561C11610700F5ACBA /* NorthDirectionFilled100.png in Resources */ = {isa = PBXBuildFile; fileRef = D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */; };
-		D29620E81C0EE1860026BBFB /* center_direction-100.png in Resources */ = {isa = PBXBuildFile; fileRef = D29620E71C0EE1860026BBFB /* center_direction-100.png */; };
 		D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */; };
 		D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49EA1BE2B58B00E79580 /* Main.storyboard */; };
 		D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */; };
@@ -94,7 +93,6 @@
 		D2341F511C11610700F5ACBA /* NearMe100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NearMe100.png; sourceTree = "<group>"; };
 		D2341F521C11610700F5ACBA /* NearMeFilled100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NearMeFilled100.png; sourceTree = "<group>"; };
 		D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NorthDirectionFilled100.png; sourceTree = "<group>"; };
-		D29620E71C0EE1860026BBFB /* center_direction-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center_direction-100.png"; sourceTree = "<group>"; };
 		D2CA49E31BE2B58B00E79580 /* ProvidenceWayfinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvidenceWayfinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2CA49EB1BE2B58B00E79580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 				B69650581C04F1EA00C8276A /* LocationTableViewController.swift */,
 				B69650591C04F1EA00C8276A /* SurveyViewController.swift */,
 				354B98DE1C0278470087E67C /* CampusViewController.swift */,
-				D29620E71C0EE1860026BBFB /* center_direction-100.png */,
 				3501ADD21BF27F6000981151 /* ToSViewController.swift */,
 				D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */,
 				D2CA49EF1BE2B58C00E79580 /* LaunchScreen.storyboard */,
@@ -338,7 +335,6 @@
 				D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */,
 				D2341F561C11610700F5ACBA /* NorthDirectionFilled100.png in Resources */,
 				354B98F91C04EF330087E67C /* Floor_1.jpg in Resources */,
-				D29620E81C0EE1860026BBFB /* center_direction-100.png in Resources */,
 				354B98FA1C04EF330087E67C /* Floor_2.jpg in Resources */,
 				354B98FB1C04EF330087E67C /* Floor_3.jpg in Resources */,
 				B69650671C05399500C8276A /* More.png in Resources */,
