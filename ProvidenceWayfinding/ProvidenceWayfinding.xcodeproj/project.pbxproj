@@ -24,6 +24,7 @@
 		39DDF7BA1C0D348A00CC63A5 /* HoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */; };
 		39DDF7BC1C0D6B9E00CC63A5 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */; };
 		39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E909351C0E30F500F81024 /* MoreViewController.swift */; };
+		A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F0AC691C176CB300052430 /* ConcessionsTableViewController.swift */; };
 		B696505A1C04F1EA00C8276A /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */; };
 		B696505B1C04F1EA00C8276A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650571C04F1EA00C8276A /* Location.swift */; };
 		B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650581C04F1EA00C8276A /* LocationTableViewController.swift */; };
@@ -81,6 +82,7 @@
 		39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HoursViewController.swift; path = ../HoursViewController.swift; sourceTree = "<group>"; };
 		39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		39E909351C0E30F500F81024 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		A0F0AC691C176CB300052430 /* ConcessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcessionsTableViewController.swift; sourceTree = "<group>"; };
 		B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		B69650571C04F1EA00C8276A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		B69650581C04F1EA00C8276A /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */,
 				B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */,
 				B69650571C04F1EA00C8276A /* Location.swift */,
+				A0F0AC691C176CB300052430 /* ConcessionsTableViewController.swift */,
 				0300278B1C0FB29D00BB789F /* Concessions.swift */,
 				B69650581C04F1EA00C8276A /* LocationTableViewController.swift */,
 				B69650591C04F1EA00C8276A /* SurveyViewController.swift */,
@@ -370,6 +373,7 @@
 				39DDF7BC1C0D6B9E00CC63A5 /* ServicesTableViewController.swift in Sources */,
 				39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */,
 				351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */,
+				A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */,
 				D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */,
 				B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */,
 				39DDF7BA1C0D348A00CC63A5 /* HoursViewController.swift in Sources */,
