@@ -1,14 +1,14 @@
 //
-//  ServicesTableViewController.swift
+//  ConcessionsTableViewController.swift
 //  ProvidenceWayfinding
 //
-//  Created by Shaun McBurney on 11/30/15.
+//  Created by Ruth Manthey on 12/8/15.
 //  Copyright © 2015 GU. All rights reserved.
 //
 
 import UIKit
 
-class ServicesTableViewController: UITableViewController {
+class ConcessionsTableViewController: UITableViewController {
     
     // Variables
     var options: [String]!
@@ -20,7 +20,7 @@ class ServicesTableViewController: UITableViewController {
     
     func initOptions()
     {
-        options = uniqueCategoryArray(locations)
+        options = uniqueCategoryArray(concessions)
         options.sortInPlace()
     }
     
@@ -28,19 +28,20 @@ class ServicesTableViewController: UITableViewController {
         return 1
     }
     
-    func uniqueCategoryArray(inputArray: [Location]!) -> [String]!
+    func uniqueCategoryArray(inputArray: [Concession]!) -> [String]!
     {
         var newArray = [String]()
         for x in inputArray
         {
-            if(newArray.contains(x.category))
+            /*if(newArray.contains(x.category))
             {
                 continue
             }
             else
             {
                 newArray.append(x.category)
-            }
+            }*/
+            newArray.append(x.name)
         }
         
         return newArray
@@ -51,7 +52,7 @@ class ServicesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("building1", forIndexPath: indexPath)
         
         // Configure the cell...
         let option = options[indexPath.row]
