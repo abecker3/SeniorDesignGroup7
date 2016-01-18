@@ -41,6 +41,7 @@ class ServicesTableViewController: UITableViewController {
             {
                 newArray.append(x.category)
             }
+            //print(x.category)
         }
         
         return newArray
