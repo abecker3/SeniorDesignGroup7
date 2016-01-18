@@ -1300,7 +1300,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="More.png" width="25" height="25"/>
         <image name="buttonGreen.png" width="600" height="192"/>
         <image name="buttonOrange.png" width="600" height="279"/>
-        <image name="providence_logo1.png" width="338" height="90"/>
+        <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YCW-oQ-6O4"/>
