@@ -18,9 +18,9 @@
 		354B98FA1C04EF330087E67C /* Floor_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354B98F21C04EF330087E67C /* Floor_2.jpg */; };
 		354B98FB1C04EF330087E67C /* Floor_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354B98F31C04EF330087E67C /* Floor_3.jpg */; };
 		354B98FC1C04EF330087E67C /* LowerLevels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354B98F41C04EF330087E67C /* LowerLevels.jpg */; };
-		354B98FD1C04EF330087E67C /* providence_logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 354B98F51C04EF330087E67C /* providence_logo1.png */; };
 		354B99031C121AB90087E67C /* ToSMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B99021C121AB90087E67C /* ToSMoreViewController.swift */; };
 		354B99051C14F6010087E67C /* LostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B99041C14F6010087E67C /* LostViewController.swift */; };
+		35A706D01C4D83B00039F4DC /* providence_logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A706CF1C4D83B00039F4DC /* providence_logo1.png */; };
 		39DDF7BA1C0D348A00CC63A5 /* HoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */; };
 		39DDF7BC1C0D6B9E00CC63A5 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */; };
 		39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E909351C0E30F500F81024 /* MoreViewController.swift */; };
@@ -76,9 +76,9 @@
 		354B98F21C04EF330087E67C /* Floor_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Floor_2.jpg; sourceTree = "<group>"; };
 		354B98F31C04EF330087E67C /* Floor_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Floor_3.jpg; sourceTree = "<group>"; };
 		354B98F41C04EF330087E67C /* LowerLevels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LowerLevels.jpg; sourceTree = "<group>"; };
-		354B98F51C04EF330087E67C /* providence_logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = providence_logo1.png; sourceTree = "<group>"; };
 		354B99021C121AB90087E67C /* ToSMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToSMoreViewController.swift; sourceTree = "<group>"; };
 		354B99041C14F6010087E67C /* LostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostViewController.swift; sourceTree = "<group>"; };
+		35A706CF1C4D83B00039F4DC /* providence_logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = providence_logo1.png; sourceTree = "<group>"; };
 		39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HoursViewController.swift; path = ../HoursViewController.swift; sourceTree = "<group>"; };
 		39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		39E909351C0E30F500F81024 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 				354B98F21C04EF330087E67C /* Floor_2.jpg */,
 				354B98F31C04EF330087E67C /* Floor_3.jpg */,
 				354B98F41C04EF330087E67C /* LowerLevels.jpg */,
-				354B98F51C04EF330087E67C /* providence_logo1.png */,
+				35A706CF1C4D83B00039F4DC /* providence_logo1.png */,
 				B69650601C05399500C8276A /* Car.png */,
 				B69650611C05399500C8276A /* Home.png */,
 				B69650621C05399500C8276A /* Map.png */,
@@ -327,8 +327,8 @@
 			files = (
 				B69650641C05399500C8276A /* Car.png in Resources */,
 				354B98FC1C04EF330087E67C /* LowerLevels.jpg in Resources */,
-				354B98FD1C04EF330087E67C /* providence_logo1.png in Resources */,
 				D2341F551C11610700F5ACBA /* NearMeFilled100.png in Resources */,
+				35A706D01C4D83B00039F4DC /* providence_logo1.png in Resources */,
 				354B98F81C04EF330087E67C /* Campus.jpg in Resources */,
 				D2341F541C11610700F5ACBA /* NearMe100.png in Resources */,
 				B69650651C05399500C8276A /* Home.png in Resources */,

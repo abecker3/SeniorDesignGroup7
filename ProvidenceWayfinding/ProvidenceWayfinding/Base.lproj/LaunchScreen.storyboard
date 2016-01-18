@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="Ln1-z3-H5K">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,15 +20,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hN1-5e-nql">
-                                <rect key="frame" x="103" y="219" width="394" height="161"/>
+                                <rect key="frame" x="69" y="207" width="463" height="186"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hN1-5e-nql" secondAttribute="height" multiplier="300:120" id="zXz-Qd-1U2"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hN1-5e-nql" firstAttribute="top" secondItem="Jdi-cM-Lwa" secondAttribute="bottom" constant="199" id="FLE-L7-7Kh"/>
-                            <constraint firstItem="hN1-5e-nql" firstAttribute="centerY" secondItem="3sG-dA-Bbx" secondAttribute="centerY" id="Yz4-XG-Uoh"/>
-                            <constraint firstItem="hN1-5e-nql" firstAttribute="leading" secondItem="3sG-dA-Bbx" secondAttribute="leadingMargin" constant="83" id="ZMQ-VD-9fN"/>
-                            <constraint firstItem="hN1-5e-nql" firstAttribute="centerX" secondItem="3sG-dA-Bbx" secondAttribute="centerX" id="e2D-Qo-hrC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hN1-5e-nql" secondAttribute="trailing" constant="48" id="hDe-Wy-0dN"/>
+                            <constraint firstItem="hN1-5e-nql" firstAttribute="leading" secondItem="3sG-dA-Bbx" secondAttribute="leadingMargin" constant="49" id="hZg-eL-uvb"/>
+                            <constraint firstItem="hN1-5e-nql" firstAttribute="centerY" secondItem="3sG-dA-Bbx" secondAttribute="centerY" id="ys8-Pq-bt8"/>
                         </constraints>
                     </view>
                 </viewController>
