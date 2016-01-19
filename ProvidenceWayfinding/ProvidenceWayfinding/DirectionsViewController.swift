@@ -10,7 +10,16 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
+extension Double {
+    var km: Double { return self * 1_000.0 }
+    var m: Double { return self }
+    var cm: Double { return self / 100.0 }
+    var mm: Double { return self / 1_000.0 }
+    var ft: Double { return self * 3.28084 }
+    var mi: Double { return self * 0.000621371192 }
+}
+
+class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     var destination: MKMapItem?
     var desPlace: MKPlacemark!
@@ -21,7 +30,12 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var locationManager: CLLocationManager?
     var endLocation: Location!
     var startLocation: Location!
-    
+    var counterForCurLocationButton = 0 //counter used in curLocationButton that changes map settings
+    var hidden = false //flag used in hideView func
+    var regionChangeIsFromUserInteraction = false //bool value for checking if user moved map
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
+
+
     // Parking Location Coordinates
     let DoctorBuilding = CLLocationCoordinate2D(
         latitude: 47.648183,
@@ -49,9 +63,20 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     //TODO - Maybe change textview steps to table view
     //TODO - Implement the tabls view with steps to change the region shown on map to that particular step
     
+    //TODO -- BUG - error message when choose dest. when off campus selected, then if you select to on, the dest portion doesnt reset but causes error if not rechosen. Also, if only the dest. is selected in the on campus mode, it will go to off campus wayfindgin map.
+    
     //MARK - Outlets
-    @IBOutlet var showRoute: MKMapView!
+    @IBOutlet weak var curLocationButton: UIButton! //button (bottom left) to change MKUserTrackingMode
+    @IBOutlet var showMapView: MKMapView! //This is the mapView
     @IBOutlet weak var DirectionsOutput: UITextView!
+    
+    //outlets for constraints used in hideView func
+    @IBOutlet weak var DetailsButton: UIButton!
+    @IBOutlet weak var viewBottomHeight: NSLayoutConstraint!
+    @IBOutlet weak var dirOutBottomHeight: NSLayoutConstraint!
+    @IBOutlet weak var directionsOutputHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewHeight: NSLayoutConstraint!
+    
     
     //MARK - Functions
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -62,18 +87,21 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //self.curLocationButton.tintColor = UIColor.blueColor()
         self.navigationController?.navigationBar.translucent = true //make top bar transluscent
-        DirectionsOutput.editable = false
+        //DirectionsOutput.editable = false
         DirectionsOutput.scrollEnabled = true
         self.DirectionsOutput.layer.borderWidth = 0.8
         self.DirectionsOutput.layer.borderColor = UIColor.init(red: 212/255, green: 212/255, blue: 212/255, alpha: 0.8).CGColor
 
         self.locationManager?.distanceFilter = kCLDistanceFilterNone
         self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
-        showRoute.showsUserLocation = true
-        showRoute.mapType = .Standard
-        showRoute.delegate = self
+        showMapView.showsUserLocation = true
+        showMapView.mapType = .Standard
+        showMapView.delegate = self
+        curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
+        //viewHeight.constant = screenSize.height * (179/568)
+        //directionsOutputHeight.constant = screenSize.height * (208/568)
         statusCheck()
 
     }
@@ -122,30 +150,48 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
                 self.presentViewController(alertController, animated: true, completion: nil)
                 return
             }
-            self.showRoute(response)
+            self.showMapView(response)
         }
         
     }
     
+    
+    
     // Create the route and output steps to text view
-    func showRoute(response: MKDirectionsResponse) {
+    func showMapView(response: MKDirectionsResponse) {
         var i = 1
         for route in response.routes {
             
-            showRoute.addOverlay(route.polyline,
+            showMapView.addOverlay(route.polyline,
                 level: MKOverlayLevel.AboveRoads)
             
             for step in route.steps {
-                DirectionsOutput.insertText("Step \(i) -- ")
-                DirectionsOutput.insertText("In \(step.distance) Meters: \(step.instructions) \n")
+                //DirectionsOutput.insertText("Step \(i) -- ")
+                print(step.distance.ft)
+                if step.distance.ft >= 528 {
+                    DirectionsOutput.editable = true
+                    DirectionsOutput.font = UIFont.boldSystemFontOfSize(20)
+                    DirectionsOutput.insertText("\(Double(round(10*step.distance.mi)/10)) mi. \n")
+                    //DirectionsOutput.font = UIFont.systemFontOfSize(10)
+                    DirectionsOutput.insertText("\(step.instructions) \n")
+                    DirectionsOutput.editable = false
+                } else if step.distance.ft < 528 {
+                    DirectionsOutput.editable = true
+                    //DirectionsOutput.font = UIFont.boldSystemFontOfSize(20)
+                    DirectionsOutput.insertText("\(Int(step.distance.ft)) ft. \n")
+                    //DirectionsOutput.font = UIFont.systemFontOfSize(10)
+                    DirectionsOutput.insertText("\(step.instructions) \n")
+                    DirectionsOutput.editable = false
+                }
                 i++
                 print(step.instructions)
             }
         }
-        let userLocation = showRoute.userLocation.coordinate
+        let userLocation = showMapView.userLocation.coordinate
+        print(userLocation)
         let region = MKCoordinateRegionMakeWithDistance(userLocation, 2000, 2000)
         
-        showRoute.setRegion(region, animated: true)
+        showMapView.setRegion(region, animated: true)
     }
     
     // Renders the line for the directions
@@ -156,6 +202,29 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
             renderer.strokeColor = UIColor.blueColor()
             renderer.lineWidth = 5.0
             return renderer
+    }
+    
+    func mapView(mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        let tempView = mapView.subviews.first! as UIView
+        let listOfGestures = tempView.gestureRecognizers! as [UIGestureRecognizer]
+        for recognizer in listOfGestures {
+            if recognizer.state == UIGestureRecognizerState.Began || recognizer.state == UIGestureRecognizerState.Ended{
+                self.regionChangeIsFromUserInteraction = true
+                break
+            }
+        }
+    }
+    
+    //Periodically checks the mapView for a change
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        if self.regionChangeIsFromUserInteraction || (showMapView.userTrackingMode == MKUserTrackingMode.None && showMapView.userTrackingMode != MKUserTrackingMode.Follow && showMapView.userTrackingMode != MKUserTrackingMode.FollowWithHeading) {
+            self.regionChangeIsFromUserInteraction = false
+            //Code here
+            showMapView.userTrackingMode = MKUserTrackingMode.None
+            curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
+            counterForCurLocationButton = 0
+
+        }
     }
     
 
@@ -231,7 +300,60 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
 
     //MARK - Actions
     @IBAction func OpenAppleMaps(sender: AnyObject, forEvent event: UIEvent) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://maps.apple.com/?saddr=\(showRoute.userLocation.coordinate.latitude),\(showRoute.userLocation.coordinate.longitude)&daddr=\(DoctorBuilding.latitude),\(DoctorBuilding.longitude)&dirflg=d")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://maps.apple.com/?saddr=\(showMapView.userLocation.coordinate.latitude),\(showMapView.userLocation.coordinate.longitude)&daddr=\(desPlace.coordinate.latitude),\(desPlace.coordinate.longitude)&dirflg=d")!)
+    }
+    
+    //Action for sensing pan gesture on map to tell if UserTrackingMode changed
+    @IBAction func moveMap(sender: AnyObject) {
+    
+        if showMapView.userTrackingMode == MKUserTrackingMode.None{
+            curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
+            print("Map Moved")
+        }
+    }
+    //Action for curLocationButton to follow user when pressed, or follow with heading when pressed twice
+    @IBAction func centerRegionToLocation(sender: AnyObject, forEvent event: UIEvent) {
+        
+        if counterForCurLocationButton == 1 && showMapView.userTrackingMode != MKUserTrackingMode.None{
+            showMapView.userTrackingMode = MKUserTrackingMode.FollowWithHeading
+            //curLocationButton.highlighted = true
+            curLocationButton.setImage(UIImage(named: "NorthDirectionFilled100.png"), forState: .Normal)
+            counterForCurLocationButton = 2
+        }else if (counterForCurLocationButton == 2 && (showMapView.userTrackingMode == MKUserTrackingMode.Follow || showMapView.userTrackingMode == MKUserTrackingMode.FollowWithHeading)) {
+            showMapView.userTrackingMode = MKUserTrackingMode.None
+            curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
+            counterForCurLocationButton = 0
+        }else if showMapView.userTrackingMode == MKUserTrackingMode.None{
+            showMapView.userTrackingMode = MKUserTrackingMode.Follow
+            //curLocationButton.selected = true
+            curLocationButton.setImage(UIImage(named: "NearMeFilled100.png"), forState: .Normal)
+            counterForCurLocationButton = 1
+        }
+    }
+    
+    @IBOutlet weak var outHeight: NSLayoutConstraint!
+    @IBAction func hideView(sender: AnyObject) {
+        let constChange: CGFloat! = (UIScreen.mainScreen().nativeScale * 245.5) / 2//(UIScreen.mainScreen().nativeBounds.height (245.5/568)) / UIScreen.mainScreen().nativeScale
+        if !hidden {
+            self.viewHeight.constant += constChange
+            self.viewBottomHeight.constant -= constChange
+            self.directionsOutputHeight.constant += constChange
+            self.dirOutBottomHeight.constant -= constChange
+            self.DetailsButton.setTitle("Show Details", forState: .Normal)
+            print(UIScreen.mainScreen().nativeScale)
+            print(UIScreen.mainScreen().nativeBounds)
+            print(screenSize.height * (245.5/568))
+            print(screenSize.height)
+            print(screenSize.width)
+            hidden = true
+        } else {
+            self.viewHeight.constant -= constChange
+            self.viewBottomHeight.constant += constChange
+            self.directionsOutputHeight.constant -= constChange
+            self.dirOutBottomHeight.constant += constChange
+            self.DetailsButton.setTitle("Hide Details", forState: .Normal)
+            hidden = false
+        }
     }
 
 }

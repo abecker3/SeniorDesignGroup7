@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -39,7 +38,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8pL-G4-aBH" kind="showDetail" id="tqf-al-TX4"/>
+                                    <segue destination="8pL-G4-aBH" kind="showDetail" id="tkq-mM-L5f"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" layoutMarginsFollowReadableWidth="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gw-2G-VDc">
@@ -104,10 +103,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="textView" destination="6Gw-2G-VDc" id="2CU-hb-6yL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkZ-6W-xYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373" y="-1694"/>
+            <point key="canvasLocation" x="1297" y="-1694"/>
         </scene>
         <!--Home-->
         <scene sceneID="3he-Ad-0Dl">
@@ -147,11 +149,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstAttribute="height" constant="42" id="IyO-Zz-FzL"/>
                                     <constraint firstAttribute="width" constant="131" id="pV4-fT-qfs"/>
                                 </constraints>
-                                <state key="normal" title="Campus Map" backgroundImage="buttonOrange.png">
+                                <state key="normal" title="Lost?" backgroundImage="buttonOrange.png">
                                     <color key="titleColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jGC-EV-aTk" kind="show" id="z9g-pP-g5J"/>
+                                    <segue destination="pnH-hp-NSH" kind="show" id="sYk-fL-vsp"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="As People of Providence, we reveal God's love for all, especially the poor and vunerable,through our compassionate service." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQD-ij-gPZ">
@@ -201,20 +203,20 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-VZ-6pk">
-                                        <rect key="frame" x="8" y="72" width="584" height="471"/>
+                                        <rect key="frame" x="0.0" y="-30" width="600" height="487"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="471" id="AAU-iV-2uj"/>
+                                            <constraint firstAttribute="height" constant="487" id="xZa-ka-dia"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Iug-VZ-6pk" secondAttribute="bottom" constant="-56" id="A5K-PE-KGz"/>
-                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="centerX" secondItem="R7E-5e-6Xd" secondAttribute="centerX" id="FgC-1y-ge1"/>
-                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="top" secondItem="R7E-5e-6Xd" secondAttribute="top" constant="72" id="Qik-PX-4Kf"/>
-                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="trailing" secondItem="R7E-5e-6Xd" secondAttribute="trailingMargin" id="m0w-TO-nSo"/>
-                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="leading" secondItem="R7E-5e-6Xd" secondAttribute="leadingMargin" id="nCy-16-0p4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iug-VZ-6pk" secondAttribute="trailing" id="MSa-Os-gE0"/>
+                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="centerX" secondItem="R7E-5e-6Xd" secondAttribute="centerX" id="dIV-HG-e1i"/>
+                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="leading" secondItem="R7E-5e-6Xd" secondAttribute="leading" id="hbj-Xf-5dp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iug-VZ-6pk" secondAttribute="bottom" constant="-64" id="nhA-Ld-KYu"/>
+                                    <constraint firstItem="Iug-VZ-6pk" firstAttribute="centerY" secondItem="R7E-5e-6Xd" secondAttribute="centerY" constant="-30" id="pVg-wz-KlQ" userLabel="Campus Map.centerY = centerY"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="jGC-EV-aTk" id="aoQ-rg-ZAZ"/>
@@ -224,10 +226,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="bottom" secondItem="0gP-Zk-9vD" secondAttribute="top" id="0MX-FV-vVo"/>
-                            <constraint firstAttribute="trailing" secondItem="R7E-5e-6Xd" secondAttribute="trailing" id="6Kd-lO-z32"/>
-                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="top" secondItem="YWC-g3-q25" secondAttribute="bottom" id="PGI-eg-UAB"/>
-                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="leading" secondItem="WRy-gz-Hh2" secondAttribute="leading" id="wMO-xT-pIv"/>
+                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="top" secondItem="YWC-g3-q25" secondAttribute="bottom" id="2dE-MW-QSu"/>
+                            <constraint firstAttribute="trailing" secondItem="R7E-5e-6Xd" secondAttribute="trailing" id="TGr-TR-FPU"/>
+                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="bottom" secondItem="0gP-Zk-9vD" secondAttribute="top" id="gbf-Q4-wBN"/>
+                            <constraint firstItem="R7E-5e-6Xd" firstAttribute="leading" secondItem="WRy-gz-Hh2" secondAttribute="leading" id="mDe-lO-MsW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -237,7 +239,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orc-6c-VGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298" y="850"/>
+            <point key="canvasLocation" x="5058" y="850"/>
         </scene>
         <!--On Campus-->
         <scene sceneID="Ehq-Kz-Df6">
@@ -352,22 +354,22 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <segue destination="g5d-IB-9aA" kind="show" id="VqF-Ew-awl"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWw-ON-UAF">
+                                        <rect key="frame" x="19" y="42" width="149" height="42"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Campus Map"/>
+                                        <connections>
+                                            <segue destination="jGC-EV-aTk" kind="show" id="cKf-yV-N8U"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnH-Y9-62s">
-                                        <rect key="frame" x="0.0" y="42" width="186" height="42"/>
+                                        <rect key="frame" x="0.0" y="84" width="186" height="42"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Terms of Service"/>
                                         <connections>
                                             <segue destination="lwr-6l-hyO" kind="show" id="UGc-Ru-c2y"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWw-ON-UAF">
-                                        <rect key="frame" x="63" y="84" width="61" height="42"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Lost?"/>
-                                        <connections>
-                                            <segue destination="pnH-hp-NSH" kind="show" id="dNB-re-Lq0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -391,7 +393,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <!--Lost-->
         <scene sceneID="Aio-mM-RVl">
             <objects>
-                <viewController title="Lost" id="pnH-hp-NSH" sceneMemberID="viewController">
+                <viewController title="Lost" id="pnH-hp-NSH" customClass="LostViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w5m-Li-cl5"/>
                         <viewControllerLayoutGuide type="bottom" id="utH-iv-bKR"/>
@@ -408,30 +410,16 @@ Personal data should be relevant to the purposes for which it is to be used, and
 
 2) When in an elevator look around the back and side walls for the guide to what is on each floor.
 
-3) Ask an employee for help if you are in distress or none of these options help you.
+3) To get from the Heart Institute to any other building take the skybridge located on top floor of the Heart Institute. This will take you to LL1 in the main tower. To get to the Children's Hospital or the Women's Center you can get there on this floor.
 
 4) The skybridges to the Heart Institute are located in the Main Tower on floors LL1 and LL3.
 
 5) You can go between the Main Hospital, Children's Hopital, and Womens Center on floors: LL3, LL1, 1st, 3rd.
 
-6) If you parked in the wrong parking garage click below for predetermined routes to assist you in getting to the correct building.</string>
+6) Ask an employee for help if you are in distress or none of these options help you.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dq-61-DuB">
-                                <rect key="frame" x="212" y="501" width="176" height="42"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="OKL-fB-JnJ"/>
-                                    <constraint firstAttribute="height" constant="42" id="V0l-Ik-2J0"/>
-                                </constraints>
-                                <state key="normal" title="More Help" backgroundImage="buttonOrange.png">
-                                    <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="cSL-kv-iEL" kind="show" id="rTY-JN-mi6"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="izM-xC-Mvz">
                                 <rect key="frame" x="179" y="83" width="190" height="49"/>
                                 <animations/>
@@ -446,12 +434,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="BTU-fc-IIi" secondAttribute="trailing" id="6IX-FA-G9q"/>
                             <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" constant="-26" id="8z3-CI-TlT"/>
+                            <constraint firstItem="utH-iv-bKR" firstAttribute="top" secondItem="BTU-fc-IIi" secondAttribute="bottom" constant="58" id="EbY-0n-x91"/>
                             <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" id="UFe-5H-mDt"/>
-                            <constraint firstItem="BTU-fc-IIi" firstAttribute="centerX" secondItem="2dq-61-DuB" secondAttribute="centerX" id="XMs-WF-Mry"/>
                             <constraint firstItem="BTU-fc-IIi" firstAttribute="top" secondItem="izM-xC-Mvz" secondAttribute="bottom" constant="30" id="b2C-ml-Wcq"/>
                             <constraint firstItem="izM-xC-Mvz" firstAttribute="top" secondItem="w5m-Li-cl5" secondAttribute="bottom" constant="19" id="kzl-am-ojk"/>
-                            <constraint firstItem="2dq-61-DuB" firstAttribute="top" secondItem="BTU-fc-IIi" secondAttribute="bottom" constant="8" id="nAf-mN-N6G"/>
-                            <constraint firstItem="utH-iv-bKR" firstAttribute="top" secondItem="2dq-61-DuB" secondAttribute="bottom" constant="8" symbolic="YES" id="nDU-HG-Tx7"/>
                             <constraint firstItem="BTU-fc-IIi" firstAttribute="leading" secondItem="vj7-sa-SNe" secondAttribute="leading" id="tzZ-6C-9pV"/>
                         </constraints>
                         <variation key="default">
@@ -463,29 +449,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     <navigationItem key="navigationItem" title="Lost" id="4yg-SR-gyh">
                         <barButtonItem key="backBarButtonItem" title="Back" id="h8p-Rh-Y5q"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="BTU-fc-IIi" id="YA6-sj-sLf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gI-nA-3Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5056" y="850"/>
-        </scene>
-        <!--More Help-->
-        <scene sceneID="dwi-LD-jxZ">
-            <objects>
-                <viewController title="More Help" id="cSL-kv-iEL" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BQY-UR-e7f"/>
-                        <viewControllerLayoutGuide type="bottom" id="eq8-Dc-cly"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8Rm-Hr-8Ie">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hku-5b-HW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5056" y="1576"/>
+            <point key="canvasLocation" x="298" y="850"/>
         </scene>
         <!--Hours-->
         <scene sceneID="rZN-tT-zTk">
@@ -521,7 +491,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <animations/>
                                 <connections>
-                                    <segue destination="T1W-vb-0gL" kind="embed" id="Agl-Lh-r4J"/>
+                                    <segue destination="EM0-0D-imj" kind="embed" id="hGT-Kd-uRg"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -548,7 +518,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ia9-hz-5hH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3516" y="850"/>
+            <point key="canvasLocation" x="3512" y="866"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1Hm-0u-Tzn">
@@ -588,43 +558,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuE-ty-iNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="298" y="-871"/>
-        </scene>
-        <!--Directions-->
-        <scene sceneID="rDr-5X-cCL">
-            <objects>
-                <viewController id="0qK-Kg-0RZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SVB-eQ-5Zs"/>
-                        <viewControllerLayoutGuide type="bottom" id="65n-Zn-jVE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TwE-B8-b1v">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKu-sn-9yr">
-                                <rect key="frame" x="219" y="252" width="162" height="48"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Start Survey"/>
-                                <connections>
-                                    <segue destination="mJf-vX-dEY" kind="show" id="zDa-LQ-u9o">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="cKu-sn-9yr" firstAttribute="centerY" secondItem="TwE-B8-b1v" secondAttribute="centerY" id="Nkb-v4-ypD"/>
-                            <constraint firstItem="cKu-sn-9yr" firstAttribute="centerX" secondItem="TwE-B8-b1v" secondAttribute="centerX" id="qOK-d4-mzH"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Directions" id="KUo-aF-e37"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XNS-0N-OwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1023" y="53"/>
         </scene>
         <!--Survey-->
         <scene sceneID="9YK-HS-Gg7">
@@ -771,7 +704,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBg-Kl-Wi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023" y="850"/>
+            <point key="canvasLocation" x="1031" y="53"/>
         </scene>
         <!--Category-->
         <scene sceneID="WZL-Sg-fph">
@@ -878,7 +811,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="0qK-Kg-0RZ" kind="relationship" relationship="rootViewController" id="DVa-gX-EiE"/>
+                        <segue destination="mJf-vX-dEY" kind="relationship" relationship="rootViewController" id="y0Y-cl-C4G"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sm1-1T-xbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1012,45 +945,72 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UEr-1l-6bj">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <animations/>
+                                <gestureRecognizers/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-zO-42D">
-                                <rect key="frame" x="0.0" y="399" width="600" height="152"/>
+                            <view opaque="NO" alpha="0.87" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-zO-42D">
+                                <rect key="frame" x="0.0" y="243" width="600" height="308"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPP-zA-2kX">
-                                        <rect key="frame" x="235" y="118" width="131" height="30"/>
+                                        <rect key="frame" x="235" y="274" width="131" height="30"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="131" id="jAl-pU-F49"/>
+                                            <constraint firstAttribute="width" constant="131" id="2gN-qn-7OK"/>
                                         </constraints>
-                                        <state key="normal" title="Use Apple Maps"/>
+                                        <state key="normal" title="Use Apple Maps">
+                                            <color key="titleColor" red="0.0" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="OpenAppleMaps:forEvent:" destination="6JG-Ic-gLa" eventType="touchUpInside" id="feZ-1F-CLV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1p-3Y-i3I">
-                                        <rect key="frame" x="8" y="118" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1p-3Y-i3I">
+                                        <rect key="frame" x="8" y="274" width="30" height="30"/>
                                         <animations/>
-                                        <state key="normal" title="Button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="aWI-Zy-HRF"/>
+                                            <constraint firstAttribute="height" constant="30" id="csg-9b-Hko"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.0" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="centerRegionToLocation:forEvent:" destination="6JG-Ic-gLa" eventType="touchUpInside" id="VTb-U8-n5N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRf-9k-dfY">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4lu-xz-z8J"/>
+                                            <constraint firstAttribute="width" constant="600" id="zv0-6f-50C"/>
+                                        </constraints>
+                                        <state key="normal" title="Hide Details">
+                                            <color key="titleColor" red="0.0" green="0.36470588235294116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hideView:" destination="6JG-Ic-gLa" eventType="touchUpInside" id="98u-vQ-XM4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="xPP-zA-2kX" firstAttribute="centerX" secondItem="kfe-zO-42D" secondAttribute="centerX" id="8zv-LT-Xp8"/>
-                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leadingMargin" id="Ba0-Ac-ER7"/>
-                                    <constraint firstAttribute="bottom" secondItem="B1p-3Y-i3I" secondAttribute="bottom" constant="4" id="HsN-Dl-Ohl"/>
-                                    <constraint firstAttribute="width" secondItem="kfe-zO-42D" secondAttribute="height" multiplier="12:1" constant="-1224" id="NvU-Jn-rX9"/>
-                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="baseline" secondItem="xPP-zA-2kX" secondAttribute="baseline" id="jsl-Id-TuB"/>
+                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="top" secondItem="xPP-zA-2kX" secondAttribute="top" id="JCC-2X-TRW"/>
+                                    <constraint firstAttribute="bottom" secondItem="B1p-3Y-i3I" secondAttribute="bottom" constant="4" id="Keh-Ht-AAs"/>
+                                    <constraint firstAttribute="trailing" secondItem="DRf-9k-dfY" secondAttribute="trailing" id="ZPp-Lr-jM5"/>
+                                    <constraint firstAttribute="height" constant="308" id="aHn-XB-Wop"/>
+                                    <constraint firstItem="xPP-zA-2kX" firstAttribute="centerX" secondItem="kfe-zO-42D" secondAttribute="centerX" id="fCS-9K-k8m"/>
+                                    <constraint firstAttribute="width" constant="600" id="j8x-k3-YoJ"/>
+                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leadingMargin" id="jZw-aK-33m"/>
+                                    <constraint firstItem="DRf-9k-dfY" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leading" id="lpJ-mY-bNY"/>
+                                    <constraint firstItem="DRf-9k-dfY" firstAttribute="top" secondItem="kfe-zO-42D" secondAttribute="top" id="p1t-so-Int"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-BC-5Oq">
-                                <rect key="frame" x="0.0" y="399" width="600" height="116"/>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-BC-5Oq">
+                                <rect key="frame" x="0.0" y="272" width="600" height="243"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="djT-aD-EZ5"/>
-                                    <constraint firstAttribute="height" constant="116" id="tNr-wJ-HFk"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1058,17 +1018,18 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UEr-1l-6bj" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leading" id="86x-N5-okY"/>
-                            <constraint firstItem="kfe-zO-42D" firstAttribute="leading" secondItem="2MZ-BW-pGz" secondAttribute="leading" id="9Le-H1-oPQ"/>
-                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="mcV-BC-5Oq" secondAttribute="bottom" constant="36" id="DiW-qQ-LHb"/>
-                            <constraint firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="Hrh-kZ-8NX"/>
-                            <constraint firstItem="UEr-1l-6bj" firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="MLw-8J-zWk"/>
+                            <constraint firstItem="kfe-zO-42D" firstAttribute="leading" secondItem="2MZ-BW-pGz" secondAttribute="leading" id="5aY-qs-rmN"/>
+                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leading" id="7ba-zm-PCU"/>
+                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="mcV-BC-5Oq" secondAttribute="bottom" constant="36" id="In3-nm-Lma"/>
                             <constraint firstItem="UEr-1l-6bj" firstAttribute="top" secondItem="2MZ-BW-pGz" secondAttribute="top" id="Obo-Ab-Kyl"/>
-                            <constraint firstItem="UEr-1l-6bj" firstAttribute="leading" secondItem="mcV-BC-5Oq" secondAttribute="leading" id="WhD-3r-Atu"/>
-                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="leading" secondItem="2MZ-BW-pGz" secondAttribute="leading" id="Wzx-LY-Vuy"/>
+                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="top" secondItem="4Fq-8p-Ecb" secondAttribute="bottom" constant="208" id="U4Z-2u-WMh"/>
                             <constraint firstItem="UEr-1l-6bj" firstAttribute="bottom" secondItem="DBD-Zv-4LM" secondAttribute="top" id="aMz-es-Ey7"/>
-                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="kfe-zO-42D" secondAttribute="bottom" id="tPy-5h-fJK"/>
-                            <constraint firstAttribute="trailing" secondItem="mcV-BC-5Oq" secondAttribute="trailing" id="yTh-Ps-Qtr"/>
+                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="trailing" secondItem="UEr-1l-6bj" secondAttribute="trailing" id="e82-RM-UxZ"/>
+                            <constraint firstItem="kfe-zO-42D" firstAttribute="top" secondItem="4Fq-8p-Ecb" secondAttribute="bottom" constant="179" id="hlt-k7-Sf4"/>
+                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="kfe-zO-42D" secondAttribute="bottom" id="iua-RO-DW8"/>
+                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="kNf-jl-Ky8"/>
+                            <constraint firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="m9V-n8-fjP"/>
+                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="leading" secondItem="UEr-1l-6bj" secondAttribute="leading" id="saz-Lz-F1v"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="6kx-BQ-dhn">
@@ -1079,8 +1040,14 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="DetailsButton" destination="DRf-9k-dfY" id="WWn-4N-XNd"/>
                         <outlet property="DirectionsOutput" destination="mcV-BC-5Oq" id="yBd-AU-gJL"/>
-                        <outlet property="showRoute" destination="UEr-1l-6bj" id="BTE-9d-6SW"/>
+                        <outlet property="curLocationButton" destination="B1p-3Y-i3I" id="KC8-0C-XpI"/>
+                        <outlet property="dirOutBottomHeight" destination="In3-nm-Lma" id="wAe-b5-Qcu"/>
+                        <outlet property="directionsOutputHeight" destination="U4Z-2u-WMh" id="vUP-h1-WhF"/>
+                        <outlet property="showMapView" destination="UEr-1l-6bj" id="3iU-Va-Z5L"/>
+                        <outlet property="viewBottomHeight" destination="iua-RO-DW8" id="Wsv-DH-lii"/>
+                        <outlet property="viewHeight" destination="hlt-k7-Sf4" id="SSv-O0-iD4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHV-Re-EH4" sceneMemberID="firstResponder"/>
@@ -1252,6 +1219,56 @@ Personal data should be relevant to the purposes for which it is to be used, and
             </objects>
             <point key="canvasLocation" x="3123" y="1576"/>
         </scene>
+        <!--Concessions Table View Controller-->
+        <scene sceneID="Dgq-En-i2L">
+            <objects>
+                <tableViewController id="EM0-0D-imj" userLabel="Concessions Table View Controller" customClass="ConcessionsTableViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hRK-rY-pxA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="building1" textLabel="NV8-M2-GBf" detailTextLabel="cx7-4i-skG" style="IBUITableViewCellStyleValue1" id="WX2-BZ-qSv">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WX2-BZ-qSv" id="gMo-l1-RnP">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NV8-M2-GBf">
+                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cx7-4i-skG">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EM0-0D-imj" id="TzU-fi-Gbq"/>
+                            <outlet property="delegate" destination="EM0-0D-imj" id="Ibr-Dp-FSe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="tx5-j8-AZ5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIy-A4-K5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3921" y="1591"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="hwY-6S-q7r">
             <objects>
@@ -1261,19 +1278,19 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <viewControllerLayoutGuide type="bottom" id="zcF-Xw-Vv9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="40B-tV-ixB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeJ-tF-pjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3855" y="1576"/>
+            <point key="canvasLocation" x="3895" y="2332"/>
         </scene>
         <!--Terms of Service-->
         <scene sceneID="eI5-qp-bKj">
             <objects>
-                <viewController title="Terms of Service" id="lwr-6l-hyO" customClass="ToSViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Terms of Service" id="lwr-6l-hyO" customClass="ToSMoreViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="leA-OB-Eiq"/>
                         <viewControllerLayoutGuide type="bottom" id="HzG-3m-x2K"/>
@@ -1360,6 +1377,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="textView2" destination="cyF-A9-K3M" id="4tC-0X-0U4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7t1-Fv-GCt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1373,7 +1393,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="More.png" width="25" height="25"/>
         <image name="buttonGreen.png" width="600" height="192"/>
         <image name="buttonOrange.png" width="600" height="279"/>
-        <image name="providence_logo1.png" width="338" height="90"/>
+        <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YCW-oQ-6O4"/>
