@@ -47,7 +47,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         {
             currentTextField.placeholder = "Select Current Location"
             currentTextField.enabled = true
-            endLocation = nil
+            startLocation = nil
         }
     }
     
