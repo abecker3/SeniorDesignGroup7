@@ -17,9 +17,8 @@ struct Concession
 }
 
 let concessions = [
-    Concession(name: "Cafe Cafeteria", category: "Main Tower", floor:"L3", hours:"6:30 AM to 7 PM"),
-    Concession(name: "Cafe Cafeteria2", category: "Main Tower", floor: "L3", hours: "6:30 AM to 7 PM"),
-    Concession(name: "Test", category: "Children's Hospital", floor: "L3", hours: "6:30 AM to 7 PM"),
-    Concession(name: "Test1", category: "Doctor's Building", floor: "3", hours: "8 AM to 6 PM"),
-    Concession(name: "Test2", category: "Heart Institute", floor: "L2", hours: "9 AM to 6 PM")
+    Concession(name: "Cafe Cafeteria",                  category: "Main Tower",             floor:"L3",     hours:"6:30 AM to 7 PM"),
+    Concession(name: "Thomas Hammer (Cafeteria)",       category: "Main Tower",             floor: "L3",    hours: "6:30 AM to 7 PM"),
+    Concession(name: "Thomas Hammer (Emergency)",       category: "Emergency",              floor: "1",     hours: "6:30 AM to 7 PM"),
+    Concession(name: "Thomas Hammer (Women's Center)",  category: "Women's Health Center",  floor: "Main",  hours: "6:30 AM to 7 PM"),
 ]
