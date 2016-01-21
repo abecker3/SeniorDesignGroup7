@@ -6,7 +6,7 @@
 //  Copyright © 2015 GU. All rights reserved.
 //
 
-import UIKit
+/*import UIKit
 
 class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIScrollViewDelegate{
     @IBOutlet weak var scrollMap: UIScrollView!
@@ -101,6 +101,74 @@ class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return self.floorMap
+    }
+    
+}*/
+
+import UIKit
+
+class OnCampusViewController: UIViewController, UIScrollViewDelegate{
+    @IBOutlet weak var scrollCurrent: UIScrollView!
+    @IBOutlet weak var currentMap: UIImageView!
+    @IBOutlet weak var scrollMap: UIScrollView!
+    @IBOutlet weak var floorMap: UIImageView!
+    var startLocation: Location!
+    var endLocation: Location!
+    
+    var defaultFloor = String()
+    var currentFloor = String()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        currentFloor = "Floor_2.jpg"
+        
+        switch endLocation.floor{
+        case "2": defaultFloor = "Floor_2.jpg"
+        case "3": defaultFloor = "Floor_3.jpg"
+        case "L1": defaultFloor = "LowerLevels.jpg"
+        case "L2": defaultFloor = "LowerLevels.jpg"
+        case "L3": defaultFloor = "LowerLevels.jpg"
+        default: defaultFloor = "Floor_1.jpg"
+        }
+        
+        floorMap.image = UIImage(named: defaultFloor)
+        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        currentMap.image = UIImage(named: currentFloor)
+        currentMap.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        self.scrollMap.maximumZoomScale = 5.0
+        self.scrollMap.clipsToBounds = true
+        
+        self.scrollCurrent.maximumZoomScale = 5.0
+        self.scrollCurrent.clipsToBounds = true
+        
+        
+        /*
+        Floor 1:    ["Medical Records","Adult Psychiatry","Surgery","Maternity",
+        Floor 2:    "Birth Place","ICU Cardiac","ICU","ICU Neuro","Child Psychiatry",
+        Floor 3:    "ICU Pediactric","Pediactric Unit","ICU Neonatal","Pediatric Oncology",
+        LL1:        "Emergency","Surgery Pediatric","Radiology"
+        LL3:        "Radiation Oncology"]    = 17
+        */
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        if (scrollView == scrollMap)
+        {
+            return self.floorMap
+        }
+        else
+        {
+            return self.currentMap
+        }
     }
     
 }

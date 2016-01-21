@@ -241,17 +241,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
-                                <rect key="frame" x="0.0" y="335" width="600" height="216"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="JIY-yd-2zC"/>
-                                </constraints>
-                            </pickerView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
-                                <rect key="frame" x="-5" y="0.0" width="605" height="333"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
+                                <rect key="frame" x="-5" y="0.0" width="605" height="305"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
-                                        <rect key="frame" x="15" y="8" width="582" height="317"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
+                                        <rect key="frame" x="15" y="8" width="582" height="297"/>
                                         <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
@@ -259,36 +253,57 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <constraints>
                                     <constraint firstItem="U83-MM-YIc" firstAttribute="leading" secondItem="MTY-QF-jCz" secondAttribute="leading" constant="15" id="BGZ-Lg-U4F"/>
                                     <constraint firstItem="U83-MM-YIc" firstAttribute="top" secondItem="MTY-QF-jCz" secondAttribute="topMargin" id="CmG-Jl-xj8"/>
-                                    <constraint firstItem="U83-MM-YIc" firstAttribute="centerY" secondItem="MTY-QF-jCz" secondAttribute="centerY" id="FPU-Kt-JNg"/>
+                                    <constraint firstItem="U83-MM-YIc" firstAttribute="centerY" secondItem="MTY-QF-jCz" secondAttribute="centerY" constant="4" id="FPU-Kt-JNg"/>
                                     <constraint firstItem="U83-MM-YIc" firstAttribute="centerX" secondItem="MTY-QF-jCz" secondAttribute="centerX" constant="3.5" id="P1s-Wp-bUh"/>
-                                    <constraint firstAttribute="bottom" secondItem="U83-MM-YIc" secondAttribute="bottom" constant="8" id="XXS-es-aC9"/>
+                                    <constraint firstAttribute="bottom" secondItem="U83-MM-YIc" secondAttribute="bottom" id="XXS-es-aC9"/>
                                     <constraint firstItem="U83-MM-YIc" firstAttribute="trailing" secondItem="MTY-QF-jCz" secondAttribute="trailingMargin" id="yRU-j7-ff3"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="JWc-UJ-WIP" id="syI-9k-DXT"/>
                                 </connections>
                             </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glt-xn-lJu">
+                                <rect key="frame" x="0.0" y="303" width="600" height="292"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2IK-Ic-WUY">
+                                        <rect key="frame" x="8" y="0.0" width="584" height="269"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="269" id="NRt-Cu-tem"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2IK-Ic-WUY" firstAttribute="bottom" secondItem="glt-xn-lJu" secondAttribute="bottomMargin" constant="-15" id="3LS-nb-364"/>
+                                    <constraint firstItem="2IK-Ic-WUY" firstAttribute="trailing" secondItem="glt-xn-lJu" secondAttribute="trailingMargin" id="M2V-4V-oOH"/>
+                                    <constraint firstItem="2IK-Ic-WUY" firstAttribute="leading" secondItem="glt-xn-lJu" secondAttribute="leadingMargin" id="Ysn-5e-tqT"/>
+                                    <constraint firstItem="2IK-Ic-WUY" firstAttribute="centerX" secondItem="glt-xn-lJu" secondAttribute="centerX" id="ojv-rb-SRy"/>
+                                    <constraint firstItem="2IK-Ic-WUY" firstAttribute="top" secondItem="glt-xn-lJu" secondAttribute="top" id="xf6-EC-gBE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="JWc-UJ-WIP" id="0CW-SX-G07"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="SU9-dA-I5H" secondAttribute="trailing" constant="-20" id="1uB-qR-uyf"/>
+                            <constraint firstItem="glt-xn-lJu" firstAttribute="top" secondItem="SZ2-Mv-AfC" secondAttribute="bottom" constant="239" id="2Ak-46-ZTa"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="glt-xn-lJu" secondAttribute="bottom" constant="-44" id="CKf-s1-Dna"/>
+                            <constraint firstItem="glt-xn-lJu" firstAttribute="trailing" secondItem="MTY-QF-jCz" secondAttribute="trailing" id="CZi-K4-cYQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MTY-QF-jCz" secondAttribute="trailing" constant="-20" id="K8e-6F-hrP"/>
                             <constraint firstItem="MTY-QF-jCz" firstAttribute="top" secondItem="VPS-rD-Anx" secondAttribute="topMargin" id="KzG-Uf-eSp"/>
+                            <constraint firstItem="glt-xn-lJu" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leading" id="PSb-PH-UYc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MTY-QF-jCz" secondAttribute="trailing" constant="-20" id="SOh-3P-Kpj"/>
                             <constraint firstItem="MTY-QF-jCz" firstAttribute="top" secondItem="VPS-rD-Anx" secondAttribute="topMargin" id="SR5-4a-x6b"/>
-                            <constraint firstItem="SU9-dA-I5H" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leadingMargin" constant="-20" id="Tbt-uj-BXf"/>
-                            <constraint firstItem="SU9-dA-I5H" firstAttribute="top" secondItem="MTY-QF-jCz" secondAttribute="bottom" constant="2" id="ZVd-1x-yLA"/>
                             <constraint firstItem="MTY-QF-jCz" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leadingMargin" constant="-25" id="i49-Wh-Zr5"/>
                             <constraint firstItem="MTY-QF-jCz" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leadingMargin" constant="-25" id="oRa-id-TrH"/>
-                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="SU9-dA-I5H" secondAttribute="bottom" constant="5" id="srv-4Z-aTp"/>
-                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="SU9-dA-I5H" secondAttribute="bottom" constant="5" id="tG9-SD-2qK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SU9-dA-I5H" secondAttribute="trailing" constant="-20" id="vR7-p8-30m"/>
+                            <constraint firstItem="pUQ-2j-KrD" firstAttribute="top" secondItem="MTY-QF-jCz" secondAttribute="bottom" constant="246" id="rcW-4j-Pu7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="On Campus" id="S4u-Me-5AF"/>
                     <connections>
+                        <outlet property="currentMap" destination="2IK-Ic-WUY" id="y0H-kk-RjA"/>
                         <outlet property="floorMap" destination="U83-MM-YIc" id="3f3-SI-y03"/>
-                        <outlet property="picker" destination="SU9-dA-I5H" id="Zas-hC-qBT"/>
+                        <outlet property="scrollCurrent" destination="glt-xn-lJu" id="iVb-CG-gQZ"/>
                         <outlet property="scrollMap" destination="MTY-QF-jCz" id="c3B-UE-JcX"/>
                     </connections>
                 </viewController>
