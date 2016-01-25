@@ -405,8 +405,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-fc-IIi">
-                                <rect key="frame" x="0.0" y="162" width="600" height="331"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-fc-IIi">
+                                <rect key="frame" x="0.0" y="140" width="600" height="403"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">1) Look around you for existing signs and follow one to an elevator.
 
@@ -433,18 +433,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="BTU-fc-IIi" secondAttribute="trailing" id="6IX-FA-G9q"/>
-                            <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" constant="-26" id="8z3-CI-TlT"/>
-                            <constraint firstItem="utH-iv-bKR" firstAttribute="top" secondItem="BTU-fc-IIi" secondAttribute="bottom" constant="58" id="EbY-0n-x91"/>
+                            <constraint firstItem="utH-iv-bKR" firstAttribute="top" secondItem="BTU-fc-IIi" secondAttribute="bottom" constant="8" id="EbY-0n-x91"/>
                             <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" id="UFe-5H-mDt"/>
-                            <constraint firstItem="BTU-fc-IIi" firstAttribute="top" secondItem="izM-xC-Mvz" secondAttribute="bottom" constant="30" id="b2C-ml-Wcq"/>
+                            <constraint firstItem="BTU-fc-IIi" firstAttribute="top" secondItem="izM-xC-Mvz" secondAttribute="bottom" constant="8" id="b2C-ml-Wcq"/>
                             <constraint firstItem="izM-xC-Mvz" firstAttribute="top" secondItem="w5m-Li-cl5" secondAttribute="bottom" constant="19" id="kzl-am-ojk"/>
                             <constraint firstItem="BTU-fc-IIi" firstAttribute="leading" secondItem="vj7-sa-SNe" secondAttribute="leading" id="tzZ-6C-9pV"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="8z3-CI-TlT"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Lost" id="4yg-SR-gyh">
                         <barButtonItem key="backBarButtonItem" title="Back" id="h8p-Rh-Y5q"/>
