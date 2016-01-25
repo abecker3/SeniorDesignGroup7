@@ -1138,7 +1138,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
             </objects>
             <point key="canvasLocation" x="2145" y="53"/>
         </scene>
-        <!--Services Table View Controller-->
+        <!--Directory-->
         <scene sceneID="JeY-dk-Nej">
             <objects>
                 <tableViewController id="brX-LQ-AWQ" customClass="ServicesTableViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
@@ -1177,15 +1177,16 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <outlet property="delegate" destination="brX-LQ-AWQ" id="abf-vQ-azD"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Directory" id="M30-Sz-7bu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jnc-gM-dbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3508" y="841"/>
         </scene>
-        <!--Directory-->
+        <!--DirectorySpecific-->
         <scene sceneID="6wx-hm-qfb">
             <objects>
-                <viewController storyboardIdentifier="Directory" title="Directory" id="sQJ-6N-59p" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Directory" title="DirectorySpecific" id="sQJ-6N-59p" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lIU-GQ-XN6"/>
                         <viewControllerLayoutGuide type="bottom" id="y7w-Cw-knf"/>
@@ -1200,24 +1201,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlI-r2-b2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3508" y="1709"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="hwY-6S-q7r">
-            <objects>
-                <viewController id="T1W-vb-0gL" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0qg-cb-1cl"/>
-                        <viewControllerLayoutGuide type="bottom" id="zcF-Xw-Vv9"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="40B-tV-ixB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JeJ-tF-pjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3895" y="2332"/>
         </scene>
         <!--Terms of Service-->
         <scene sceneID="eI5-qp-bKj">
