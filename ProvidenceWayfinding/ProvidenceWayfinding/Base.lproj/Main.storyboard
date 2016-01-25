@@ -1167,6 +1167,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="sQJ-6N-59p" kind="show" identifier="ServicesToDirectory" id="iR1-6R-CX7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1178,6 +1181,25 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jnc-gM-dbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3508" y="841"/>
+        </scene>
+        <!--Directory-->
+        <scene sceneID="6wx-hm-qfb">
+            <objects>
+                <viewController storyboardIdentifier="Directory" title="Directory" id="sQJ-6N-59p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lIU-GQ-XN6"/>
+                        <viewControllerLayoutGuide type="bottom" id="y7w-Cw-knf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="62F-52-0sa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KlI-r2-b2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3508" y="1709"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hwY-6S-q7r">
