@@ -56,7 +56,7 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
     
     func initOptions()
     {
-        options = uniqueCategoryArray(locations)
+        options = uniqueCategoryArray(directory)
         options.sortInPlace()
     }
     
@@ -64,7 +64,7 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
 //        return 1
 //    }
     
-    func uniqueCategoryArray(inputArray: [Location]!) -> [String]!
+    func uniqueCategoryArray(inputArray: [Directory]!) -> [String]!
     {
         var newArray = [String]()
         for x in inputArray
