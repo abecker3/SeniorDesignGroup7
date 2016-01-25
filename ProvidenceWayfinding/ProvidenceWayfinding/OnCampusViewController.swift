@@ -6,101 +6,113 @@
 //  Copyright © 2015 GU. All rights reserved.
 //
 
+
 import UIKit
 
-class OnCampusViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIScrollViewDelegate{
+class OnCampusViewController: UIViewController, UIScrollViewDelegate{
+    @IBOutlet weak var scrollCurrent: UIScrollView!
+    @IBOutlet weak var currentMap: UIImageView!
     @IBOutlet weak var scrollMap: UIScrollView!
     @IBOutlet weak var floorMap: UIImageView!
-    @IBOutlet weak var picker: UIPickerView!
     var startLocation: Location!
     var endLocation: Location!
     
-    var defaultFloor = String()
-    var pickerData: [[String]] = [[String]]()
+    var destinationFloor = String()
+    var currentFloor = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        switch endLocation.floor{
-            case "2": defaultFloor = "Floor_2.jpg"
-            case "3": defaultFloor = "Floor_3.jpg"
-            case "L1": defaultFloor = "LowerLevels.jpg"
-            case "L2": defaultFloor = "LowerLevels.jpg"
-            case "L3": defaultFloor = "LowerLevels.jpg"
-        default: defaultFloor = "Floor_1.jpg"
+        
+        switch startLocation.category{
+        case "Children's Hospital": currentFloor = getFloorChildrens(startLocation)
+        case "Women's Health Center": currentFloor = getFloorWomens(startLocation)
+        case "Heart Institute": currentFloor = getFloorHeart(startLocation)
+        case "Main Tower": currentFloor = getFloorMain(startLocation)
+        default: currentFloor = "NotAvailable.jpg"
         }
- 
-        floorMap.image = UIImage(named: defaultFloor)
+        
+        switch endLocation.category{
+        case "Children's Hospital": destinationFloor = getFloorChildrens(endLocation)
+        case "Women's Health Center": destinationFloor = getFloorWomens(endLocation)
+        case "Heart Institute": destinationFloor = getFloorHeart(endLocation)
+        case "Main Tower": destinationFloor = getFloorMain(endLocation)
+        default: destinationFloor = "NotAvailable.jpg"
+        }
+        
+        
+        floorMap.image = UIImage(named: destinationFloor)
         floorMap.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        currentMap.image = UIImage(named: currentFloor)
+        currentMap.contentMode = UIViewContentMode.ScaleAspectFit
         
         self.scrollMap.maximumZoomScale = 5.0
         self.scrollMap.clipsToBounds = true
         
-        // Connect data:
-        self.picker.delegate = self
-        self.picker.dataSource = self
+        self.scrollCurrent.maximumZoomScale = 5.0
+        self.scrollCurrent.clipsToBounds = true
         
-        // Input data into the Array:
-        pickerData = [["None","Adult Psychiatry"," Birth Place", "Child Psychiatry","Emergency","ICU",
-                        "ICU Cardiac","ICU Neonatal","ICU Neuro","ICU Pediatrics","Maternity",
-                        "Medical Records","Pediatric Oncology","Pediatric Unit","Radiation Oncology","Radiology",
-                        "Surgery","Surgery Pediatric"],
-                    ["None","Destination","Lower Levels","Floor 1","Floor 2","Floor 3"]]
-        /*
-        Floor 1:    ["Medical Records","Adult Psychiatry","Surgery","Maternity",
-        Floor 2:    "Birth Place","ICU Cardiac","ICU","ICU Neuro","Child Psychiatry",
-        Floor 3:    "ICU Pediactric","Pediactric Unit","ICU Neonatal","Pediatric Oncology",
-        LL1:        "Emergency","Surgery Pediatric","Radiology"
-        LL3:        "Radiation Oncology"]    = 17
-        */
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    // The number of columns of data
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 2
-    }
-    
-    // The number of rows of data
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData[component].count
-    }
-    
-    // The data to return for the row and component (column) that's being passed in
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[component][row]
-    }
-    
-    // Catpure the picker view selection
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // This method is triggered whenever the user makes a change to the picker selection.
-        // The parameter named row and component represents what was selected.
-        if component == 1{
-            //This is if the user chooses a specific floor
-            if (row == 1){floorMap.image = UIImage(named: defaultFloor)}
-            else if (row == 2){floorMap.image = UIImage(named:"LowerLevels.jpg")}
-            else if (row == 3){floorMap.image = UIImage(named:"Floor_1.jpg")}
-            else if (row == 4){floorMap.image = UIImage(named:"Floor_2.jpg")}
-            else if (row == 5){floorMap.image = UIImage(named:"Floor_3.jpg")}
-            picker.selectRow(0, inComponent: 0, animated: true)
-        }
-        else if component == 0{
-            //This is if the user selects a department
-            if (row == 1 || row == 11 || row == 16 || row == 10)              {floorMap.image = UIImage(named:"Floor_1.jpg")}
-            else if (row == 2 || row == 6 || row == 5 || row == 8 || row == 3){floorMap.image = UIImage(named:"Floor_2.jpg")}
-            else if (row == 9 || row == 13 || row == 7 || row == 12)          {floorMap.image = UIImage(named:"Floor_3.jpg")}
-            else if (row == 4 || row == 17 || row == 15 || row == 14)         {floorMap.image = UIImage(named:"LowerLevels.jpg")}
-            picker.selectRow(0, inComponent: 1, animated: true)
-        }
-        
-    }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        return self.floorMap
+        if (scrollView == scrollMap)
+        {
+            return self.floorMap
+        }
+        else
+        {
+            return self.currentMap
+        }
+    }
+    
+    func getFloorChildrens(floorMap: Location) -> String{
+        switch floorMap.floor{
+        //case "2": return "Childrens_2.jpg"
+        //case "3": return "Childrens_3.jpg"
+        //case "4": return "Childrens_4.jpg"
+        //case "5": return "Childrens_5.jpg"
+        //default: return "Childrens_1.jpg"
+        default: return "Heart_1.jpg"
+        }
+    }
+    
+    func getFloorHeart(floorMap: Location) -> String{
+        switch floorMap.floor{
+        //case "2": return "Heart_2.jpg"
+        //case "3": return "Heart_3.jpg"
+        //case "4": return "Heart_4.jpg"
+        //case "5": return "Heart_5.jpg"
+        //default: return "Heart_1.jpg"
+        default: return "Heart_2.jpg"
+        }
+    }
+    
+    func getFloorMain(floorMap: Location) -> String{
+        switch floorMap.floor{
+        //case "2": return "Main_2.jpg"
+        //case "3": return "Main_3.jpg"
+        //case "4": return "Main_4.jpg"
+        //case "5": return "Main_5.jpg"
+        //default: return "Main_1.jpg"
+        default: return "Heart_1.jpg"
+        }
+    }
+    
+    func getFloorWomens(floorMap: Location) -> String{
+        switch floorMap.floor{
+       // case "2": return "Womens_2.jpg"
+        //case "3": return "Womens_3.jpg"
+        //case "4": return "Womens_4.jpg"
+        //case "5": return "Womens_5.jpg"
+        //default: return "Womens_1.jpg"
+        default: return "Heart_2.jpg"
+        }
     }
     
 }

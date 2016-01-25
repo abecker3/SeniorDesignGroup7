@@ -56,7 +56,7 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
     
     func initOptions()
     {
-        options = uniqueCategoryArray(locations)
+        options = uniqueCategoryArray(directory)
         options.sortInPlace()
     }
     
@@ -64,20 +64,21 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
 //        return 1
 //    }
     
-    func uniqueCategoryArray(inputArray: [Location]!) -> [String]!
+    func uniqueCategoryArray(inputArray: [Directory]!) -> [String]!
     {
         var newArray = [String]()
         for x in inputArray
         {
-            if(newArray.contains(x.category))
+            /*if(newArray.contains(x.category))
             {
                 continue
             }
             else
             {
                 newArray.append(x.category)
-            }
+            }*/
             //print(x.category)
+            newArray.append(x.name)
         }
         
         return newArray
@@ -101,14 +102,14 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
         let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
         
         if(self.resultSearchController.active) {
-            cell.textLabel?.text = filteredTableData[indexPath.row] + ":"
-            cell.detailTextLabel!.text = "11 AM to 8 PM"
+            cell.textLabel?.text = filteredTableData[indexPath.row]
+            //cell.detailTextLabel!.text = "11 AM to 8 PM"
             return cell
         }
             
         else {
             cell.textLabel?.text = options[indexPath.row]
-            cell.detailTextLabel!.text = "11 AM to 8 PM"
+            //cell.detailTextLabel!.text = "11 AM to 8 PM"
             return cell
         }
     }
