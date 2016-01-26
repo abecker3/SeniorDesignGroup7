@@ -124,4 +124,13 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
         
         return cell
     }*/
+    
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "buildingToLocation")
+        {
+            let nextViewController = segue.destinationViewController as! LocationTableViewController
+            nextViewController.passInTextFieldTag = self.passInTextFieldTag
+            nextViewController.passInCategory = options[buildingTableView.indexPathForSelectedRow!.row]
+        }
+    }*/
 }
