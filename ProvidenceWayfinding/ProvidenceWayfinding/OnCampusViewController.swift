@@ -12,8 +12,6 @@ import UIKit
 class OnCampusViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var scrollCurrent: UIScrollView!
     @IBOutlet weak var currentMap: UIImageView!
-    @IBOutlet weak var scrollMap: UIScrollView!
-    @IBOutlet weak var floorMap: UIImageView!
     var startLocation: Location!
     var endLocation: Location!
     
@@ -45,18 +43,20 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         }
         
         
-        floorMap.image = UIImage(named: destinationFloor)
-        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
-        
         currentMap.image = UIImage(named: currentFloor)
         currentMap.contentMode = UIViewContentMode.ScaleAspectFit
-        
-        self.scrollMap.maximumZoomScale = 5.0
-        self.scrollMap.clipsToBounds = true
-        
+
         self.scrollCurrent.maximumZoomScale = 5.0
         self.scrollCurrent.clipsToBounds = true
+                
+        //let nextViewController = UIStoryboardSegue.destinationViewController as! DestinationViewController;
+        //nextViewController.destinationFloor = self.destinationFloor
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextViewController = segue.destinationViewController as! DestinationViewController;
+        nextViewController.destinationFloor = self.destinationFloor
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,14 +65,8 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
     
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        if (scrollView == scrollMap)
-        {
-            return self.floorMap
-        }
-        else
-        {
             return self.currentMap
-        }
+        
     }
     
     func getFloorChildrens(floorMap: Location) -> String{
