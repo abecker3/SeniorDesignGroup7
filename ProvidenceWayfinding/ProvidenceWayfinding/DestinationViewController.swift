@@ -10,10 +10,13 @@
 import UIKit
 
 class DestinationViewController: UIViewController, UIScrollViewDelegate{
+    @IBOutlet weak var whichFloor: UITextField!
     @IBOutlet weak var floorMap: UIImageView!
     @IBOutlet weak var scrollMap: UIScrollView!
     
     var destinationFloor = String()
+    var endBuilding = String()
+    var textDestinationFloor = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,7 @@ class DestinationViewController: UIViewController, UIScrollViewDelegate{
         self.scrollMap.maximumZoomScale = 5.0
         self.scrollMap.clipsToBounds = true
         
+        whichFloor.text = endBuilding + " Floor " + textDestinationFloor
     }
     
     override func didReceiveMemoryWarning() {
