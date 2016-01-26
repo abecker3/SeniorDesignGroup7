@@ -10,4 +10,7 @@ import UIKit
 
 class DirectorySpecificViewController: UIViewController {
 
+    var passInCategory: String!
+    
+    
 }
