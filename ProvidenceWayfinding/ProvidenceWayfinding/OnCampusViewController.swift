@@ -10,17 +10,31 @@
 import UIKit
 
 class OnCampusViewController: UIViewController, UIScrollViewDelegate{
+    @IBOutlet weak var whichFloor: UITextField!
     @IBOutlet weak var scrollCurrent: UIScrollView!
     @IBOutlet weak var currentMap: UIImageView!
     var startLocation: Location!
     var endLocation: Location!
     
-    var destinationFloor = String()
+    //Variables for this screen
     var currentFloor = String()
+    var startBuilding = String()
+    var textCurrentFloor = String()
+    
+    //Variables for next screen
+    var destinationFloor = String()
+    var endBuilding = String()
+    var textDestinationFloor = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        startBuilding = startLocation.category
+        textCurrentFloor = startLocation.floor
+        if textCurrentFloor == "Main"{
+            textCurrentFloor = "1"
+        }
         
         switch startLocation.category{
         case "Children's Hospital": currentFloor = getFloorChildrens(startLocation)
@@ -30,6 +44,12 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         case "Emergency": currentFloor = getFloorMain(startLocation)
         case "Surgery Center": currentFloor = getFloorWomens(startLocation)
         default: currentFloor = "NotAvailable.jpg"
+        }
+        
+        endBuilding = endLocation.category
+        textDestinationFloor = endLocation.floor
+        if textDestinationFloor == "Main"{
+            textDestinationFloor = "1"
         }
         
         switch endLocation.category{
@@ -48,15 +68,16 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
 
         self.scrollCurrent.maximumZoomScale = 5.0
         self.scrollCurrent.clipsToBounds = true
-                
-        //let nextViewController = UIStoryboardSegue.destinationViewController as! DestinationViewController;
-        //nextViewController.destinationFloor = self.destinationFloor
+        
+        whichFloor.text = startBuilding + " Floor " + textCurrentFloor
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nextViewController = segue.destinationViewController as! DestinationViewController;
         nextViewController.destinationFloor = self.destinationFloor
+        nextViewController.textDestinationFloor = self.textDestinationFloor
+        nextViewController.endBuilding = self.endBuilding
     }
     
     override func didReceiveMemoryWarning() {
