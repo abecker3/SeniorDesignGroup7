@@ -137,19 +137,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjH-BT-v5f">
-                                <rect key="frame" x="230" y="489" width="131" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="IyO-Zz-FzL"/>
-                                    <constraint firstAttribute="width" constant="131" id="pV4-fT-qfs"/>
-                                </constraints>
-                                <state key="normal" title="Directions" backgroundImage="buttonOrange.png">
-                                    <color key="titleColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mJf-vX-dEY" kind="show" id="0MT-cX-0XX"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="As People of Providence, we reveal God's love for all, especially the poor and vunerable,through our compassionate service." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQD-ij-gPZ">
                                 <rect key="frame" x="0.0" y="241" width="600" height="211"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,17 +147,15 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fMd-z2-nUt" firstAttribute="top" secondItem="vQD-ij-gPZ" secondAttribute="bottom" constant="99" id="0WN-0e-6Om"/>
                             <constraint firstItem="fRc-rC-jgH" firstAttribute="top" secondItem="gdp-Wh-bsj" secondAttribute="bottom" constant="8" symbolic="YES" id="2oD-Q0-uJy"/>
                             <constraint firstItem="vQD-ij-gPZ" firstAttribute="centerX" secondItem="mdJ-Pr-KE4" secondAttribute="centerX" id="3Ak-xP-oaH"/>
-                            <constraint firstItem="TjH-BT-v5f" firstAttribute="centerX" secondItem="fRc-rC-jgH" secondAttribute="centerX" id="BMX-8v-vkD"/>
                             <constraint firstItem="mdJ-Pr-KE4" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leadingMargin" id="III-Kf-wvy"/>
                             <constraint firstAttribute="trailing" secondItem="vQD-ij-gPZ" secondAttribute="trailing" id="RWs-xO-dlF"/>
                             <constraint firstItem="fRc-rC-jgH" firstAttribute="centerX" secondItem="sF1-Fm-tx0" secondAttribute="centerX" constant="-5" id="UzL-Z8-vXc"/>
-                            <constraint firstItem="TjH-BT-v5f" firstAttribute="top" secondItem="vQD-ij-gPZ" secondAttribute="bottom" constant="37" id="jjp-8j-20h"/>
                             <constraint firstItem="vQD-ij-gPZ" firstAttribute="top" secondItem="mdJ-Pr-KE4" secondAttribute="bottom" constant="18" id="wiB-2Z-7jz"/>
                             <constraint firstItem="vQD-ij-gPZ" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leading" id="xVE-P9-BnS"/>
                             <constraint firstItem="mdJ-Pr-KE4" firstAttribute="top" secondItem="fRc-rC-jgH" secondAttribute="bottom" constant="23" id="y4s-ys-iDD"/>
-                            <constraint firstAttribute="bottom" secondItem="TjH-BT-v5f" secondAttribute="bottom" constant="20" symbolic="YES" id="zoQ-2L-4w3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eN9-MX-1Xa"/>
@@ -454,7 +439,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <!--Tab Bar Controller-->
         <scene sceneID="1Hm-0u-Tzn">
             <objects>
-                <tabBarController id="8pL-G4-aBH" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" id="8pL-G4-aBH" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="tmQ-ry-SEa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1238,7 +1223,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0MT-cX-0XX"/>
         <segue reference="YCW-oQ-6O4"/>
     </inferredMetricsTieBreakers>
 </document>
