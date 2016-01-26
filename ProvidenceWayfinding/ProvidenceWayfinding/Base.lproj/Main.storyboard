@@ -241,7 +241,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glt-xn-lJu">
                                 <rect key="frame" x="0.0" y="124" width="600" height="432"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2IK-Ic-WUY">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2IK-Ic-WUY">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                                         <animations/>
                                         <constraints>
@@ -264,6 +264,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             </scrollView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J1a-ke-xeh">
                                 <rect key="frame" x="0.0" y="72" width="600" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -315,7 +316,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Daf-UT-qIu">
                                 <rect key="frame" x="0.0" y="125" width="600" height="431"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zYw-Bc-kav">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zYw-Bc-kav">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                                         <animations/>
                                         <constraints>
@@ -337,6 +338,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             </scrollView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6S7-Cc-zUb">
                                 <rect key="frame" x="0.0" y="72" width="600" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
