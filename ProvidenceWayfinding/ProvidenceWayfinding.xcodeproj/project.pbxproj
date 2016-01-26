@@ -25,6 +25,7 @@
 		39DDF7BC1C0D6B9E00CC63A5 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */; };
 		39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E909351C0E30F500F81024 /* MoreViewController.swift */; };
 		A06517E11C56CD1800B12A63 /* DirectoryInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */; };
+		A0DD87201C580E0B0071B478 /* DirectorySpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */; };
 		A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F0AC691C176CB300052430 /* ConcessionsTableViewController.swift */; };
 		B696505A1C04F1EA00C8276A /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */; };
 		B696505B1C04F1EA00C8276A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650571C04F1EA00C8276A /* Location.swift */; };
@@ -88,6 +89,7 @@
 		39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		39E909351C0E30F500F81024 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryInformation.swift; sourceTree = "<group>"; };
+		A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorySpecificViewController.swift; sourceTree = "<group>"; };
 		A0F0AC691C176CB300052430 /* ConcessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcessionsTableViewController.swift; sourceTree = "<group>"; };
 		B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		B69650571C04F1EA00C8276A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				351906AC1BE9489200F1D343 /* OnCampusViewController.swift */,
 				B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */,
 				D2CA49EA1BE2B58B00E79580 /* Main.storyboard */,
+				A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */,
 				354B99041C14F6010087E67C /* LostViewController.swift */,
 				B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */,
 				354B99021C121AB90087E67C /* ToSMoreViewController.swift */,
@@ -396,6 +399,7 @@
 				A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */,
 				D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */,
 				B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */,
+				A0DD87201C580E0B0071B478 /* DirectorySpecificViewController.swift in Sources */,
 				39DDF7BA1C0D348A00CC63A5 /* HoursViewController.swift in Sources */,
 				B696505A1C04F1EA00C8276A /* CategoryTableViewController.swift in Sources */,
 				B696505D1C04F1EA00C8276A /* SurveyViewController.swift in Sources */,
