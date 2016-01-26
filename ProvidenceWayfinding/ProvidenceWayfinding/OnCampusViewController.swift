@@ -12,8 +12,6 @@ import UIKit
 class OnCampusViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var scrollCurrent: UIScrollView!
     @IBOutlet weak var currentMap: UIImageView!
-    @IBOutlet weak var scrollMap: UIScrollView!
-    @IBOutlet weak var floorMap: UIImageView!
     var startLocation: Location!
     var endLocation: Location!
     
@@ -29,6 +27,8 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         case "Women's Health Center": currentFloor = getFloorWomens(startLocation)
         case "Heart Institute": currentFloor = getFloorHeart(startLocation)
         case "Main Tower": currentFloor = getFloorMain(startLocation)
+        case "Emergency": currentFloor = getFloorMain(startLocation)
+        case "Surgery Center": currentFloor = getFloorWomens(startLocation)
         default: currentFloor = "NotAvailable.jpg"
         }
         
@@ -37,22 +37,26 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         case "Women's Health Center": destinationFloor = getFloorWomens(endLocation)
         case "Heart Institute": destinationFloor = getFloorHeart(endLocation)
         case "Main Tower": destinationFloor = getFloorMain(endLocation)
+        case "Emergency": destinationFloor = getFloorMain(endLocation)
+        case "Surgery Center": destinationFloor = getFloorWomens(endLocation)
         default: destinationFloor = "NotAvailable.jpg"
         }
         
         
-        floorMap.image = UIImage(named: destinationFloor)
-        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
-        
         currentMap.image = UIImage(named: currentFloor)
         currentMap.contentMode = UIViewContentMode.ScaleAspectFit
-        
-        self.scrollMap.maximumZoomScale = 5.0
-        self.scrollMap.clipsToBounds = true
-        
+
         self.scrollCurrent.maximumZoomScale = 5.0
         self.scrollCurrent.clipsToBounds = true
+                
+        //let nextViewController = UIStoryboardSegue.destinationViewController as! DestinationViewController;
+        //nextViewController.destinationFloor = self.destinationFloor
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextViewController = segue.destinationViewController as! DestinationViewController;
+        nextViewController.destinationFloor = self.destinationFloor
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,14 +65,8 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
     
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        if (scrollView == scrollMap)
-        {
-            return self.floorMap
-        }
-        else
-        {
             return self.currentMap
-        }
+        
     }
     
     func getFloorChildrens(floorMap: Location) -> String{
@@ -78,7 +76,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         //case "4": return "Childrens_4.jpg"
         //case "5": return "Childrens_5.jpg"
         //default: return "Childrens_1.jpg"
-        default: return "Heart_1.jpg"
+        default: return "NotAvailable.jpg"
         }
     }
     
@@ -111,7 +109,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         //case "4": return "Womens_4.jpg"
         //case "5": return "Womens_5.jpg"
         //default: return "Womens_1.jpg"
-        default: return "Heart_2.jpg"
+        default: return "NotAvailable.jpg"
         }
     }
     
