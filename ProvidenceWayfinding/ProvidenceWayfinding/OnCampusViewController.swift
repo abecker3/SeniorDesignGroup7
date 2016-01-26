@@ -29,6 +29,8 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         case "Women's Health Center": currentFloor = getFloorWomens(startLocation)
         case "Heart Institute": currentFloor = getFloorHeart(startLocation)
         case "Main Tower": currentFloor = getFloorMain(startLocation)
+        case "Emergency": currentFloor = getFloorMain(startLocation)
+        case "Surgery Center": currentFloor = getFloorWomens(startLocation)
         default: currentFloor = "NotAvailable.jpg"
         }
         
@@ -37,6 +39,8 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         case "Women's Health Center": destinationFloor = getFloorWomens(endLocation)
         case "Heart Institute": destinationFloor = getFloorHeart(endLocation)
         case "Main Tower": destinationFloor = getFloorMain(endLocation)
+        case "Emergency": destinationFloor = getFloorMain(endLocation)
+        case "Surgery Center": destinationFloor = getFloorWomens(endLocation)
         default: destinationFloor = "NotAvailable.jpg"
         }
         
@@ -78,7 +82,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         //case "4": return "Childrens_4.jpg"
         //case "5": return "Childrens_5.jpg"
         //default: return "Childrens_1.jpg"
-        default: return "Heart_1.jpg"
+        default: return "NotAvailable.jpg"
         }
     }
     
@@ -111,7 +115,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         //case "4": return "Womens_4.jpg"
         //case "5": return "Womens_5.jpg"
         //default: return "Womens_1.jpg"
-        default: return "Heart_2.jpg"
+        default: return "NotAvailable.jpg"
         }
     }
     
