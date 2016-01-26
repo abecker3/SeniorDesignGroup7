@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -193,8 +194,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-5e-6Xd">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-VZ-6pk">
-                                        <rect key="frame" x="0.0" y="-30" width="600" height="487"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iug-VZ-6pk">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="457"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Iug-VZ-6pk" secondAttribute="height" multiplier="1800:1371" id="0BG-Mk-Loj"/>
                                         </constraints>
@@ -241,17 +242,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SU9-dA-I5H">
-                                <rect key="frame" x="0.0" y="335" width="600" height="216"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="JIY-yd-2zC"/>
-                                </constraints>
-                            </pickerView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
-                                <rect key="frame" x="-5" y="0.0" width="605" height="333"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTY-QF-jCz">
+                                <rect key="frame" x="0.0" y="64" width="600" height="221"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
-                                        <rect key="frame" x="15" y="8" width="582" height="317"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U83-MM-YIc">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="221"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="221" id="TWo-Hi-F1b"/>
@@ -275,10 +270,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2IK-Ic-WUY">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="246"/>
-                                        <animations/>
                                     </imageView>
                                 </subviews>
-                                <animations/>
                                 <constraints>
                                     <constraint firstItem="2IK-Ic-WUY" firstAttribute="centerY" secondItem="glt-xn-lJu" secondAttribute="centerY" id="4SZ-Pn-5HX"/>
                                     <constraint firstAttribute="bottom" secondItem="2IK-Ic-WUY" secondAttribute="bottom" id="8AD-dy-cFL"/>
@@ -293,7 +286,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wD-To-0xg">
                                 <rect key="frame" x="0.0" y="285" width="600" height="20"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Uaz-Tv-WWC"/>
@@ -431,7 +423,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="izM-xC-Mvz">
-                                <rect key="frame" x="179" y="83" width="190" height="49"/>
+                                <rect key="frame" x="205" y="83" width="190" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="190" id="Jv0-rU-m8S"/>
                                     <constraint firstAttribute="height" constant="49" id="tx5-bP-Ngy"/>
@@ -474,10 +466,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <viewControllerLayoutGuide type="bottom" id="r5p-zp-nMB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d9l-GJ-3Zc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8W9-P7-8us">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8W9-P7-8us">
                                 <rect key="frame" x="208" y="72" width="185" height="29"/>
                                 <segments>
                                     <segment title="Services"/>
@@ -487,17 +479,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <action selector="showComponent:" destination="g5d-IB-9aA" eventType="valueChanged" id="keu-uv-Aie"/>
                                 </connections>
                             </segmentedControl>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8C-N4-uQ2">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8C-N4-uQ2">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
-                                <connections>
-                                    <segue destination="8wJ-LP-M0f" kind="embed" id="SPb-H4-cYR"/>
-                                </connections>
                             </containerView>
-                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jud-Hh-x0s">
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jud-Hh-x0s">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
-                                <connections>
-                                    <segue destination="EM0-0D-imj" kind="embed" id="hGT-Kd-uRg"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1131,48 +1117,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
             </objects>
             <point key="canvasLocation" x="2145" y="53"/>
         </scene>
-        <!--Services Table View Controller-->
-        <scene sceneID="QsR-FM-1Er">
-            <objects>
-                <viewController id="8wJ-LP-M0f" customClass="ServicesTableViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6cd-6V-Taf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="building" textLabel="VpD-UO-FX5" detailTextLabel="EJH-ZV-T8t" style="IBUITableViewCellStyleValue1" id="KHe-Ga-yBG">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KHe-Ga-yBG" id="l9s-5K-iYI">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VpD-UO-FX5">
-                                            <rect key="frame" x="15" y="12" width="32" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EJH-ZV-T8t">
-                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CFp-gk-fcb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3123" y="1576"/>
-        </scene>
-        <!--Concessions Table View Controller-->
-        <scene sceneID="Dgq-En-i2L">
+        <!--Directory-->
+        <scene sceneID="JeY-dk-Nej">
             <objects>
                 <tableViewController id="brX-LQ-AWQ" customClass="ServicesTableViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CXQ-XB-KgJ">
@@ -1203,6 +1149,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="sQJ-6N-59p" kind="show" identifier="ServicesToDirectory" id="iR1-6R-CX7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1227,6 +1176,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     <view key="view" contentMode="scaleToFill" id="62F-52-0sa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlI-r2-b2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
