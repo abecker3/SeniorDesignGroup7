@@ -26,7 +26,7 @@ let directory = [
     Directory(name: "Doctors Building Information", category: "Doctors Building", floor: "?", hours: "9AM to 5PM", ext: 44775),
     Directory(name: "Emergency Department", category: "Emergency", floor: "L1", hours: "9AM to 5PM", ext: 43344),
     Directory(name: "Emergency FastTrack", category: "Emergency", floor: "?", hours: "9AM to 5PM", ext: 43357),
-    Directory(name: "Gift Shopt", category: "Main Tower", floor: "Main", hours: "9AM to 5PM", ext: 43285),
+    Directory(name: "Gift Shop", category: "Main Tower", floor: "Main", hours: "9AM to 5PM", ext: 43285),
     Directory(name: "ICU Information", category: "?", floor: "?", hours: "9AM to 5PM", ext: 43310),
     Directory(name: "Intermediate Nursing", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 44648),
     Directory(name: "Madison Inn", category: "Madison Inn", floor: "n/a", hours: "9AM to 5PM", ext: 4744200),
