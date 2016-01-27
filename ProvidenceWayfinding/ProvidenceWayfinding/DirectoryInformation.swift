@@ -14,12 +14,40 @@ struct Directory
     var category: String
     var floor: String
     var hours: String
-    var ext: String //phone extension, named ext because extension is a keyword
+    var ext: Int //phone extension, named ext because extension is a keyword
 }
 
 
 let directory = [
-    Directory(name: "Admitting", category: "Main Tower", floor: "Main", hours: "9AM to 5PM", ext: "12345"),
+    Directory(name: "Adolescent Medicine", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 45445),
+    Directory(name: "Child Life Specialists", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 43049),
+    Directory(name: "Children's Hospital Administration", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 42800),
+    Directory(name: "Developmental Pediatrics", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 42730),
+    Directory(name: "Doctors Building Information", category: "Doctors Building", floor: "?", hours: "9AM to 5PM", ext: 44775),
+    Directory(name: "Emergency Department", category: "Emergency", floor: "L1", hours: "9AM to 5PM", ext: 43344),
+    Directory(name: "Emergency FastTrack", category: "Emergency", floor: "?", hours: "9AM to 5PM", ext: 43357),
+    Directory(name: "Gift Shopt", category: "Main Tower", floor: "Main", hours: "9AM to 5PM", ext: 43285),
+    Directory(name: "ICU Information", category: "?", floor: "?", hours: "9AM to 5PM", ext: 43310),
+    Directory(name: "Intermediate Nursing", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 44648),
+    Directory(name: "Madison Inn", category: "Madison Inn", floor: "n/a", hours: "9AM to 5PM", ext: 4744200),
+    Directory(name: "Main Entrance Information", category: "Main Tower", floor: "?", hours: "9AM to 5PM", ext: 43227),
+    Directory(name: "Main Floor Back Entrance Information", category: "Main Tower", floor: "?", hours: "9AM to 5PM", ext: 43226),
+    Directory(name: "Neonatal Intensive Care Unit", category: "Women's Health Center", floor: "3", hours: "9AM to 5PM", ext: 46300),
+    Directory(name: "Northwest Heart and Lung", category: "?", floor: "?", hours: "9AM to 5PM", ext: 4560262),
+    Directory(name: "Pediatric Emergency", category: "Emergency", floor: "L1", hours: "9AM to 5PM", ext: 45690),
+    Directory(name: "Pediatric Endocrinology", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 42880),
+    Directory(name: "Pediatric Gastroenterology", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 45437),
+    Directory(name: "Pediatric Intensive Care Unit", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 45233),
+    Directory(name: "Pediatric Intensivists", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 45233),
+    Directory(name: "Pediatric Nephrology", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 3400930),
+    Directory(name: "Pediatric Neurology", category: "Children's Hospital", floor: "?", hours: "9AM to 5PM", ext: 45440),
+    Directory(name: "Pediatric Oncology Inpatient", category: "Children's Hospital", floor: "3", hours: "9AM to 5PM", ext: 42700),
+    Directory(name: "Pediatric Oncology Outpatient", category: "Children's Hospital", floor: "3", hours: "9AM to 5PM", ext: 42777),
+    Directory(name: "Pediatric Pulmonology", category: "?", floor: "?", hours: "9AM to 5PM", ext: 46960),
+    Directory(name: "Pediatric Surgeons", category: "?", floor: "?", hours: "9AM to 5PM", ext: 45445),
+    Directory(name: "Pediatric Surgery Center", category: "?", floor: "?", hours: "9AM to 5PM", ext: 43112),
+    Directory(name: "Providence Center for Congenital Heart Disease", category: "?", floor: "?", hours: "9AM to 5PM", ext: 46707),
+
     /*Location(name: "Admitting",                                                         category: "Main Tower",                     floor: "Main"),
     Location(name: "Birth Place",                                                       category: "Women's Health Center",          floor: "2"),
     Location(name: "Bone & Joint Center",                                               category: "Main Tower",                     floor: "4"),
