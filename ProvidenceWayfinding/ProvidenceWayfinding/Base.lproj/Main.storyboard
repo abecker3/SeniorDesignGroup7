@@ -1334,6 +1334,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="8Mc-gX-Ooj"/>
                     <connections>
+                        <outlet property="buildingLabel" destination="rfM-uC-SmA" id="CFt-Ek-vYL"/>
+                        <outlet property="floorLabel" destination="ak0-sB-c0u" id="skM-wT-4rQ"/>
+                        <outlet property="hoursLabel" destination="VLb-IW-Ip4" id="WPX-Zv-cUB"/>
                         <outlet property="nameLabel" destination="BEG-x4-hxK" id="6DB-rn-OzW"/>
                         <outlet property="phoneLabel" destination="1vm-GG-exD" id="67m-KG-hWG"/>
                     </connections>

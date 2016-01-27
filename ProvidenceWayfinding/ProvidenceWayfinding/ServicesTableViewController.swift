@@ -136,7 +136,7 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
             //let cell = table.dequeueReusableCellWithIdentifier("building", forIndexPath: selectedCellPath!)
             let cell = table.cellForRowAtIndexPath(selectedCellPath!)
             print(cell!.textLabel?.text)
-            nextViewController.passInCategory = cell!.textLabel?.text
+            nextViewController.passInName = cell!.textLabel?.text
         }
     }
 }
