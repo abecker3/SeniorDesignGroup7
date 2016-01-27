@@ -228,12 +228,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glt-xn-lJu">
-                                <rect key="frame" x="0.0" y="124" width="600" height="432"/>
+                                <rect key="frame" x="0.0" y="124" width="600" height="359"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2IK-Ic-WUY">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="432"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="359"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="432" id="f2y-jI-l7z"/>
+                                            <constraint firstAttribute="height" constant="359" id="f2y-jI-l7z"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -254,16 +254,26 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phq-U1-xgh">
+                                <rect key="frame" x="0.0" y="484" width="600" height="72"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="glt-xn-lJu" firstAttribute="bottom" secondItem="pUQ-2j-KrD" secondAttribute="top" id="4IU-db-Eqa"/>
+                            <constraint firstItem="glt-xn-lJu" firstAttribute="bottom" secondItem="pUQ-2j-KrD" secondAttribute="top" constant="-73" id="4IU-db-Eqa"/>
                             <constraint firstItem="J1a-ke-xeh" firstAttribute="trailing" secondItem="glt-xn-lJu" secondAttribute="trailing" id="6IR-2c-E7a"/>
+                            <constraint firstItem="Phq-U1-xgh" firstAttribute="top" secondItem="glt-xn-lJu" secondAttribute="bottom" constant="1" id="Cbq-E3-Mtn"/>
+                            <constraint firstItem="Phq-U1-xgh" firstAttribute="leading" secondItem="glt-xn-lJu" secondAttribute="leading" id="FdG-4i-AXT"/>
+                            <constraint firstItem="Phq-U1-xgh" firstAttribute="bottom" secondItem="pUQ-2j-KrD" secondAttribute="top" id="LAr-W5-nT8"/>
                             <constraint firstAttribute="trailing" secondItem="glt-xn-lJu" secondAttribute="trailing" id="LL3-NX-w5o"/>
                             <constraint firstItem="J1a-ke-xeh" firstAttribute="top" secondItem="SZ2-Mv-AfC" secondAttribute="bottom" constant="8" symbolic="YES" id="dMs-Ky-uiI"/>
                             <constraint firstItem="glt-xn-lJu" firstAttribute="top" secondItem="SZ2-Mv-AfC" secondAttribute="bottom" constant="60" id="mb0-Nt-JB3"/>
                             <constraint firstItem="glt-xn-lJu" firstAttribute="leading" secondItem="VPS-rD-Anx" secondAttribute="leading" id="oUp-n8-9fx"/>
                             <constraint firstItem="J1a-ke-xeh" firstAttribute="leading" secondItem="glt-xn-lJu" secondAttribute="leading" id="rxt-4A-VTq"/>
+                            <constraint firstItem="Phq-U1-xgh" firstAttribute="trailing" secondItem="glt-xn-lJu" secondAttribute="trailing" id="tc9-Wf-ksG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="On Campus" id="S4u-Me-5AF"/>
@@ -278,6 +288,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="currentMap" destination="2IK-Ic-WUY" id="y0H-kk-RjA"/>
+                        <outlet property="instructionsField" destination="Phq-U1-xgh" id="XCb-Qq-jBB"/>
                         <outlet property="scrollCurrent" destination="glt-xn-lJu" id="iVb-CG-gQZ"/>
                         <outlet property="whichFloor" destination="J1a-ke-xeh" id="Lr1-A8-FVr"/>
                     </connections>

@@ -10,6 +10,7 @@
 import UIKit
 
 class OnCampusViewController: UIViewController, UIScrollViewDelegate{
+    @IBOutlet weak var instructionsField: UITextView!
     @IBOutlet weak var whichFloor: UITextField!
     @IBOutlet weak var scrollCurrent: UIScrollView!
     @IBOutlet weak var currentMap: UIImageView!
@@ -20,6 +21,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
     var currentFloor = String()
     var startBuilding = String()
     var textCurrentFloor = String()
+    var parkingGarage = Bool()
     
     //Variables for next screen
     var destinationFloor = String()
@@ -43,6 +45,8 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         case "Main Tower": currentFloor = getFloorMain(startLocation)
         case "Emergency": currentFloor = getFloorMain(startLocation)
         case "Surgery Center": currentFloor = getFloorWomens(startLocation)
+        case "Off Campus": currentFloor = "NotAvailabe.jpg"
+                            parkingGarage = true
         default: currentFloor = "NotAvailable.jpg"
         }
         
@@ -69,7 +73,19 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         self.scrollCurrent.maximumZoomScale = 5.0
         self.scrollCurrent.clipsToBounds = true
         
-        whichFloor.text = startBuilding + " Floor " + textCurrentFloor
+        if startBuilding == "NA"{
+            whichFloor.text = "Parking Garage"
+        }
+        else{
+            whichFloor.text = startBuilding + " Floor " + textCurrentFloor
+        }
+        
+        if (startBuilding != "NA" && startBuilding != endBuilding){
+            instructionsField.text = "1. Go to Elevator" + "\n 2. Take it to floor LL1" + "\n 3. Cross skybridge to " + endBuilding + "\n 4. Go to Elevator" + "\n 5. Take it to floor " + textDestinationFloor
+        }
+        else{
+            instructionsField.text = "1. Go to Elevator" + "\n 2. Take it to floor " + textDestinationFloor
+        }
         
     }
     
