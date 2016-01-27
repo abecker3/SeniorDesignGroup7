@@ -11,6 +11,10 @@ import UIKit
 class DirectorySpecificViewController: UIViewController {
 
     var passInName: String!
+    var phoneExt: Int!
+    var hours: String!
+    var building: String!
+    var floor: String!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
@@ -21,8 +25,30 @@ class DirectorySpecificViewController: UIViewController {
         super.viewDidLoad()
         
         nameLabel.text = passInName
-        
+        getInfoFromName(directory)
+        phoneLabel.text = String(phoneExt)
+        hoursLabel.text = hours
+        buildingLabel.text = building
+        floorLabel.text = floor
         //phoneLabel.text =
     }
+    
+    func getInfoFromName(inputArray: [Directory]!) -> [String]!
+    {
+        var newArray = [String]()
+        for x in inputArray
+        {
+            if(x.name == passInName)
+            {
+                newArray.append(x.name)
+                phoneExt = x.ext
+                hours = x.hours
+                building = x.category
+                floor = x.floor
+            }
+        }
+        return newArray
+    }
+
     
 }
