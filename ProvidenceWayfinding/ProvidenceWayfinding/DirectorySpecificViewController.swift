@@ -11,6 +11,15 @@ import UIKit
 class DirectorySpecificViewController: UIViewController {
 
     var passInCategory: String!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        nameLabel.text = passInCategory
+        //phoneLabel.text =
+    }
     
 }

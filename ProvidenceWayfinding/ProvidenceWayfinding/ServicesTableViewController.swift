@@ -11,6 +11,7 @@ import UIKit
 class ServicesTableViewController: UITableViewController, UISearchResultsUpdating {
     
     // Variables
+    @IBOutlet var table: UITableView!
     var resultSearchController = UISearchController()
     var filteredTableData = [String]()
     var options: [String]!
@@ -125,13 +126,17 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
         return cell
     }*/
     
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ServicesToDirectory")
         {
-            let nextViewController = segue.destinationViewController as! LocationTableViewController
+            let nextViewController = segue.destinationViewController as! DirectorySpecificViewController
             //nextViewController.passInTextFieldTag = self.passInTextFieldTag
-            let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
-            nextViewController.passInCategory = cell.textLabel?.text
+            //let cell = table.dequeueReusableCellWithIdentifier("building", indexPathForSelectedRow)
+            let selectedCellPath = table.indexPathForSelectedRow
+            //let cell = table.dequeueReusableCellWithIdentifier("building", forIndexPath: selectedCellPath!)
+            let cell = table.cellForRowAtIndexPath(selectedCellPath!)
+            print(cell!.textLabel?.text)
+            nextViewController.passInCategory = cell!.textLabel?.text
         }
-    }*/
+    }
 }
