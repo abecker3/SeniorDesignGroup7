@@ -11,6 +11,7 @@ import UIKit
 class DirectorySpecificViewController: UIViewController {
     @IBOutlet weak var floorMap: UIImageView!
     @IBOutlet weak var scrollMap: UIScrollView!
+    @IBOutlet weak var directorySpecificTitle: UINavigationItem!
 
     var passInName: String!
     var phoneExt: Int!
@@ -31,6 +32,7 @@ class DirectorySpecificViewController: UIViewController {
         
         nameLabel.text = passInName
         getInfoFromName(directory)
+        directorySpecificTitle.title = passInName
         phoneLabel.text = String(phoneExt)
         hoursLabel.text = hours
         buildingLabel.text = building
