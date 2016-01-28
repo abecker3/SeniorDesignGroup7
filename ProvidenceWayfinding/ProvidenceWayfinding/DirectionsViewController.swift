@@ -64,6 +64,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     //TODO - Implement the tabls view with steps to change the region shown on map to that particular step
     
     //TODO -- BUG - error message when choose dest. when off campus selected, then if you select to on, the dest portion doesnt reset but causes error if not rechosen. Also, if only the dest. is selected in the on campus mode, it will go to off campus wayfindgin map.
+    //TODO -- BUG - when location services are not allowed, app gets stuck on error screen. Need prompt to dismiss and take to pin of hospital as standard.
     
     //MARK - Outlets
     @IBOutlet weak var curLocationButton: UIButton! //button (bottom left) to change MKUserTrackingMode
