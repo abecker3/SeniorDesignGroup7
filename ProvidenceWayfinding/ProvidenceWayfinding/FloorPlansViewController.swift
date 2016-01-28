@@ -9,7 +9,8 @@
 import UIKit
 
 class FloorPlansViewController: UIViewController {
-    
+    @IBOutlet weak var floorMap: UIImageView!
+    @IBOutlet weak var scrollMap: UIScrollView!
     @IBOutlet weak var textTitle: UITextField!
     @IBOutlet weak var buildingWomens: UIButton!
     @IBOutlet weak var buildingChildrens: UIButton!
@@ -31,12 +32,25 @@ class FloorPlansViewController: UIViewController {
     var underscore = String()
     var fileExtension = String()
     var textBuilding = String()
+    var imageName = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         underscore = "_"
         fileExtension = ".jpg"
         initialize()
+        
+        self.scrollMap.maximumZoomScale = 5.0
+        self.scrollMap.clipsToBounds = true
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return self.floorMap
     }
     
     func initialize(){
@@ -54,6 +68,9 @@ class FloorPlansViewController: UIViewController {
         floor6.enabled = true
         floor7.enabled = true
         textTitle.text = textBuilding + " Floor " + floor
+        imageName = building + underscore + floor + fileExtension
+        floorMap.image = UIImage(named: imageName)
+        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
     }
     
 
@@ -73,6 +90,9 @@ class FloorPlansViewController: UIViewController {
         floor6.enabled = true
         floor7.enabled = true
         textTitle.text = textBuilding + " Floor " + floor
+        imageName = building + underscore + floor + fileExtension
+        floorMap.image = UIImage(named: imageName)
+        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
     }
     
     @IBAction func heartPressed(sender: UIButton) {
@@ -90,6 +110,9 @@ class FloorPlansViewController: UIViewController {
         floor6.enabled = false
         floor7.enabled = false
         textTitle.text = textBuilding + " Floor " + floor
+        imageName = building + underscore + floor + fileExtension
+        floorMap.image = UIImage(named: imageName)
+        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
     }
     
     @IBAction func childrensPressed(sender: UIButton) {
@@ -107,6 +130,9 @@ class FloorPlansViewController: UIViewController {
         floor6.enabled = false
         floor7.enabled = false
         textTitle.text = textBuilding + " Floor " + floor
+        imageName = building + underscore + floor + fileExtension
+        floorMap.image = UIImage(named: imageName)
+        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
     }
     
     @IBAction func womensPressed(sender: UIButton) {
@@ -124,6 +150,9 @@ class FloorPlansViewController: UIViewController {
         floor6.enabled = false
         floor7.enabled = false
         textTitle.text = textBuilding + " Floor " + floor
+        imageName = building + underscore + floor + fileExtension
+        floorMap.image = UIImage(named: imageName)
+        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
     }
     
     @IBAction func floorPressed(sender: UIButton) {
@@ -140,5 +169,8 @@ class FloorPlansViewController: UIViewController {
         default: floor = "1"
         }
         textTitle.text = textBuilding + " Floor " + floor
+        imageName = building + underscore + floor + fileExtension
+        floorMap.image = UIImage(named: imageName)
+        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
     }
 }

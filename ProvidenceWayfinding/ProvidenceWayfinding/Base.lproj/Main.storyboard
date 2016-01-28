@@ -864,14 +864,37 @@ Institute </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwv-bf-FI8">
+                                <rect key="frame" x="30" y="99" width="570" height="374"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9cv-bu-GbI">
+                                        <rect key="frame" x="0.0" y="0.0" width="570" height="374"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9cv-bu-GbI" secondAttribute="trailing" id="HA0-yQ-gDD"/>
+                                    <constraint firstItem="9cv-bu-GbI" firstAttribute="leading" secondItem="Jwv-bf-FI8" secondAttribute="leading" id="HkG-bh-8QW"/>
+                                    <constraint firstItem="9cv-bu-GbI" firstAttribute="centerX" secondItem="Jwv-bf-FI8" secondAttribute="centerX" id="Ozf-Ti-8ev"/>
+                                    <constraint firstItem="9cv-bu-GbI" firstAttribute="centerY" secondItem="Jwv-bf-FI8" secondAttribute="centerY" id="b7E-Ol-VUa"/>
+                                    <constraint firstItem="9cv-bu-GbI" firstAttribute="top" secondItem="Jwv-bf-FI8" secondAttribute="top" id="mtQ-7E-91F"/>
+                                    <constraint firstAttribute="bottom" secondItem="9cv-bu-GbI" secondAttribute="bottom" id="qHW-3x-M4p"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="zem-nh-fd5" id="Rkn-FD-mcK"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tYM-6J-w2L" firstAttribute="centerX" secondItem="AKL-HE-P1D" secondAttribute="centerX" id="3lO-04-dqc"/>
+                            <constraint firstItem="Jwv-bf-FI8" firstAttribute="top" secondItem="vsP-Uc-7iF" secondAttribute="top" id="B9q-j0-vlQ"/>
                             <constraint firstItem="tYM-6J-w2L" firstAttribute="top" secondItem="uob-Zs-kRR" secondAttribute="bottom" id="Jc9-Xn-gvr"/>
                             <constraint firstItem="AKL-HE-P1D" firstAttribute="bottom" secondItem="8Dh-nk-cRa" secondAttribute="top" id="ata-xW-UoI"/>
+                            <constraint firstItem="Jwv-bf-FI8" firstAttribute="bottom" secondItem="vsP-Uc-7iF" secondAttribute="bottom" id="bNR-HY-KRI"/>
+                            <constraint firstItem="Jwv-bf-FI8" firstAttribute="leading" secondItem="vsP-Uc-7iF" secondAttribute="trailing" id="fj2-Wa-gnN"/>
                             <constraint firstItem="tYM-6J-w2L" firstAttribute="leading" secondItem="vsP-Uc-7iF" secondAttribute="leading" id="l6d-Ty-sv4"/>
                             <constraint firstItem="vsP-Uc-7iF" firstAttribute="leading" secondItem="ZfB-ED-mZN" secondAttribute="leading" id="n7k-cQ-UI2"/>
+                            <constraint firstItem="Jwv-bf-FI8" firstAttribute="trailing" secondItem="tYM-6J-w2L" secondAttribute="trailing" id="po0-Fh-Rxg"/>
                             <constraint firstItem="AKL-HE-P1D" firstAttribute="leading" secondItem="ZfB-ED-mZN" secondAttribute="leadingMargin" id="u1Y-Ke-av9"/>
                             <constraint firstItem="vsP-Uc-7iF" firstAttribute="top" secondItem="uob-Zs-kRR" secondAttribute="bottom" constant="35" id="y4J-Y8-Ywf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AKL-HE-P1D" secondAttribute="trailing" id="yqm-yG-AOA"/>
@@ -896,6 +919,8 @@ Institute </string>
                         <outlet property="floorL1" destination="GvT-JU-Nsn" id="xhL-4E-pF4"/>
                         <outlet property="floorL2" destination="rO4-R5-Pb8" id="e2O-MP-6iL"/>
                         <outlet property="floorL3" destination="VZB-YK-zMq" id="EOo-6A-U5k"/>
+                        <outlet property="floorMap" destination="9cv-bu-GbI" id="V6i-5k-WAJ"/>
+                        <outlet property="scrollMap" destination="Jwv-bf-FI8" id="DzB-Vs-58H"/>
                         <outlet property="textTitle" destination="tYM-6J-w2L" id="7sF-yL-cMy"/>
                     </connections>
                 </viewController>
