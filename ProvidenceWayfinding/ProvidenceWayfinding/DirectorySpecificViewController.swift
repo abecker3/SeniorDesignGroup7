@@ -9,12 +9,17 @@
 import UIKit
 
 class DirectorySpecificViewController: UIViewController {
+    @IBOutlet weak var floorMap: UIImageView!
+    @IBOutlet weak var scrollMap: UIScrollView!
 
     var passInName: String!
     var phoneExt: Int!
     var hours: String!
     var building: String!
     var floor: String!
+    var thisFloor = String()
+    var fileExtension = String()
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
@@ -31,6 +36,25 @@ class DirectorySpecificViewController: UIViewController {
         buildingLabel.text = building
         floorLabel.text = floor
         //phoneLabel.text =
+        fileExtension = ".jpg"
+        
+        setMap()
+    }
+    
+    func setMap(){
+        switch building{
+        case "Children's Hospital": thisFloor = "Childrens_" + floor + fileExtension
+        case "Main Tower": thisFloor = "Main_" + floor + fileExtension
+        case "Women's Health Center": thisFloor = "Womens_" + floor + fileExtension
+        case "Heart Institute": thisFloor = "Heart_" + floor + fileExtension
+        default: "NotAvailable.jpg"
+        }
+        
+        floorMap.image = UIImage(named: thisFloor)
+        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        self.scrollMap.maximumZoomScale = 5.0
+        self.scrollMap.clipsToBounds = true
     }
     
     func getInfoFromName(inputArray: [Directory]!) -> [String]!
@@ -50,5 +74,8 @@ class DirectorySpecificViewController: UIViewController {
         return newArray
     }
 
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return self.floorMap
+    }
     
 }
