@@ -57,11 +57,31 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
             newArray.append(x.name)
         }
         
+        //var oldArray = uniqueCategoryArray
+        
         let array = (newArray as NSArray).filteredArrayUsingPredicate(searchPredicate)
         filteredTableData = array as! [String]
         
         self.tableView.reloadData()
     }
+    
+/*    func uniqueCategoryArray(inputArray: [Location]!) -> [String]!
+    {
+        var newArray = [String]()
+        for x in inputArray
+        {
+            if(newArray.contains(x.category))
+            {
+                continue
+            }
+            else
+            {
+                newArray.append(x.category)
+            }
+        }
+        
+        return newArray
+    }*/
 
     //Populate Table
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

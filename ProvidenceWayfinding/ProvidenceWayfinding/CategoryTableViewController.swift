@@ -20,6 +20,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
     var resultSearchController = UISearchController()
     var filteredTableData = [String]()
     var options: [String]!
+    var locationOptions:[Location] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,17 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
         filteredTableData.removeAll(keepCapacity: false)
         
         let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
-        let array = (options as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        
+        var newArray = [String]()
+        for x in locations
+        {
+            newArray.append(x.name)
+            print(x.name)
+        }
+        
+        //_ = options + newArray
+        
+        let array = ((options + newArray) as NSArray).filteredArrayUsingPredicate(searchPredicate)
         filteredTableData = array as! [String]
         
         self.tableView.reloadData()
@@ -113,6 +124,26 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
             return cell
         }
     }
+    
+/*    //Pop back 1 once a row is selected
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let navController = self.navigationController!
+        let indexOfSurvey = navController.viewControllers.count - 1
+        let surveyViewController = navController.viewControllers[indexOfSurvey] as! SurveyViewController
+        
+        if(passInTextFieldTag == surveyViewController.currentTextField.tag)
+        {
+            surveyViewController.currentTextField.placeholder = locationOptions[indexPath.row].name
+            surveyViewController.startLocation = locationOptions[indexPath.row]
+        }
+        else if(passInTextFieldTag == surveyViewController.destinationTextField.tag)
+        {
+            surveyViewController.destinationTextField.placeholder = locationOptions[indexPath.row].name
+            surveyViewController.endLocation = locationOptions[indexPath.row]
+        }
+        
+        navController.popToViewController(surveyViewController, animated: true)
+    }*/
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "buildingToLocation")
