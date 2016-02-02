@@ -113,7 +113,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         //case "4": return "Childrens_4.jpg"
         //case "5": return "Childrens_5.jpg"
         //default: return "Childrens_1.jpg"
-        default: return "NotAvailable.jpg"
+        default: return "Heart_3.jpg"
         }
     }
     
@@ -124,7 +124,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         //case "4": return "Heart_4.jpg"
         //case "5": return "Heart_5.jpg"
         //default: return "Heart_1.jpg"
-        default: return "Heart_2.jpg"
+        default: return "Heart_4.jpg"
         }
     }
     
