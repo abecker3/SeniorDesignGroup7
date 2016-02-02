@@ -389,8 +389,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="center" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dPm-9X-qme">
-                                <rect key="frame" x="242" y="261" width="186" height="126"/>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dPm-9X-qme">
+                                <rect key="frame" x="207" y="213" width="186" height="126"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hg-CB-UoP">
                                         <rect key="frame" x="43" y="0.0" width="101" height="42"/>
@@ -1487,14 +1487,30 @@ Institute </string>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mvd-yl-qoW" firstAttribute="top" secondItem="lIU-GQ-XN6" secondAttribute="bottom" constant="8" id="9uB-4f-iOd"/>
+                            <constraint firstItem="xNX-ej-USZ" firstAttribute="leading" secondItem="62F-52-0sa" secondAttribute="leadingMargin" id="9zK-SD-RQB"/>
+                            <constraint firstItem="9UM-wH-pTl" firstAttribute="top" secondItem="Mvd-yl-qoW" secondAttribute="bottom" constant="2" id="WsQ-Ak-oJ5"/>
+                            <constraint firstItem="9UM-wH-pTl" firstAttribute="bottom" secondItem="y7w-Cw-knf" secondAttribute="top" id="Xz4-Er-7Eo"/>
+                            <constraint firstItem="9UM-wH-pTl" firstAttribute="top" secondItem="xNX-ej-USZ" secondAttribute="bottom" constant="5" id="Yi0-7y-gwU"/>
+                            <constraint firstAttribute="trailing" secondItem="9UM-wH-pTl" secondAttribute="trailing" id="bri-7l-fv9"/>
+                            <constraint firstItem="9UM-wH-pTl" firstAttribute="centerX" secondItem="62F-52-0sa" secondAttribute="centerX" id="iKA-qL-ElL"/>
+                            <constraint firstItem="Mvd-yl-qoW" firstAttribute="leading" secondItem="xNX-ej-USZ" secondAttribute="trailing" constant="8" id="olo-r1-oiJ"/>
+                            <constraint firstItem="xNX-ej-USZ" firstAttribute="top" secondItem="lIU-GQ-XN6" secondAttribute="bottom" constant="8" id="smT-un-cbh"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="8Mc-gX-Ooj"/>
+                    <navigationItem key="navigationItem" title="Directory" id="8Mc-gX-Ooj">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="8pM-IH-4JD"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="buildingLabel" destination="rfM-uC-SmA" id="CFt-Ek-vYL"/>
+                        <outlet property="directorySpecificTitle" destination="8Mc-gX-Ooj" id="XOp-hU-aes"/>
                         <outlet property="floorLabel" destination="ak0-sB-c0u" id="skM-wT-4rQ"/>
+                        <outlet property="floorMap" destination="tbR-T5-Tei" id="8rW-eb-nvE"/>
                         <outlet property="hoursLabel" destination="VLb-IW-Ip4" id="WPX-Zv-cUB"/>
                         <outlet property="nameLabel" destination="BEG-x4-hxK" id="6DB-rn-OzW"/>
                         <outlet property="phoneLabel" destination="1vm-GG-exD" id="67m-KG-hWG"/>
+                        <outlet property="scrollMap" destination="9UM-wH-pTl" id="cst-FL-kIa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlI-r2-b2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
