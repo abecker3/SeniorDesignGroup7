@@ -149,6 +149,11 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
                 let alertMessage = "Error getting directions"
                 let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
                 self.presentViewController(alertController, animated: true, completion: nil)
+                let delay = 1.5 * Double(NSEC_PER_SEC)
+                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
                 return
             }
             self.showMapView(response)
