@@ -40,10 +40,6 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
     }
     
 
-    
-    
- 
-    
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         filteredTableData.removeAll(keepCapacity: false)
