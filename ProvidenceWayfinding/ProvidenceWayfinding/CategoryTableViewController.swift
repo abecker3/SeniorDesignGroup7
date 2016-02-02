@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryTableViewController: UITableViewController{
+class CategoryTableViewController: UITableViewController, UISearchResultsUpdating{
     
     //Passed in variables
     var passInTextFieldTag: Int!
@@ -17,11 +17,37 @@ class CategoryTableViewController: UITableViewController{
     @IBOutlet var buildingTableView: UITableView!
     
     //Variables
+    var resultSearchController = UISearchController()
+    var filteredTableData = [String]()
     var options: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initOptions()
+        
+        self.resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            
+            self.tableView.tableHeaderView = controller.searchBar
+            return controller
+        })()
+        
+        //Reload table
+        self.tableView.reloadData()
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        filteredTableData.removeAll(keepCapacity: false)
+        
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        let array = (options as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        filteredTableData = array as! [String]
+        
+        self.tableView.reloadData()
     }
     
     func initOptions()
@@ -53,17 +79,39 @@ class CategoryTableViewController: UITableViewController{
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return options.count
+        //return options.count
+        
+        //Takes the filtered data and assigns them to the number of rows needed
+        if(self.resultSearchController.active) {
+            return self.filteredTableData.count
+        }
+            
+            // No searching is going on so the table stays regular using the same number of rows as before
+        else {
+            return self.options.count
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("building cell", forIndexPath: indexPath)
         
-        // Configure the cell...
+        /*// Configure the cell...
         let option = options[indexPath.row]
         cell.textLabel!.text = option
         
-        return cell
+        return cell*/
+        
+        if(self.resultSearchController.active) {
+            cell.textLabel?.text = filteredTableData[indexPath.row]
+            //cell.detailTextLabel!.text = "11 AM to 8 PM"
+            return cell
+        }
+            
+        else {
+            cell.textLabel?.text = options[indexPath.row]
+            //cell.detailTextLabel!.text = "11 AM to 8 PM"
+            return cell
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
