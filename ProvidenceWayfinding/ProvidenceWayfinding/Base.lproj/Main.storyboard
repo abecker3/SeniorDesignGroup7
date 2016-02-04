@@ -269,6 +269,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="glt-xn-lJu" firstAttribute="bottom" secondItem="pUQ-2j-KrD" secondAttribute="top" constant="-73" id="4IU-db-Eqa"/>
                             <constraint firstItem="J1a-ke-xeh" firstAttribute="trailing" secondItem="glt-xn-lJu" secondAttribute="trailing" id="6IR-2c-E7a"/>
@@ -282,13 +283,16 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="J1a-ke-xeh" firstAttribute="leading" secondItem="glt-xn-lJu" secondAttribute="leading" id="rxt-4A-VTq"/>
                             <constraint firstItem="Phq-U1-xgh" firstAttribute="trailing" secondItem="glt-xn-lJu" secondAttribute="trailing" id="tc9-Wf-ksG"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dmA-bs-9QJ" appends="YES" id="MPl-2z-pvG"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="On Campus" id="S4u-Me-5AF"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Current Floor" id="uhH-zX-qk2">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="fGX-yn-8nY">
                             <connections>
-                                <segue destination="PBB-GF-SDW" kind="show" id="IOd-CW-4AL"/>
+                                <segue destination="PBB-GF-SDW" kind="show" identifier="destinationView" id="IOd-CW-4AL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -302,6 +306,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNw-r9-6HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="0" id="CpO-3O-Bf5"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="dmA-bs-9QJ"/>
             </objects>
             <point key="canvasLocation" x="1057" y="3223"/>
         </scene>
@@ -1806,6 +1811,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SoW-dI-v9z"/>
+        <segue reference="YCW-oQ-6O4"/>
     </inferredMetricsTieBreakers>
 </document>
