@@ -25,7 +25,8 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var desPlace: MKPlacemark!
     var annotation:MKAnnotation!
     var error:NSError!
-    var pointAnnotation:MKPointAnnotation!
+    var pointAnnotation = MKPointAnnotation()
+    
     var pinAnnotationView:MKPinAnnotationView!
     var locationManager: CLLocationManager?
     var endLocation: Location!
@@ -35,7 +36,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var regionChangeIsFromUserInteraction = false //bool value for checking if user moved map
     let screenSize: CGRect = UIScreen.mainScreen().bounds
 
-
+    
     // Parking Location Coordinates
     let DoctorBuilding = CLLocationCoordinate2D(
         latitude: 47.648183,
@@ -64,6 +65,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     //TODO - Implement the tabls view with steps to change the region shown on map to that particular step
     
     //TODO -- BUG - error message when choose dest. when off campus selected, then if you select to on, the dest portion doesnt reset but causes error if not rechosen. Also, if only the dest. is selected in the on campus mode, it will go to off campus wayfindgin map.
+    //TODO -- BUG - when location services are not allowed, app gets stuck on error screen. Need prompt to dismiss and take to pin of hospital as standard.
     
     //MARK - Outlets
     @IBOutlet weak var curLocationButton: UIButton! //button (bottom left) to change MKUserTrackingMode
@@ -84,9 +86,14 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         nextViewController.startLocation = self.startLocation
         nextViewController.endLocation = self.endLocation
     }
-    
+    override func viewWillAppear(animated: Bool) {
+        //super.viewWillAppear(true)
+        statusCheck()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+//statusCheck()
+
         //self.curLocationButton.tintColor = UIColor.blueColor()
         self.navigationController?.navigationBar.translucent = true //make top bar transluscent
         //DirectionsOutput.editable = false
@@ -102,7 +109,6 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
         //viewHeight.constant = screenSize.height * (179/568)
         //directionsOutputHeight.constant = screenSize.height * (208/568)
-        statusCheck()
 
     }
     
@@ -144,10 +150,29 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
             response, error in
             
             guard let response = response else {
-                let alertTitle = "Error"
-                let alertMessage = "Error getting directions"
+                /*let alertTitle = "Error"
+                let alertMessage = "Error getting directions, please check your data connection and retry getting directions"
                 let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
                 self.presentViewController(alertController, animated: true, completion: nil)
+
+                let delay = 3 * Double(NSEC_PER_SEC)
+                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                    //Set the map view to providence main tower and add pin.
+                    self.showMapView.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 47.648755, longitude: -117.413009), 2000, 2000), animated: true)
+                    self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: 47.648755, longitude: -117.413009)
+                    self.pointAnnotation.title = "Providence Sacred Heart"
+                    self.showMapView.addAnnotation(self.pointAnnotation)
+
+                }*/
+                self.displayAlertWithTitle("Error",
+                    message: "Error getting directions, please check your data connection and retry getting directions")
+                //Set the map view to providence main tower and add pin.
+                self.showMapView.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 47.648755, longitude: -117.413009), 2000, 2000), animated: true)
+                self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: 47.648755, longitude: -117.413009)
+                self.pointAnnotation.title = "Providence Sacred Heart"
+                self.showMapView.addAnnotation(self.pointAnnotation)
                 return
             }
             self.showMapView(response)
@@ -190,8 +215,15 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         let userLocation = showMapView.userLocation.coordinate
         print(userLocation)
         let region = MKCoordinateRegionMakeWithDistance(userLocation, 2000, 2000)
-        
-        showMapView.setRegion(region, animated: true)
+        if(userLocation.latitude == 0.0 && userLocation.longitude == 0.0){
+            showMapView.userTrackingMode = MKUserTrackingMode.Follow
+            curLocationButton.setImage(UIImage(named: "NearMeFilled100.png"), forState: .Normal)
+            counterForCurLocationButton = 1
+
+        }
+        else {
+            showMapView.setRegion(region, animated: true)
+        }
     }
     
     // Renders the line for the directions
@@ -219,7 +251,6 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         if self.regionChangeIsFromUserInteraction || (showMapView.userTrackingMode == MKUserTrackingMode.None && showMapView.userTrackingMode != MKUserTrackingMode.Follow && showMapView.userTrackingMode != MKUserTrackingMode.FollowWithHeading) {
             self.regionChangeIsFromUserInteraction = false
-            //Code here
             showMapView.userTrackingMode = MKUserTrackingMode.None
             curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
             counterForCurLocationButton = 0
@@ -245,7 +276,6 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
                 print("Authorized")
                 getDirections()
             }
-            
     }
     
     func displayAlertWithTitle(title: String, message: String){
@@ -271,7 +301,9 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
             case .Denied:
                 /* No */
                 displayAlertWithTitle("Not Determined",
-                    message: "Location services are not allowed for this app")
+                    message: "Location services are not allowed for this app, please change your settings to allow location services")
+
+                
             case .NotDetermined:
                 /* We don't know yet, we have to ask */
                 locationManager = CLLocationManager()
@@ -279,11 +311,14 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
                     manager.delegate = self
                     manager.requestWhenInUseAuthorization()
                 }
+
             case .Restricted:
                 /* Restrictions have been applied, we have no access
                 to location services */
                 displayAlertWithTitle("Restricted",
-                    message: "Location services are not allowed for this app")
+                    message: "Location services are not allowed for this app, please change your settings to allow location services")
+
+                
             default:
                 getDirections()
             }
