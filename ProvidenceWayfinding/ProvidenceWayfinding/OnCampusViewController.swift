@@ -81,7 +81,12 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         }
         
         if (startBuilding != "NA" && startBuilding != endBuilding){
-            instructionsField.text = "1. Go to Elevator" + "\n 2. Take it to floor LL1" + "\n 3. Cross skybridge to " + endBuilding + "\n 4. Go to Elevator" + "\n 5. Take it to floor " + textDestinationFloor
+            if (startBuilding == "Heart Institute"){
+                instructionsField.text = "1. Go to Elevator" + "\n 2. Take it to floor 5" + "\n 3. Cross skybridge to Main Tower" + "\n 4. Follow signs to " + endBuilding + "\n 5. Go to Elevator" + "\n 6. Take it to floor " + textDestinationFloor
+            }
+            else{
+                instructionsField.text = "1. Go to Elevator" + "\n 2. Take it to floor LL1" + " \n 3. Follow signs to Main Tower" + "\n 3. Cross skybridge to " + endBuilding + "\n 4. Go to Elevator" + "\n 5. Take it to floor " + textDestinationFloor
+            }
         }
         else{
             instructionsField.text = "1. Go to Elevator" + "\n 2. Take it to floor " + textDestinationFloor
@@ -113,7 +118,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         //case "4": return "Childrens_4.jpg"
         //case "5": return "Childrens_5.jpg"
         //default: return "Childrens_1.jpg"
-        default: return "NotAvailable.jpg"
+        default: return "Heart_3.jpg"
         }
     }
     
@@ -124,7 +129,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         //case "4": return "Heart_4.jpg"
         //case "5": return "Heart_5.jpg"
         //default: return "Heart_1.jpg"
-        default: return "Heart_2.jpg"
+        default: return "Heart_4.jpg"
         }
     }
     

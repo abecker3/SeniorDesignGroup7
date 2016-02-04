@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocationTableViewController: UITableViewController {
+class LocationTableViewController: UITableViewController, UISearchResultsUpdating{
     
     //Passed in variables
     var passInTextFieldTag: Int!
@@ -19,6 +19,8 @@ class LocationTableViewController: UITableViewController {
     @IBOutlet var controllerTitle: UINavigationItem!
     
     //Variables
+    var resultSearchController = UISearchController()
+    var filteredTableData = [String]()
     var locationOptions:[Location] = []
 
     override func viewDidLoad()
@@ -28,23 +30,100 @@ class LocationTableViewController: UITableViewController {
         //Choose options based on passed in building
         initControllerTitle()
         initOptions()
+        
+        self.resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            
+            self.tableView.tableHeaderView = controller.searchBar
+            return controller
+        })()
+        
+        //Reload table
+        self.tableView.reloadData()
     }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        filteredTableData.removeAll(keepCapacity: false)
+        
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        
+        var newArray = [String]()
+        for x in locationOptions
+        {
+            newArray.append(x.name)
+        }
+        
+        //var oldArray = uniqueCategoryArray
+        
+        let array = (newArray as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        filteredTableData = array as! [String]
+        
+        self.tableView.reloadData()
+    }
+    
+/*    func uniqueCategoryArray(inputArray: [Location]!) -> [String]!
+    {
+        var newArray = [String]()
+        for x in inputArray
+        {
+            if(newArray.contains(x.category))
+            {
+                continue
+            }
+            else
+            {
+                newArray.append(x.category)
+            }
+        }
+        
+        return newArray
+    }*/
 
     //Populate Table
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return locationOptions.count
+        //return locationOptions.count
+        
+        //Takes the filtered data and assigns them to the number of rows needed
+        if(self.resultSearchController.active) {
+            return self.filteredTableData.count
+        }
+            
+            // No searching is going on so the table stays regular using the same number of rows as before
+        else {
+            return self.locationOptions.count
+        }
     }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("location cell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        /*// Configure the cell...
         let option = locationOptions[indexPath.row]
         cell.textLabel!.text = option.name
 
-        return cell
+        return cell*/
+        
+        if(self.resultSearchController.active) {
+            
+            cell.textLabel?.text = filteredTableData[indexPath.row]
+            //cell.detailTextLabel!.text = "11 AM to 8 PM"
+            return cell
+        }
+            
+        else {
+            let option = locationOptions[indexPath.row]
+            cell.textLabel?.text = option.name
+            //cell.detailTextLabel!.text = "11 AM to 8 PM"
+            return cell
+        }
     }
     
     //Pop back 2 once a row is selected
