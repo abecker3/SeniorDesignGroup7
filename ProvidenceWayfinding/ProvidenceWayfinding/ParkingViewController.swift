@@ -83,7 +83,10 @@ class ParkingViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.        
+        parkingLocationBuilding = "Main Tower "
+        parkingLocationElevator = "Main Elevator "
+        parkingLocationFloor = "L6 "
     }
     
     override func viewDidAppear(animated: Bool) {

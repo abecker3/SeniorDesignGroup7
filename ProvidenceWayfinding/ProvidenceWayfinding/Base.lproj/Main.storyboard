@@ -206,6 +206,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="jGC-EV-aTk" id="aoQ-rg-ZAZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="Zaq-6X-c4z" appends="YES" id="aOe-sk-Abz"/>
                                 </connections>
                             </scrollView>
                         </subviews>
@@ -224,6 +225,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orc-6c-VGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Zaq-6X-c4z"/>
             </objects>
             <point key="canvasLocation" x="5058" y="850"/>
         </scene>
@@ -261,6 +263,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="JWc-UJ-WIP" id="0CW-SX-G07"/>
+                                    <outletCollection property="gestureRecognizers" destination="CpO-3O-Bf5" appends="YES" id="Psq-eT-fhg"/>
                                 </connections>
                             </scrollView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J1a-ke-xeh">
@@ -279,6 +282,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="glt-xn-lJu" firstAttribute="bottom" secondItem="pUQ-2j-KrD" secondAttribute="top" constant="-73" id="4IU-db-Eqa"/>
                             <constraint firstItem="J1a-ke-xeh" firstAttribute="trailing" secondItem="glt-xn-lJu" secondAttribute="trailing" id="6IR-2c-E7a"/>
@@ -292,13 +296,16 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="J1a-ke-xeh" firstAttribute="leading" secondItem="glt-xn-lJu" secondAttribute="leading" id="rxt-4A-VTq"/>
                             <constraint firstItem="Phq-U1-xgh" firstAttribute="trailing" secondItem="glt-xn-lJu" secondAttribute="trailing" id="tc9-Wf-ksG"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dmA-bs-9QJ" appends="YES" id="MPl-2z-pvG"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="On Campus" id="S4u-Me-5AF"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Current Floor" id="uhH-zX-qk2">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="fGX-yn-8nY">
                             <connections>
-                                <segue destination="PBB-GF-SDW" kind="show" id="IOd-CW-4AL"/>
+                                <segue destination="PBB-GF-SDW" kind="show" identifier="destinationView" id="IOd-CW-4AL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -311,6 +318,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNw-r9-6HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="0" id="CpO-3O-Bf5"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="dmA-bs-9QJ"/>
             </objects>
             <point key="canvasLocation" x="1057" y="3223"/>
         </scene>
@@ -347,6 +356,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="PBB-GF-SDW" id="UQk-n8-SzR"/>
+                                    <outletCollection property="gestureRecognizers" destination="baY-1m-gqQ" appends="YES" id="ioW-Rc-t8o"/>
                                 </connections>
                             </scrollView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6S7-Cc-zUb">
@@ -378,6 +388,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdX-Nw-Sqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="baY-1m-gqQ"/>
             </objects>
             <point key="canvasLocation" x="1765" y="3223"/>
         </scene>
@@ -949,6 +960,7 @@ Institute </string>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="zem-nh-fd5" id="Rkn-FD-mcK"/>
+                                    <outletCollection property="gestureRecognizers" destination="6mq-Ow-eHy" appends="YES" id="xI7-Kf-amf"/>
                                 </connections>
                             </scrollView>
                         </subviews>
@@ -994,6 +1006,7 @@ Institute </string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8C-Va-Htk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6mq-Ow-eHy"/>
             </objects>
             <point key="canvasLocation" x="714" y="850"/>
         </scene>
@@ -1276,7 +1289,7 @@ Institute </string>
                                 <rect key="frame" x="5" y="106" width="590" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zuq-Ix-Bxi" userLabel="BuildingButtons">
@@ -1296,7 +1309,7 @@ Institute </string>
                                 <rect key="frame" x="5" y="171" width="590" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3dn-G7-aJZ" userLabel="FloorButtons">
@@ -1320,7 +1333,7 @@ Institute </string>
                                 <rect key="frame" x="5" y="236" width="590" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WHJ-fP-y3y" userLabel="ElevatorButtons">
@@ -1514,6 +1527,7 @@ Institute </string>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="sQJ-6N-59p" id="AVW-vs-cpZ"/>
+                                    <outletCollection property="gestureRecognizers" destination="B9z-DO-l6u" appends="YES" id="BTo-Mz-lEd"/>
                                 </connections>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xNX-ej-USZ" userLabel="Left Stack">
@@ -1634,6 +1648,7 @@ Institute </string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlI-r2-b2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="B9z-DO-l6u"/>
             </objects>
             <point key="canvasLocation" x="3508" y="1709"/>
         </scene>
@@ -1758,7 +1773,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <rect key="frame" x="5" y="106" width="590" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hW6-Nq-jvf" userLabel="BuildingButtons">
@@ -1778,7 +1793,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <rect key="frame" x="5" y="171" width="590" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rRB-Xe-inL" userLabel="FloorButtons">
@@ -1802,7 +1817,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <rect key="frame" x="5" y="236" width="590" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A4a-Ke-ZGP" userLabel="ElevatorButtons">
@@ -1925,6 +1940,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SoW-dI-v9z"/>
+        <segue reference="YCW-oQ-6O4"/>
     </inferredMetricsTieBreakers>
 </document>
