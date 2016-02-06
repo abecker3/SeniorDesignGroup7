@@ -1052,12 +1052,12 @@ Institute </string>
                                 <gestureRecognizers/>
                             </mapView>
                             <view opaque="NO" alpha="0.87" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-zO-42D">
-                                <rect key="frame" x="0.0" y="243" width="600" height="308"/>
+                                <rect key="frame" x="0.0" y="512" width="600" height="39"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPP-zA-2kX">
-                                        <rect key="frame" x="235" y="274" width="131" height="30"/>
+                                        <rect key="frame" x="235" y="5" width="131" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="131" id="2gN-qn-7OK"/>
+                                            <constraint firstAttribute="width" constant="131" id="Q18-Z7-HwO"/>
                                         </constraints>
                                         <state key="normal" title="Use Apple Maps">
                                             <color key="titleColor" red="0.0" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1067,10 +1067,10 @@ Institute </string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1p-3Y-i3I">
-                                        <rect key="frame" x="8" y="274" width="30" height="30"/>
+                                        <rect key="frame" x="8" y="5" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="aWI-Zy-HRF"/>
-                                            <constraint firstAttribute="height" constant="30" id="csg-9b-Hko"/>
+                                            <constraint firstAttribute="width" constant="30" id="dqX-L9-ayU"/>
+                                            <constraint firstAttribute="height" constant="30" id="wYB-fi-m7Z"/>
                                         </constraints>
                                         <state key="normal">
                                             <color key="titleColor" red="0.0" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1080,54 +1080,40 @@ Institute </string>
                                             <action selector="centerRegionToLocation:forEvent:" destination="6JG-Ic-gLa" eventType="touchUpInside" id="VTb-U8-n5N"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRf-9k-dfY">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="4lu-xz-z8J"/>
-                                            <constraint firstAttribute="width" constant="600" id="zv0-6f-50C"/>
-                                        </constraints>
-                                        <state key="normal" title="Hide Details">
-                                            <color key="titleColor" red="0.0" green="0.36470588235294116" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="hideView:" destination="6JG-Ic-gLa" eventType="touchUpInside" id="98u-vQ-XM4"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="top" secondItem="xPP-zA-2kX" secondAttribute="top" id="JCC-2X-TRW"/>
-                                    <constraint firstAttribute="bottom" secondItem="B1p-3Y-i3I" secondAttribute="bottom" constant="4" id="Keh-Ht-AAs"/>
-                                    <constraint firstAttribute="trailing" secondItem="DRf-9k-dfY" secondAttribute="trailing" id="ZPp-Lr-jM5"/>
-                                    <constraint firstAttribute="height" constant="308" id="aHn-XB-Wop"/>
-                                    <constraint firstItem="xPP-zA-2kX" firstAttribute="centerX" secondItem="kfe-zO-42D" secondAttribute="centerX" id="fCS-9K-k8m"/>
-                                    <constraint firstAttribute="width" constant="600" id="j8x-k3-YoJ"/>
-                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leadingMargin" id="jZw-aK-33m"/>
-                                    <constraint firstItem="DRf-9k-dfY" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leading" id="lpJ-mY-bNY"/>
-                                    <constraint firstItem="DRf-9k-dfY" firstAttribute="top" secondItem="kfe-zO-42D" secondAttribute="top" id="p1t-so-Int"/>
+                                    <constraint firstItem="xPP-zA-2kX" firstAttribute="top" secondItem="B1p-3Y-i3I" secondAttribute="top" id="DQX-5M-J1i"/>
+                                    <constraint firstItem="xPP-zA-2kX" firstAttribute="centerY" secondItem="kfe-zO-42D" secondAttribute="centerY" id="Tk5-9P-EqA"/>
+                                    <constraint firstItem="xPP-zA-2kX" firstAttribute="centerX" secondItem="kfe-zO-42D" secondAttribute="centerX" id="You-9G-zuR"/>
+                                    <constraint firstItem="B1p-3Y-i3I" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leadingMargin" id="ivL-fE-uhC"/>
+                                    <constraint firstAttribute="height" constant="39" id="tkW-Vb-wqn"/>
                                 </constraints>
                             </view>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.59999999999999998" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mcV-BC-5Oq">
-                                <rect key="frame" x="0.0" y="272" width="600" height="243"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZI6-Kd-qKB">
+                                <rect key="frame" x="0.0" y="64" width="600" height="105"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="WLH-Dn-Wfo"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="6JG-Ic-gLa" id="KFM-1d-GNq"/>
+                                    <outlet property="delegate" destination="6JG-Ic-gLa" id="wLr-LL-p8d"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kfe-zO-42D" firstAttribute="leading" secondItem="2MZ-BW-pGz" secondAttribute="leading" id="5aY-qs-rmN"/>
-                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leading" id="7ba-zm-PCU"/>
-                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="mcV-BC-5Oq" secondAttribute="bottom" constant="36" id="In3-nm-Lma"/>
-                            <constraint firstItem="UEr-1l-6bj" firstAttribute="top" secondItem="2MZ-BW-pGz" secondAttribute="top" id="Obo-Ab-Kyl"/>
-                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="top" secondItem="4Fq-8p-Ecb" secondAttribute="bottom" constant="208" id="U4Z-2u-WMh"/>
-                            <constraint firstItem="UEr-1l-6bj" firstAttribute="bottom" secondItem="DBD-Zv-4LM" secondAttribute="top" id="aMz-es-Ey7"/>
-                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="trailing" secondItem="UEr-1l-6bj" secondAttribute="trailing" id="e82-RM-UxZ"/>
-                            <constraint firstItem="kfe-zO-42D" firstAttribute="top" secondItem="4Fq-8p-Ecb" secondAttribute="bottom" constant="179" id="hlt-k7-Sf4"/>
-                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="kfe-zO-42D" secondAttribute="bottom" id="iua-RO-DW8"/>
-                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="kNf-jl-Ky8"/>
-                            <constraint firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="m9V-n8-fjP"/>
-                            <constraint firstItem="mcV-BC-5Oq" firstAttribute="leading" secondItem="UEr-1l-6bj" secondAttribute="leading" id="saz-Lz-F1v"/>
+                            <constraint firstItem="ZI6-Kd-qKB" firstAttribute="top" secondItem="4Fq-8p-Ecb" secondAttribute="bottom" id="0gD-Jp-ZhH"/>
+                            <constraint firstItem="ZI6-Kd-qKB" firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="18u-oh-toV"/>
+                            <constraint firstItem="ZI6-Kd-qKB" firstAttribute="leading" secondItem="kfe-zO-42D" secondAttribute="leading" id="ILs-BF-dqN"/>
+                            <constraint firstItem="UEr-1l-6bj" firstAttribute="leading" secondItem="2MZ-BW-pGz" secondAttribute="leadingMargin" constant="-20" id="Of6-i8-yr3"/>
+                            <constraint firstItem="UEr-1l-6bj" firstAttribute="top" secondItem="2MZ-BW-pGz" secondAttribute="topMargin" id="Rt2-Fp-dKU"/>
+                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="UEr-1l-6bj" secondAttribute="bottom" id="Smd-Jt-CsC"/>
+                            <constraint firstItem="DBD-Zv-4LM" firstAttribute="top" secondItem="kfe-zO-42D" secondAttribute="bottom" id="VQ4-9p-pPu"/>
+                            <constraint firstItem="kfe-zO-42D" firstAttribute="leading" secondItem="2MZ-BW-pGz" secondAttribute="leading" id="Wla-8W-EEx"/>
+                            <constraint firstAttribute="trailing" secondItem="kfe-zO-42D" secondAttribute="trailing" id="feO-h9-IyP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UEr-1l-6bj" secondAttribute="trailing" constant="-20" id="sdm-sp-Z6v"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="6kx-BQ-dhn">
@@ -1138,14 +1124,9 @@ Institute </string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="DetailsButton" destination="DRf-9k-dfY" id="WWn-4N-XNd"/>
-                        <outlet property="DirectionsOutput" destination="mcV-BC-5Oq" id="yBd-AU-gJL"/>
                         <outlet property="curLocationButton" destination="B1p-3Y-i3I" id="KC8-0C-XpI"/>
-                        <outlet property="dirOutBottomHeight" destination="In3-nm-Lma" id="wAe-b5-Qcu"/>
-                        <outlet property="directionsOutputHeight" destination="U4Z-2u-WMh" id="vUP-h1-WhF"/>
                         <outlet property="showMapView" destination="UEr-1l-6bj" id="3iU-Va-Z5L"/>
-                        <outlet property="viewBottomHeight" destination="iua-RO-DW8" id="Wsv-DH-lii"/>
-                        <outlet property="viewHeight" destination="hlt-k7-Sf4" id="SSv-O0-iD4"/>
+                        <outlet property="tableView" destination="ZI6-Kd-qKB" id="u7d-1H-uGy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHV-Re-EH4" sceneMemberID="firstResponder"/>

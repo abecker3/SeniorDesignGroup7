@@ -19,7 +19,7 @@ extension Double {
     var mi: Double { return self * 0.000621371192 }
 }
 
-class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class DirectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
 
     var destination: MKMapItem?
     var desPlace: MKPlacemark!
@@ -35,7 +35,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var hidden = false //flag used in hideView func
     var regionChangeIsFromUserInteraction = false //bool value for checking if user moved map
     let screenSize: CGRect = UIScreen.mainScreen().bounds
-
+    var turnbyturn: [String] = [""]
     
     // Parking Location Coordinates
     let DoctorBuilding = CLLocationCoordinate2D(
@@ -64,21 +64,22 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     //TODO - Maybe change textview steps to table view
     //TODO - Implement the tabls view with steps to change the region shown on map to that particular step
     
-    //TODO -- BUG - error message when choose dest. when off campus selected, then if you select to on, the dest portion doesnt reset but causes error if not rechosen. Also, if only the dest. is selected in the on campus mode, it will go to off campus wayfindgin map.
-    //TODO -- BUG - when location services are not allowed, app gets stuck on error screen. Need prompt to dismiss and take to pin of hospital as standard.
+    //done -- TODO -- BUG - error message when choose dest. when off campus selected, then if you select to on, the dest portion doesnt reset but causes error if not rechosen. Also, if only the dest. is selected in the on campus mode, it will go to off campus wayfindgin map.
+    //done -- TODO -- BUG - when location services are not allowed, app gets stuck on error screen. Need prompt to dismiss and take to pin of hospital as standard.
     
     //MARK - Outlets
     @IBOutlet weak var curLocationButton: UIButton! //button (bottom left) to change MKUserTrackingMode
     @IBOutlet var showMapView: MKMapView! //This is the mapView
-    @IBOutlet weak var DirectionsOutput: UITextView!
+   // @IBOutlet weak var DirectionsOutput: UITextView!
     
     //outlets for constraints used in hideView func
     @IBOutlet weak var DetailsButton: UIButton!
     @IBOutlet weak var viewBottomHeight: NSLayoutConstraint!
     @IBOutlet weak var dirOutBottomHeight: NSLayoutConstraint!
-    @IBOutlet weak var directionsOutputHeight: NSLayoutConstraint!
+    //@IBOutlet weak var directionsOutputHeight: NSLayoutConstraint!
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var tableView: UITableView!
     
     //MARK - Functions
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -90,6 +91,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         //super.viewWillAppear(true)
         statusCheck()
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 //statusCheck()
@@ -97,9 +99,9 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         //self.curLocationButton.tintColor = UIColor.blueColor()
         self.navigationController?.navigationBar.translucent = true //make top bar transluscent
         //DirectionsOutput.editable = false
-        DirectionsOutput.scrollEnabled = true
-        self.DirectionsOutput.layer.borderWidth = 0.8
-        self.DirectionsOutput.layer.borderColor = UIColor.init(red: 212/255, green: 212/255, blue: 212/255, alpha: 0.8).CGColor
+        //DirectionsOutput.scrollEnabled = true
+        //self.DirectionsOutput.layer.borderWidth = 0.8
+        //self.DirectionsOutput.layer.borderColor = UIColor.init(red: 212/255, green: 212/255, blue: 212/255, alpha: 0.8).CGColor
 
         self.locationManager?.distanceFilter = kCLDistanceFilterNone
         self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
@@ -109,8 +111,33 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
         //viewHeight.constant = screenSize.height * (179/568)
         //directionsOutputHeight.constant = screenSize.height * (208/568)
-
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
+    
+    
+    
+    //MARK -- Table View section
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.turnbyturn.count
+    }
+    /*func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }*/
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        
+        cell.textLabel?.text = self.turnbyturn[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    
+    
     
     //Set desPlace based on the endLocation.category being passed through
     func setDestination(){
@@ -150,22 +177,6 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
             response, error in
             
             guard let response = response else {
-                /*let alertTitle = "Error"
-                let alertMessage = "Error getting directions, please check your data connection and retry getting directions"
-                let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
-                self.presentViewController(alertController, animated: true, completion: nil)
-
-                let delay = 3 * Double(NSEC_PER_SEC)
-                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-                dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                    //Set the map view to providence main tower and add pin.
-                    self.showMapView.setRegion(MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2D(latitude: 47.648755, longitude: -117.413009), 2000, 2000), animated: true)
-                    self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: 47.648755, longitude: -117.413009)
-                    self.pointAnnotation.title = "Providence Sacred Heart"
-                    self.showMapView.addAnnotation(self.pointAnnotation)
-
-                }*/
                 self.displayAlertWithTitle("Error",
                     message: "Error getting directions, please check your data connection and retry getting directions")
                 //Set the map view to providence main tower and add pin.
@@ -194,23 +205,29 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
                 //DirectionsOutput.insertText("Step \(i) -- ")
                 print(step.distance.ft)
                 if step.distance.ft >= 528 {
-                    DirectionsOutput.editable = true
+                    /*DirectionsOutput.editable = true
                     DirectionsOutput.font = UIFont.boldSystemFontOfSize(20)
                     DirectionsOutput.insertText("\(Double(round(10*step.distance.mi)/10)) mi. \n")
                     //DirectionsOutput.font = UIFont.systemFontOfSize(10)
                     DirectionsOutput.insertText("\(step.instructions) \n")
-                    DirectionsOutput.editable = false
+                    DirectionsOutput.editable = false*/
+                    turnbyturn.append("\(Double(round(10*step.distance.mi)/10)) mi. \(step.instructions)")
                 } else if step.distance.ft < 528 {
-                    DirectionsOutput.editable = true
+                    /*DirectionsOutput.editable = true
                     //DirectionsOutput.font = UIFont.boldSystemFontOfSize(20)
                     DirectionsOutput.insertText("\(Int(step.distance.ft)) ft. \n")
                     //DirectionsOutput.font = UIFont.systemFontOfSize(10)
                     DirectionsOutput.insertText("\(step.instructions) \n")
-                    DirectionsOutput.editable = false
+                    DirectionsOutput.editable = false*/
+                    turnbyturn.append("\(Int(step.distance.ft)) ft. \(step.instructions)")
+
                 }
                 i++
                 print(step.instructions)
             }
+            turnbyturn.removeAtIndex(0)
+            tableView.reloadData()
+
         }
         let userLocation = showMapView.userLocation.coordinate
         print(userLocation)
@@ -365,7 +382,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
             counterForCurLocationButton = 1
         }
     }
-    
+    /*
     @IBOutlet weak var outHeight: NSLayoutConstraint!
     @IBAction func hideView(sender: AnyObject) {
         let constChange: CGFloat! = (UIScreen.mainScreen().nativeScale * 245.5) / 2//(UIScreen.mainScreen().nativeBounds.height (245.5/568)) / UIScreen.mainScreen().nativeScale
@@ -389,7 +406,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
             self.DetailsButton.setTitle("Hide Details", forState: .Normal)
             hidden = false
         }
-    }
+    }*/
 
 }
 
