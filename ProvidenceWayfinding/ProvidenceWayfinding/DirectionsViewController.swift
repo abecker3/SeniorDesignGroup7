@@ -94,6 +94,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 //statusCheck()
 
         //self.curLocationButton.tintColor = UIColor.blueColor()
