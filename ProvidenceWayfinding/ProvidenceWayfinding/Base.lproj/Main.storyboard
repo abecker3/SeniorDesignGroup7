@@ -155,6 +155,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="fMd-z2-nUt" firstAttribute="top" secondItem="vQD-ij-gPZ" secondAttribute="bottom" constant="99" id="0WN-0e-6Om"/>
                             <constraint firstItem="fRc-rC-jgH" firstAttribute="top" secondItem="gdp-Wh-bsj" secondAttribute="bottom" constant="8" symbolic="YES" id="2oD-Q0-uJy"/>
@@ -166,10 +167,14 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="vQD-ij-gPZ" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leading" id="xVE-P9-BnS"/>
                             <constraint firstItem="mdJ-Pr-KE4" firstAttribute="top" secondItem="fRc-rC-jgH" secondAttribute="bottom" constant="23" id="y4s-ys-iDD"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="I50-xM-MJj" appends="YES" id="KiN-0F-rtC"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="eN9-MX-1Xa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWQ-cu-k2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="I50-xM-MJj"/>
             </objects>
             <point key="canvasLocation" x="298" y="53"/>
         </scene>

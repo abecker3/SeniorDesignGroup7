@@ -11,6 +11,10 @@ import Foundation
 
 class ParkingViewController: UIViewController, UITextFieldDelegate {
     
+    var screenEdgeRecognizerLeft: UIScreenEdgePanGestureRecognizer!
+    var screenEdgeRecognizerRight: UIScreenEdgePanGestureRecognizer!
+    var flag = 0
+    
     //Variables
     var endLocation: Location!
     var startLocation: Location!
@@ -82,6 +86,14 @@ class ParkingViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        screenEdgeRecognizerLeft = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureLeft:")
+        screenEdgeRecognizerLeft.edges = .Left
+        view.addGestureRecognizer(screenEdgeRecognizerLeft)
+        
+        screenEdgeRecognizerRight = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureRight:")
+        screenEdgeRecognizerRight.edges = .Right
+        view.addGestureRecognizer(screenEdgeRecognizerRight)
 
         // Do any additional setup after loading the view.        
         parkingLocationBuilding = "Main Tower "
@@ -100,5 +112,19 @@ class ParkingViewController: UIViewController, UITextFieldDelegate {
         let nextViewController = segue.destinationViewController as! OnCampusViewController
         nextViewController.startLocation = self.startLocation
         nextViewController.endLocation = self.endLocation
+    }
+    
+    func switchScreenGestureRight(sender: UIScreenEdgePanGestureRecognizer) {
+        flag = flag + 1
+        if (flag % 2 == 1){
+            tabBarController?.selectedIndex = 3
+        }
+    }
+    
+    func switchScreenGestureLeft(sender: UIScreenEdgePanGestureRecognizer) {
+        flag = flag + 1
+        if (flag % 2 == 1){
+            tabBarController?.selectedIndex = 1
+        }
     }
 }

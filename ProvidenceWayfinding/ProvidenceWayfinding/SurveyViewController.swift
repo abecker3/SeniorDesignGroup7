@@ -10,6 +10,10 @@ import UIKit
 
 class SurveyViewController: UIViewController, UITextFieldDelegate{
     
+    var screenEdgeRecognizerLeft: UIScreenEdgePanGestureRecognizer!
+    var screenEdgeRecognizerRight: UIScreenEdgePanGestureRecognizer!
+    var flag = 0
+    
     //Referencing Outlets
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var currentTextField: UITextField!
@@ -22,6 +26,14 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        screenEdgeRecognizerLeft = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureLeft:")
+        screenEdgeRecognizerLeft.edges = .Left
+        view.addGestureRecognizer(screenEdgeRecognizerLeft)
+        
+        screenEdgeRecognizerRight = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureRight:")
+        screenEdgeRecognizerRight.edges = .Right
+        view.addGestureRecognizer(screenEdgeRecognizerRight)
         
         //Delegates
         currentTextField.delegate = self
@@ -110,5 +122,18 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
+    func switchScreenGestureRight(sender: UIScreenEdgePanGestureRecognizer) {
+        flag = flag + 1
+        if (flag % 2 == 1){
+            tabBarController?.selectedIndex = 2
+        }
+    }
+    
+    func switchScreenGestureLeft(sender: UIScreenEdgePanGestureRecognizer) {
+        flag = flag + 1
+        if (flag % 2 == 1){
+            tabBarController?.selectedIndex = 0
+        }
+    }
     
 }
