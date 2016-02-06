@@ -56,4 +56,6 @@ let locations = [
     Location(name: "Waiting Room (Pediatric Surgery/Family)",                           category: "Main Tower",                     floor: "L1"),
     Location(name: "Waiting Room (Skybridge)",                                          category: "Main Tower",                     floor: "L1"),
     Location(name: "Waiting Room (Surgery)",                                            category: "Surgery Center",                 floor: "Main"),
+    Location(name: "Search All Locations",                                     category: "Search All Locations",
+        floor: "kdjlsa")
 ]

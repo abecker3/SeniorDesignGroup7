@@ -197,6 +197,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     </imageView>
                                 </subviews>
                                 <animations/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Iug-VZ-6pk" secondAttribute="bottom" id="FO3-kb-YxT"/>
                                     <constraint firstItem="Iug-VZ-6pk" firstAttribute="top" secondItem="R7E-5e-6Xd" secondAttribute="top" id="Fe1-3c-bSF"/>
@@ -247,12 +248,14 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2IK-Ic-WUY">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="359"/>
                                         <animations/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="359" id="f2y-jI-l7z"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <animations/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="2IK-Ic-WUY" secondAttribute="trailing" id="3cV-vw-i94"/>
                                     <constraint firstItem="2IK-Ic-WUY" firstAttribute="top" secondItem="glt-xn-lJu" secondAttribute="top" id="IoT-wI-Qky"/>
@@ -347,6 +350,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     </imageView>
                                 </subviews>
                                 <animations/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="zYw-Bc-kav" firstAttribute="centerY" secondItem="Daf-UT-qIu" secondAttribute="centerY" constant="30.5" id="5jO-vd-9j1"/>
                                     <constraint firstAttribute="trailing" secondItem="zYw-Bc-kav" secondAttribute="trailing" id="ENc-7J-jAw"/>
@@ -1517,6 +1521,7 @@ Institute </string>
                                     </imageView>
                                 </subviews>
                                 <animations/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="tbR-T5-Tei" firstAttribute="leading" secondItem="9UM-wH-pTl" secondAttribute="leading" id="5Xs-GR-9SU"/>
                                     <constraint firstItem="tbR-T5-Tei" firstAttribute="centerY" secondItem="9UM-wH-pTl" secondAttribute="centerY" id="NPO-py-oaV"/>
