@@ -31,6 +31,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
             controller.searchResultsUpdater = self
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
+            //controller.buildingTableView.delegate = self
             
             self.tableView.tableHeaderView = controller.searchBar
             return controller
@@ -55,7 +56,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
         
         //_ = options + newArray
         
-        let array = ((options + newArray) as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        let array = ((options /*+ newArray*/) as NSArray).filteredArrayUsingPredicate(searchPredicate)
         filteredTableData = array as! [String]
         
         self.tableView.reloadData()
@@ -125,7 +126,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
         }
     }
     
-/*    //Pop back 1 once a row is selected
+/*   //Pop back 1 once a row is selected
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let navController = self.navigationController!
         let indexOfSurvey = navController.viewControllers.count - 1

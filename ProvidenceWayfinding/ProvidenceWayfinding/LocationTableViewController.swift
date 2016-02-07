@@ -155,6 +155,13 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
             {
                 locationOptions.append(location)
             }
+            else if(passInCategory == "Search All Locations")
+            {
+                if(location.category != "Search All Locations")
+                {
+                    locationOptions.append(location)
+                }
+            }
         }
     }
     
