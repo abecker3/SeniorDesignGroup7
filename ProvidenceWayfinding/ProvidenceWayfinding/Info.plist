@@ -23,9 +23,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Turn on Location Services in Settings&gt;Privacy to allow app to determine your current location</string>
+	<string>Turn on Location Services in Settings&gt;ProvidenceWayfinding&gt;Location to allow app to determine your current location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Turn on Location Services in Settings&gt;Privacy to allow app to determine your current location</string>
+	<string>Turn on Location Services in Settings&gt;ProvidenceWayfinding&gt;Location to allow app to determine your current location</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

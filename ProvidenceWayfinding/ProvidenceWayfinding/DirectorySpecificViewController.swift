@@ -30,6 +30,10 @@ class DirectorySpecificViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap = UITapGestureRecognizer(target: self, action: "doubleTapped")
+        tap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tap)
+        
         nameLabel.text = passInName
         getInfoFromName(directory)
         directorySpecificTitle.title = passInName
@@ -80,4 +84,12 @@ class DirectorySpecificViewController: UIViewController {
         return self.floorMap
     }
     
+    func doubleTapped() {
+        if (scrollMap.zoomScale > 1){
+            scrollMap.setZoomScale(0.25, animated: true)
+        }
+        else{
+            scrollMap.setZoomScale(2, animated: true)
+        }
+    }
 }

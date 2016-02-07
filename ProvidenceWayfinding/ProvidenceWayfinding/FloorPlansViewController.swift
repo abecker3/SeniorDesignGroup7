@@ -42,6 +42,10 @@ class FloorPlansViewController: UIViewController {
         
         self.scrollMap.maximumZoomScale = 5.0
         self.scrollMap.clipsToBounds = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: "doubleTapped")
+        tap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tap)
     }
     
     override func didReceiveMemoryWarning() {
@@ -172,5 +176,14 @@ class FloorPlansViewController: UIViewController {
         imageName = building + underscore + floor + fileExtension
         floorMap.image = UIImage(named: imageName)
         floorMap.contentMode = UIViewContentMode.ScaleAspectFit
+    }
+    
+    func doubleTapped() {
+        if (scrollMap.zoomScale > 1){
+            scrollMap.setZoomScale(0.25, animated: true)
+        }
+        else{
+            scrollMap.setZoomScale(2, animated: true)
+        }
     }
 }

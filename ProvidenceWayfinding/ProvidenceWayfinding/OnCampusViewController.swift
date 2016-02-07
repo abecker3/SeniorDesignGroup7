@@ -28,9 +28,23 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
     var endBuilding = String()
     var textDestinationFloor = String()
     
+    var screenEdgeRecognizer: UIScreenEdgePanGestureRecognizer!
+    var currentRadius:CGFloat = 0.0
+    
+    var flag = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        flag = 0
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let tap = UITapGestureRecognizer(target: self, action: "doubleTapped")
+        tap.numberOfTapsRequired = 2
+        view.addGestureRecognizer(tap)
+        
+        screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGesture:")
+        screenEdgeRecognizer.edges = .Right
+        view.addGestureRecognizer(screenEdgeRecognizer)
         
         startBuilding = startLocation.category
         textCurrentFloor = startLocation.floor
@@ -69,6 +83,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         
         currentMap.image = UIImage(named: currentFloor)
         currentMap.contentMode = UIViewContentMode.ScaleAspectFit
+        currentMap.frame = CGRect(origin: CGPoint(x: 0, y: 0), size:((currentMap.image)?.size)!)
 
         self.scrollCurrent.maximumZoomScale = 5.0
         self.scrollCurrent.clipsToBounds = true
@@ -152,6 +167,22 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         //case "5": return "Womens_5.jpg"
         //default: return "Womens_1.jpg"
         default: return "NotAvailable.jpg"
+        }
+    }
+    
+    func doubleTapped() {
+        if (scrollCurrent.zoomScale > 1){
+            scrollCurrent.setZoomScale(0.25, animated: true)
+        }
+        else{
+            scrollCurrent.setZoomScale(2, animated: true)
+        }
+    }
+    
+    func switchScreenGesture(sender: UIScreenEdgePanGestureRecognizer) {
+        flag = flag + 1
+        if (flag % 2 == 1){
+            performSegueWithIdentifier("destinationView", sender: nil)
         }
     }
     
