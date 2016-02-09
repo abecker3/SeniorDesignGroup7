@@ -80,6 +80,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var tableView: UITableView!
+
     
     //MARK - Functions
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -88,34 +89,26 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         nextViewController.endLocation = self.endLocation
     }
     override func viewWillAppear(animated: Bool) {
-        //super.viewWillAppear(true)
         statusCheck()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//statusCheck()
 
-        //self.curLocationButton.tintColor = UIColor.blueColor()
         self.navigationController?.navigationBar.translucent = true //make top bar transluscent
-        //DirectionsOutput.editable = false
-        //DirectionsOutput.scrollEnabled = true
-        //self.DirectionsOutput.layer.borderWidth = 0.8
-        //self.DirectionsOutput.layer.borderColor = UIColor.init(red: 212/255, green: 212/255, blue: 212/255, alpha: 0.8).CGColor
-
         self.locationManager?.distanceFilter = kCLDistanceFilterNone
         self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         showMapView.showsUserLocation = true
         showMapView.mapType = .Standard
         showMapView.delegate = self
         curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
-        //viewHeight.constant = screenSize.height * (179/568)
-        //directionsOutputHeight.constant = screenSize.height * (208/568)
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 40.0
     }
-    
-    
+    let basicCellIdentifier = "BasicDirectionsCell"
+
     
     //MARK -- Table View section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
