@@ -21,11 +21,14 @@ class CampusViewController: UIViewController, UIScrollViewDelegate {
         view.addGestureRecognizer(tap)
         
         campusMap.image = UIImage(named:"Campus.jpg")
-        campusMap.contentMode = UIViewContentMode.ScaleAspectFit
+        campusMap.contentMode = UIViewContentMode.ScaleToFill
         self.campusMap.clipsToBounds = true
         
         self.campusScroll.maximumZoomScale = 5.0
+        self.campusScroll.minimumZoomScale = 2.0
         self.campusScroll.clipsToBounds = true
+        
+        campusScroll.setZoomScale(2, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,11 +40,11 @@ class CampusViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func doubleTapped() {
-        if (campusScroll.zoomScale > 1){
-            campusScroll.setZoomScale(0.25, animated: true)
+        if (campusScroll.zoomScale > 2){
+            campusScroll.setZoomScale(2, animated: true)
         }
         else{
-            campusScroll.setZoomScale(2, animated: true)
+            campusScroll.setZoomScale(4, animated: true)
         }
     }
 }
