@@ -145,6 +145,19 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CU-P0-Qeu">
+                                <rect key="frame" x="0.0" y="506" width="600" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="aDG-HD-BNZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="dEx-IQ-45g"/>
+                                </constraints>
+                                <state key="normal" title="Click Here to Begin" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClick:" destination="Jbg-Av-W2a" eventType="touchUpInside" id="DeV-LU-1RC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -152,9 +165,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="fMd-z2-nUt" firstAttribute="top" secondItem="vQD-ij-gPZ" secondAttribute="bottom" constant="99" id="0WN-0e-6Om"/>
                             <constraint firstItem="fRc-rC-jgH" firstAttribute="top" secondItem="gdp-Wh-bsj" secondAttribute="bottom" constant="8" symbolic="YES" id="2oD-Q0-uJy"/>
                             <constraint firstItem="vQD-ij-gPZ" firstAttribute="centerX" secondItem="mdJ-Pr-KE4" secondAttribute="centerX" id="3Ak-xP-oaH"/>
+                            <constraint firstItem="1CU-P0-Qeu" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leadingMargin" constant="-20" id="Euy-wg-2nJ"/>
                             <constraint firstItem="mdJ-Pr-KE4" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leadingMargin" id="III-Kf-wvy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1CU-P0-Qeu" secondAttribute="trailing" constant="-20" id="LsK-Dc-BLP"/>
                             <constraint firstAttribute="trailing" secondItem="vQD-ij-gPZ" secondAttribute="trailing" id="RWs-xO-dlF"/>
                             <constraint firstItem="fRc-rC-jgH" firstAttribute="centerX" secondItem="sF1-Fm-tx0" secondAttribute="centerX" constant="-5" id="UzL-Z8-vXc"/>
+                            <constraint firstItem="fMd-z2-nUt" firstAttribute="top" secondItem="1CU-P0-Qeu" secondAttribute="bottom" id="ldp-YU-eCg"/>
                             <constraint firstItem="vQD-ij-gPZ" firstAttribute="top" secondItem="mdJ-Pr-KE4" secondAttribute="bottom" constant="18" id="wiB-2Z-7jz"/>
                             <constraint firstItem="vQD-ij-gPZ" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leading" id="xVE-P9-BnS"/>
                             <constraint firstItem="mdJ-Pr-KE4" firstAttribute="top" secondItem="fRc-rC-jgH" secondAttribute="bottom" constant="23" id="y4s-ys-iDD"/>
@@ -163,7 +179,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <outletCollection property="gestureRecognizers" destination="I50-xM-MJj" appends="YES" id="KiN-0F-rtC"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="eN9-MX-1Xa"/>
+                    <navigationItem key="navigationItem" title="Home" id="eN9-MX-1Xa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWQ-cu-k2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="I50-xM-MJj"/>
@@ -1625,14 +1641,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JcV-jw-WAV" firstAttribute="top" secondItem="leA-OB-Eiq" secondAttribute="bottom" id="0Al-mN-CqB"/>
                             <constraint firstItem="cyF-A9-K3M" firstAttribute="leading" secondItem="XTt-5u-QdV" secondAttribute="leadingMargin" constant="-20" id="Aos-7C-Vt3"/>
                             <constraint firstItem="cyF-A9-K3M" firstAttribute="centerX" secondItem="XTt-5u-QdV" secondAttribute="centerX" id="INR-to-amI"/>
                             <constraint firstItem="cyF-A9-K3M" firstAttribute="trailing" secondItem="yle-Kj-PUh" secondAttribute="trailing" id="My9-vh-C4h"/>
-                            <constraint firstItem="cyF-A9-K3M" firstAttribute="top" secondItem="JcV-jw-WAV" secondAttribute="bottom" constant="1" id="WGN-1b-G3r"/>
+                            <constraint firstItem="cyF-A9-K3M" firstAttribute="top" secondItem="leA-OB-Eiq" secondAttribute="bottom" id="ObQ-OW-yVw"/>
                             <constraint firstItem="cyF-A9-K3M" firstAttribute="leading" secondItem="yle-Kj-PUh" secondAttribute="leading" id="X4F-na-Jid"/>
                             <constraint firstItem="yle-Kj-PUh" firstAttribute="top" secondItem="XTt-5u-QdV" secondAttribute="top" id="Xl7-0R-RZU"/>
-                            <constraint firstItem="JcV-jw-WAV" firstAttribute="centerX" secondItem="XTt-5u-QdV" secondAttribute="centerX" id="a0B-Hs-nou"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cyF-A9-K3M" secondAttribute="trailing" constant="-20" id="awB-uH-exV"/>
                             <constraint firstItem="cyF-A9-K3M" firstAttribute="centerX" secondItem="XTt-5u-QdV" secondAttribute="centerX" id="lEG-3F-SBh"/>
                             <constraint firstItem="cyF-A9-K3M" firstAttribute="bottom" secondItem="HzG-3m-x2K" secondAttribute="top" id="piw-qC-Zsg"/>
@@ -1650,7 +1664,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <!--Parking-->
         <scene sceneID="tdE-vE-62H">
             <objects>
-                <viewController title="Parking" id="B5n-Ui-7sL" customClass="ParkingViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Parking" id="B5n-Ui-7sL" customClass="ParkingPathViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="K53-kU-tMb"/>
                         <viewControllerLayoutGuide type="bottom" id="Des-g1-1sQ"/>
@@ -1796,7 +1810,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     <navigationItem key="navigationItem" title="Parking" id="cb6-0s-zNp">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="4gM-Gf-F9O">
                             <connections>
-                                <segue destination="JWc-UJ-WIP" kind="show" id="SoW-dI-v9z"/>
+                                <segue destination="JWc-UJ-WIP" kind="show" identifier="onCampusView" id="SoW-dI-v9z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1823,6 +1837,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YCW-oQ-6O4"/>
+        <segue reference="SoW-dI-v9z"/>
     </inferredMetricsTieBreakers>
 </document>

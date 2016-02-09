@@ -144,6 +144,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
             surveyViewController.endLocation = locationOptions[indexPath.row]
         }
         
+        resultSearchController.active = false
         navController.popToViewController(surveyViewController, animated: true)
     }
     
