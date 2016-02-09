@@ -34,6 +34,7 @@
 		B81F5F801C5867DF00B2D981 /* FloorPlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F5F7F1C5867DF00B2D981 /* FloorPlansViewController.swift */; };
 		B86C12671C52A71C00FF284F /* Heart_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B86C12661C52A71C00FF284F /* Heart_1.jpg */; };
 		B86C12691C52A72500FF284F /* Heart_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B86C12681C52A72500FF284F /* Heart_2.jpg */; };
+		B87C86091C6A46E20091514E /* ParkingPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C86081C6A46E20091514E /* ParkingPathViewController.swift */; };
 		B89D054E1C56F1FD00D81C76 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */; };
 		B89D05501C56F8F800D81C76 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */; };
 		B8C32E1F1C61AD4E0081BE10 /* buttonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C32E1E1C61AD4E0081BE10 /* buttonBlue.png */; };
@@ -99,6 +100,7 @@
 		B81F5F7F1C5867DF00B2D981 /* FloorPlansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorPlansViewController.swift; sourceTree = "<group>"; };
 		B86C12661C52A71C00FF284F /* Heart_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_1.jpg; sourceTree = "<group>"; };
 		B86C12681C52A72500FF284F /* Heart_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_2.jpg; sourceTree = "<group>"; };
+		B87C86081C6A46E20091514E /* ParkingPathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingPathViewController.swift; sourceTree = "<group>"; };
 		B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
 		B8C32E1E1C61AD4E0081BE10 /* buttonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBlue.png; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				B69650631C05399500C8276A /* More.png */,
 				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
 				B696505E1C04F7E200C8276A /* ParkingViewController.swift */,
+				B87C86081C6A46E20091514E /* ParkingPathViewController.swift */,
 				D2CA4A161BE2B72600E79580 /* TransitionManager.swift */,
 				D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */,
 				39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */,
@@ -399,6 +402,7 @@
 				B89D05501C56F8F800D81C76 /* DestinationViewController.swift in Sources */,
 				351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */,
 				A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */,
+				B87C86091C6A46E20091514E /* ParkingPathViewController.swift in Sources */,
 				D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */,
 				B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */,
 				A0DD87201C580E0B0071B478 /* DirectorySpecificViewController.swift in Sources */,

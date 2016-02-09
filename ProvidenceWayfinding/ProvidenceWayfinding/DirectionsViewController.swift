@@ -82,7 +82,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
     //MARK - Functions
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let nextViewController = segue.destinationViewController as! ParkingViewController
+        let nextViewController = segue.destinationViewController as! ParkingPathViewController
         nextViewController.startLocation = self.startLocation
         nextViewController.endLocation = self.endLocation
     }

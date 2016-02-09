@@ -27,5 +27,9 @@ class HomeViewController: UIViewController {
             tabBarController?.selectedIndex = 1
         }
     }
+    
+    @IBAction func buttonClick(sender: AnyObject) {
+        tabBarController?.selectedIndex = 1
+    }
 
 }
