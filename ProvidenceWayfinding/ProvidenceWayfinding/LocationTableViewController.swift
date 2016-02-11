@@ -182,7 +182,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         
         else if(passInTextFieldTag == surveyViewController.destinationTextField.tag)
         {
-            surveyViewController.currentTextField.placeholder = locationOptions[indexPath.row].name
+            surveyViewController.destinationTextField.placeholder = locationOptions[indexPath.row].name
             surveyViewController.endLocation = locationOptions[indexPath.row]
         }
         
