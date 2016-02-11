@@ -22,10 +22,13 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
     var options: [String]!
     var locationOptions:[Location] = []
     var searchActive: Bool = false
+    var revisitView: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initOptions()
+        
+        definesPresentationContext = true
         
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
@@ -70,6 +73,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
     }*/
     
     //func searchBar(
+    
     
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
@@ -185,7 +189,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
         }
         
         else {
-            resultSearchController.active = false
+            //resultSearchController.active = false
             let nextViewController = segue.destinationViewController as! LocationTableViewController
             nextViewController.passInTextFieldTag = self.passInTextFieldTag
             nextViewController.passInCategory = "Search All Locations"

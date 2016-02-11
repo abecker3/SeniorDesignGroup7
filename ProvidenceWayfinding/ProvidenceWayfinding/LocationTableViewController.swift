@@ -27,7 +27,6 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     {
         super.viewDidLoad()
         //resultSearchController.active = false
-        definesPresentationContext = true
         
         //Choose options based on passed in building
         initControllerTitle()
