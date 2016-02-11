@@ -35,7 +35,11 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     var hidden = false //flag used in hideView func
     var regionChangeIsFromUserInteraction = false //bool value for checking if user moved map
     let screenSize: CGRect = UIScreen.mainScreen().bounds
-    var turnbyturn: [String] = [""]
+    var turnbyturnStepDistance: [String] = [""]
+    var turnbyturnStepIns: [String] = [""]
+    var timer = NSTimer()
+    var updateDirectionsCheck: [String]!
+    var updateDistanceCheck: [String]!
     
     // Parking Location Coordinates
     let DoctorBuilding = CLLocationCoordinate2D(
@@ -79,6 +83,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     //@IBOutlet weak var directionsOutputHeight: NSLayoutConstraint!
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var tableView: UITableView!
 
     
@@ -90,11 +95,21 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     override func viewWillAppear(animated: Bool) {
         statusCheck()
+        self.tableView.reloadData()
+
+
     }
 
+    override func viewWillDisappear(animated: Bool) {
+        self.turnbyturnStepDistance.removeAll()
+        self.turnbyturnStepDistance.append("")
+        self.turnbyturnStepIns.removeAll()
+        self.turnbyturnStepIns.append("")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.infoView.layer.borderWidth = 0.5
+        self.tableView.layer.borderWidth = 0.5
 
         self.navigationController?.navigationBar.translucent = true //make top bar transluscent
         self.locationManager?.distanceFilter = kCLDistanceFilterNone
@@ -105,23 +120,28 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 40.0
+        self.tableView.estimatedRowHeight = 90.0
+        self.tableView.separatorStyle = .None
     }
-    let basicCellIdentifier = "BasicDirectionsCell"
 
     
     //MARK -- Table View section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.turnbyturn.count
+        return 1
+    }
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
     }
     /*func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Section \(section)"
     }*/
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        
-        cell.textLabel?.text = self.turnbyturn[indexPath.row]
+        let cell:BasicDirectionsCell = tableView.dequeueReusableCellWithIdentifier("BasicDirectionsCell", forIndexPath: indexPath) as! BasicDirectionsCell
+            cell.subtitleLabel.text = self.turnbyturnStepIns[indexPath.row]
+            cell.titleLabel.text = self.turnbyturnStepDistance[indexPath.row]
+            print("index = \(indexPath.row)")
+
         
         return cell
     }
@@ -155,6 +175,50 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
+    func scheduledTimerWithTimeInterval(){
+        timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("updateDirections"), userInfo: nil, repeats: true)
+    }
+    
+    func updateDirections(){
+        let request = MKDirectionsRequest()
+        request.source = MKMapItem.mapItemForCurrentLocation()
+        request.destination = MKMapItem(placemark: desPlace)
+        
+        request.requestsAlternateRoutes = false
+        
+        let directions = MKDirections(request: request)
+        directions.calculateDirectionsWithCompletionHandler{
+            response, error in
+            
+            guard let response = response else {
+                self.displayAlertWithTitle("Error",
+                    message: "Error getting directions, please check your data connection and retry getting directions")
+                return
+            }
+            self.showMapView.removeOverlays(self.showMapView.overlaysInLevel(MKOverlayLevel.AboveRoads))
+
+            for route in response.routes {
+                for step in route.steps {
+                    print(step.distance.ft)
+                    if step.distance.ft >= 528 {
+                        self.turnbyturnStepDistance.append("\(Double(round(10*step.distance.mi)/10)) mi.")
+                        self.turnbyturnStepIns.append("\(step.instructions)")
+                        
+                    } else if step.distance.ft < 528 {
+                        self.turnbyturnStepDistance.append("\(Int(step.distance.ft)) ft.")
+                        self.turnbyturnStepIns.append("\(step.instructions)")
+                    }
+                    print(step.instructions)
+                }
+                //self.turnbyturnStepDistance.removeAtIndex(0)
+                //self.turnbyturnStepIns.removeAtIndex(0)
+                self.tableView.reloadData()
+                self.showMapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
+            }
+        }
+    }
+    
+    
     //Create the request for source and use destination to
     func getDirections(){
         let request = MKDirectionsRequest()
@@ -182,44 +246,29 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             self.showMapView(response)
         }
-        
     }
     
     
     
     // Create the route and output steps to text view
     func showMapView(response: MKDirectionsResponse) {
-        var i = 1
         for route in response.routes {
-            
-            showMapView.addOverlay(route.polyline,
-                level: MKOverlayLevel.AboveRoads)
+            showMapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
             
             for step in route.steps {
-                //DirectionsOutput.insertText("Step \(i) -- ")
                 print(step.distance.ft)
                 if step.distance.ft >= 528 {
-                    /*DirectionsOutput.editable = true
-                    DirectionsOutput.font = UIFont.boldSystemFontOfSize(20)
-                    DirectionsOutput.insertText("\(Double(round(10*step.distance.mi)/10)) mi. \n")
-                    //DirectionsOutput.font = UIFont.systemFontOfSize(10)
-                    DirectionsOutput.insertText("\(step.instructions) \n")
-                    DirectionsOutput.editable = false*/
-                    turnbyturn.append("\(Double(round(10*step.distance.mi)/10)) mi. \(step.instructions)")
-                } else if step.distance.ft < 528 {
-                    /*DirectionsOutput.editable = true
-                    //DirectionsOutput.font = UIFont.boldSystemFontOfSize(20)
-                    DirectionsOutput.insertText("\(Int(step.distance.ft)) ft. \n")
-                    //DirectionsOutput.font = UIFont.systemFontOfSize(10)
-                    DirectionsOutput.insertText("\(step.instructions) \n")
-                    DirectionsOutput.editable = false*/
-                    turnbyturn.append("\(Int(step.distance.ft)) ft. \(step.instructions)")
+                    turnbyturnStepDistance.append("\(Double(round(10*step.distance.mi)/10)) mi.")
+                    turnbyturnStepIns.append("\(step.instructions)")
 
+                } else if step.distance.ft < 528 {
+                    turnbyturnStepDistance.append("\(Int(step.distance.ft)) ft.")
+                    turnbyturnStepIns.append("\(step.instructions)")
                 }
-                i++
                 print(step.instructions)
             }
-            turnbyturn.removeAtIndex(0)
+            turnbyturnStepDistance.removeAtIndex(0)
+            turnbyturnStepIns.removeAtIndex(0)
             tableView.reloadData()
 
         }
@@ -235,13 +284,13 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         else {
             showMapView.setRegion(region, animated: true)
         }
+        scheduledTimerWithTimeInterval()
+
     }
     
     // Renders the line for the directions
-    func mapView(mapView: MKMapView, rendererForOverlay
-        overlay: MKOverlay) -> MKOverlayRenderer {
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
             let renderer = MKPolylineRenderer(overlay: overlay)
-            
             renderer.strokeColor = UIColor.blueColor()
             renderer.lineWidth = 5.0
             return renderer

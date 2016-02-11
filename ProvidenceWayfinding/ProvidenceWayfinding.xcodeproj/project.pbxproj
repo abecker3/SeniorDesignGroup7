@@ -402,6 +402,7 @@
 				351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */,
 				A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */,
 				D2C7308C1C69473D002AF7CB /* BasicDirectionsCell.swift in Sources */,
+				B87C86091C6A46E20091514E /* ParkingPathViewController.swift in Sources */,
 				D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */,
 				B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */,
 				A0DD87201C580E0B0071B478 /* DirectorySpecificViewController.swift in Sources */,
