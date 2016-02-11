@@ -126,6 +126,33 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         }
     }
     
+    //This function checks whether the search bar cell that was clicked is part of Locations
+    func checkArrayForMember(tableView: UITableView, indexPath: NSIndexPath) -> Bool
+    {
+        for x in locations
+        {
+            if(filteredTableData.count > indexPath.row)
+            {
+                if(x.name == filteredTableData[indexPath.row])
+                {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
+    func getLocationFromName(name: String) -> Location
+    {
+        for x in locations{
+            if(x.name == name)
+            {
+                return x
+            }
+        }
+        return Location(name: "Admitting", category: "Main Tower", floor: "Main")
+    }
+    
     //Pop back 2 once a row is selected
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let navController = self.navigationController!
@@ -133,11 +160,25 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         let indexOfSurvey = indexOfLastViewController - 2
         let surveyViewController = navController.viewControllers[indexOfSurvey] as! SurveyViewController
     
-        if(passInTextFieldTag == surveyViewController.currentTextField.tag)
+        if(passInTextFieldTag == surveyViewController.currentTextField.tag && checkArrayForMember(tableView, indexPath: indexPath))
+        {
+            surveyViewController.currentTextField.placeholder = filteredTableData[indexPath.row]
+            let location = getLocationFromName(surveyViewController.currentTextField.placeholder!)
+            surveyViewController.startLocation = location
+        }
+        else if(passInTextFieldTag == surveyViewController.destinationTextField.tag && checkArrayForMember(tableView, indexPath: indexPath))
+        {
+            surveyViewController.destinationTextField.placeholder = filteredTableData[indexPath.row]
+            let location = getLocationFromName(surveyViewController.currentTextField.placeholder!)
+            surveyViewController.endLocation = location
+        }
+        
+        else if(passInTextFieldTag == surveyViewController.currentTextField.tag)
         {
             surveyViewController.currentTextField.placeholder = locationOptions[indexPath.row].name
             surveyViewController.startLocation = locationOptions[indexPath.row]
         }
+        
         else if(passInTextFieldTag == surveyViewController.destinationTextField.tag)
         {
             surveyViewController.destinationTextField.placeholder = locationOptions[indexPath.row].name
