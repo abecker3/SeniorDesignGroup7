@@ -26,6 +26,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //resultSearchController.active = false
         
         //Choose options based on passed in building
         initControllerTitle()
