@@ -22,6 +22,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     var resultSearchController = UISearchController()
     var filteredTableData = [String]()
     var locationOptions:[Location] = []
+    var allLocationsTag: Bool = false
 
     override func viewDidLoad()
     {
@@ -161,29 +162,52 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         let indexOfSurvey = indexOfLastViewController - 2
         let surveyViewController = navController.viewControllers[indexOfSurvey] as! SurveyViewController
     
-        if(passInTextFieldTag == surveyViewController.currentTextField.tag && checkArrayForMember(tableView, indexPath: indexPath))
+        if(passInTextFieldTag == surveyViewController.currentTextField.tag && resultSearchController.active && allLocationsTag)
         {
             surveyViewController.currentTextField.placeholder = filteredTableData[indexPath.row]
             let location = getLocationFromName(surveyViewController.currentTextField.placeholder!)
             surveyViewController.startLocation = location
+            print(location)
+            print("Current: search is active")
         }
-        else if(passInTextFieldTag == surveyViewController.destinationTextField.tag && checkArrayForMember(tableView, indexPath: indexPath))
+        else if(passInTextFieldTag == surveyViewController.destinationTextField.tag && resultSearchController.active && allLocationsTag)
         {
             surveyViewController.destinationTextField.placeholder = filteredTableData[indexPath.row]
             let location = getLocationFromName(surveyViewController.currentTextField.placeholder!)
             surveyViewController.endLocation = location
+            print(location)
+            print("Destination: search is active")
         }
         
-        else if(passInTextFieldTag == surveyViewController.currentTextField.tag)
+        /*else if(passInTextFieldTag == surveyViewController.currentTextField.tag )
+        {
+            surveyViewController.currentTextField.placeholder = filteredTableData[indexPath.row]
+            let location = getLocationFromName(surveyViewController.currentTextField.placeholder!)
+            surveyViewController.startLocation = location
+            print("Current: regular cell selection")
+        }
+        else if(passInTextFieldTag == surveyViewController.destinationTextField.tag)
+        {
+            surveyViewController.destinationTextField.placeholder = filteredTableData[indexPath.row]
+            let location = getLocationFromName(surveyViewController.currentTextField.placeholder!)
+            surveyViewController.endLocation = location
+            print("Destination: regular cell selection")
+        }*/
+        
+        else if(passInTextFieldTag == surveyViewController.currentTextField.tag /*&& !allLocationsTag*/)
         {
             surveyViewController.currentTextField.placeholder = locationOptions[indexPath.row].name
             surveyViewController.startLocation = locationOptions[indexPath.row]
+            print(locationOptions[indexPath.row])
+            print("Current: regular cell selection")
         }
         
-        else if(passInTextFieldTag == surveyViewController.destinationTextField.tag)
+        else if(passInTextFieldTag == surveyViewController.destinationTextField.tag /*&& !allLocationsTag*/)
         {
             surveyViewController.destinationTextField.placeholder = locationOptions[indexPath.row].name
             surveyViewController.endLocation = locationOptions[indexPath.row]
+            print(locationOptions[indexPath.row])
+            print("Destination: regular cell selection")
         }
         
         resultSearchController.active = false
@@ -198,9 +222,10 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
             {
                 locationOptions.append(location)
             }
-            else if(passInCategory == "Search All Locations")
+            else if(passInCategory == "All Locations")
             {
-                if(location.category != "Search All Locations")
+                allLocationsTag = true
+                if(location.category != "All Locations")
                 {
                     locationOptions.append(location)
                 }

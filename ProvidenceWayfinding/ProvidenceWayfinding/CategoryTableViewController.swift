@@ -192,7 +192,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
             //resultSearchController.active = false
             let nextViewController = segue.destinationViewController as! LocationTableViewController
             nextViewController.passInTextFieldTag = self.passInTextFieldTag
-            nextViewController.passInCategory = "Search All Locations"
+            nextViewController.passInCategory = "All Locations"
         }
     }
 }
