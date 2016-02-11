@@ -173,7 +173,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         else if(passInTextFieldTag == surveyViewController.destinationTextField.tag && resultSearchController.active && allLocationsTag)
         {
             surveyViewController.destinationTextField.placeholder = filteredTableData[indexPath.row]
-            let location = getLocationFromName(surveyViewController.currentTextField.placeholder!)
+            let location = getLocationFromName(surveyViewController.destinationTextField.placeholder!)
             surveyViewController.endLocation = location
             print(location)
             print("Destination: search is active")
