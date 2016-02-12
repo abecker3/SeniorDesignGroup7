@@ -1355,7 +1355,13 @@ Institute </string>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Parking" id="p7u-um-xRi"/>
+                    <navigationItem key="navigationItem" title="Parking" id="p7u-um-xRi">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="Va6-Eh-2vZ">
+                            <connections>
+                                <segue destination="odO-hm-Lvz" kind="show" id="IPA-Yu-X3r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buildingButtons" destination="Zuq-Ix-Bxi" id="uX2-mE-6ap"/>
@@ -1368,6 +1374,37 @@ Institute </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgO-HW-7CA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2145" y="62"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="IvO-Ol-bAX">
+            <objects>
+                <viewController id="odO-hm-Lvz" customClass="HistoryViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xyH-sU-kMm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" id="BPp-ZX-RfU">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BPp-ZX-RfU" id="3fQ-Xr-cyD">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="odO-hm-Lvz" id="Jq9-BK-qNL"/>
+                            <outlet property="delegate" destination="odO-hm-Lvz" id="zop-Bo-RgP"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="table" destination="xyH-sU-kMm" id="aIi-Rk-Qdt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEf-us-M2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2869" y="62"/>
         </scene>
         <!--Directory-->
         <scene sceneID="JeY-dk-Nej">
