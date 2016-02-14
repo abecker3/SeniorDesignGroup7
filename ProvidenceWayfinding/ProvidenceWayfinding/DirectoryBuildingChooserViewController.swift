@@ -20,10 +20,10 @@ class DirectoryBuildingChooserViewController: UITableViewController {
         initOptions()
     }
     
-    /*override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // We are only using one section so we return one
         return 1
-    }*/
+    }
     
     func initOptions()
     {
