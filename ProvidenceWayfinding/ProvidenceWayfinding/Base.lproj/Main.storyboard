@@ -1519,10 +1519,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
             </objects>
             <point key="canvasLocation" x="4350" y="850"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Directory Building Chooser View Controller-->
         <scene sceneID="BS4-Y6-pl3">
             <objects>
-                <tableViewController id="Kg9-jc-EgW" sceneMemberID="viewController">
+                <tableViewController id="Kg9-jc-EgW" customClass="DirectoryBuildingChooserViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sRA-i9-STm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
