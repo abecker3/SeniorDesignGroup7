@@ -10,5 +10,7 @@ import UIKit
 
 class DirectoryBuildingChooserViewController: UITableViewController{
     
-    
+    @IBOutlet var table: UITableView!
+    var filteredTableData = [String]()
+    var options: [String]!
 }
