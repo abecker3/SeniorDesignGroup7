@@ -18,6 +18,7 @@
 		39DDF7BA1C0D348A00CC63A5 /* HoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */; };
 		39DDF7BC1C0D6B9E00CC63A5 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */; };
 		39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E909351C0E30F500F81024 /* MoreViewController.swift */; };
+		A05A93AB1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05A93AA1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift */; };
 		A06517E11C56CD1800B12A63 /* DirectoryInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */; };
 		A0D264C21C691D260026EB2A /* BuildingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D264C11C691D260026EB2A /* BuildingTableViewController.swift */; };
 		A0DD87201C580E0B0071B478 /* DirectorySpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */; };
@@ -84,6 +85,7 @@
 		39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HoursViewController.swift; path = ../HoursViewController.swift; sourceTree = "<group>"; };
 		39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		39E909351C0E30F500F81024 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		A05A93AA1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryBuildingChooserViewController.swift; sourceTree = "<group>"; };
 		A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryInformation.swift; sourceTree = "<group>"; };
 		A0D264C11C691D260026EB2A /* BuildingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingTableViewController.swift; sourceTree = "<group>"; };
 		A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorySpecificViewController.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				351906AC1BE9489200F1D343 /* OnCampusViewController.swift */,
 				B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */,
 				D2CA49EA1BE2B58B00E79580 /* Main.storyboard */,
+				A05A93AA1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift */,
 				A0D264C11C691D260026EB2A /* BuildingTableViewController.swift */,
 				B81F5F7F1C5867DF00B2D981 /* FloorPlansViewController.swift */,
 				A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */,
@@ -402,6 +405,7 @@
 				B89D05501C56F8F800D81C76 /* DestinationViewController.swift in Sources */,
 				351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */,
 				A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */,
+				A05A93AB1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift in Sources */,
 				B87C86091C6A46E20091514E /* ParkingPathViewController.swift in Sources */,
 				D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */,
 				B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */,
