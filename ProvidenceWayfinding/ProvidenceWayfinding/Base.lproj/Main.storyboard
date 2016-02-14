@@ -1551,10 +1551,20 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="resultSearchController" destination="VB2-uw-Mba" id="qZy-s5-scj"/>
+                        <outlet property="searchDisplayController" destination="VB2-uw-Mba" id="lVd-Lu-WXe"/>
                         <outlet property="table" destination="sRA-i9-STm" id="2Cb-OH-gE7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvd-AF-VEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="VB2-uw-Mba">
+                    <connections>
+                        <outlet property="delegate" destination="Kg9-jc-EgW" id="iXc-QZ-iKH"/>
+                        <outlet property="searchContentsController" destination="Kg9-jc-EgW" id="cMW-49-ldq"/>
+                        <outlet property="searchResultsDataSource" destination="Kg9-jc-EgW" id="yqS-gB-pZE"/>
+                        <outlet property="searchResultsDelegate" destination="Kg9-jc-EgW" id="TKK-bm-TXc"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="4304" y="1767"/>
         </scene>
