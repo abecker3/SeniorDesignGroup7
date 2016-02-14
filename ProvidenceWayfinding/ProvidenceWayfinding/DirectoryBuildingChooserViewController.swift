@@ -52,12 +52,24 @@ class DirectoryBuildingChooserViewController: UITableViewController {
     }
     
     /*override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.options.count
+        print(options.count)
+        return 11
+        //return options.count
     }*/
     
-    override func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    /*override func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
         cell.textLabel?.text = options[indexPath.row]
+        return cell
+    }*/
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
+        
+        // Configure the cell...
+        let option = options[indexPath.row]
+        cell.textLabel!.text = option
+        
         return cell
     }
 
