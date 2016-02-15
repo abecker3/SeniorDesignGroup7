@@ -19,13 +19,15 @@ extension Double {
     var mi: Double { return self * 0.000621371192 }
 }
 
-class DirectionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MKMapViewDelegate, CLLocationManagerDelegate {
+class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     var destination: MKMapItem?
     var desPlace: MKPlacemark!
     var annotation:MKAnnotation!
     var error:NSError!
     var pointAnnotation = MKPointAnnotation()
+    var startAnnotation = MKPointAnnotation()
+    var endAnnotation = MKPointAnnotation()
     
     var pinAnnotationView:MKPinAnnotationView!
     var locationManager: CLLocationManager?
@@ -38,6 +40,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     var turnbyturnStepDistance: [String] = [""]
     var turnbyturnStepIns: [String] = [""]
     var timer = NSTimer()
+    var timer2 = NSTimer()
     var updateDirectionsCheck: [String]!
     var updateDistanceCheck: [String]!
     
@@ -78,24 +81,38 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     //outlets for constraints used in hideView func
     @IBOutlet weak var DetailsButton: UIButton!
-    @IBOutlet weak var viewBottomHeight: NSLayoutConstraint!
-    @IBOutlet weak var dirOutBottomHeight: NSLayoutConstraint!
+    //@IBOutlet weak var viewBottomHeight: NSLayoutConstraint!
+    //@IBOutlet weak var dirOutBottomHeight: NSLayoutConstraint!
     //@IBOutlet weak var directionsOutputHeight: NSLayoutConstraint!
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
     
+    //@IBOutlet weak var detailsButton: UIButton!
     @IBOutlet weak var infoView: UIView!
-    @IBOutlet weak var tableView: UITableView!
+    //@IBOutlet weak var tableView: UITableView!
 
+    /*@IBAction func detailsPress(sender: UIButton) {
+        self.performSegueWithIdentifier("detailsSegue", sender: sender)
+    }*/
     
     //MARK - Functions
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let nextViewController = segue.destinationViewController as! ParkingPathViewController
-        nextViewController.startLocation = self.startLocation
-        nextViewController.endLocation = self.endLocation
+
+        if segue.identifier == "detailsSegue" {
+            let detailView = segue.destinationViewController as! MapDetailsViewController
+            detailView.turnbyturnStepDistance = self.turnbyturnStepDistance
+            detailView.turnbyturnStepIns = self.turnbyturnStepIns
+        }else{
+            let nextViewController = segue.destinationViewController as! ParkingPathViewController
+            nextViewController.startLocation = self.startLocation
+            nextViewController.endLocation = self.endLocation
+        }
     }
+    
+
+    
     override func viewWillAppear(animated: Bool) {
         statusCheck()
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
 
 
     }
@@ -109,7 +126,6 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.infoView.layer.borderWidth = 0.5
-        self.tableView.layer.borderWidth = 0.5
 
         self.navigationController?.navigationBar.translucent = true //make top bar transluscent
         self.locationManager?.distanceFilter = kCLDistanceFilterNone
@@ -118,37 +134,11 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         showMapView.mapType = .Standard
         showMapView.delegate = self
         curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-        self.tableView.estimatedRowHeight = 90.0
-        self.tableView.separatorStyle = .None
+
     }
 
     
-    //MARK -- Table View section
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
-    }
-    /*func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
-    }*/
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:BasicDirectionsCell = tableView.dequeueReusableCellWithIdentifier("BasicDirectionsCell", forIndexPath: indexPath) as! BasicDirectionsCell
-            cell.subtitleLabel.text = self.turnbyturnStepIns[indexPath.row]
-            cell.titleLabel.text = self.turnbyturnStepDistance[indexPath.row]
-            print("index = \(indexPath.row)")
 
-        
-        return cell
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
     
     
     
@@ -174,11 +164,14 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
                 desPlace = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
         }
     }
-    
+       /*
     func scheduledTimerWithTimeInterval(){
-        timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: Selector("updateDirections"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("updateDirections"), userInfo: nil, repeats: true)
+        //timer2 = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateDirections"), userInfo: nil, repeats: true)
     }
     
+    //var coords: [CLLocationCoordinate2D] = []
+ 
     func updateDirections(){
         let request = MKDirectionsRequest()
         request.source = MKMapItem.mapItemForCurrentLocation()
@@ -191,14 +184,34 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
             response, error in
             
             guard let response = response else {
-                self.displayAlertWithTitle("Error",
-                    message: "Error getting directions, please check your data connection and retry getting directions")
+                /*self.displayAlertWithTitle("Error",
+                    message: "Error getting directions, please check your data connection and retry getting directions")*/
                 return
             }
             self.showMapView.removeOverlays(self.showMapView.overlaysInLevel(MKOverlayLevel.AboveRoads))
+            if response.routes[0].steps[1].instructions != self.turnbyturnStepIns[1]{
+                self.turnbyturnStepDistance.removeAtIndex(0)
+                self.turnbyturnStepIns.removeAtIndex(0)
+            }
+            self.tableView.reloadData()
+            /*for route in response.routes{
+                for step in 0...route.steps.count-1{
+                    if route.steps[step].instructions == self.turnbyturnStepIns[step]{
+                        self.turnbyturnStepIns.removeAtIndex(step)
+                    }
+                    print(route.steps[step].instructions)
+                    print(self.turnbyturnStepIns[step]);
+                }
+            }*/
 
-            for route in response.routes {
+            /*for route in response.routes {
+                if route.steps[0].instructions == {
+                
+                }
                 for step in route.steps {
+                    //self.coords.reserveCapacity(step.polyline.pointCount)
+
+                    //print(String(step.polyline.getCoordinates(&self.coords, range: NSMakeRange(0, step.polyline.pointCount))))
                     print(step.distance.ft)
                     if step.distance.ft >= 528 {
                         self.turnbyturnStepDistance.append("\(Double(round(10*step.distance.mi)/10)) mi.")
@@ -210,23 +223,23 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
                     }
                     print(step.instructions)
                 }
-                //self.turnbyturnStepDistance.removeAtIndex(0)
-                //self.turnbyturnStepIns.removeAtIndex(0)
+                if self.turnbyturnStepDistance[0] == "0 ft." {
+                    self.turnbyturnStepDistance.removeAtIndex(0)
+                    self.turnbyturnStepIns.removeAtIndex(0)
+                }
                 self.tableView.reloadData()
-                self.showMapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
-            }
+                self.showMapView.addOverlay(response.routes.polyline, level: MKOverlayLevel.AboveRoads)
+            }*/
         }
-    }
+    }*/
     
     
     //Create the request for source and use destination to
     func getDirections(){
         let request = MKDirectionsRequest()
         setDestination()
-        //let destination = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
         request.source = MKMapItem.mapItemForCurrentLocation()
         request.destination = MKMapItem(placemark: desPlace)
-
         request.requestsAlternateRoutes = false
         
         let directions = MKDirections(request: request)
@@ -269,10 +282,19 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
             }
             turnbyturnStepDistance.removeAtIndex(0)
             turnbyturnStepIns.removeAtIndex(0)
-            tableView.reloadData()
+            //tableView.reloadData()
 
         }
         let userLocation = showMapView.userLocation.coordinate
+        
+        //self.startAnnotation.coordinate = userLocation
+        self.endAnnotation.coordinate = desPlace.coordinate
+        //self.startAnnotation.title = "Start"
+        self.endAnnotation.title = "Parking for \(endLocation.category)"
+        self.showMapView.addAnnotation(self.endAnnotation)
+        //self.pinAnnotationView.pinTintColor = UIColor.greenColor()
+        //self.showMapView.addAnnotation(self.startAnnotation)
+
         print(userLocation)
         let region = MKCoordinateRegionMakeWithDistance(userLocation, 2000, 2000)
         if(userLocation.latitude == 0.0 && userLocation.longitude == 0.0){
@@ -284,7 +306,7 @@ class DirectionsViewController: UIViewController, UITableViewDelegate, UITableVi
         else {
             showMapView.setRegion(region, animated: true)
         }
-        scheduledTimerWithTimeInterval()
+        //scheduledTimerWithTimeInterval()
 
     }
     
