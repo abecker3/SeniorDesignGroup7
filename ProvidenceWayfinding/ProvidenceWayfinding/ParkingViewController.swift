@@ -112,6 +112,10 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         parkingLocationBuilding = "Main Tower "
         parkingLocationElevator = "Main Elevator "
         parkingLocationFloor = "L6 "
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        //Load Saved Parking Spot/Date
         if(defaults.stringForKey("keyNum") != nil){
             keyNum = Int(defaults.stringForKey("keyNum")!)!
         }
@@ -120,11 +124,6 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
             indexFlag = Int(defaults.stringForKey("indexFlag")!)!
         }
         else{ indexFlag = 0 }
-    
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        //Load Saved Parking Spot/Date
         if (indexFlag == 1){
             if (keyNum != 0){
                 theseSpots = defaults.objectForKey("parkingArray")! as! NSArray as! [String]
