@@ -22,10 +22,12 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     var resultSearchController = UISearchController()
     var filteredTableData = [String]()
     var locationOptions:[Location] = []
+    var allLocationsTag: Bool = false
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //resultSearchController.active = false
         
         //Choose options based on passed in building
         initControllerTitle()
@@ -126,6 +128,33 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         }
     }
     
+    //This function checks whether the search bar cell that was clicked is part of Locations
+    func checkArrayForMember(tableView: UITableView, indexPath: NSIndexPath) -> Bool
+    {
+        for x in locations
+        {
+            if(filteredTableData.count > indexPath.row)
+            {
+                if(x.name == filteredTableData[indexPath.row])
+                {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
+    func getLocationFromName(name: String) -> Location
+    {
+        for x in locations{
+            if(x.name == name)
+            {
+                return x
+            }
+        }
+        return Location(name: "Admitting", category: "Main Tower", floor: "Main")
+    }
+    
     //Pop back 2 once a row is selected
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let navController = self.navigationController!
@@ -133,17 +162,55 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         let indexOfSurvey = indexOfLastViewController - 2
         let surveyViewController = navController.viewControllers[indexOfSurvey] as! SurveyViewController
     
-        if(passInTextFieldTag == surveyViewController.currentTextField.tag)
+        if(passInTextFieldTag == surveyViewController.currentTextField.tag && resultSearchController.active && allLocationsTag)
         {
-            surveyViewController.currentTextField.placeholder = locationOptions[indexPath.row].name
-            surveyViewController.startLocation = locationOptions[indexPath.row]
+            surveyViewController.currentTextField.placeholder = filteredTableData[indexPath.row]
+            let location = getLocationFromName(surveyViewController.currentTextField.placeholder!)
+            surveyViewController.startLocation = location
+            print(location)
+            print("Current: search is active")
+        }
+        else if(passInTextFieldTag == surveyViewController.destinationTextField.tag && resultSearchController.active && allLocationsTag)
+        {
+            surveyViewController.destinationTextField.placeholder = filteredTableData[indexPath.row]
+            let location = getLocationFromName(surveyViewController.destinationTextField.placeholder!)
+            surveyViewController.endLocation = location
+            print(location)
+            print("Destination: search is active")
+        }
+        
+        /*else if(passInTextFieldTag == surveyViewController.currentTextField.tag )
+        {
+            surveyViewController.currentTextField.placeholder = filteredTableData[indexPath.row]
+            let location = getLocationFromName(surveyViewController.currentTextField.placeholder!)
+            surveyViewController.startLocation = location
+            print("Current: regular cell selection")
         }
         else if(passInTextFieldTag == surveyViewController.destinationTextField.tag)
         {
-            surveyViewController.destinationTextField.placeholder = locationOptions[indexPath.row].name
-            surveyViewController.endLocation = locationOptions[indexPath.row]
+            surveyViewController.destinationTextField.placeholder = filteredTableData[indexPath.row]
+            let location = getLocationFromName(surveyViewController.currentTextField.placeholder!)
+            surveyViewController.endLocation = location
+            print("Destination: regular cell selection")
+        }*/
+        
+        else if(passInTextFieldTag == surveyViewController.currentTextField.tag /*&& !allLocationsTag*/)
+        {
+            surveyViewController.currentTextField.placeholder = locationOptions[indexPath.row].name
+            surveyViewController.startLocation = locationOptions[indexPath.row]
+            print(locationOptions[indexPath.row])
+            print("Current: regular cell selection")
         }
         
+        else if(passInTextFieldTag == surveyViewController.destinationTextField.tag /*&& !allLocationsTag*/)
+        {
+            surveyViewController.destinationTextField.placeholder = locationOptions[indexPath.row].name
+            surveyViewController.endLocation = locationOptions[indexPath.row]
+            print(locationOptions[indexPath.row])
+            print("Destination: regular cell selection")
+        }
+        
+        resultSearchController.active = false
         navController.popToViewController(surveyViewController, animated: true)
     }
     
@@ -155,9 +222,10 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
             {
                 locationOptions.append(location)
             }
-            else if(passInCategory == "Search All Locations")
+            else if(passInCategory == "All Locations")
             {
-                if(location.category != "Search All Locations")
+                allLocationsTag = true
+                if(location.category != "All Locations")
                 {
                     locationOptions.append(location)
                 }
