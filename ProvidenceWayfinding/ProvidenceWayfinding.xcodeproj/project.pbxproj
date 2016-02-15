@@ -92,7 +92,7 @@
 		39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		39E909351C0E30F500F81024 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		A05A93AA1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryBuildingChooserViewController.swift; sourceTree = "<group>"; };
-		A05A93AC1C715F750047B5B3 /* SearchedDirectoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchedDirectoryTableViewController.swift; sourceTree = "<group>"; };
+		A05A93AC1C715F750047B5B3 /* SearchedDirectoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchedDirectoryTableViewController.swift; path = ../SearchedDirectoryTableViewController.swift; sourceTree = "<group>"; };
 		A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryInformation.swift; sourceTree = "<group>"; };
 		A0D264C11C691D260026EB2A /* BuildingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingTableViewController.swift; sourceTree = "<group>"; };
 		A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorySpecificViewController.swift; sourceTree = "<group>"; };
@@ -170,7 +170,6 @@
 		D2CA49DA1BE2B58B00E79580 = {
 			isa = PBXGroup;
 			children = (
-				A05A93AC1C715F750047B5B3 /* SearchedDirectoryTableViewController.swift */,
 				D2CA49E51BE2B58B00E79580 /* ProvidenceWayfinding */,
 				D2CA49FA1BE2B58C00E79580 /* ProvidenceWayfindingTests */,
 				D2CA4A051BE2B58D00E79580 /* ProvidenceWayfindingUITests */,
@@ -209,6 +208,7 @@
 				B69650611C05399500C8276A /* Home.png */,
 				B69650621C05399500C8276A /* Map.png */,
 				B69650631C05399500C8276A /* More.png */,
+				A05A93AC1C715F750047B5B3 /* SearchedDirectoryTableViewController.swift */,
 				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
 				B696505E1C04F7E200C8276A /* ParkingViewController.swift */,
 				B87C860A1C6A79720091514E /* HistoryViewController.swift */,
@@ -430,6 +430,7 @@
 				351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */,
 				A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */,
 				D2C7308C1C69473D002AF7CB /* BasicDirectionsCell.swift in Sources */,
+				A05A93AB1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift in Sources */,
 				B87C86091C6A46E20091514E /* ParkingPathViewController.swift in Sources */,
 				D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */,
 				B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */,
