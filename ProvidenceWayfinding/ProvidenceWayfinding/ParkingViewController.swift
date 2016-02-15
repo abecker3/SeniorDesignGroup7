@@ -2,18 +2,20 @@
 //  ParkingViewController.swift
 //  ProvidenceWayfinding
 //
-//  Created by Bilsborough, Michael J on 11/10/15.
+//  Created by Bilsborough, Michael J and Becker, Andrew D on 11/10/15.
 //  Copyright © 2015 GU. All rights reserved.
 //
 
 import UIKit
 import Foundation
 
-class ParkingViewController: UIViewController, UITextFieldDelegate {
-    /*
+class ParkingViewController: UIViewController, UITextFieldDelegate{
     var screenEdgeRecognizerLeft: UIScreenEdgePanGestureRecognizer!
     var screenEdgeRecognizerRight: UIScreenEdgePanGestureRecognizer!
     var flag = 0
+    var theseSpots = [String()]
+    var keyNum = Int()
+    var indexFlag = Int()
     
     //Variables
     var endLocation: Location!
@@ -38,144 +40,27 @@ class ParkingViewController: UIViewController, UITextFieldDelegate {
     var parkingLocationFloor = String()
     var parkingLocationElevator = String()
     var parkingLocation = String()
-    var parkingKey = String()
-    var dateKey = String()
-    var keyNum = 0
     
     //Actions
     @IBAction func save(sender: AnyObject) {
         parkingLocation = parkingLocationBuilding + "Floor " + parkingLocationFloor + "using the " + parkingLocationElevator
-        defaults.setObject(parkingLocation, forKey: parkingKey);
-        defaults.setObject(dateFormatter.stringFromDate(NSDate()), forKey: dateKey);
-        defaults.synchronize();
-        savedParkingSpot.text = parkingLocation;
-        savedParkingDate.text = dateFormatter.stringFromDate(NSDate());
-        keyNum = (keyNum + 1) % 25
-        defaults.setObject(keyNum, forKey: String(keyNum))
-        print(keyNum)
-    }
-    
-    @IBAction func changedBuilding(sender: UISegmentedControl) {
-        let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
-        switch title{
-        case "Main"?: parkingLocationBuilding = "Main Tower "
-        case "Children's"?: parkingLocationBuilding = "Children's Hospital "
-        case "Women's"?: parkingLocationBuilding = "Women's Health Institute "
-        default: parkingLocationBuilding = "Heart Institute "
+        if (indexFlag == 0){
+            theseSpots.insert(String(keyNum), atIndex: keyNum)
+            theseSpots.insert(parkingLocation, atIndex: keyNum + 1)
+            theseSpots.insert(dateFormatter.stringFromDate(NSDate()), atIndex: keyNum + 2)
         }
-    }
-    
-    @IBAction func changedFloor(sender: UISegmentedControl) {
-        let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
-        switch title{
-        case "L6"?: parkingLocationFloor = "L6 "
-        case "L5"?: parkingLocationFloor = "L5 "
-        case "L4"?: parkingLocationFloor = "L4 "
-        case "UL4"?: parkingLocationFloor = "UL4 "
-        case "L3"?: parkingLocationFloor = "L3 "
-        case "L2"?: parkingLocationFloor = "L2 "
-        case "L1"?: parkingLocationFloor = "L1 "
-        default: parkingLocationFloor = "N/A "
+        else{
+            theseSpots[keyNum] = String(keyNum)
+            theseSpots[keyNum + 1] = parkingLocation
+            theseSpots[keyNum + 2] = dateFormatter.stringFromDate(NSDate())
         }
-}
-    
-    @IBAction func changedElevator(sender: UISegmentedControl) {
-        let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
-        switch title{
-        case "Main"?: parkingLocationElevator = "Main Elevator "
-        case "Star"?: parkingLocationElevator = "Star Elevator "
-        case "Fish"?: parkingLocationElevator = "Fish Elevator "
-        case "Women's"?: parkingLocationElevator = "Women's Health Elevator "
-        default: parkingLocationElevator = "Heart Institute Elevator "
+        defaults.setObject(theseSpots, forKey: "parkingArray");
+        if(keyNum + 3 >= 30){
+            indexFlag = 1
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        screenEdgeRecognizerLeft = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureLeft:")
-        screenEdgeRecognizerLeft.edges = .Left
-        view.addGestureRecognizer(screenEdgeRecognizerLeft)
-        
-        screenEdgeRecognizerRight = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureRight:")
-        screenEdgeRecognizerRight.edges = .Right
-        view.addGestureRecognizer(screenEdgeRecognizerRight)
-
-        // Do any additional setup after loading the view.        
-        parkingLocationBuilding = "Main Tower "
-        parkingLocationElevator = "Main Elevator "
-        parkingLocationFloor = "L6 "
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        //Load Saved Parking Spot/Date
-        savedParkingSpot.text = defaults.stringForKey("savedParkingSpot_" + String(keyNum));
-        savedParkingDate.text = defaults.stringForKey("savedParkingDate_" + String(keyNum));
-        if keyNum > 0{
-            keyNum = Int(defaults.stringForKey(String(keyNum - 1))!)!
-        }
-    }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let nextViewController = segue.destinationViewController as! OnCampusViewController
-        nextViewController.startLocation = self.startLocation
-        nextViewController.endLocation = self.endLocation
-    }
-    
-    func switchScreenGestureRight(sender: UIScreenEdgePanGestureRecognizer) {
-        flag = flag + 1
-        if (flag % 2 == 1){
-            tabBarController?.selectedIndex = 3
-        }
-    }
-    
-    func switchScreenGestureLeft(sender: UIScreenEdgePanGestureRecognizer) {
-        flag = flag + 1
-        if (flag % 2 == 1){
-            tabBarController?.selectedIndex = 1
-        }
-    }
-    
-    func setKeys(){
-        parkingKey = "savedParkingSpot_" + String(keyNum)
-        dateKey = "savedParkingDate_" + String(keyNum)
-    }
-*/
-    
-    var screenEdgeRecognizerLeft: UIScreenEdgePanGestureRecognizer!
-    var screenEdgeRecognizerRight: UIScreenEdgePanGestureRecognizer!
-    var flag = 0
-    
-    //Variables
-    var endLocation: Location!
-    var startLocation: Location!
-    
-    let defaults = NSUserDefaults.standardUserDefaults()
-    let dateFormatter: NSDateFormatter = {
-        let df = NSDateFormatter();
-        df.dateStyle = NSDateFormatterStyle.ShortStyle;
-        return df;
-    }()
-    
-    
-    //Outlets
-    @IBOutlet weak var savedParkingSpot: UILabel!
-    @IBOutlet weak var savedParkingDate: UILabel!
-    @IBOutlet weak var buildingButtons: UISegmentedControl!
-    @IBOutlet weak var floorButtons: UISegmentedControl!
-    @IBOutlet weak var elevatorButtons: UISegmentedControl!
-    
-    var parkingLocationBuilding = String()
-    var parkingLocationFloor = String()
-    var parkingLocationElevator = String()
-    var parkingLocation = String()
-    
-    //Actions
-    @IBAction func save(sender: AnyObject) {
-        parkingLocation = parkingLocationBuilding + "Floor " + parkingLocationFloor + "using the " + parkingLocationElevator
-        defaults.setObject(parkingLocation, forKey: "savedParkingSpot");
-        defaults.setObject(dateFormatter.stringFromDate(NSDate()), forKey: "savedParkingDate");
+        keyNum = (keyNum + 3) % 30
+        defaults.setObject(keyNum, forKey: "keyNum")
+        defaults.setObject(indexFlag, forKey: "indexFlag")
         defaults.synchronize();
         savedParkingSpot.text = parkingLocation;
         savedParkingDate.text = dateFormatter.stringFromDate(NSDate());
@@ -231,15 +116,46 @@ class ParkingViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(animated: Bool) {
         //Load Saved Parking Spot/Date
-        savedParkingSpot.text = defaults.stringForKey("savedParkingSpot");
-        savedParkingDate.text = defaults.stringForKey("savedParkingDate");
+        if(defaults.stringForKey("keyNum") != nil){
+            keyNum = Int(defaults.stringForKey("keyNum")!)!
+        }
+        else{ keyNum = 0 }
+        if(defaults.stringForKey("indexFlag") != nil && defaults.stringForKey("indexFlag") != String(0)){
+            indexFlag = Int(defaults.stringForKey("indexFlag")!)!
+        }
+        else{ indexFlag = 0 }
+        if (indexFlag == 1){
+            if (keyNum != 0){
+                theseSpots = defaults.objectForKey("parkingArray")! as! NSArray as! [String]
+                savedParkingSpot.text = theseSpots[keyNum - 2]
+                savedParkingDate.text = theseSpots[keyNum - 1]
+            }
+            else{
+                theseSpots = defaults.objectForKey("parkingArray")! as! NSArray as! [String]
+                savedParkingSpot.text = theseSpots[28]
+                savedParkingDate.text = theseSpots[29]
+            }
+        }
+        else if (keyNum != 0){
+            theseSpots = defaults.objectForKey("parkingArray")! as! NSArray as! [String]
+            savedParkingSpot.text = theseSpots[keyNum - 2]
+            savedParkingDate.text = theseSpots[keyNum - 1]
+        }
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let nextViewController = segue.destinationViewController as! OnCampusViewController
-        nextViewController.startLocation = self.startLocation
-        nextViewController.endLocation = self.endLocation
+        let nextViewController = segue.destinationViewController as! HistoryViewController
+        if (indexFlag == 1){
+            nextViewController.maxKeyNum = 30
+            nextViewController.curIndex = keyNum
+            nextViewController.flag = indexFlag
+        }
+        else{
+            nextViewController.maxKeyNum = keyNum
+            nextViewController.flag = indexFlag
+        }
+        nextViewController.thisArray = theseSpots
     }
     
     func switchScreenGestureRight(sender: UIScreenEdgePanGestureRecognizer) {

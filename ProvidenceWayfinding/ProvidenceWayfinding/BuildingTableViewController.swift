@@ -1,17 +1,16 @@
 //
-//  ServicesTableViewController.swift
+//  BuildingTableViewController.swift
 //  ProvidenceWayfinding
 //
-//  Created by Shaun McBurney on 11/30/15.
-//  Copyright © 2015 GU. All rights reserved.
+//  Created by Ruth Manthey on 2/8/16.
+//  Copyright © 2016 GU. All rights reserved.
 //
 
 import UIKit
 
-class ServicesTableViewController: UITableViewController, UISearchResultsUpdating {
-    
+class BuildingTableViewController: UITableViewController {
     // Variables
-    @IBOutlet var table: UITableView!
+    @IBOutlet weak var table: UITableView!
     var resultSearchController = UISearchController()
     var filteredTableData = [String]()
     var options: [String]!
@@ -20,7 +19,7 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
         super.viewDidLoad()
         initOptions()
         
-        self.resultSearchController = ({
+        /*self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
             controller.dimsBackgroundDuringPresentation = false
@@ -28,7 +27,7 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
             
             self.tableView.tableHeaderView = controller.searchBar
             return controller
-        })()
+        })()*/
         
         //Reload table
         self.tableView.reloadData()
@@ -39,7 +38,7 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
         return 1
     }
     
-
+    
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         filteredTableData.removeAll(keepCapacity: false)
@@ -57,24 +56,23 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
         options.sortInPlace()
     }
     
-    
     func uniqueCategoryArray(inputArray: [Directory]!) -> [String]!
     {
         var newArray = [String]()
         for x in inputArray
         {
-            /*if(newArray.contains(x.category))
+            if(newArray.contains(x.category))
             {
-                continue
+            continue
             }
             else
             {
-                newArray.append(x.category)
-            }*/
+            newArray.append(x.category)
+            }
             //print(x.category)
-            newArray.append(x.name)
+            newArray.append(x.category)
         }
-        
+        newArray.append("Search all buildings")
         return newArray
     }
     
@@ -108,15 +106,15 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
         }
     }
     
-/*    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
-        
-        // Configure the cell...
-        let option = options[indexPath.row]
-        cell.textLabel!.text = option + ":"
-        cell.detailTextLabel!.text = "11 AM to 8 PM"
-        
-        return cell
+    /*    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
+    
+    // Configure the cell...
+    let option = options[indexPath.row]
+    cell.textLabel!.text = option + ":"
+    cell.detailTextLabel!.text = "11 AM to 8 PM"
+    
+    return cell
     }*/
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -132,4 +130,5 @@ class ServicesTableViewController: UITableViewController, UISearchResultsUpdatin
             nextViewController.passInName = cell!.textLabel?.text
         }
     }
+
 }

@@ -13,6 +13,9 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
 
     var screenEdgeRecognizerRight: UIScreenEdgePanGestureRecognizer!
     var flag = 0
+    var theseSpots = [String()]
+    var keyNum = Int()
+    var indexFlag = Int()
     
     //Variables
     var endLocation: Location!
@@ -41,8 +44,23 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     //Actions
     @IBAction func save(sender: AnyObject) {
         parkingLocation = parkingLocationBuilding + "Floor " + parkingLocationFloor + "using the " + parkingLocationElevator
-        defaults.setObject(parkingLocation, forKey: "savedParkingSpot");
-        defaults.setObject(dateFormatter.stringFromDate(NSDate()), forKey: "savedParkingDate");
+        if (indexFlag == 0){
+            theseSpots.insert(String(keyNum), atIndex: keyNum)
+            theseSpots.insert(parkingLocation, atIndex: keyNum + 1)
+            theseSpots.insert(dateFormatter.stringFromDate(NSDate()), atIndex: keyNum + 2)
+        }
+        else{
+            theseSpots[keyNum] = String(keyNum)
+            theseSpots[keyNum + 1] = parkingLocation
+            theseSpots[keyNum + 2] = dateFormatter.stringFromDate(NSDate())
+        }
+        defaults.setObject(theseSpots, forKey: "parkingArray");
+        if(keyNum + 3 >= 30){
+            indexFlag = 1
+        }
+        keyNum = (keyNum + 3) % 30
+        defaults.setObject(keyNum, forKey: "keyNum")
+        defaults.setObject(indexFlag, forKey: "indexFlag")
         defaults.synchronize();
         savedParkingSpot.text = parkingLocation;
         savedParkingDate.text = dateFormatter.stringFromDate(NSDate());
@@ -98,8 +116,32 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(animated: Bool) {
         //Load Saved Parking Spot/Date
-        savedParkingSpot.text = defaults.stringForKey("savedParkingSpot");
-        savedParkingDate.text = defaults.stringForKey("savedParkingDate");
+        if(defaults.stringForKey("keyNum") != nil){
+            keyNum = Int(defaults.stringForKey("keyNum")!)!
+        }
+        else{ keyNum = 0 }
+        if(defaults.stringForKey("indexFlag") != nil && defaults.stringForKey("indexFlag") != String(0)){
+            indexFlag = Int(defaults.stringForKey("indexFlag")!)!
+        }
+        else{ indexFlag = 0 }
+        if (indexFlag == 1){
+            if (keyNum != 0){
+                theseSpots = defaults.objectForKey("parkingArray")! as! NSArray as! [String]
+                savedParkingSpot.text = theseSpots[keyNum - 2]
+                savedParkingDate.text = theseSpots[keyNum - 1]
+            }
+            else{
+                theseSpots = defaults.objectForKey("parkingArray")! as! NSArray as! [String]
+                savedParkingSpot.text = theseSpots[28]
+                savedParkingDate.text = theseSpots[29]
+            }
+        }
+        else if (keyNum != 0){
+            theseSpots = defaults.objectForKey("parkingArray")! as! NSArray as! [String]
+            savedParkingSpot.text = theseSpots[keyNum - 2]
+            savedParkingDate.text = theseSpots[keyNum - 1]
+        }
+
     }
     
     
