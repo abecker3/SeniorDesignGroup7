@@ -34,9 +34,6 @@ class HistoryViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        print("Flag: " + String(flag))
-        print("curIndex: " + String(curIndex))
-        print("Count: " + String(thisArray.count - 1))
         if(flag == 1){
             index = curIndex
         }
@@ -72,44 +69,3 @@ class HistoryViewController: UITableViewController {
     
     
 }
-    /*
-@IBOutlet var table: UITableView!
-
-let defaults = NSUserDefaults.standardUserDefaults()
-var maxKeyNum = Int()
-var thisArray = [String()]
-var count = 0
-//let myarray = ["item1", "item2", "item3"]
-
-override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-return thisArray.count
-}
-
-override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-let cell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath)
-cell.textLabel?.text = thisArray[indexPath.item]
-return cell
-}
-
-override func viewDidAppear(animated: Bool) {
-super.viewDidAppear(animated)
-table.reloadData()
-}
-
-}*/
-
-
-
-    /*
-    func printArray(){
-        while(count != maxKeyNum){
-            textView.text = textView.text + thisArray[count]
-            textView.text = textView.text + thisArray[count + 1]
-            textView.text = textView.text + thisArray[count + 2]
-            textView.text = textView.text + "    |    "
-            //textView.text = textView.text + thisArray[count]
-            //print(thisArray[count])
-            count = count + 3
-        }
-    }
-*/
