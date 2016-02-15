@@ -1528,7 +1528,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="building" textLabel="Wch-T1-vm4" style="IBUITableViewCellStyleDefault" id="weP-Eh-PWn" userLabel="building">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="building" textLabel="Wch-T1-vm4" style="IBUITableViewCellStyleDefault" id="weP-Eh-PWn">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="weP-Eh-PWn" id="HTj-tP-PN0">
@@ -1539,11 +1539,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cQ0-N7-zWa" kind="show" identifier="ChooserToSearched" id="sHi-AI-A5F"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1883,12 +1885,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
             <objects>
                 <tableViewController title="SearchedDirectory" id="cQ0-N7-zWa" customClass="SearchedDirectoryTableViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EUs-9s-USo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="building" textLabel="2d7-o2-ooJ" style="IBUITableViewCellStyleDefault" id="9Oi-sI-iqt" userLabel="building">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="building" textLabel="2d7-o2-ooJ" style="IBUITableViewCellStyleDefault" id="9Oi-sI-iqt">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Oi-sI-iqt" id="IGm-Xe-LXd">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -1914,7 +1916,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     <connections>
                         <outlet property="resultSearchController" destination="VB2-uw-Mba" id="oAV-SN-U0J"/>
                         <outlet property="searchDisplayController" destination="VB2-uw-Mba" id="FNm-NA-rPE"/>
-                        <outlet property="table" destination="EUs-9s-USo" id="ybb-iZ-wC1"/>
+                        <outlet property="table" destination="EUs-9s-USo" id="hcq-Mn-57p"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTo-bQ-e7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1927,7 +1929,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="4296" y="2551"/>
+            <point key="canvasLocation" x="4304" y="2546"/>
         </scene>
     </scenes>
     <resources>

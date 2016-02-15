@@ -45,21 +45,14 @@ class DirectoryBuildingChooserViewController: UITableViewController {
             {
             newArray.append(x.category)
             }
-            //print(x.category)
-            //newArray.append(x.name)
         }
-        
+        newArray.append(" SEARCH ALL BUILDINGS")
         return newArray
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{        return options.count
     }
-    
-    /*override func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
-        cell.textLabel?.text = options[indexPath.row]
-        return cell
-    }*/
+
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -70,6 +63,22 @@ class DirectoryBuildingChooserViewController: UITableViewController {
         cell.textLabel!.text = option
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "ChooserToSearched")
+        {
+            let nextViewController = segue.destinationViewController as! SearchedDirectoryTableViewController
+            //nextViewController.passInTextFieldTag = self.passInTextFieldTag
+            //let cell = table.dequeueReusableCellWithIdentifier("building", indexPathForSelectedRow)
+            let selectedCellPath = table.indexPathForSelectedRow
+            //let cell = table.dequeueReusableCellWithIdentifier("building", forIndexPath: selectedCellPath!)
+            let cell = table.cellForRowAtIndexPath(selectedCellPath!)
+            print(cell!.textLabel?.text)
+            nextViewController.passInBuilding = cell!.textLabel?.text
+            //nextViewController.passInBuilding = "Children's Hospital"
+            print(nextViewController.passInBuilding)
+        }
     }
 
     
