@@ -1878,7 +1878,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCF-ZY-EHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Hny-37-kOO"/>
             </objects>
-            <point key="canvasLocation" x="3508" y="1669"/>
+            <point key="canvasLocation" x="3484" y="2327"/>
         </scene>
         <!--SearchedDirectory-->
         <scene sceneID="qWP-Nk-Tel">
@@ -1905,6 +1905,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ako-5N-Tn5" kind="show" identifier="SearchedToSpecific" id="tIE-Hr-pRb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1941,6 +1944,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="tIE-Hr-pRb"/>
         <segue reference="SoW-dI-v9z"/>
     </inferredMetricsTieBreakers>
 </document>

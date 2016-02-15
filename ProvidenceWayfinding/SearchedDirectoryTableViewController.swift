@@ -77,6 +77,22 @@ class SearchedDirectoryTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "SearchedToSpecific")
+        {
+            let nextViewController = segue.destinationViewController as! DirectorySpecificViewController
+            //nextViewController.passInTextFieldTag = self.passInTextFieldTag
+            //let cell = table.dequeueReusableCellWithIdentifier("building", indexPathForSelectedRow)
+            let selectedCellPath = table.indexPathForSelectedRow
+            //let cell = table.dequeueReusableCellWithIdentifier("building", forIndexPath: selectedCellPath!)
+            let cell = table.cellForRowAtIndexPath(selectedCellPath!)
+            print(cell!.textLabel?.text)
+            nextViewController.passInName = cell!.textLabel?.text
+            //nextViewController.passInBuilding = "Children's Hospital"
+        }
+    }
+
 
     
 }
