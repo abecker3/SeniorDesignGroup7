@@ -17,6 +17,7 @@ class DirectoryBuildingChooserViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Title"
         initOptions()
     }
     
@@ -51,11 +52,8 @@ class DirectoryBuildingChooserViewController: UITableViewController {
         return newArray
     }
     
-    /*override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        print(options.count)
-        return 11
-        //return options.count
-    }*/
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{        return options.count
+    }
     
     /*override func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
@@ -64,6 +62,7 @@ class DirectoryBuildingChooserViewController: UITableViewController {
     }*/
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
         
         // Configure the cell...
