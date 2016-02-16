@@ -11,6 +11,7 @@ import UIKit
 class SearchedDirectoryTableViewController: UITableViewController {
     
     @IBOutlet var table: UITableView!
+    @IBOutlet var resultSearchController: UISearchController!
     //@IBOutlet var controllerTitle: UINavigationItem
     var filteredTableData = [String]()
     var options: [String]!
