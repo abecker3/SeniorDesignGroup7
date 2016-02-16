@@ -180,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				B8C32E1E1C61AD4E0081BE10 /* buttonBlue.png */,
-				A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */,
 				D2341F511C11610700F5ACBA /* NearMe100.png */,
 				D2341F521C11610700F5ACBA /* NearMeFilled100.png */,
 				D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */,
@@ -196,6 +195,7 @@
 				B69650611C05399500C8276A /* Home.png */,
 				B69650621C05399500C8276A /* Map.png */,
 				B69650631C05399500C8276A /* More.png */,
+				A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */,
 				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
 				B696505E1C04F7E200C8276A /* ParkingViewController.swift */,
 				B87C86081C6A46E20091514E /* ParkingPathViewController.swift */,

@@ -111,7 +111,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
             newArray.append(x.category)
             }
         }
-        newArray.append(" SEARCH ALL BUILDINGS")
+        newArray.append("All Locations")
         return newArray
     }
     

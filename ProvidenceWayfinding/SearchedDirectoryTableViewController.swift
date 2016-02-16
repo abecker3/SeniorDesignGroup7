@@ -50,7 +50,7 @@ class SearchedDirectoryTableViewController: UITableViewController {
                 allLocationsTag = true
                 if (x.category != "All Locations")
                 {
-                    options.append(x.name)
+                    newArray.append(x.name)
                 }
             }
         }
