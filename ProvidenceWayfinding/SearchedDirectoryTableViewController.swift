@@ -11,13 +11,17 @@ import UIKit
 class SearchedDirectoryTableViewController: UITableViewController {
     
     @IBOutlet var table: UITableView!
+    @IBOutlet var resultSearchController: UISearchController!
+    //@IBOutlet var controllerTitle: UINavigationItem
     var filteredTableData = [String]()
     var options: [String]!
     var passInBuilding: String!
+    var allLocationsTag: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //SearchedDirectoryTitle.title = passInBuilding
+        initControllerTitle()
         initOptions()
     }
     
@@ -36,29 +40,31 @@ class SearchedDirectoryTableViewController: UITableViewController {
     {
         var newArray = [String]()
         //print(passInBuilding)
-        if (passInBuilding == " SEARCH ALL BUILDINGS"){
-            for x in inputArray{
+        for x in inputArray
+        {
+            if(x.category == passInBuilding)
+            {
                 newArray.append(x.name)
             }
-        }
-        else {
-            for x in inputArray
+            else if (passInBuilding == "All Locations")
             {
-                if(x.category == passInBuilding)
+                allLocationsTag = true
+                if (x.category != "All Locations")
                 {
                     newArray.append(x.name)
                 }
-                else
-                {
-                    continue
-                }
             }
         }
-        
         return newArray
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{        return options.count
+    func initControllerTitle()
+    {
+        //controllerTitle.title = passInBuilding
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return options.count
     }
     
     /*override func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -92,7 +98,7 @@ class SearchedDirectoryTableViewController: UITableViewController {
             //nextViewController.passInBuilding = "Children's Hospital"
         }
     }
-
-
+    
+    
     
 }

@@ -2025,7 +2025,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </tableView>
                     <navigationItem key="navigationItem" title="SearchedDirectory" id="C0V-v6-EuC"/>
                     <connections>
-                        <outlet property="resultSearchController" destination="VB2-uw-Mba" id="oAV-SN-U0J"/>
+                        <outlet property="resultSearchController" destination="XWP-oX-qXA" id="fVj-qx-OW9"/>
                         <outlet property="searchDisplayController" destination="VB2-uw-Mba" id="FNm-NA-rPE"/>
                         <outlet property="table" destination="EUs-9s-USo" id="hcq-Mn-57p"/>
                     </connections>
