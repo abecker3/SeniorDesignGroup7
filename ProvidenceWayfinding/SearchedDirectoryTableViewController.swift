@@ -97,7 +97,7 @@ class SearchedDirectoryTableViewController: UITableViewController {
             //nextViewController.passInBuilding = "Children's Hospital"
         }
     }
-
-
+    
+    
     
 }
