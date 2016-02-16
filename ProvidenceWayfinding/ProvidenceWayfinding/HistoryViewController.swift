@@ -19,6 +19,7 @@ class HistoryViewController: UITableViewController {
     var flag = Int()
     var index = 0
     var count = 10
+    var pathFlag = Int()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellArray.count
@@ -43,7 +44,12 @@ class HistoryViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        //Insert here. Instead of using prepare for segue pull from memory everything here
+        pathFlag = Int(defaults.stringForKey("pathFlag")!)!
+        if (pathFlag == 1) {
+            if let navController = self.navigationController {
+                navController.popViewControllerAnimated(false)
+            }
+        }
     }
     
     

@@ -40,6 +40,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     var parkingLocationFloor = String()
     var parkingLocationElevator = String()
     var parkingLocation = String()
+    var pathFlag = Int()
     
     //Actions
     @IBAction func save(sender: AnyObject) {
@@ -116,6 +117,9 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(animated: Bool) {
         //Load Saved Parking Spot/Date
+        pathFlag = 1
+        defaults.setObject(pathFlag, forKey: "pathFlag")
+        
         if(defaults.stringForKey("keyNum") != nil){
             keyNum = Int(defaults.stringForKey("keyNum")!)!
         }
