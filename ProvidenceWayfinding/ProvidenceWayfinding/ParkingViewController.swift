@@ -108,6 +108,10 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         screenEdgeRecognizerRight.edges = .Right
         view.addGestureRecognizer(screenEdgeRecognizerRight)
         
+        screenEdgeRecognizerLeft = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureLeft:")
+        screenEdgeRecognizerLeft.edges = .Left
+        view.addGestureRecognizer(screenEdgeRecognizerLeft)
+        
         // Do any additional setup after loading the view.
         parkingLocationBuilding = "Main Tower "
         parkingLocationElevator = "Main Elevator "

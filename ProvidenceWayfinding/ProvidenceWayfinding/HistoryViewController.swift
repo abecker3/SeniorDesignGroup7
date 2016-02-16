@@ -32,13 +32,18 @@ class HistoryViewController: UITableViewController {
         return cell
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         if(flag == 1){
             index = curIndex
         }
         createCellArray()
         table.reloadData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        //Insert here. Instead of using prepare for segue pull from memory everything here
     }
     
     
