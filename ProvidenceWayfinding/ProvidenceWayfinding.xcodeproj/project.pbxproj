@@ -37,6 +37,7 @@
 		B86C12671C52A71C00FF284F /* Heart_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B86C12661C52A71C00FF284F /* Heart_1.jpg */; };
 		B86C12691C52A72500FF284F /* Heart_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B86C12681C52A72500FF284F /* Heart_2.jpg */; };
 		B87C86091C6A46E20091514E /* ParkingPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C86081C6A46E20091514E /* ParkingPathViewController.swift */; };
+		B87C860B1C6A79720091514E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C860A1C6A79720091514E /* HistoryViewController.swift */; };
 		B89D054E1C56F1FD00D81C76 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */; };
 		B89D05501C56F8F800D81C76 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */; };
 		B8C32E1F1C61AD4E0081BE10 /* buttonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C32E1E1C61AD4E0081BE10 /* buttonBlue.png */; };
@@ -44,9 +45,13 @@
 		B8EAEFB61C61411D0084A531 /* Heart_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8EAEFB31C61411D0084A531 /* Heart_3.jpg */; };
 		B8EAEFB71C61411D0084A531 /* Heart_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8EAEFB41C61411D0084A531 /* Heart_4.jpg */; };
 		B8EAEFB81C61411D0084A531 /* Heart_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8EAEFB51C61411D0084A531 /* Heart_5.jpg */; };
+		D227F9911C725E2A0029A5E7 /* List-100.png in Resources */ = {isa = PBXBuildFile; fileRef = D227F9901C725E2A0029A5E7 /* List-100.png */; };
+		D227F9931C725F930029A5E7 /* MapDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D227F9921C725F930029A5E7 /* MapDetailsViewController.swift */; };
 		D2341F541C11610700F5ACBA /* NearMe100.png in Resources */ = {isa = PBXBuildFile; fileRef = D2341F511C11610700F5ACBA /* NearMe100.png */; };
 		D2341F551C11610700F5ACBA /* NearMeFilled100.png in Resources */ = {isa = PBXBuildFile; fileRef = D2341F521C11610700F5ACBA /* NearMeFilled100.png */; };
 		D2341F561C11610700F5ACBA /* NorthDirectionFilled100.png in Resources */ = {isa = PBXBuildFile; fileRef = D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */; };
+		D25196141C6D337D001BA3AA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25196131C6D337D001BA3AA /* MapKit.framework */; };
+		D2C7308C1C69473D002AF7CB /* BasicDirectionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7308B1C69473D002AF7CB /* BasicDirectionsCell.swift */; };
 		D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */; };
 		D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49EA1BE2B58B00E79580 /* Main.storyboard */; };
 		D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */; };
@@ -105,6 +110,7 @@
 		B86C12661C52A71C00FF284F /* Heart_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_1.jpg; sourceTree = "<group>"; };
 		B86C12681C52A72500FF284F /* Heart_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_2.jpg; sourceTree = "<group>"; };
 		B87C86081C6A46E20091514E /* ParkingPathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingPathViewController.swift; sourceTree = "<group>"; };
+		B87C860A1C6A79720091514E /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
 		B8C32E1E1C61AD4E0081BE10 /* buttonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBlue.png; sourceTree = "<group>"; };
@@ -112,9 +118,13 @@
 		B8EAEFB31C61411D0084A531 /* Heart_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_3.jpg; sourceTree = "<group>"; };
 		B8EAEFB41C61411D0084A531 /* Heart_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_4.jpg; sourceTree = "<group>"; };
 		B8EAEFB51C61411D0084A531 /* Heart_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_5.jpg; sourceTree = "<group>"; };
+		D227F9901C725E2A0029A5E7 /* List-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "List-100.png"; sourceTree = "<group>"; };
+		D227F9921C725F930029A5E7 /* MapDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailsViewController.swift; sourceTree = "<group>"; };
 		D2341F511C11610700F5ACBA /* NearMe100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NearMe100.png; sourceTree = "<group>"; };
 		D2341F521C11610700F5ACBA /* NearMeFilled100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NearMeFilled100.png; sourceTree = "<group>"; };
 		D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NorthDirectionFilled100.png; sourceTree = "<group>"; };
+		D25196131C6D337D001BA3AA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D2C7308B1C69473D002AF7CB /* BasicDirectionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicDirectionsCell.swift; sourceTree = "<group>"; };
 		D2CA49E31BE2B58B00E79580 /* ProvidenceWayfinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvidenceWayfinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2CA49EB1BE2B58B00E79580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D25196141C6D337D001BA3AA /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +174,7 @@
 				D2CA49FA1BE2B58C00E79580 /* ProvidenceWayfindingTests */,
 				D2CA4A051BE2B58D00E79580 /* ProvidenceWayfindingUITests */,
 				D2CA49E41BE2B58B00E79580 /* Products */,
+				D25196131C6D337D001BA3AA /* MapKit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +191,7 @@
 		D2CA49E51BE2B58B00E79580 /* ProvidenceWayfinding */ = {
 			isa = PBXGroup;
 			children = (
+				D227F9901C725E2A0029A5E7 /* List-100.png */,
 				B8C32E1E1C61AD4E0081BE10 /* buttonBlue.png */,
 				D2341F511C11610700F5ACBA /* NearMe100.png */,
 				D2341F521C11610700F5ACBA /* NearMeFilled100.png */,
@@ -198,6 +211,7 @@
 				A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */,
 				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
 				B696505E1C04F7E200C8276A /* ParkingViewController.swift */,
+				B87C860A1C6A79720091514E /* HistoryViewController.swift */,
 				B87C86081C6A46E20091514E /* ParkingPathViewController.swift */,
 				D2CA4A161BE2B72600E79580 /* TransitionManager.swift */,
 				D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */,
@@ -226,6 +240,8 @@
 				D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */,
 				D2CA49EF1BE2B58C00E79580 /* LaunchScreen.storyboard */,
 				D2CA49F21BE2B58C00E79580 /* Info.plist */,
+				D2C7308B1C69473D002AF7CB /* BasicDirectionsCell.swift */,
+				D227F9921C725F930029A5E7 /* MapDetailsViewController.swift */,
 			);
 			path = ProvidenceWayfinding;
 			sourceTree = "<group>";
@@ -316,7 +332,11 @@
 				TargetAttributes = {
 					D2CA49E21BE2B58B00E79580 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = EN63MJGHGH;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D2CA49F61BE2B58C00E79580 = {
 						CreatedOnToolsVersion = 7.1;
@@ -356,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B69650641C05399500C8276A /* Car.png in Resources */,
+				D227F9911C725E2A0029A5E7 /* List-100.png in Resources */,
 				B8EAEFB81C61411D0084A531 /* Heart_5.jpg in Resources */,
 				D2341F551C11610700F5ACBA /* NearMeFilled100.png in Resources */,
 				35A706D01C4D83B00039F4DC /* providence_logo1.png in Resources */,
@@ -408,10 +429,12 @@
 				B89D05501C56F8F800D81C76 /* DestinationViewController.swift in Sources */,
 				351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */,
 				A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */,
+				D2C7308C1C69473D002AF7CB /* BasicDirectionsCell.swift in Sources */,
 				A05A93AB1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift in Sources */,
 				B87C86091C6A46E20091514E /* ParkingPathViewController.swift in Sources */,
 				D2CA49E71BE2B58B00E79580 /* AppDelegate.swift in Sources */,
 				B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */,
+				B87C860B1C6A79720091514E /* HistoryViewController.swift in Sources */,
 				A0DD87201C580E0B0071B478 /* DirectorySpecificViewController.swift in Sources */,
 				39DDF7BA1C0D348A00CC63A5 /* HoursViewController.swift in Sources */,
 				B696505A1C04F1EA00C8276A /* CategoryTableViewController.swift in Sources */,
@@ -419,6 +442,7 @@
 				3501ADD31BF27F6000981151 /* ToSViewController.swift in Sources */,
 				A05A93B11C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift in Sources */,
 				B89D054E1C56F1FD00D81C76 /* HomeViewController.swift in Sources */,
+				D227F9931C725F930029A5E7 /* MapDetailsViewController.swift in Sources */,
 				B81F5F801C5867DF00B2D981 /* FloorPlansViewController.swift in Sources */,
 				A0D264C21C691D260026EB2A /* BuildingTableViewController.swift in Sources */,
 				354B98DF1C0278470087E67C /* CampusViewController.swift in Sources */,
@@ -575,7 +599,7 @@
 				INFOPLIST_FILE = ProvidenceWayfinding/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding.Becker;
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -591,7 +615,7 @@
 				INFOPLIST_FILE = ProvidenceWayfinding/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding.Becker;
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
