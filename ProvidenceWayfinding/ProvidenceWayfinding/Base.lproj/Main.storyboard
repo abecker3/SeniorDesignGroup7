@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1096,7 +1096,7 @@ Institute </string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <gestureRecognizers/>
                             </mapView>
-                            <view opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-zO-42D">
+                            <view opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-zO-42D">
                                 <rect key="frame" x="0.0" y="512" width="600" height="39"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPP-zA-2kX">
@@ -1168,7 +1168,6 @@ Institute </string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="DetailsButton" destination="hjP-6t-DXf" id="37v-Gf-jPs"/>
                         <outlet property="curLocationButton" destination="B1p-3Y-i3I" id="KC8-0C-XpI"/>
                         <outlet property="infoView" destination="kfe-zO-42D" id="yXo-hS-943"/>
                         <outlet property="showMapView" destination="UEr-1l-6bj" id="3iU-Va-Z5L"/>
@@ -1191,11 +1190,11 @@ Institute </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="103" sectionHeaderHeight="18" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZI6-Kd-qKB">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="6U0-T1-2UQ"/>
-                                    <constraint firstAttribute="height" constant="551" id="bL9-pu-MXs"/>
+                                    <constraint firstAttribute="height" constant="508" id="bL9-pu-MXs"/>
                                 </constraints>
                                 <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 <prototypes>
@@ -1210,14 +1209,14 @@ Institute </string>
                                                     <rect key="frame" x="15" y="23" width="57" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hvP-np-dXg">
                                                     <rect key="frame" x="15" y="59" width="59" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1235,18 +1234,33 @@ Institute </string>
                                     <outlet property="delegate" destination="OY3-Zo-f7k" id="04c-Sv-8cg"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Ir-4O-npd">
+                                <rect key="frame" x="20" y="516" width="560" height="29"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeMapType:" destination="OY3-Zo-f7k" eventType="valueChanged" id="7KO-to-Lmm"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZI6-Kd-qKB" firstAttribute="leading" secondItem="Znj-i7-wE1" secondAttribute="leading" id="5F0-AT-mQE"/>
                             <constraint firstAttribute="trailing" secondItem="ZI6-Kd-qKB" secondAttribute="trailing" id="82g-W9-m0V"/>
+                            <constraint firstItem="2Ir-4O-npd" firstAttribute="top" secondItem="ZI6-Kd-qKB" secondAttribute="bottom" constant="8" symbolic="YES" id="ELp-Qu-Y7Y"/>
                             <constraint firstItem="ZI6-Kd-qKB" firstAttribute="top" secondItem="7kq-j3-L60" secondAttribute="bottom" constant="-64" id="Gik-wB-h0s"/>
+                            <constraint firstItem="2Ir-4O-npd" firstAttribute="leading" secondItem="Znj-i7-wE1" secondAttribute="leadingMargin" id="VL0-zP-g7k"/>
                             <constraint firstItem="ZI6-Kd-qKB" firstAttribute="leading" secondItem="Znj-i7-wE1" secondAttribute="leading" id="gAU-4a-jKm"/>
-                            <constraint firstItem="ZI6-Kd-qKB" firstAttribute="bottom" secondItem="a4c-Jf-VDp" secondAttribute="top" id="nkz-ce-0Iw"/>
+                            <constraint firstItem="2Ir-4O-npd" firstAttribute="centerX" secondItem="ZI6-Kd-qKB" secondAttribute="centerX" id="nJg-3g-5e8"/>
+                            <constraint firstItem="ZI6-Kd-qKB" firstAttribute="bottom" secondItem="a4c-Jf-VDp" secondAttribute="top" constant="-43" id="nkz-ce-0Iw"/>
                             <constraint firstAttribute="trailing" secondItem="ZI6-Kd-qKB" secondAttribute="trailing" id="puz-c1-Uc5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mapStyle" destination="2Ir-4O-npd" id="HeU-jW-cb4"/>
                         <outlet property="tableView" destination="ZI6-Kd-qKB" id="PIn-Qk-PyE"/>
                     </connections>
                 </viewController>
@@ -1439,7 +1453,7 @@ Institute </string>
             </objects>
             <point key="canvasLocation" x="2145" y="62"/>
         </scene>
-        <!--History View Controller-->
+        <!--History-->
         <scene sceneID="IvO-Ol-bAX">
             <objects>
                 <viewController id="odO-hm-Lvz" customClass="HistoryViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
@@ -1462,6 +1476,9 @@ Institute </string>
                             <outlet property="delegate" destination="odO-hm-Lvz" id="zop-Bo-RgP"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="History" id="nAj-ao-84y">
+                        <barButtonItem key="backBarButtonItem" title="Parking" id="RHX-38-8o8"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="xyH-sU-kMm" id="aIi-Rk-Qdt"/>
                     </connections>

@@ -19,6 +19,7 @@ class HistoryViewController: UITableViewController {
     var flag = Int()
     var index = 0
     var count = 10
+    var pathFlag = Int()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellArray.count
@@ -32,13 +33,23 @@ class HistoryViewController: UITableViewController {
         return cell
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         if(flag == 1){
             index = curIndex
         }
         createCellArray()
         table.reloadData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        pathFlag = Int(defaults.stringForKey("pathFlag")!)!
+        if (pathFlag == 1) {
+            if let navController = self.navigationController {
+                navController.popViewControllerAnimated(false)
+            }
+        }
     }
     
     
