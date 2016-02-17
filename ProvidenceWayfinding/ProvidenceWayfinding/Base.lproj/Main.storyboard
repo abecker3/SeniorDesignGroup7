@@ -1572,7 +1572,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
             </objects>
             <point key="canvasLocation" x="4350" y="850"/>
         </scene>
-        <!--DirectoryBuildingChooser-->
+        <!--Directory-->
         <scene sceneID="BS4-Y6-pl3">
             <objects>
                 <tableViewController id="Kg9-jc-EgW" customClass="DirectoryBuildingChooserViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
@@ -1606,7 +1606,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <outlet property="delegate" destination="Kg9-jc-EgW" id="M9B-al-8s8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="DirectoryBuildingChooser" id="Psf-FS-dDf"/>
+                    <navigationItem key="navigationItem" title="Directory" id="Psf-FS-dDf"/>
                     <connections>
                         <outlet property="table" destination="sRA-i9-STm" id="2Cb-OH-gE7"/>
                     </connections>
@@ -1960,6 +1960,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </tableView>
                     <navigationItem key="navigationItem" title="SearchedDirectory" id="C0V-v6-EuC"/>
                     <connections>
+                        <outlet property="PageTitle" destination="C0V-v6-EuC" id="DQP-GE-3Oi"/>
                         <outlet property="controllerTitle" destination="C0V-v6-EuC" id="VHR-IK-2Gh"/>
                         <outlet property="table" destination="EUs-9s-USo" id="hcq-Mn-57p"/>
                     </connections>
