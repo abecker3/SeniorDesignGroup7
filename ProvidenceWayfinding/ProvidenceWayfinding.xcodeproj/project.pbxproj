@@ -16,7 +16,6 @@
 		354B99051C14F6010087E67C /* LostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B99041C14F6010087E67C /* LostViewController.swift */; };
 		35A706D01C4D83B00039F4DC /* providence_logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A706CF1C4D83B00039F4DC /* providence_logo1.png */; };
 		39DDF7BA1C0D348A00CC63A5 /* HoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */; };
-		39DDF7BC1C0D6B9E00CC63A5 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */; };
 		39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E909351C0E30F500F81024 /* MoreViewController.swift */; };
 		A05A93AB1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05A93AA1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift */; };
 		A05A93B11C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */; };
@@ -89,7 +88,6 @@
 		354B99041C14F6010087E67C /* LostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostViewController.swift; sourceTree = "<group>"; };
 		35A706CF1C4D83B00039F4DC /* providence_logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = providence_logo1.png; sourceTree = "<group>"; };
 		39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HoursViewController.swift; path = ../HoursViewController.swift; sourceTree = "<group>"; };
-		39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		39E909351C0E30F500F81024 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		A05A93AA1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryBuildingChooserViewController.swift; sourceTree = "<group>"; };
 		A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchedDirectoryTableViewController.swift; path = ../SearchedDirectoryTableViewController.swift; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 				B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */,
 				354B99021C121AB90087E67C /* ToSMoreViewController.swift */,
 				39E909351C0E30F500F81024 /* MoreViewController.swift */,
-				39DDF7BB1C0D6B9E00CC63A5 /* ServicesTableViewController.swift */,
 				A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */,
 				B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */,
 				B69650571C04F1EA00C8276A /* Location.swift */,
@@ -425,7 +422,6 @@
 				D2CA4A171BE2B72600E79580 /* DirectionsViewController.swift in Sources */,
 				0300278C1C0FB29D00BB789F /* Concessions.swift in Sources */,
 				A06517E11C56CD1800B12A63 /* DirectoryInformation.swift in Sources */,
-				39DDF7BC1C0D6B9E00CC63A5 /* ServicesTableViewController.swift in Sources */,
 				39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */,
 				B89D05501C56F8F800D81C76 /* DestinationViewController.swift in Sources */,
 				351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */,
