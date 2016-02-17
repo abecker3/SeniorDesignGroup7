@@ -8,14 +8,16 @@
 
 import UIKit
 
-class SearchedDirectoryTableViewController: UITableViewController {
+class SearchedDirectoryTableViewController: UITableViewController, UISearchResultsUpdating {
     
     @IBOutlet var table: UITableView!
-    @IBOutlet var resultSearchController: UISearchController!
-    //@IBOutlet var controllerTitle: UINavigationItem
+    //@IBOutlet var resultSearchController: UISearchController!
+    @IBOutlet var controllerTitle: UINavigationItem?
+    var resultSearchController = UISearchController()
     var filteredTableData = [String]()
     var options: [String]!
     var passInBuilding: String!
+    var selectedCellPath: NSIndexPath!
     var allLocationsTag: Bool = false
     
     override func viewDidLoad() {
@@ -23,6 +25,39 @@ class SearchedDirectoryTableViewController: UITableViewController {
         //SearchedDirectoryTitle.title = passInBuilding
         initControllerTitle()
         initOptions()
+        
+        definesPresentationContext = true
+        
+        self.resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+            
+            self.tableView.tableHeaderView = controller.searchBar
+            return controller
+        })()
+        
+        //Reload table
+        self.tableView.reloadData()
+    }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController)
+    {
+        filteredTableData.removeAll(keepCapacity: false)
+        
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        
+        var newArray = [String]()
+        for x in directory
+        {
+            newArray.append(x.name)
+        }
+        
+        let array = (newArray as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        filteredTableData = array as! [String]
+        
+        self.tableView.reloadData()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -60,10 +95,21 @@ class SearchedDirectoryTableViewController: UITableViewController {
     
     func initControllerTitle()
     {
-        //controllerTitle.title = passInBuilding
+        if(allLocationsTag)
+        {
+            controllerTitle!.title = "All Locations"
+        }
+        else {
+            controllerTitle!.title = passInBuilding
+        }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        //number depends on whether using search bar or just clicking a regular table view cell
+        if(resultSearchController.active)
+        {
+            return self.filteredTableData.count
+        }
         return options.count
     }
     
@@ -77,17 +123,35 @@ class SearchedDirectoryTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("building", forIndexPath: indexPath)
         
-        // Configure the cell...
+        /*// Configure the cell...
         let option = options[indexPath.row]
         cell.textLabel!.text = option
         
-        return cell
+        return cell*/
+        if(self.resultSearchController.active) {
+            
+            cell.textLabel?.text = filteredTableData[indexPath.row]
+            //cell.detailTextLabel!.text = "11 AM to 8 PM"
+            return cell
+        }
+            
+        else {
+            let option = options[indexPath.row]
+            cell.textLabel?.text = option
+            //cell.detailTextLabel!.text = "11 AM to 8 PM"
+            return cell
+        }
+        
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedCellPath = indexPath
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "SearchedToSpecific")
+        let nextViewController = segue.destinationViewController as! DirectorySpecificViewController
+        if (segue.identifier == "SearchedToSpecific" && !resultSearchController.active)
         {
-            let nextViewController = segue.destinationViewController as! DirectorySpecificViewController
             //nextViewController.passInTextFieldTag = self.passInTextFieldTag
             //let cell = table.dequeueReusableCellWithIdentifier("building", indexPathForSelectedRow)
             let selectedCellPath = table.indexPathForSelectedRow
@@ -96,6 +160,10 @@ class SearchedDirectoryTableViewController: UITableViewController {
             print(cell!.textLabel?.text)
             nextViewController.passInName = cell!.textLabel?.text
             //nextViewController.passInBuilding = "Children's Hospital"
+        }
+        else {
+            //let selectedCellPath = filteredTableData.indexPathForSelectedRow
+            nextViewController.passInName = filteredTableData[table.indexPathForSelectedRow!.row]
         }
     }
     

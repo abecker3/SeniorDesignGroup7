@@ -87,9 +87,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
             newArray.append(x.name)
             print(x.name)
         }
-        
-        //_ = options + newArray
-        
+                
         let array = ((options /*+ newArray*/) as NSArray).filteredArrayUsingPredicate(searchPredicate)
         filteredTableData = array as! [String]
         

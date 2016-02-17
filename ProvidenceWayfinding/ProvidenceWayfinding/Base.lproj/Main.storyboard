@@ -1649,20 +1649,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </tableView>
                     <navigationItem key="navigationItem" title="DirectoryBuildingChooser" id="Psf-FS-dDf"/>
                     <connections>
-                        <outlet property="resultSearchController" destination="VB2-uw-Mba" id="qZy-s5-scj"/>
-                        <outlet property="searchDisplayController" destination="VB2-uw-Mba" id="lVd-Lu-WXe"/>
                         <outlet property="table" destination="sRA-i9-STm" id="2Cb-OH-gE7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvd-AF-VEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="VB2-uw-Mba">
-                    <connections>
-                        <outlet property="delegate" destination="Kg9-jc-EgW" id="iXc-QZ-iKH"/>
-                        <outlet property="searchContentsController" destination="Kg9-jc-EgW" id="cMW-49-ldq"/>
-                        <outlet property="searchResultsDataSource" destination="Kg9-jc-EgW" id="yqS-gB-pZE"/>
-                        <outlet property="searchResultsDelegate" destination="Kg9-jc-EgW" id="TKK-bm-TXc"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="4304" y="1767"/>
         </scene>
@@ -2011,20 +2001,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </tableView>
                     <navigationItem key="navigationItem" title="SearchedDirectory" id="C0V-v6-EuC"/>
                     <connections>
-                        <outlet property="resultSearchController" destination="XWP-oX-qXA" id="fVj-qx-OW9"/>
-                        <outlet property="searchDisplayController" destination="VB2-uw-Mba" id="FNm-NA-rPE"/>
+                        <outlet property="controllerTitle" destination="C0V-v6-EuC" id="VHR-IK-2Gh"/>
                         <outlet property="table" destination="EUs-9s-USo" id="hcq-Mn-57p"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTo-bQ-e7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="XWP-oX-qXA">
-                    <connections>
-                        <outlet property="delegate" destination="cQ0-N7-zWa" id="2lx-65-a1z"/>
-                        <outlet property="searchContentsController" destination="cQ0-N7-zWa" id="R6g-Q3-ADa"/>
-                        <outlet property="searchResultsDataSource" destination="cQ0-N7-zWa" id="7A3-fy-wWY"/>
-                        <outlet property="searchResultsDelegate" destination="cQ0-N7-zWa" id="erk-c1-3nt"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="4304" y="2546"/>
         </scene>

@@ -13,7 +13,8 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
     //let controller = UISearchController(searchResultsController: nil)
     
     @IBOutlet var table: UITableView!
-    @IBOutlet var resultSearchController: UISearchController!
+    //@IBOutlet var resultSearchController: UISearchController!
+    var resultSearchController = UISearchController()
     var filteredTableData = [String]()
     var options: [String]!
     var searchActive: Bool = false
@@ -61,7 +62,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
         //resultSearchController.active = false
         //searchBarCancelButtonClicked(searchBar)
         //resultSearchController.willDismissSearchController(UISearchController)
-        performSegueWithIdentifier("buildingToLocation", sender: UISearchBar.self)
+        performSegueWithIdentifier("ChooserToSearched", sender: UISearchBar.self)
         print("Worked!")
     }
     
@@ -165,14 +166,14 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
             //nextViewController.passInBuilding = "Children's Hospital"
             print(nextViewController.passInBuilding)
         }*/
-        let selectedCellPath = table.indexPathForSelectedRow
-        let cell = table.cellForRowAtIndexPath(selectedCellPath!)
+        //let selectedCellPath = table.indexPathForSelectedRow
+        //let cell = table.cellForRowAtIndexPath(selectedCellPath!)
 
-        if (segue.identifier == "ChooserToSearched")// && !searchActive /*&& sender === UITableViewCell()*/)
+        if (segue.identifier == "ChooserToSearched" && !searchActive /*&& sender === UITableViewCell()*/)
         {
             let nextViewController = segue.destinationViewController as! SearchedDirectoryTableViewController
             //nextViewController.passInTextFieldTag = self.passInTextFieldTag
-            nextViewController.passInBuilding = cell!.textLabel?.text
+            nextViewController.passInBuilding = options[table.indexPathForSelectedRow!.row]
         }
             
         else {
@@ -180,6 +181,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
             let nextViewController = segue.destinationViewController as! SearchedDirectoryTableViewController
             //nextViewController.passInTextFieldTag = self.passInTextFieldTag
             nextViewController.passInBuilding = "All Locations"
+            nextViewController.allLocationsTag = true
         }
 
     }
