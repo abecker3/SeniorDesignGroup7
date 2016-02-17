@@ -1960,7 +1960,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     </tableView>
                     <navigationItem key="navigationItem" title="SearchedDirectory" id="C0V-v6-EuC"/>
                     <connections>
-                        <outlet property="PageTitle" destination="C0V-v6-EuC" id="DQP-GE-3Oi"/>
                         <outlet property="controllerTitle" destination="C0V-v6-EuC" id="VHR-IK-2Gh"/>
                         <outlet property="table" destination="EUs-9s-USo" id="hcq-Mn-57p"/>
                     </connections>
