@@ -14,6 +14,10 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     var screenEdgeRecognizerRight: UIScreenEdgePanGestureRecognizer!
     var flag = 0
     var theseSpots = [String()]
+    var buiding = [String()]
+    var floor =  [String()]
+    var dateSave = [String()]
+    var timeSave = [String()]
     var keyNum = Int()
     var indexFlag = Int()
     
