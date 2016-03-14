@@ -13,25 +13,29 @@ class HistoryViewController: UITableViewController{
     
     let defaults = NSUserDefaults.standardUserDefaults()
     var maxKeyNum = Int()
-    var thisArray = [String()]
+    //var thisArray = [String()]
     var cellArray = [String()]
+    var building = [String()]
+    var floor =  [String()]
+    var dateSave = [String()]
+    var timeSave = [String()]
     var curIndex = Int()
     var flag = Int()
     var index = 0
-    var count = 10
+    //var count = 10
     var pathFlag = Int()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return building.count
         //return cellArray.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:BasicDirectionsCell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath) as! BasicDirectionsCell
-        cell.subtitleLabel.text = "Floor: L2"
-        cell.titleLabel.text = "Women's Health Center"
-        cell.subtitle2Label.text = "11:52 AM"
-        cell.title2Label.text = "2/23/2016"
+        cell.subtitleLabel.text = floor[indexPath.item]//"Floor: L2"
+        cell.titleLabel.text = building[indexPath.item]//"Women's Health Center"
+        cell.subtitle2Label.text = timeSave[indexPath.item]//"11:52 AM"
+        cell.title2Label.text = dateSave[indexPath.item]//"2/23/2016"
         return cell
     }
     
@@ -53,7 +57,15 @@ class HistoryViewController: UITableViewController{
         if(flag == 1){
             index = curIndex
         }
-        createCellArray()
+        /*building = building.reverse()
+        building.removeAtIndex(0)
+        floor = floor.reverse()
+        floor.removeAtIndex(0)
+        timeSave = timeSave.reverse()
+        timeSave.removeAtIndex(0)
+        dateSave = dateSave.reverse()
+        dateSave.removeAtIndex(0)*/
+        //createCellArray()
         //table.reloadData()
     }
     
@@ -67,7 +79,7 @@ class HistoryViewController: UITableViewController{
         }
     }
     
-    
+    /*
     func createCellArray(){
         if (flag == 1){
             var iteration = 0
@@ -91,7 +103,7 @@ class HistoryViewController: UITableViewController{
             }
         }
         cellArray = cellArray.reverse()
-    }
+    }*/
     
     
 }

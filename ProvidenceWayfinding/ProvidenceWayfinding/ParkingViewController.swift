@@ -13,8 +13,8 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     var screenEdgeRecognizerLeft: UIScreenEdgePanGestureRecognizer!
     var screenEdgeRecognizerRight: UIScreenEdgePanGestureRecognizer!
     var flag = 0
-    var theseSpots = [String()]
-    var buiding = [String()]
+    //var theseSpots = [String()]
+    var building = [String()]
     var floor =  [String()]
     var dateSave = [String()]
     var timeSave = [String()]
@@ -28,12 +28,14 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     let defaults = NSUserDefaults.standardUserDefaults()
     let dateFormatter: NSDateFormatter = {
         let df = NSDateFormatter();
-        df.dateStyle = NSDateFormatterStyle.ShortStyle;
+        df.dateStyle = NSDateFormatterStyle.MediumStyle;
         return df;
     }()
 
     
     //Outlets
+    @IBOutlet weak var savedParkingTime: UILabel!
+    @IBOutlet weak var savedParkingFloor: UILabel!
     @IBOutlet weak var savedParkingSpot: UILabel!
     @IBOutlet weak var savedParkingDate: UILabel!
     @IBOutlet weak var buildingButtons: UISegmentedControl!
@@ -48,27 +50,74 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     
     //Actions
     @IBAction func save(sender: AnyObject) {
-        parkingLocation = parkingLocationBuilding + "Floor " + parkingLocationFloor + "using the " + parkingLocationElevator
+        //parkingLocation = parkingLocationBuilding + "Floor " + parkingLocationFloor + "using the " + parkingLocationElevator
         if (indexFlag == 0){
-            theseSpots.insert(String(keyNum), atIndex: keyNum)
+            /*building.insert(String(keyNum), atIndex: keyNum)
+            floor.insert(String(keyNum), atIndex: keyNum)
+            dateSave.insert(String(keyNum), atIndex: keyNum)
+            timeSave.insert(String(keyNum), atIndex: keyNum)*/
+            
+            building.insert(parkingLocationBuilding, atIndex: 0)
+            floor.insert("Floor: "+parkingLocationFloor, atIndex: 0)
+            dateSave.insert(dateFormatter.stringFromDate(NSDate()), atIndex: 0)
+            dateFormatter.dateFormat = "h:mm a"
+            timeSave.insert(dateFormatter.stringFromDate(NSDate()) , atIndex: 0)
+            dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle;
+
+
+            /*theseSpots.insert(String(keyNum), atIndex: keyNum)
             theseSpots.insert(parkingLocation, atIndex: keyNum + 1)
-            theseSpots.insert(dateFormatter.stringFromDate(NSDate()), atIndex: keyNum + 2)
+            theseSpots.insert(dateFormatter.stringFromDate(NSDate()), atIndex: keyNum + 2)*/
         }
         else{
-            theseSpots[keyNum] = String(keyNum)
+            /*building[keyNum] = String(keyNum)
+            floor[keyNum] = String(keyNum)
+            dateSave[keyNum] = String(keyNum)
+            timeSave[keyNum] = String(keyNum)*/
+            building.insert(parkingLocationBuilding, atIndex: 0)
+            floor.insert("Floor: "+parkingLocationFloor, atIndex: 0)
+            dateSave.insert(dateFormatter.stringFromDate(NSDate()), atIndex: 0)
+            dateFormatter.dateFormat = "h:mm a"
+            timeSave.insert(dateFormatter.stringFromDate(NSDate()) , atIndex: 0)
+            dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle;
+            building.removeLast()
+            floor.removeLast()
+            timeSave.removeLast()
+            dateSave.removeLast()
+            /*
+            building[keyNum] = parkingLocationBuilding
+            floor[keyNum] = parkingLocationFloor
+            dateSave[keyNum] = dateFormatter.stringFromDate(NSDate())
+            dateFormatter.dateFormat = "HH:mm a"
+            timeSave[keyNum] = dateFormatter.stringFromDate(NSDate())
+            dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle;
+            */
+            
+            /*theseSpots[keyNum] = String(keyNum)
             theseSpots[keyNum + 1] = parkingLocation
-            theseSpots[keyNum + 2] = dateFormatter.stringFromDate(NSDate())
+            theseSpots[keyNum + 2] = dateFormatter.stringFromDate(NSDate())*/
         }
-        defaults.setObject(theseSpots, forKey: "parkingArray");
-        if(keyNum + 3 >= 30){
+        //defaults.setObject(theseSpots, forKey: "parkingArray");
+        defaults.setObject(building, forKey: "buildingArray")
+        defaults.setObject(floor, forKey: "floorArray")
+        defaults.setObject(timeSave, forKey: "timeArray")
+        defaults.setObject(dateSave, forKey: "dateArray")
+        if(keyNum >= 8){
             indexFlag = 1
+            keyNum = 0
+        }else{
+            keyNum += 1
         }
-        keyNum = (keyNum + 3) % 30
+        //keyNum = (keyNum + 1) % 10
         defaults.setObject(keyNum, forKey: "keyNum")
         defaults.setObject(indexFlag, forKey: "indexFlag")
         defaults.synchronize();
-        savedParkingSpot.text = parkingLocation;
-        savedParkingDate.text = dateFormatter.stringFromDate(NSDate());
+        savedParkingSpot.text = building[0]
+        savedParkingDate.text = dateSave[0]
+        savedParkingFloor.text = floor[0]
+        savedParkingTime.text = timeSave[0]
+        //savedParkingSpot.text = parkingLocation;
+        //savedParkingDate.text = dateFormatter.stringFromDate(NSDate());
     }
     
     @IBAction func changedBuilding(sender: UISegmentedControl) {
@@ -76,7 +125,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         switch title{
         case "Main"?: parkingLocationBuilding = "Main Tower "
         case "Children's"?: parkingLocationBuilding = "Children's Hospital "
-        case "Women's"?: parkingLocationBuilding = "Women's Health Institute "
+        case "Women's"?: parkingLocationBuilding = "Women's Health Center "
         default: parkingLocationBuilding = "Heart Institute "
         }
     }
@@ -127,7 +176,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         //Load Saved Parking Spot/Date
         pathFlag = 0
         defaults.setObject(pathFlag, forKey: "pathFlag")
-        
+
         if(defaults.stringForKey("keyNum") != nil){
             keyNum = Int(defaults.stringForKey("keyNum")!)!
         }
@@ -136,30 +185,59 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
             indexFlag = Int(defaults.stringForKey("indexFlag")!)!
         }
         else{ indexFlag = 0 }
+        
+        if (keyNum != 0){
+            building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
+            floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
+            timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
+            dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
+        }
+        
+        savedParkingSpot.text = building[0]
+        savedParkingDate.text = dateSave[0]
+        savedParkingFloor.text = floor[0]
+        savedParkingTime.text = timeSave[0]
+        /*
         if (indexFlag == 1){
             if (keyNum != 0){
+                building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
+                floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
+                timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
+                dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
+                /*
                 theseSpots = defaults.objectForKey("parkingArray")! as! NSArray as! [String]
                 savedParkingSpot.text = theseSpots[keyNum - 2]
                 savedParkingDate.text = theseSpots[keyNum - 1]
+                */
             }
             else{
+                building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
+                floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
+                timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
+                dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
+                /*
                 theseSpots = defaults.objectForKey("parkingArray")! as! NSArray as! [String]
                 savedParkingSpot.text = theseSpots[28]
-                savedParkingDate.text = theseSpots[29]
+                savedParkingDate.text = theseSpots[29]*/
             }
         }
         else if (keyNum != 0){
+            building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
+            floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
+            timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
+            dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
+            /*
             theseSpots = defaults.objectForKey("parkingArray")! as! NSArray as! [String]
             savedParkingSpot.text = theseSpots[keyNum - 2]
-            savedParkingDate.text = theseSpots[keyNum - 1]
-        }
+            savedParkingDate.text = theseSpots[keyNum - 1]*/
+        }*/
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nextViewController = segue.destinationViewController as! HistoryViewController
         if (indexFlag == 1){
-            nextViewController.maxKeyNum = 30
+            nextViewController.maxKeyNum = 20
             nextViewController.curIndex = keyNum
             nextViewController.flag = indexFlag
         }
@@ -167,7 +245,11 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
             nextViewController.maxKeyNum = keyNum
             nextViewController.flag = indexFlag
         }
-        nextViewController.thisArray = theseSpots
+        //nextViewController.thisArray = theseSpots
+        nextViewController.building = building
+        nextViewController.floor = floor
+        nextViewController.dateSave = dateSave
+        nextViewController.timeSave = timeSave
     }
     
     func switchScreenGestureRight(sender: UIScreenEdgePanGestureRecognizer) {

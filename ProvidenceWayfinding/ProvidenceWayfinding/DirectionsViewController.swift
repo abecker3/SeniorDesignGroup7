@@ -128,8 +128,6 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     }
 
     func changeMapStyle(){
-        print("mapType in map: \(self.mapType)")
-
         switch self.mapType{
         case nil:
             showMapView.mapType = .Standard
@@ -210,7 +208,6 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
             showMapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
             
             for step in route.steps {
-                print(step.distance.ft)
                 if step.distance.ft >= 528 {
                     turnbyturnStepDistance.append("\(Double(round(10*step.distance.mi)/10)) mi.")
                     turnbyturnStepIns.append("\(step.instructions)")
@@ -219,7 +216,6 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
                     turnbyturnStepDistance.append("\(Int(step.distance.ft)) ft.")
                     turnbyturnStepIns.append("\(step.instructions)")
                 }
-                print(step.instructions)
             }
             turnbyturnStepDistance.removeAtIndex(0)
             turnbyturnStepIns.removeAtIndex(0)
@@ -234,7 +230,6 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         //self.pinAnnotationView.pinTintColor = UIColor.greenColor()
         //self.showMapView.addAnnotation(self.startAnnotation)
 
-        print(userLocation)
         let region = MKCoordinateRegionMakeWithDistance(userLocation, 2000, 2000)
         if(userLocation.latitude == 0.0 && userLocation.longitude == 0.0){
             showMapView.userTrackingMode = MKUserTrackingMode.Follow
@@ -362,7 +357,6 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     
         if showMapView.userTrackingMode == MKUserTrackingMode.None{
             curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
-            print("Map Moved")
         }
     }
     //Action for curLocationButton to follow user when pressed, or follow with heading when pressed twice

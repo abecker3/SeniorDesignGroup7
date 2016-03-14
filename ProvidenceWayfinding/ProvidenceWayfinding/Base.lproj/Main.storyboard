@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1365,7 +1365,7 @@ Institute </string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Tj-xVj">
-                                <rect key="frame" x="5" y="343" width="590" height="99"/>
+                                <rect key="frame" x="10" y="343" width="590" height="143"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-cD-9WC">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
@@ -1373,22 +1373,29 @@ Institute </string>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Spot" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Pl-uTS">
-                                        <rect key="frame" x="0.0" y="26" width="149" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Building" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Pl-uTS" userLabel="Saved Parking Building">
+                                        <rect key="frame" x="0.0" y="26" width="255" height="30"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1t-ss-d1P">
-                                        <rect key="frame" x="0.0" y="52" width="20" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-CW-vxg">
+                                        <rect key="frame" x="0.0" y="61" width="152" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
+                                        <rect key="frame" x="0.0" y="91" width="40" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
-                                        <rect key="frame" x="0.0" y="78" width="36" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-js-Yum">
+                                        <rect key="frame" x="0.0" y="122" width="151" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1405,7 +1412,7 @@ Institute </string>
                             <constraint firstAttribute="trailingMargin" secondItem="fTi-9C-EQT" secondAttribute="trailing" constant="-15" id="I1x-f5-Xew"/>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="KFE-hI-8k5"/>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="top" secondItem="0VC-Oy-jwo" secondAttribute="bottom" constant="8" id="MYI-9i-YUl"/>
-                            <constraint firstItem="cT9-Tj-xVj" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="MqL-ic-vpH"/>
+                            <constraint firstItem="cT9-Tj-xVj" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-10" id="MqL-ic-vpH"/>
                             <constraint firstItem="uLv-GO-hVW" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="Sfq-Na-kg8"/>
                             <constraint firstItem="3dn-G7-aJZ" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="Xuf-ZA-nsL"/>
                             <constraint firstItem="uLv-GO-hVW" firstAttribute="top" secondItem="3dn-G7-aJZ" secondAttribute="bottom" constant="8" id="aMk-Dg-MUz"/>
@@ -1414,7 +1421,7 @@ Institute </string>
                             <constraint firstItem="Zuq-Ix-Bxi" firstAttribute="top" secondItem="xRC-9A-9ee" secondAttribute="bottom" constant="8" id="dfe-6x-T5p"/>
                             <constraint firstItem="WHJ-fP-y3y" firstAttribute="top" secondItem="uLv-GO-hVW" secondAttribute="bottom" constant="8" id="eLO-NE-90o"/>
                             <constraint firstItem="cT9-Tj-xVj" firstAttribute="top" secondItem="fTi-9C-EQT" secondAttribute="bottom" constant="8" id="fEa-4d-gfT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cT9-Tj-xVj" secondAttribute="trailing" constant="-15" id="gyp-Ig-bCU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cT9-Tj-xVj" secondAttribute="trailing" constant="-20" id="gyp-Ig-bCU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uLv-GO-hVW" secondAttribute="trailing" constant="-15" id="heM-ub-ajG"/>
                             <constraint firstItem="WHJ-fP-y3y" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="iuE-Ev-9T3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WHJ-fP-y3y" secondAttribute="trailing" constant="-15" id="j5Y-4L-yUm"/>
@@ -1439,7 +1446,9 @@ Institute </string>
                         <outlet property="elevatorButtons" destination="WHJ-fP-y3y" id="Rxp-t7-RJa"/>
                         <outlet property="floorButtons" destination="3dn-G7-aJZ" id="nnu-yb-hGZ"/>
                         <outlet property="savedParkingDate" destination="YN8-u6-3hX" id="E50-Y8-VK2"/>
-                        <outlet property="savedParkingSpot" destination="HPt-Pl-uTS" id="iVm-N3-qB1"/>
+                        <outlet property="savedParkingFloor" destination="ucR-CW-vxg" id="cwH-sm-mNV"/>
+                        <outlet property="savedParkingSpot" destination="HPt-Pl-uTS" id="xAo-Bg-tyQ"/>
+                        <outlet property="savedParkingTime" destination="Gci-js-Yum" id="WXb-Fp-54E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgO-HW-7CA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1456,7 +1465,7 @@ Institute </string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="86" id="BPp-ZX-RfU" customClass="BasicDirectionsCell" customModule="ProvidenceWayfinding" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="historyCell" rowHeight="86" id="BPp-ZX-RfU" customClass="BasicDirectionsCell" customModule="ProvidenceWayfinding" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BPp-ZX-RfU" id="3fQ-Xr-cyD">
@@ -1516,7 +1525,6 @@ Institute </string>
                                         <constraint firstItem="c3a-Xh-5BV" firstAttribute="height" secondItem="3fQ-Xr-cyD" secondAttribute="height" id="amV-Fn-hYs"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <edgeInsets key="layoutMargins" top="15" left="15" bottom="15" right="15"/>
                                 <connections>
                                     <outlet property="subtitle2Label" destination="B7W-Xs-wfg" id="cpR-aq-2yE"/>
                                     <outlet property="subtitleLabel" destination="Uge-Ch-MnA" id="mfS-lm-c7W"/>
@@ -1756,31 +1764,38 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <action selector="save:" destination="B5n-Ui-7sL" eventType="touchUpInside" id="Vlw-lB-E5I"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i3W-BF-37O">
-                                <rect key="frame" x="5" y="343" width="590" height="99"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jt0-mu-Dnf">
+                                <rect key="frame" x="10" y="343" width="255" height="143"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrH-TY-uGR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INO-lF-4xR">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Spot" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOU-6x-1bM">
-                                        <rect key="frame" x="0.0" y="26" width="149" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Building" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt6-6W-jIO" userLabel="Saved Parking Building">
+                                        <rect key="frame" x="0.0" y="26" width="255" height="30"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BV-N9-ciL">
-                                        <rect key="frame" x="0.0" y="52" width="20" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM2-eJ-ieE">
+                                        <rect key="frame" x="0.0" y="61" width="152" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-Kw-3HH">
+                                        <rect key="frame" x="0.0" y="91" width="40" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRM-tx-9ix">
-                                        <rect key="frame" x="0.0" y="78" width="36" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dna-xM-Eeq">
+                                        <rect key="frame" x="0.0" y="122" width="151" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1788,7 +1803,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="i3W-BF-37O" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="118-NQ-33h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pmm-We-pw0" secondAttribute="trailing" constant="-15" id="1oR-Kb-NSX"/>
                             <constraint firstItem="pmm-We-pw0" firstAttribute="top" secondItem="rRB-Xe-inL" secondAttribute="bottom" constant="8" id="6UH-Yc-7Dg"/>
                             <constraint firstItem="A4a-Ke-ZGP" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="6pc-yY-C3e"/>
@@ -1799,16 +1813,16 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstAttribute="trailingMargin" secondItem="O6V-TG-zaK" secondAttribute="trailing" constant="-15" id="FZl-7f-JOK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DhO-sq-oqc" secondAttribute="trailing" constant="-15" id="JX6-uE-2pJ"/>
                             <constraint firstItem="hW6-Nq-jvf" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="PG0-xq-w6r"/>
+                            <constraint firstItem="jt0-mu-Dnf" firstAttribute="top" secondItem="O6V-TG-zaK" secondAttribute="bottom" constant="8" symbolic="YES" id="R7e-u3-yNO"/>
                             <constraint firstItem="EjI-Oc-Q6L" firstAttribute="top" secondItem="K53-kU-tMb" secondAttribute="bottom" constant="13" id="UU9-xw-wEx"/>
                             <constraint firstItem="EjI-Oc-Q6L" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="aW4-Ot-Du8"/>
-                            <constraint firstItem="i3W-BF-37O" firstAttribute="top" secondItem="O6V-TG-zaK" secondAttribute="bottom" constant="8" id="d55-9R-fNt"/>
                             <constraint firstItem="DhO-sq-oqc" firstAttribute="top" secondItem="hW6-Nq-jvf" secondAttribute="bottom" constant="8" id="fpv-jG-Gtf"/>
                             <constraint firstItem="hW6-Nq-jvf" firstAttribute="top" secondItem="CiH-td-16l" secondAttribute="bottom" constant="8" id="gIW-Mz-0k0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CiH-td-16l" secondAttribute="trailing" constant="-15" id="hWF-WO-JDB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i3W-BF-37O" secondAttribute="trailing" constant="-15" id="jfq-v6-Nnb"/>
                             <constraint firstItem="pmm-We-pw0" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="lEf-hz-O5o"/>
                             <constraint firstItem="O6V-TG-zaK" firstAttribute="top" secondItem="A4a-Ke-ZGP" secondAttribute="bottom" constant="12" id="qf5-6w-Qle"/>
                             <constraint firstItem="CiH-td-16l" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="qoK-IL-82G"/>
+                            <constraint firstItem="jt0-mu-Dnf" firstAttribute="leading" secondItem="O6V-TG-zaK" secondAttribute="leading" id="sWD-dd-w20"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EjI-Oc-Q6L" secondAttribute="trailing" constant="-15" id="sqs-2i-XcN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rRB-Xe-inL" secondAttribute="trailing" constant="-15" id="tqB-dw-Nbo"/>
                             <constraint firstItem="rRB-Xe-inL" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="u2t-31-UI1"/>
@@ -1830,8 +1844,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <outlet property="buildingButtons" destination="hW6-Nq-jvf" id="YMP-oq-8MV"/>
                         <outlet property="elevatorButtons" destination="A4a-Ke-ZGP" id="zrp-zf-syy"/>
                         <outlet property="floorButtons" destination="rRB-Xe-inL" id="S2H-T0-ePi"/>
-                        <outlet property="savedParkingDate" destination="fRM-tx-9ix" id="CG5-B2-JS4"/>
-                        <outlet property="savedParkingSpot" destination="WOU-6x-1bM" id="h3O-OD-fkQ"/>
+                        <outlet property="savedParkingDate" destination="ucx-Kw-3HH" id="k6H-UF-BhA"/>
+                        <outlet property="savedParkingFloor" destination="BM2-eJ-ieE" id="a9B-v8-fPN"/>
+                        <outlet property="savedParkingSpot" destination="Vt6-6W-jIO" id="Yka-9p-O0y"/>
+                        <outlet property="savedParkingTime" destination="dna-xM-Eeq" id="8dE-T4-EZf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="te5-HQ-b8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
