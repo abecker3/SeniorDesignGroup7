@@ -176,12 +176,10 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nextViewController = segue.destinationViewController as! HistoryViewController
         if (indexFlag == 1){
-            nextViewController.maxKeyNum = 20
             nextViewController.curIndex = keyNum
             nextViewController.flag = indexFlag
         }
         else{
-            nextViewController.maxKeyNum = keyNum
             nextViewController.flag = indexFlag
         }
         //nextViewController.thisArray = theseSpots
