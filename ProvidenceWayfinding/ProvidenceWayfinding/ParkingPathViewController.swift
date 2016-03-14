@@ -13,7 +13,6 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
 
     var screenEdgeRecognizerRight: UIScreenEdgePanGestureRecognizer!
     var flag = 0
-    //var theseSpots = [String()]
     var building = [String()]
     var floor =  [String()]
     var dateSave = [String()]
@@ -52,11 +51,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     @IBAction func save(sender: AnyObject) {
         parkingLocation = parkingLocationBuilding + "Floor " + parkingLocationFloor + "using the " + parkingLocationElevator
         if (indexFlag == 0){
-            /*
-            theseSpots.insert(String(keyNum), atIndex: keyNum)
-            theseSpots.insert(parkingLocation, atIndex: keyNum + 1)
-            theseSpots.insert(dateFormatter.stringFromDate(NSDate()), atIndex: keyNum + 2)
-*/
+
             building.insert(parkingLocationBuilding, atIndex: 0)
             floor.insert("Floor: "+parkingLocationFloor, atIndex: 0)
             dateSave.insert(dateFormatter.stringFromDate(NSDate()), atIndex: 0)
@@ -65,9 +60,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
             dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle;
         }
         else{
-            /*theseSpots[keyNum] = String(keyNum)
-            theseSpots[keyNum + 1] = parkingLocation
-            theseSpots[keyNum + 2] = dateFormatter.stringFromDate(NSDate())*/
+
             building.insert(parkingLocationBuilding, atIndex: 0)
             floor.insert("Floor: "+parkingLocationFloor, atIndex: 0)
             dateSave.insert(dateFormatter.stringFromDate(NSDate()), atIndex: 0)
@@ -89,11 +82,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         }else{
             keyNum += 1
         }
-        /*defaults.setObject(theseSpots, forKey: "parkingArray");
-        if(keyNum + 3 >= 30){
-            indexFlag = 1
-        }
-        keyNum = (keyNum + 3) % 30*/
+
         defaults.setObject(keyNum, forKey: "keyNum")
         defaults.setObject(indexFlag, forKey: "indexFlag")
         defaults.synchronize();

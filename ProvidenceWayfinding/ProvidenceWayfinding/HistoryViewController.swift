@@ -12,9 +12,6 @@ class HistoryViewController: UITableViewController{
     @IBOutlet var table: UITableView!
     
     let defaults = NSUserDefaults.standardUserDefaults()
-    var maxKeyNum = Int()
-    //var thisArray = [String()]
-    var cellArray = [String()]
     var building = [String()]
     var floor =  [String()]
     var dateSave = [String()]
@@ -22,31 +19,21 @@ class HistoryViewController: UITableViewController{
     var curIndex = Int()
     var flag = Int()
     var index = 0
-    //var count = 10
     var pathFlag = Int()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return building.count
-        //return cellArray.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:BasicDirectionsCell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath) as! BasicDirectionsCell
-        cell.subtitleLabel.text = floor[indexPath.item]//"Floor: L2"
-        cell.titleLabel.text = building[indexPath.item]//"Women's Health Center"
-        cell.subtitle2Label.text = timeSave[indexPath.item]//"11:52 AM"
-        cell.title2Label.text = dateSave[indexPath.item]//"2/23/2016"
+        cell.subtitleLabel.text = floor[indexPath.item]
+        cell.titleLabel.text = building[indexPath.item]
+        cell.subtitle2Label.text = timeSave[indexPath.item]
+        cell.title2Label.text = dateSave[indexPath.item]
         return cell
     }
     
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("historyCell", forIndexPath: indexPath)
-        cell.textLabel?.lineBreakMode = .ByWordWrapping
-        cell.textLabel?.numberOfLines = 2
-        cell.textLabel?.text = cellArray[indexPath.item]
-        return cell
-    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,16 +44,6 @@ class HistoryViewController: UITableViewController{
         if(flag == 1){
             index = curIndex
         }
-        /*building = building.reverse()
-        building.removeAtIndex(0)
-        floor = floor.reverse()
-        floor.removeAtIndex(0)
-        timeSave = timeSave.reverse()
-        timeSave.removeAtIndex(0)
-        dateSave = dateSave.reverse()
-        dateSave.removeAtIndex(0)*/
-        //createCellArray()
-        //table.reloadData()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -78,32 +55,7 @@ class HistoryViewController: UITableViewController{
             }
         }
     }
-    
-    /*
-    func createCellArray(){
-        if (flag == 1){
-            var iteration = 0
-            while (iteration < 10){
-                let location = thisArray[index + 1]
-                let date = thisArray[index + 2]
-                cellArray.append(String(count) + ": " + location + "on " + date)
-                index = (index + 3) % 30
-                count = count - 1
-                iteration++
-            }
-        }
-        else if (maxKeyNum != 0){
-            count = (thisArray.count - 1) / 3
-            while (index < thisArray.count - 1){
-                let location = thisArray[index + 1]
-                let date = thisArray[index + 2]
-                cellArray.append(String(count) + ": " + location + "on " + date)
-                index = (index + 3) % 30
-                count = count - 1
-            }
-        }
-        cellArray = cellArray.reverse()
-    }*/
+
     
     
 }
