@@ -155,7 +155,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonClick:" destination="Jbg-Av-W2a" eventType="touchUpInside" id="DeV-LU-1RC"/>
+                                    <segue destination="VSu-wh-Yqg" kind="show" id="3SN-ud-FB9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -468,6 +468,97 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5l-EC-xs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4326" y="53"/>
+        </scene>
+        <!--Tutorial-->
+        <scene sceneID="1mU-cP-1h0">
+            <objects>
+                <viewController id="VSu-wh-Yqg" customClass="TutorialViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r2E-rc-Ak3"/>
+                        <viewControllerLayoutGuide type="bottom" id="4NJ-uK-H9E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9EN-eC-qfM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqE-IJ-zxv">
+                                <rect key="frame" x="265" y="513" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="chg-cs-lgg"/>
+                                </constraints>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartAction:" destination="VSu-wh-Yqg" eventType="touchUpInside" id="QBK-uD-Ubs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CqE-IJ-zxv" firstAttribute="centerX" secondItem="9EN-eC-qfM" secondAttribute="centerX" id="p5Q-zQ-q8N"/>
+                            <constraint firstItem="4NJ-uK-H9E" firstAttribute="top" secondItem="CqE-IJ-zxv" secondAttribute="bottom" constant="8" symbolic="YES" id="ssk-Wy-gku"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tutorial" id="lWY-B5-ROx" userLabel="Tutorial">
+                        <barButtonItem key="backBarButtonItem" title="Done" id="n8B-vQ-dol"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0AI-4e-LBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-740" y="53"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="nZu-28-g4l">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" id="Mz3-zq-kxP" customClass="ContentViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S0A-hY-UzD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zdf-Ig-zUc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k92-Fb-eap">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeS-DY-d8G">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mne-HF-j9y">
+                                <rect key="frame" x="260" y="57" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Fev-6b-8Ua"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mne-HF-j9y" firstAttribute="top" secondItem="SeS-DY-d8G" secondAttribute="bottom" constant="8" symbolic="YES" id="4CN-n9-iTE"/>
+                            <constraint firstItem="Mne-HF-j9y" firstAttribute="centerX" secondItem="SeS-DY-d8G" secondAttribute="centerX" id="4bo-fQ-EKf"/>
+                            <constraint firstItem="Zdf-Ig-zUc" firstAttribute="top" secondItem="Mne-HF-j9y" secondAttribute="bottom" constant="463" id="UeL-zQ-xBR"/>
+                            <constraint firstItem="SeS-DY-d8G" firstAttribute="leading" secondItem="k92-Fb-eap" secondAttribute="leadingMargin" id="X2u-V4-A16"/>
+                            <constraint firstItem="SeS-DY-d8G" firstAttribute="trailing" secondItem="k92-Fb-eap" secondAttribute="trailingMargin" id="a0k-Vt-68Q"/>
+                            <constraint firstItem="SeS-DY-d8G" firstAttribute="top" secondItem="S0A-hY-UzD" secondAttribute="bottom" constant="8" symbolic="YES" id="mYZ-js-WoL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Mne-HF-j9y" id="va1-Lc-LUd"/>
+                        <outlet property="titleLabel" destination="SeS-DY-d8G" id="WRt-VP-ehk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcV-IA-sLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1450" y="774"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="7pf-6a-gOU">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zD0-g9-RYN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i3w-UL-y5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-740" y="774"/>
         </scene>
         <!--Lost-->
         <scene sceneID="Aio-mM-RVl">
@@ -1383,7 +1474,7 @@ Institute </string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-CW-vxg">
                                         <rect key="frame" x="0.0" y="61" width="152" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
@@ -1395,7 +1486,7 @@ Institute </string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-js-Yum">
                                         <rect key="frame" x="0.0" y="122" width="151" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1783,7 +1874,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM2-eJ-ieE">
                                         <rect key="frame" x="0.0" y="61" width="152" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-Kw-3HH">
@@ -1795,7 +1886,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dna-xM-Eeq">
                                         <rect key="frame" x="0.0" y="122" width="151" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
