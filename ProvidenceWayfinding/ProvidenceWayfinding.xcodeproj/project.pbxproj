@@ -28,15 +28,15 @@
 		B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650581C04F1EA00C8276A /* LocationTableViewController.swift */; };
 		B696505D1C04F1EA00C8276A /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650591C04F1EA00C8276A /* SurveyViewController.swift */; };
 		B696505F1C04F7E200C8276A /* ParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696505E1C04F7E200C8276A /* ParkingViewController.swift */; };
-		B69650641C05399500C8276A /* Car.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650601C05399500C8276A /* Car.png */; };
-		B69650651C05399500C8276A /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650611C05399500C8276A /* Home.png */; };
-		B69650661C05399500C8276A /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650621C05399500C8276A /* Map.png */; };
-		B69650671C05399500C8276A /* More.png in Resources */ = {isa = PBXBuildFile; fileRef = B69650631C05399500C8276A /* More.png */; };
 		B81F5F801C5867DF00B2D981 /* FloorPlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F5F7F1C5867DF00B2D981 /* FloorPlansViewController.swift */; };
 		B86C12671C52A71C00FF284F /* Heart_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B86C12661C52A71C00FF284F /* Heart_1.jpg */; };
 		B86C12691C52A72500FF284F /* Heart_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B86C12681C52A72500FF284F /* Heart_2.jpg */; };
 		B877638E1C9899E300F9032C /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877638D1C9899E300F9032C /* TutorialViewController.swift */; };
 		B87763901C989C7300F9032C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877638F1C989C7300F9032C /* ContentViewController.swift */; };
+		B87763A51C98CA6600F9032C /* Car.png in Resources */ = {isa = PBXBuildFile; fileRef = B87763A11C98CA6600F9032C /* Car.png */; };
+		B87763A61C98CA6600F9032C /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = B87763A21C98CA6600F9032C /* Home.png */; };
+		B87763A71C98CA6600F9032C /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = B87763A31C98CA6600F9032C /* Map.png */; };
+		B87763A81C98CA6600F9032C /* More.png in Resources */ = {isa = PBXBuildFile; fileRef = B87763A41C98CA6600F9032C /* More.png */; };
 		B87C86091C6A46E20091514E /* ParkingPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C86081C6A46E20091514E /* ParkingPathViewController.swift */; };
 		B87C860B1C6A79720091514E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C860A1C6A79720091514E /* HistoryViewController.swift */; };
 		B89D054E1C56F1FD00D81C76 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */; };
@@ -102,15 +102,15 @@
 		B69650581C04F1EA00C8276A /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		B69650591C04F1EA00C8276A /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		B696505E1C04F7E200C8276A /* ParkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingViewController.swift; sourceTree = "<group>"; };
-		B69650601C05399500C8276A /* Car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car.png; sourceTree = "<group>"; };
-		B69650611C05399500C8276A /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
-		B69650621C05399500C8276A /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
-		B69650631C05399500C8276A /* More.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = More.png; sourceTree = "<group>"; };
 		B81F5F7F1C5867DF00B2D981 /* FloorPlansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorPlansViewController.swift; sourceTree = "<group>"; };
 		B86C12661C52A71C00FF284F /* Heart_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_1.jpg; sourceTree = "<group>"; };
 		B86C12681C52A72500FF284F /* Heart_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_2.jpg; sourceTree = "<group>"; };
 		B877638D1C9899E300F9032C /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		B877638F1C989C7300F9032C /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		B87763A11C98CA6600F9032C /* Car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car.png; sourceTree = "<group>"; };
+		B87763A21C98CA6600F9032C /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
+		B87763A31C98CA6600F9032C /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
+		B87763A41C98CA6600F9032C /* More.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = More.png; sourceTree = "<group>"; };
 		B87C86081C6A46E20091514E /* ParkingPathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingPathViewController.swift; sourceTree = "<group>"; };
 		B87C860A1C6A79720091514E /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -206,10 +206,10 @@
 				B8EAEFB51C61411D0084A531 /* Heart_5.jpg */,
 				B8EAEFAB1C613E260084A531 /* NotAvailable.jpg */,
 				35A706CF1C4D83B00039F4DC /* providence_logo1.png */,
-				B69650601C05399500C8276A /* Car.png */,
-				B69650611C05399500C8276A /* Home.png */,
-				B69650621C05399500C8276A /* Map.png */,
-				B69650631C05399500C8276A /* More.png */,
+				B87763A11C98CA6600F9032C /* Car.png */,
+				B87763A21C98CA6600F9032C /* Home.png */,
+				B87763A31C98CA6600F9032C /* Map.png */,
+				B87763A41C98CA6600F9032C /* More.png */,
 				A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */,
 				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
 				B696505E1C04F7E200C8276A /* ParkingViewController.swift */,
@@ -335,7 +335,7 @@
 				TargetAttributes = {
 					D2CA49E21BE2B58B00E79580 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = FT24NTBXEG;
+						DevelopmentTeam = EN63MJGHGH;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -379,23 +379,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B69650641C05399500C8276A /* Car.png in Resources */,
+				B87763A61C98CA6600F9032C /* Home.png in Resources */,
 				D227F9911C725E2A0029A5E7 /* List-100.png in Resources */,
+				B87763A81C98CA6600F9032C /* More.png in Resources */,
 				B8EAEFB81C61411D0084A531 /* Heart_5.jpg in Resources */,
 				D2341F551C11610700F5ACBA /* NearMeFilled100.png in Resources */,
 				35A706D01C4D83B00039F4DC /* providence_logo1.png in Resources */,
 				354B98F81C04EF330087E67C /* Campus.jpg in Resources */,
+				B87763A51C98CA6600F9032C /* Car.png in Resources */,
 				D2341F541C11610700F5ACBA /* NearMe100.png in Resources */,
 				B8EAEFB71C61411D0084A531 /* Heart_4.jpg in Resources */,
-				B69650651C05399500C8276A /* Home.png in Resources */,
 				D2CA49F11BE2B58C00E79580 /* LaunchScreen.storyboard in Resources */,
-				B69650661C05399500C8276A /* Map.png in Resources */,
 				D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */,
+				B87763A71C98CA6600F9032C /* Map.png in Resources */,
 				B86C12691C52A72500FF284F /* Heart_2.jpg in Resources */,
 				D2341F561C11610700F5ACBA /* NorthDirectionFilled100.png in Resources */,
 				B8EAEFAC1C613E260084A531 /* NotAvailable.jpg in Resources */,
 				B86C12671C52A71C00FF284F /* Heart_1.jpg in Resources */,
-				B69650671C05399500C8276A /* More.png in Resources */,
 				B8C32E1F1C61AD4E0081BE10 /* buttonBlue.png in Resources */,
 				D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */,
 				B8EAEFB61C61411D0084A531 /* Heart_3.jpg in Resources */,
@@ -604,7 +604,7 @@
 				INFOPLIST_FILE = ProvidenceWayfinding/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding.Becker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -620,7 +620,7 @@
 				INFOPLIST_FILE = ProvidenceWayfinding/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding;
+				PRODUCT_BUNDLE_IDENTIFIER = GU.ProvidenceWayfinding.Becker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
