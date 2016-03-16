@@ -15,8 +15,8 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.pageTitles = NSArray(objects: "Explore", "Today Widget","Test")
-        self.pageImages = NSArray(objects: "Map.png", "More.png","Home.png")
+        self.pageTitles = NSArray(objects: "Home", "Directions","Parking","More")
+        self.pageImages = NSArray(objects: "Home.png", "Map.png","Car.png","More.png")
         self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController
         self.pageViewController.dataSource = self
         var startVC = self.viewControllerAtIndex(0) as ContentViewController

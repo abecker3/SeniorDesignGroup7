@@ -9,6 +9,7 @@
 import UIKit
 
 class ContentViewController: UIViewController {
+    @IBOutlet weak var textField: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -21,6 +22,23 @@ class ContentViewController: UIViewController {
         
         self.imageView.image = UIImage(named: self.imageFile)
         self.titleLabel.text = self.titleText
+        
+        setTextField()
+    }
+    
+    func setTextField(){
+        if (titleText == "Home"){
+            textField.text = "Home Instructions"
+        }
+        else if (titleText == "Directions"){
+            textField.text = "Directions Instructions"
+        }
+        else if (titleText == "Parking"){
+            textField.text = "Parking Instructions"
+        }
+        else if (titleText == "More"){
+            textField.text = "More Instructions"
+        }
     }
     
     
