@@ -26,6 +26,10 @@ class ContentViewController: UIViewController {
         setTextField()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        self.textField.scrollRangeToVisible(NSMakeRange(0, 0))
+    }
+    
     func setTextField(){
         if (titleText == "Home"){
             textField.text = "From the Home tab you can: \n\n1) View the tutorial to learn the functionality of the app \n\n2) Read the mission of Providence Sacred Heart"

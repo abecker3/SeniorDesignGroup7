@@ -151,7 +151,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstAttribute="height" constant="45" id="aDG-HD-BNZ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="dEx-IQ-45g"/>
                                 </constraints>
-                                <state key="normal" title="Click Here to Begin" backgroundImage="buttonBlue.png">
+                                <state key="normal" title="App Tutorial" backgroundImage="buttonBlue.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
