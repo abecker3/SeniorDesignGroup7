@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -151,11 +151,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstAttribute="height" constant="45" id="aDG-HD-BNZ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="dEx-IQ-45g"/>
                                 </constraints>
-                                <state key="normal" title="Click Here to Begin" backgroundImage="buttonBlue.png">
+                                <state key="normal" title="App Tutorial" backgroundImage="buttonBlue.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonClick:" destination="Jbg-Av-W2a" eventType="touchUpInside" id="DeV-LU-1RC"/>
+                                    <segue destination="VSu-wh-Yqg" kind="show" id="3SN-ud-FB9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -401,7 +401,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="Ub4-Sa-2ef">
             <objects>
                 <navigationController id="AdO-fJ-qNo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="More.png" id="Jg0-OT-gPW"/>
+                    <tabBarItem key="tabBarItem" title="More" image="More.png" id="Jg0-OT-gPW">
+                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MCX-yQ-PrL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -468,6 +470,108 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5l-EC-xs9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4326" y="53"/>
+        </scene>
+        <!--Tutorial-->
+        <scene sceneID="1mU-cP-1h0">
+            <objects>
+                <viewController id="VSu-wh-Yqg" customClass="TutorialViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r2E-rc-Ak3"/>
+                        <viewControllerLayoutGuide type="bottom" id="4NJ-uK-H9E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9EN-eC-qfM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqE-IJ-zxv">
+                                <rect key="frame" x="265" y="513" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="chg-cs-lgg"/>
+                                </constraints>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartAction:" destination="VSu-wh-Yqg" eventType="touchUpInside" id="QBK-uD-Ubs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CqE-IJ-zxv" firstAttribute="centerX" secondItem="9EN-eC-qfM" secondAttribute="centerX" id="p5Q-zQ-q8N"/>
+                            <constraint firstItem="4NJ-uK-H9E" firstAttribute="top" secondItem="CqE-IJ-zxv" secondAttribute="bottom" constant="8" symbolic="YES" id="ssk-Wy-gku"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tutorial" id="lWY-B5-ROx" userLabel="Tutorial">
+                        <barButtonItem key="backBarButtonItem" title="Done" id="n8B-vQ-dol"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0AI-4e-LBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-740" y="53"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="nZu-28-g4l">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" id="Mz3-zq-kxP" customClass="ContentViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S0A-hY-UzD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zdf-Ig-zUc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k92-Fb-eap">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeS-DY-d8G">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9C-SQ-usg">
+                                <rect key="frame" x="20" y="115" width="560" height="477"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mne-HF-j9y">
+                                <rect key="frame" x="275" y="57" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Yve-Fr-byA"/>
+                                    <constraint firstAttribute="width" constant="50" id="vEO-jb-O5t"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q9C-SQ-usg" firstAttribute="leading" secondItem="k92-Fb-eap" secondAttribute="leadingMargin" id="196-au-fOW"/>
+                            <constraint firstItem="Q9C-SQ-usg" firstAttribute="trailing" secondItem="k92-Fb-eap" secondAttribute="trailingMargin" id="WaD-wf-Ylx"/>
+                            <constraint firstItem="SeS-DY-d8G" firstAttribute="trailing" secondItem="Q9C-SQ-usg" secondAttribute="trailing" id="aQJ-gG-4FL"/>
+                            <constraint firstItem="Zdf-Ig-zUc" firstAttribute="top" secondItem="Q9C-SQ-usg" secondAttribute="bottom" constant="8" symbolic="YES" id="fxG-3a-2sR"/>
+                            <constraint firstItem="Q9C-SQ-usg" firstAttribute="leading" secondItem="SeS-DY-d8G" secondAttribute="leading" id="hdh-Q4-HRy"/>
+                            <constraint firstItem="SeS-DY-d8G" firstAttribute="centerX" secondItem="Mne-HF-j9y" secondAttribute="centerX" id="ksg-3p-6Hx"/>
+                            <constraint firstItem="SeS-DY-d8G" firstAttribute="top" secondItem="S0A-hY-UzD" secondAttribute="bottom" constant="8" symbolic="YES" id="ofy-FD-lxe"/>
+                            <constraint firstItem="Q9C-SQ-usg" firstAttribute="top" secondItem="Mne-HF-j9y" secondAttribute="bottom" constant="8" symbolic="YES" id="pQl-rq-GHo"/>
+                            <constraint firstItem="Mne-HF-j9y" firstAttribute="top" secondItem="SeS-DY-d8G" secondAttribute="bottom" constant="8" symbolic="YES" id="rfd-Vz-ZyL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Mne-HF-j9y" id="va1-Lc-LUd"/>
+                        <outlet property="textField" destination="Q9C-SQ-usg" id="qNN-AE-zsw"/>
+                        <outlet property="titleLabel" destination="SeS-DY-d8G" id="WRt-VP-ehk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcV-IA-sLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1450" y="774"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="7pf-6a-gOU">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zD0-g9-RYN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i3w-UL-y5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-740" y="774"/>
         </scene>
         <!--Lost-->
         <scene sceneID="Aio-mM-RVl">
@@ -551,7 +655,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="PyC-73-uNT">
             <objects>
                 <navigationController title="Home" id="Weh-dA-egp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Home.png" id="ZgA-TI-JB2"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home.png" id="ZgA-TI-JB2">
+                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYh-YR-Pi9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1058,7 +1164,9 @@ Institute </string>
         <scene sceneID="mtt-Id-MDm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w0u-Nb-dND" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Directions" image="Map.png" id="IZF-R8-Kpe"/>
+                    <tabBarItem key="tabBarItem" title="Directions" image="Map.png" id="IZF-R8-Kpe">
+                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gC1-PJ-0Z9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1265,7 +1373,9 @@ Institute </string>
         <scene sceneID="dMI-V2-0p0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XCX-NU-mPr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Parking" image="Car.png" id="t3b-ME-Ahh"/>
+                    <tabBarItem key="tabBarItem" title="Parking" image="Car.png" id="t3b-ME-Ahh">
+                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1od-qH-4KO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1383,7 +1493,7 @@ Institute </string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-CW-vxg">
                                         <rect key="frame" x="0.0" y="61" width="152" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
@@ -1395,7 +1505,7 @@ Institute </string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-js-Yum">
                                         <rect key="frame" x="0.0" y="122" width="151" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1783,7 +1893,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM2-eJ-ieE">
                                         <rect key="frame" x="0.0" y="61" width="152" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-Kw-3HH">
@@ -1795,7 +1905,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dna-xM-Eeq">
                                         <rect key="frame" x="0.0" y="122" width="151" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -2043,11 +2153,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
         </scene>
     </scenes>
     <resources>
-        <image name="Car.png" width="25" height="25"/>
-        <image name="Home.png" width="25" height="25"/>
+        <image name="Car.png" width="50" height="50"/>
+        <image name="Home.png" width="50" height="50"/>
         <image name="List-100.png" width="100" height="100"/>
-        <image name="Map.png" width="25" height="25"/>
-        <image name="More.png" width="25" height="25"/>
+        <image name="Map.png" width="50" height="50"/>
+        <image name="More.png" width="50" height="50"/>
         <image name="buttonBlue.png" width="40" height="40"/>
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
