@@ -76,7 +76,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstAttribute="height" constant="45" id="76u-Mi-ouW"/>
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="I Accept the Terms and Conditions" backgroundImage="buttonBlue.png">
+                                <state key="normal" title="I Accept the Terms and Conditions" backgroundImage="ButtonDarkBlue.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -151,7 +151,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstAttribute="height" constant="45" id="aDG-HD-BNZ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="dEx-IQ-45g"/>
                                 </constraints>
-                                <state key="normal" title="App Tutorial" backgroundImage="buttonBlue.png">
+                                <state key="normal" title="App Tutorial" backgroundImage="ButtonDarkBlue.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -761,7 +761,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstAttribute="height" constant="45" id="DrG-xW-7Ae"/>
                                     <constraint firstAttribute="width" constant="600" id="Gd6-kt-fNa"/>
                                 </constraints>
-                                <state key="normal" title="Route Now" backgroundImage="buttonBlue.png"/>
+                                <state key="normal" title="Route Now" backgroundImage="ButtonDarkBlue.png"/>
                                 <connections>
                                     <action selector="routeNowEvent:" destination="mJf-vX-dEY" eventType="touchUpInside" id="16M-fa-bOE"/>
                                 </connections>
@@ -771,7 +771,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwK-Go-qDv">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
-                                        <state key="normal" title="Completely Lost?" backgroundImage="buttonBlue.png">
+                                        <state key="normal" title="Completely Lost?" backgroundImage="ButtonDarkBlue.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -780,7 +780,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-Ls-ZTb">
                                         <rect key="frame" x="301" y="0.0" width="299" height="45"/>
-                                        <state key="normal" title="Floor Maps" backgroundImage="buttonBlue.png">
+                                        <state key="normal" title="Floor Maps" backgroundImage="ButtonDarkBlue.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -2153,15 +2153,15 @@ Personal data should be relevant to the purposes for which it is to be used, and
         </scene>
     </scenes>
     <resources>
+        <image name="ButtonDarkBlue.png" width="40" height="40"/>
         <image name="Car.png" width="50" height="50"/>
         <image name="Home.png" width="50" height="50"/>
         <image name="List-100.png" width="100" height="100"/>
         <image name="Map.png" width="50" height="50"/>
         <image name="More.png" width="50" height="50"/>
-        <image name="buttonBlue.png" width="40" height="40"/>
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SoW-dI-v9z"/>
+        <segue reference="YCW-oQ-6O4"/>
     </inferredMetricsTieBreakers>
 </document>
