@@ -122,22 +122,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="fRc-rC-jgH">
-                                <rect key="frame" x="200" y="72" width="190" height="49"/>
+                                <rect key="frame" x="178" y="72" width="245" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="foM-te-vSb"/>
-                                    <constraint firstAttribute="width" constant="190" id="onz-98-1Ty"/>
+                                    <constraint firstAttribute="height" constant="80" id="foM-te-vSb"/>
+                                    <constraint firstAttribute="width" constant="245" id="onz-98-1Ty"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Our Mission" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-Pr-KE4">
-                                <rect key="frame" x="20" y="144" width="560" height="79"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="TWr-ZD-Y2p"/>
-                                </constraints>
-                                <color key="textColor" red="0.95686274509803915" green="0.52156862745098043" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="As People of Providence, we reveal God's love for all, especially the poor and vunerable,through our compassionate service." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQD-ij-gPZ">
                                 <rect key="frame" x="0.0" y="241" width="600" height="211"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,7 +136,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CU-P0-Qeu">
-                                <rect key="frame" x="0.0" y="506" width="600" height="45"/>
+                                <rect key="frame" x="0.0" y="505" width="600" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="aDG-HD-BNZ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="dEx-IQ-45g"/>
@@ -158,6 +148,16 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <segue destination="VSu-wh-Yqg" kind="show" id="3SN-ud-FB9"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Our Mission" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-Pr-KE4">
+                                <rect key="frame" x="20" y="154" width="560" height="79"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="TWr-ZD-Y2p"/>
+                                </constraints>
+                                <color key="textColor" red="0.95686274509803915" green="0.52156862745098043" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -169,11 +169,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="mdJ-Pr-KE4" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leadingMargin" id="III-Kf-wvy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1CU-P0-Qeu" secondAttribute="trailing" constant="-20" id="LsK-Dc-BLP"/>
                             <constraint firstAttribute="trailing" secondItem="vQD-ij-gPZ" secondAttribute="trailing" id="RWs-xO-dlF"/>
-                            <constraint firstItem="fRc-rC-jgH" firstAttribute="centerX" secondItem="sF1-Fm-tx0" secondAttribute="centerX" constant="-5" id="UzL-Z8-vXc"/>
-                            <constraint firstItem="fMd-z2-nUt" firstAttribute="top" secondItem="1CU-P0-Qeu" secondAttribute="bottom" id="ldp-YU-eCg"/>
-                            <constraint firstItem="vQD-ij-gPZ" firstAttribute="top" secondItem="mdJ-Pr-KE4" secondAttribute="bottom" constant="18" id="wiB-2Z-7jz"/>
+                            <constraint firstItem="fRc-rC-jgH" firstAttribute="centerX" secondItem="sF1-Fm-tx0" secondAttribute="centerX" constant="0.5" id="UzL-Z8-vXc"/>
+                            <constraint firstItem="fMd-z2-nUt" firstAttribute="top" secondItem="1CU-P0-Qeu" secondAttribute="bottom" constant="1" id="ldp-YU-eCg"/>
+                            <constraint firstItem="vQD-ij-gPZ" firstAttribute="top" secondItem="mdJ-Pr-KE4" secondAttribute="bottom" constant="8" id="wiB-2Z-7jz"/>
                             <constraint firstItem="vQD-ij-gPZ" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leading" id="xVE-P9-BnS"/>
-                            <constraint firstItem="mdJ-Pr-KE4" firstAttribute="top" secondItem="fRc-rC-jgH" secondAttribute="bottom" constant="23" id="y4s-ys-iDD"/>
+                            <constraint firstItem="mdJ-Pr-KE4" firstAttribute="top" secondItem="fRc-rC-jgH" secondAttribute="bottom" constant="2" id="y4s-ys-iDD"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="I50-xM-MJj" appends="YES" id="KiN-0F-rtC"/>
@@ -434,7 +434,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hg-CB-UoP">
                                         <rect key="frame" x="43" y="0.0" width="101" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Directory"/>
+                                        <state key="normal" title="Directory">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="Kg9-jc-EgW" kind="show" id="ISm-xG-c5h"/>
                                         </connections>
@@ -442,7 +444,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWw-ON-UAF">
                                         <rect key="frame" x="19" y="42" width="149" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Campus Map"/>
+                                        <state key="normal" title="Campus Map">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="jGC-EV-aTk" kind="show" id="cKf-yV-N8U"/>
                                         </connections>
@@ -450,7 +454,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnH-Y9-62s">
                                         <rect key="frame" x="0.0" y="84" width="186" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Terms of Service"/>
+                                        <state key="normal" title="Terms of Service">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="lwr-6l-hyO" kind="show" id="UGc-Ru-c2y"/>
                                         </connections>
@@ -489,7 +495,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstAttribute="width" constant="70" id="chg-cs-lgg"/>
                                 </constraints>
                                 <state key="normal" title="Restart">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="restartAction:" destination="VSu-wh-Yqg" eventType="touchUpInside" id="QBK-uD-Ubs"/>
@@ -586,7 +592,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-fc-IIi">
-                                <rect key="frame" x="0.0" y="140" width="600" height="403"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="479"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">1) Look around you for existing signs and follow one to an elevator.
 
@@ -602,22 +608,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="izM-xC-Mvz">
-                                <rect key="frame" x="205" y="83" width="190" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="190" id="Jv0-rU-m8S"/>
-                                    <constraint firstAttribute="height" constant="49" id="tx5-bP-Ngy"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="BTU-fc-IIi" secondAttribute="trailing" id="6IX-FA-G9q"/>
                             <constraint firstItem="utH-iv-bKR" firstAttribute="top" secondItem="BTU-fc-IIi" secondAttribute="bottom" constant="8" id="EbY-0n-x91"/>
-                            <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" id="UFe-5H-mDt"/>
-                            <constraint firstItem="BTU-fc-IIi" firstAttribute="top" secondItem="izM-xC-Mvz" secondAttribute="bottom" constant="8" id="b2C-ml-Wcq"/>
-                            <constraint firstItem="izM-xC-Mvz" firstAttribute="top" secondItem="w5m-Li-cl5" secondAttribute="bottom" constant="19" id="kzl-am-ojk"/>
                             <constraint firstItem="BTU-fc-IIi" firstAttribute="leading" secondItem="vj7-sa-SNe" secondAttribute="leading" id="tzZ-6C-9pV"/>
+                            <constraint firstItem="BTU-fc-IIi" firstAttribute="top" secondItem="w5m-Li-cl5" secondAttribute="bottom" id="yHp-aN-StK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lost" id="4yg-SR-gyh">
@@ -756,7 +753,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyH-3N-nLp">
-                                <rect key="frame" x="0.0" y="460" width="600" height="45"/>
+                                <rect key="frame" x="0.0" y="459" width="600" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="DrG-xW-7Ae"/>
                                     <constraint firstAttribute="width" constant="600" id="Gd6-kt-fNa"/>
@@ -767,7 +764,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="AsR-K3-um2">
-                                <rect key="frame" x="0.0" y="506" width="600" height="45"/>
+                                <rect key="frame" x="0.0" y="505" width="600" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwK-Go-qDv">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
@@ -793,7 +790,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVi-qD-b81">
-                                <rect key="frame" x="20" y="431" width="560" height="21"/>
+                                <rect key="frame" x="20" y="430" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -803,7 +800,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <constraints>
                             <constraint firstItem="zoq-YI-r9f" firstAttribute="leading" secondItem="SNK-sc-V39" secondAttribute="leading" id="2dl-wr-B1l"/>
                             <constraint firstItem="CyH-3N-nLp" firstAttribute="centerX" secondItem="29z-k8-yyW" secondAttribute="centerX" id="2hv-vo-mPl"/>
-                            <constraint firstItem="BU5-IL-ijs" firstAttribute="top" secondItem="AsR-K3-um2" secondAttribute="bottom" id="3QJ-GM-IY0"/>
+                            <constraint firstItem="BU5-IL-ijs" firstAttribute="top" secondItem="AsR-K3-um2" secondAttribute="bottom" constant="1" id="3QJ-GM-IY0"/>
                             <constraint firstItem="iWH-GQ-yCc" firstAttribute="leading" secondItem="UVi-qD-b81" secondAttribute="leading" id="4cn-GG-jUQ"/>
                             <constraint firstItem="yJJ-hT-r7Y" firstAttribute="trailing" secondItem="29z-k8-yyW" secondAttribute="trailingMargin" id="6Bz-XU-OHB"/>
                             <constraint firstItem="iWH-GQ-yCc" firstAttribute="trailing" secondItem="yJJ-hT-r7Y" secondAttribute="trailing" id="8gD-p4-Rki"/>
@@ -859,6 +856,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 7
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Eh6-Cu-m9C"/>
@@ -869,6 +867,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 6 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="K29-AI-zp5"/>
@@ -879,6 +878,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 5 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="kq8-0e-DcP"/>
@@ -889,6 +889,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 4 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Zn7-h2-nNs"/>
@@ -899,6 +900,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 3 
 </string>
+                                            <color key="titleColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="IAN-2p-jc2"/>
@@ -909,6 +911,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 2 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="g8O-Q6-GuX"/>
@@ -919,6 +922,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 1 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="OcR-d4-0ND"/>
@@ -929,6 +933,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> LL1 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="9rR-7F-adg"/>
@@ -939,6 +944,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> LL2 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Qu0-2A-lc9"/>
@@ -949,6 +955,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> LL3   
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="a68-nP-BC3"/>
@@ -964,6 +971,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> Main 
 Tower </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="mainPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="4oA-6e-cva"/>
@@ -974,6 +982,7 @@ Tower </string>
                                         <state key="normal">
                                             <string key="title">  Heart 
 Institute </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="heartPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Hgu-59-Cxo"/>
@@ -984,6 +993,7 @@ Institute </string>
                                         <state key="normal">
                                             <string key="title"> Children's 
   Hospital </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="childrensPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="xwT-qv-hrL"/>
@@ -995,6 +1005,7 @@ Institute </string>
                                             <string key="title">Women's 
   Health 
   Center</string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="womensPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="a1s-WG-mW4"/>
@@ -1205,9 +1216,7 @@ Institute </string>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="131" id="Q18-Z7-HwO"/>
                                         </constraints>
-                                        <state key="normal" title="Use Apple Maps">
-                                            <color key="titleColor" red="0.0" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Use Apple Maps"/>
                                         <connections>
                                             <action selector="OpenAppleMaps:forEvent:" destination="6JG-Ic-gLa" eventType="touchUpInside" id="feZ-1F-CLV"/>
                                         </connections>
@@ -1667,13 +1676,6 @@ Institute </string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="JcV-jw-WAV">
-                                <rect key="frame" x="205" y="64" width="190" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="190" id="ehe-qu-Bz3"/>
-                                    <constraint firstAttribute="height" constant="49" id="xpP-te-v0O"/>
-                                </constraints>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yle-Kj-PUh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
@@ -2162,6 +2164,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YCW-oQ-6O4"/>
+        <segue reference="SoW-dI-v9z"/>
     </inferredMetricsTieBreakers>
 </document>
