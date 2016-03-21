@@ -37,11 +37,11 @@
 		B87763A61C98CA6600F9032C /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = B87763A21C98CA6600F9032C /* Home.png */; };
 		B87763A71C98CA6600F9032C /* Map.png in Resources */ = {isa = PBXBuildFile; fileRef = B87763A31C98CA6600F9032C /* Map.png */; };
 		B87763A81C98CA6600F9032C /* More.png in Resources */ = {isa = PBXBuildFile; fileRef = B87763A41C98CA6600F9032C /* More.png */; };
+		B87763AE1C9E09B400F9032C /* ButtonDarkBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = B87763AD1C9E09B400F9032C /* ButtonDarkBlue.png */; };
 		B87C86091C6A46E20091514E /* ParkingPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C86081C6A46E20091514E /* ParkingPathViewController.swift */; };
 		B87C860B1C6A79720091514E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C860A1C6A79720091514E /* HistoryViewController.swift */; };
 		B89D054E1C56F1FD00D81C76 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */; };
 		B89D05501C56F8F800D81C76 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */; };
-		B8C32E1F1C61AD4E0081BE10 /* buttonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = B8C32E1E1C61AD4E0081BE10 /* buttonBlue.png */; };
 		B8EAEFAC1C613E260084A531 /* NotAvailable.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8EAEFAB1C613E260084A531 /* NotAvailable.jpg */; };
 		B8EAEFB61C61411D0084A531 /* Heart_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8EAEFB31C61411D0084A531 /* Heart_3.jpg */; };
 		B8EAEFB71C61411D0084A531 /* Heart_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8EAEFB41C61411D0084A531 /* Heart_4.jpg */; };
@@ -111,11 +111,11 @@
 		B87763A21C98CA6600F9032C /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
 		B87763A31C98CA6600F9032C /* Map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Map.png; sourceTree = "<group>"; };
 		B87763A41C98CA6600F9032C /* More.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = More.png; sourceTree = "<group>"; };
+		B87763AD1C9E09B400F9032C /* ButtonDarkBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonDarkBlue.png; sourceTree = "<group>"; };
 		B87C86081C6A46E20091514E /* ParkingPathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingPathViewController.swift; sourceTree = "<group>"; };
 		B87C860A1C6A79720091514E /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
-		B8C32E1E1C61AD4E0081BE10 /* buttonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBlue.png; sourceTree = "<group>"; };
 		B8EAEFAB1C613E260084A531 /* NotAvailable.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NotAvailable.jpg; sourceTree = "<group>"; };
 		B8EAEFB31C61411D0084A531 /* Heart_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_3.jpg; sourceTree = "<group>"; };
 		B8EAEFB41C61411D0084A531 /* Heart_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Heart_4.jpg; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				D227F9901C725E2A0029A5E7 /* List-100.png */,
-				B8C32E1E1C61AD4E0081BE10 /* buttonBlue.png */,
+				B87763AD1C9E09B400F9032C /* ButtonDarkBlue.png */,
 				D2341F511C11610700F5ACBA /* NearMe100.png */,
 				D2341F521C11610700F5ACBA /* NearMeFilled100.png */,
 				D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */,
@@ -387,6 +387,7 @@
 				35A706D01C4D83B00039F4DC /* providence_logo1.png in Resources */,
 				354B98F81C04EF330087E67C /* Campus.jpg in Resources */,
 				B87763A51C98CA6600F9032C /* Car.png in Resources */,
+				B87763AE1C9E09B400F9032C /* ButtonDarkBlue.png in Resources */,
 				D2341F541C11610700F5ACBA /* NearMe100.png in Resources */,
 				B8EAEFB71C61411D0084A531 /* Heart_4.jpg in Resources */,
 				D2CA49F11BE2B58C00E79580 /* LaunchScreen.storyboard in Resources */,
@@ -396,7 +397,6 @@
 				D2341F561C11610700F5ACBA /* NorthDirectionFilled100.png in Resources */,
 				B8EAEFAC1C613E260084A531 /* NotAvailable.jpg in Resources */,
 				B86C12671C52A71C00FF284F /* Heart_1.jpg in Resources */,
-				B8C32E1F1C61AD4E0081BE10 /* buttonBlue.png in Resources */,
 				D2CA49EC1BE2B58B00E79580 /* Main.storyboard in Resources */,
 				B8EAEFB61C61411D0084A531 /* Heart_3.jpg in Resources */,
 			);
