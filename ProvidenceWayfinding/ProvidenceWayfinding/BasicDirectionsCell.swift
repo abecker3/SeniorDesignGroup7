@@ -12,7 +12,8 @@ class BasicDirectionsCell: UITableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
-    
+    @IBOutlet var title2Label: UILabel!
+    @IBOutlet var subtitle2Label: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

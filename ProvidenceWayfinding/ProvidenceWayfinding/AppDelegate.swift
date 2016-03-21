@@ -16,6 +16,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var pageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
+        pageControl.backgroundColor = UIColor.whiteColor()
+    
+        //UITabBar.appearance().barTintColor = UIColor(red: 244/255, green: 133/255, blue: 24/255, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 6/255, green: 56/255, blue: 122/255, alpha: 1.0)
+        UITabBar.appearance().barTintColor = UIColor(red: 6/255, green: 56/255, blue: 122/255, alpha: 1.0)
+        
+        UINavigationBar.appearance().tintColor = UIColor(red: 244/255, green: 133/255, blue: 24/255, alpha: 1.0)
+        UITabBar.appearance().tintColor = UIColor(red: 244/255, green: 133/255, blue: 24/255, alpha: 1.0)
+        
+        UISegmentedControl.appearance().tintColor = UIColor(red: 6/255, green: 56/255, blue: 122/255, alpha: 1.0)
+        
+        let attr = [
+            NSFontAttributeName : UIFont(name: "Helvetica-Bold", size: 20)!,
+            NSForegroundColorAttributeName : UIColor(red: 244/255, green: 133/255, blue: 24/255, alpha: 1.0)
+        ]
+        UINavigationBar.appearance().titleTextAttributes = attr
+        
         return true		
     }
 

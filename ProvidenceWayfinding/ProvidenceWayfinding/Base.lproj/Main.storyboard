@@ -76,7 +76,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <constraint firstAttribute="height" constant="45" id="76u-Mi-ouW"/>
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="I Accept the Terms and Conditions" backgroundImage="buttonBlue.png">
+                                <state key="normal" title="I Accept the Terms and Conditions" backgroundImage="ButtonDarkBlue.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -122,22 +122,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="fRc-rC-jgH">
-                                <rect key="frame" x="200" y="72" width="190" height="49"/>
+                                <rect key="frame" x="178" y="72" width="245" height="80"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="foM-te-vSb"/>
-                                    <constraint firstAttribute="width" constant="190" id="onz-98-1Ty"/>
+                                    <constraint firstAttribute="height" constant="80" id="foM-te-vSb"/>
+                                    <constraint firstAttribute="width" constant="245" id="onz-98-1Ty"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Our Mission" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-Pr-KE4">
-                                <rect key="frame" x="20" y="144" width="560" height="79"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="TWr-ZD-Y2p"/>
-                                </constraints>
-                                <color key="textColor" red="0.95686274509803915" green="0.52156862745098043" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="As People of Providence, we reveal God's love for all, especially the poor and vunerable,through our compassionate service." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQD-ij-gPZ">
                                 <rect key="frame" x="0.0" y="241" width="600" height="211"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,18 +136,28 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CU-P0-Qeu">
-                                <rect key="frame" x="0.0" y="506" width="600" height="45"/>
+                                <rect key="frame" x="0.0" y="505" width="600" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="aDG-HD-BNZ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="dEx-IQ-45g"/>
                                 </constraints>
-                                <state key="normal" title="Click Here to Begin" backgroundImage="buttonBlue.png">
+                                <state key="normal" title="App Tutorial" backgroundImage="ButtonDarkBlue.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonClick:" destination="Jbg-Av-W2a" eventType="touchUpInside" id="DeV-LU-1RC"/>
+                                    <segue destination="VSu-wh-Yqg" kind="show" id="3SN-ud-FB9"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Our Mission" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdJ-Pr-KE4">
+                                <rect key="frame" x="20" y="154" width="560" height="79"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="TWr-ZD-Y2p"/>
+                                </constraints>
+                                <color key="textColor" red="0.95686274509803915" green="0.52156862745098043" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -169,11 +169,11 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="mdJ-Pr-KE4" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leadingMargin" id="III-Kf-wvy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1CU-P0-Qeu" secondAttribute="trailing" constant="-20" id="LsK-Dc-BLP"/>
                             <constraint firstAttribute="trailing" secondItem="vQD-ij-gPZ" secondAttribute="trailing" id="RWs-xO-dlF"/>
-                            <constraint firstItem="fRc-rC-jgH" firstAttribute="centerX" secondItem="sF1-Fm-tx0" secondAttribute="centerX" constant="-5" id="UzL-Z8-vXc"/>
-                            <constraint firstItem="fMd-z2-nUt" firstAttribute="top" secondItem="1CU-P0-Qeu" secondAttribute="bottom" id="ldp-YU-eCg"/>
-                            <constraint firstItem="vQD-ij-gPZ" firstAttribute="top" secondItem="mdJ-Pr-KE4" secondAttribute="bottom" constant="18" id="wiB-2Z-7jz"/>
+                            <constraint firstItem="fRc-rC-jgH" firstAttribute="centerX" secondItem="sF1-Fm-tx0" secondAttribute="centerX" constant="0.5" id="UzL-Z8-vXc"/>
+                            <constraint firstItem="fMd-z2-nUt" firstAttribute="top" secondItem="1CU-P0-Qeu" secondAttribute="bottom" constant="1" id="ldp-YU-eCg"/>
+                            <constraint firstItem="vQD-ij-gPZ" firstAttribute="top" secondItem="mdJ-Pr-KE4" secondAttribute="bottom" constant="8" id="wiB-2Z-7jz"/>
                             <constraint firstItem="vQD-ij-gPZ" firstAttribute="leading" secondItem="sF1-Fm-tx0" secondAttribute="leading" id="xVE-P9-BnS"/>
-                            <constraint firstItem="mdJ-Pr-KE4" firstAttribute="top" secondItem="fRc-rC-jgH" secondAttribute="bottom" constant="23" id="y4s-ys-iDD"/>
+                            <constraint firstItem="mdJ-Pr-KE4" firstAttribute="top" secondItem="fRc-rC-jgH" secondAttribute="bottom" constant="2" id="y4s-ys-iDD"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="I50-xM-MJj" appends="YES" id="KiN-0F-rtC"/>
@@ -401,7 +401,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="Ub4-Sa-2ef">
             <objects>
                 <navigationController id="AdO-fJ-qNo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="More.png" id="Jg0-OT-gPW"/>
+                    <tabBarItem key="tabBarItem" title="More" image="More.png" id="Jg0-OT-gPW">
+                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MCX-yQ-PrL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -432,7 +434,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hg-CB-UoP">
                                         <rect key="frame" x="43" y="0.0" width="101" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Directory"/>
+                                        <state key="normal" title="Directory">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="Kg9-jc-EgW" kind="show" id="ISm-xG-c5h"/>
                                         </connections>
@@ -440,7 +444,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWw-ON-UAF">
                                         <rect key="frame" x="19" y="42" width="149" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Campus Map"/>
+                                        <state key="normal" title="Campus Map">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="jGC-EV-aTk" kind="show" id="cKf-yV-N8U"/>
                                         </connections>
@@ -448,7 +454,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnH-Y9-62s">
                                         <rect key="frame" x="0.0" y="84" width="186" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Terms of Service"/>
+                                        <state key="normal" title="Terms of Service">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="lwr-6l-hyO" kind="show" id="UGc-Ru-c2y"/>
                                         </connections>
@@ -469,6 +477,108 @@ Personal data should be relevant to the purposes for which it is to be used, and
             </objects>
             <point key="canvasLocation" x="4326" y="53"/>
         </scene>
+        <!--Tutorial-->
+        <scene sceneID="1mU-cP-1h0">
+            <objects>
+                <viewController id="VSu-wh-Yqg" customClass="TutorialViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r2E-rc-Ak3"/>
+                        <viewControllerLayoutGuide type="bottom" id="4NJ-uK-H9E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9EN-eC-qfM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqE-IJ-zxv">
+                                <rect key="frame" x="265" y="513" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="chg-cs-lgg"/>
+                                </constraints>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartAction:" destination="VSu-wh-Yqg" eventType="touchUpInside" id="QBK-uD-Ubs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CqE-IJ-zxv" firstAttribute="centerX" secondItem="9EN-eC-qfM" secondAttribute="centerX" id="p5Q-zQ-q8N"/>
+                            <constraint firstItem="4NJ-uK-H9E" firstAttribute="top" secondItem="CqE-IJ-zxv" secondAttribute="bottom" constant="8" symbolic="YES" id="ssk-Wy-gku"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tutorial" id="lWY-B5-ROx" userLabel="Tutorial">
+                        <barButtonItem key="backBarButtonItem" title="Done" id="n8B-vQ-dol"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0AI-4e-LBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-740" y="53"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="nZu-28-g4l">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" id="Mz3-zq-kxP" customClass="ContentViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S0A-hY-UzD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zdf-Ig-zUc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k92-Fb-eap">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeS-DY-d8G">
+                                <rect key="frame" x="20" y="28" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9C-SQ-usg">
+                                <rect key="frame" x="20" y="115" width="560" height="477"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mne-HF-j9y">
+                                <rect key="frame" x="275" y="57" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Yve-Fr-byA"/>
+                                    <constraint firstAttribute="width" constant="50" id="vEO-jb-O5t"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q9C-SQ-usg" firstAttribute="leading" secondItem="k92-Fb-eap" secondAttribute="leadingMargin" id="196-au-fOW"/>
+                            <constraint firstItem="Q9C-SQ-usg" firstAttribute="trailing" secondItem="k92-Fb-eap" secondAttribute="trailingMargin" id="WaD-wf-Ylx"/>
+                            <constraint firstItem="SeS-DY-d8G" firstAttribute="trailing" secondItem="Q9C-SQ-usg" secondAttribute="trailing" id="aQJ-gG-4FL"/>
+                            <constraint firstItem="Zdf-Ig-zUc" firstAttribute="top" secondItem="Q9C-SQ-usg" secondAttribute="bottom" constant="8" symbolic="YES" id="fxG-3a-2sR"/>
+                            <constraint firstItem="Q9C-SQ-usg" firstAttribute="leading" secondItem="SeS-DY-d8G" secondAttribute="leading" id="hdh-Q4-HRy"/>
+                            <constraint firstItem="SeS-DY-d8G" firstAttribute="centerX" secondItem="Mne-HF-j9y" secondAttribute="centerX" id="ksg-3p-6Hx"/>
+                            <constraint firstItem="SeS-DY-d8G" firstAttribute="top" secondItem="S0A-hY-UzD" secondAttribute="bottom" constant="8" symbolic="YES" id="ofy-FD-lxe"/>
+                            <constraint firstItem="Q9C-SQ-usg" firstAttribute="top" secondItem="Mne-HF-j9y" secondAttribute="bottom" constant="8" symbolic="YES" id="pQl-rq-GHo"/>
+                            <constraint firstItem="Mne-HF-j9y" firstAttribute="top" secondItem="SeS-DY-d8G" secondAttribute="bottom" constant="8" symbolic="YES" id="rfd-Vz-ZyL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Mne-HF-j9y" id="va1-Lc-LUd"/>
+                        <outlet property="textField" destination="Q9C-SQ-usg" id="qNN-AE-zsw"/>
+                        <outlet property="titleLabel" destination="SeS-DY-d8G" id="WRt-VP-ehk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcV-IA-sLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1450" y="774"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="7pf-6a-gOU">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zD0-g9-RYN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i3w-UL-y5J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-740" y="774"/>
+        </scene>
         <!--Lost-->
         <scene sceneID="Aio-mM-RVl">
             <objects>
@@ -482,7 +592,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-fc-IIi">
-                                <rect key="frame" x="0.0" y="140" width="600" height="403"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="479"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">1) Look around you for existing signs and follow one to an elevator.
 
@@ -498,22 +608,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="izM-xC-Mvz">
-                                <rect key="frame" x="205" y="83" width="190" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="190" id="Jv0-rU-m8S"/>
-                                    <constraint firstAttribute="height" constant="49" id="tx5-bP-Ngy"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="BTU-fc-IIi" secondAttribute="trailing" id="6IX-FA-G9q"/>
                             <constraint firstItem="utH-iv-bKR" firstAttribute="top" secondItem="BTU-fc-IIi" secondAttribute="bottom" constant="8" id="EbY-0n-x91"/>
-                            <constraint firstItem="izM-xC-Mvz" firstAttribute="centerX" secondItem="vj7-sa-SNe" secondAttribute="centerX" id="UFe-5H-mDt"/>
-                            <constraint firstItem="BTU-fc-IIi" firstAttribute="top" secondItem="izM-xC-Mvz" secondAttribute="bottom" constant="8" id="b2C-ml-Wcq"/>
-                            <constraint firstItem="izM-xC-Mvz" firstAttribute="top" secondItem="w5m-Li-cl5" secondAttribute="bottom" constant="19" id="kzl-am-ojk"/>
                             <constraint firstItem="BTU-fc-IIi" firstAttribute="leading" secondItem="vj7-sa-SNe" secondAttribute="leading" id="tzZ-6C-9pV"/>
+                            <constraint firstItem="BTU-fc-IIi" firstAttribute="top" secondItem="w5m-Li-cl5" secondAttribute="bottom" id="yHp-aN-StK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lost" id="4yg-SR-gyh">
@@ -551,7 +652,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="PyC-73-uNT">
             <objects>
                 <navigationController title="Home" id="Weh-dA-egp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Home.png" id="ZgA-TI-JB2"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home.png" id="ZgA-TI-JB2">
+                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYh-YR-Pi9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -650,22 +753,22 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyH-3N-nLp">
-                                <rect key="frame" x="0.0" y="460" width="600" height="45"/>
+                                <rect key="frame" x="0.0" y="459" width="600" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="DrG-xW-7Ae"/>
                                     <constraint firstAttribute="width" constant="600" id="Gd6-kt-fNa"/>
                                 </constraints>
-                                <state key="normal" title="Route Now" backgroundImage="buttonBlue.png"/>
+                                <state key="normal" title="Route Now" backgroundImage="ButtonDarkBlue.png"/>
                                 <connections>
                                     <action selector="routeNowEvent:" destination="mJf-vX-dEY" eventType="touchUpInside" id="16M-fa-bOE"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="AsR-K3-um2">
-                                <rect key="frame" x="0.0" y="506" width="600" height="45"/>
+                                <rect key="frame" x="0.0" y="505" width="600" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwK-Go-qDv">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
-                                        <state key="normal" title="Completely Lost?" backgroundImage="buttonBlue.png">
+                                        <state key="normal" title="Completely Lost?" backgroundImage="ButtonDarkBlue.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -674,7 +777,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-Ls-ZTb">
                                         <rect key="frame" x="301" y="0.0" width="299" height="45"/>
-                                        <state key="normal" title="Floor Maps" backgroundImage="buttonBlue.png">
+                                        <state key="normal" title="Floor Maps" backgroundImage="ButtonDarkBlue.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -687,7 +790,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVi-qD-b81">
-                                <rect key="frame" x="20" y="431" width="560" height="21"/>
+                                <rect key="frame" x="20" y="430" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -697,7 +800,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <constraints>
                             <constraint firstItem="zoq-YI-r9f" firstAttribute="leading" secondItem="SNK-sc-V39" secondAttribute="leading" id="2dl-wr-B1l"/>
                             <constraint firstItem="CyH-3N-nLp" firstAttribute="centerX" secondItem="29z-k8-yyW" secondAttribute="centerX" id="2hv-vo-mPl"/>
-                            <constraint firstItem="BU5-IL-ijs" firstAttribute="top" secondItem="AsR-K3-um2" secondAttribute="bottom" id="3QJ-GM-IY0"/>
+                            <constraint firstItem="BU5-IL-ijs" firstAttribute="top" secondItem="AsR-K3-um2" secondAttribute="bottom" constant="1" id="3QJ-GM-IY0"/>
                             <constraint firstItem="iWH-GQ-yCc" firstAttribute="leading" secondItem="UVi-qD-b81" secondAttribute="leading" id="4cn-GG-jUQ"/>
                             <constraint firstItem="yJJ-hT-r7Y" firstAttribute="trailing" secondItem="29z-k8-yyW" secondAttribute="trailingMargin" id="6Bz-XU-OHB"/>
                             <constraint firstItem="iWH-GQ-yCc" firstAttribute="trailing" secondItem="yJJ-hT-r7Y" secondAttribute="trailing" id="8gD-p4-Rki"/>
@@ -753,6 +856,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 7
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Eh6-Cu-m9C"/>
@@ -763,6 +867,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 6 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="K29-AI-zp5"/>
@@ -773,6 +878,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 5 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="kq8-0e-DcP"/>
@@ -783,6 +889,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 4 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Zn7-h2-nNs"/>
@@ -793,6 +900,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 3 
 </string>
+                                            <color key="titleColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="IAN-2p-jc2"/>
@@ -803,6 +911,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 2 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="g8O-Q6-GuX"/>
@@ -813,6 +922,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> 1 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="OcR-d4-0ND"/>
@@ -823,6 +933,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> LL1 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="9rR-7F-adg"/>
@@ -833,6 +944,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> LL2 
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Qu0-2A-lc9"/>
@@ -843,6 +955,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> LL3   
 </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="a68-nP-BC3"/>
@@ -858,6 +971,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal">
                                             <string key="title"> Main 
 Tower </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="mainPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="4oA-6e-cva"/>
@@ -868,6 +982,7 @@ Tower </string>
                                         <state key="normal">
                                             <string key="title">  Heart 
 Institute </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="heartPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Hgu-59-Cxo"/>
@@ -878,6 +993,7 @@ Institute </string>
                                         <state key="normal">
                                             <string key="title"> Children's 
   Hospital </string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="childrensPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="xwT-qv-hrL"/>
@@ -889,6 +1005,7 @@ Institute </string>
                                             <string key="title">Women's 
   Health 
   Center</string>
+                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="womensPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="a1s-WG-mW4"/>
@@ -1058,7 +1175,9 @@ Institute </string>
         <scene sceneID="mtt-Id-MDm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w0u-Nb-dND" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Directions" image="Map.png" id="IZF-R8-Kpe"/>
+                    <tabBarItem key="tabBarItem" title="Directions" image="Map.png" id="IZF-R8-Kpe">
+                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gC1-PJ-0Z9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1097,9 +1216,7 @@ Institute </string>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="131" id="Q18-Z7-HwO"/>
                                         </constraints>
-                                        <state key="normal" title="Use Apple Maps">
-                                            <color key="titleColor" red="0.0" green="0.36470588240000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
+                                        <state key="normal" title="Use Apple Maps"/>
                                         <connections>
                                             <action selector="OpenAppleMaps:forEvent:" destination="6JG-Ic-gLa" eventType="touchUpInside" id="feZ-1F-CLV"/>
                                         </connections>
@@ -1265,7 +1382,9 @@ Institute </string>
         <scene sceneID="dMI-V2-0p0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XCX-NU-mPr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Parking" image="Car.png" id="t3b-ME-Ahh"/>
+                    <tabBarItem key="tabBarItem" title="Parking" image="Car.png" id="t3b-ME-Ahh">
+                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1od-qH-4KO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1365,7 +1484,7 @@ Institute </string>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Tj-xVj">
-                                <rect key="frame" x="5" y="343" width="590" height="99"/>
+                                <rect key="frame" x="10" y="343" width="590" height="143"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-cD-9WC">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
@@ -1373,20 +1492,27 @@ Institute </string>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Spot" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Pl-uTS">
-                                        <rect key="frame" x="0.0" y="26" width="149" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Building" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Pl-uTS" userLabel="Saved Parking Building">
+                                        <rect key="frame" x="0.0" y="26" width="255" height="30"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-CW-vxg">
+                                        <rect key="frame" x="0.0" y="61" width="152" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1t-ss-d1P">
-                                        <rect key="frame" x="0.0" y="52" width="20" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
+                                        <rect key="frame" x="0.0" y="91" width="40" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
-                                        <rect key="frame" x="0.0" y="78" width="36" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-js-Yum">
+                                        <rect key="frame" x="0.0" y="122" width="151" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1405,7 +1531,7 @@ Institute </string>
                             <constraint firstAttribute="trailingMargin" secondItem="fTi-9C-EQT" secondAttribute="trailing" constant="-15" id="I1x-f5-Xew"/>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="KFE-hI-8k5"/>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="top" secondItem="0VC-Oy-jwo" secondAttribute="bottom" constant="8" id="MYI-9i-YUl"/>
-                            <constraint firstItem="cT9-Tj-xVj" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="MqL-ic-vpH"/>
+                            <constraint firstItem="cT9-Tj-xVj" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-10" id="MqL-ic-vpH"/>
                             <constraint firstItem="uLv-GO-hVW" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="Sfq-Na-kg8"/>
                             <constraint firstItem="3dn-G7-aJZ" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="Xuf-ZA-nsL"/>
                             <constraint firstItem="uLv-GO-hVW" firstAttribute="top" secondItem="3dn-G7-aJZ" secondAttribute="bottom" constant="8" id="aMk-Dg-MUz"/>
@@ -1414,7 +1540,7 @@ Institute </string>
                             <constraint firstItem="Zuq-Ix-Bxi" firstAttribute="top" secondItem="xRC-9A-9ee" secondAttribute="bottom" constant="8" id="dfe-6x-T5p"/>
                             <constraint firstItem="WHJ-fP-y3y" firstAttribute="top" secondItem="uLv-GO-hVW" secondAttribute="bottom" constant="8" id="eLO-NE-90o"/>
                             <constraint firstItem="cT9-Tj-xVj" firstAttribute="top" secondItem="fTi-9C-EQT" secondAttribute="bottom" constant="8" id="fEa-4d-gfT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cT9-Tj-xVj" secondAttribute="trailing" constant="-15" id="gyp-Ig-bCU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cT9-Tj-xVj" secondAttribute="trailing" constant="-20" id="gyp-Ig-bCU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uLv-GO-hVW" secondAttribute="trailing" constant="-15" id="heM-ub-ajG"/>
                             <constraint firstItem="WHJ-fP-y3y" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="iuE-Ev-9T3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WHJ-fP-y3y" secondAttribute="trailing" constant="-15" id="j5Y-4L-yUm"/>
@@ -1439,7 +1565,9 @@ Institute </string>
                         <outlet property="elevatorButtons" destination="WHJ-fP-y3y" id="Rxp-t7-RJa"/>
                         <outlet property="floorButtons" destination="3dn-G7-aJZ" id="nnu-yb-hGZ"/>
                         <outlet property="savedParkingDate" destination="YN8-u6-3hX" id="E50-Y8-VK2"/>
-                        <outlet property="savedParkingSpot" destination="HPt-Pl-uTS" id="iVm-N3-qB1"/>
+                        <outlet property="savedParkingFloor" destination="ucR-CW-vxg" id="cwH-sm-mNV"/>
+                        <outlet property="savedParkingSpot" destination="HPt-Pl-uTS" id="xAo-Bg-tyQ"/>
+                        <outlet property="savedParkingTime" destination="Gci-js-Yum" id="WXb-Fp-54E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgO-HW-7CA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1450,30 +1578,86 @@ Institute </string>
         <scene sceneID="IvO-Ol-bAX">
             <objects>
                 <viewController id="odO-hm-Lvz" customClass="HistoryViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xyH-sU-kMm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="xyH-sU-kMm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" id="BPp-ZX-RfU">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="historyCell" rowHeight="86" id="BPp-ZX-RfU" customClass="BasicDirectionsCell" customModule="ProvidenceWayfinding" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BPp-ZX-RfU" id="3fQ-Xr-cyD">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="c3a-Xh-5BV">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="85"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkb-KM-Ih7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="58"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhI-cx-95G">
+                                                            <rect key="frame" x="8" y="12" width="548" height="42"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvb-gu-XNU" userLabel="Date">
+                                                            <rect key="frame" x="556" y="12" width="36" height="42"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <edgeInsets key="layoutMargins" top="12" left="8" bottom="4" right="8"/>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvO-Gm-py5">
+                                                    <rect key="frame" x="0.0" y="58" width="600" height="27"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Floor" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-Ch-MnA">
+                                                            <rect key="frame" x="8" y="3" width="292" height="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7W-Xs-wfg">
+                                                            <rect key="frame" x="300" y="3" width="292" height="14"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <edgeInsets key="layoutMargins" top="3" left="8" bottom="10" right="8"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="hkb-KM-Ih7" secondAttribute="bottom" constant="27" id="LA8-gn-gqm"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="c3a-Xh-5BV" firstAttribute="centerX" secondItem="3fQ-Xr-cyD" secondAttribute="centerX" id="6nc-8s-ZIX"/>
+                                        <constraint firstItem="c3a-Xh-5BV" firstAttribute="leading" secondItem="3fQ-Xr-cyD" secondAttribute="leading" id="ENb-zt-ub0"/>
+                                        <constraint firstItem="c3a-Xh-5BV" firstAttribute="centerY" secondItem="3fQ-Xr-cyD" secondAttribute="centerY" id="VQK-jP-jZE"/>
+                                        <constraint firstItem="c3a-Xh-5BV" firstAttribute="width" secondItem="3fQ-Xr-cyD" secondAttribute="width" id="XA2-aP-7KN"/>
+                                        <constraint firstItem="c3a-Xh-5BV" firstAttribute="height" secondItem="3fQ-Xr-cyD" secondAttribute="height" id="amV-Fn-hYs"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="subtitle2Label" destination="B7W-Xs-wfg" id="cpR-aq-2yE"/>
+                                    <outlet property="subtitleLabel" destination="Uge-Ch-MnA" id="mfS-lm-c7W"/>
+                                    <outlet property="title2Label" destination="bvb-gu-XNU" id="ju8-LJ-QI6"/>
+                                    <outlet property="titleLabel" destination="uhI-cx-95G" id="e0s-uc-g7v"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="odO-hm-Lvz" id="Jq9-BK-qNL"/>
-                            <outlet property="delegate" destination="odO-hm-Lvz" id="zop-Bo-RgP"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="History" id="nAj-ao-84y">
                         <barButtonItem key="backBarButtonItem" title="Parking" id="RHX-38-8o8"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="table" destination="xyH-sU-kMm" id="aIi-Rk-Qdt"/>
+                        <outlet property="table" destination="xyH-sU-kMm" id="3lk-tQ-5p9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEf-us-M2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1492,13 +1676,6 @@ Institute </string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="providence_logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="JcV-jw-WAV">
-                                <rect key="frame" x="205" y="64" width="190" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="190" id="ehe-qu-Bz3"/>
-                                    <constraint firstAttribute="height" constant="49" id="xpP-te-v0O"/>
-                                </constraints>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yle-Kj-PUh">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
@@ -1699,29 +1876,36 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <action selector="save:" destination="B5n-Ui-7sL" eventType="touchUpInside" id="Vlw-lB-E5I"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i3W-BF-37O">
-                                <rect key="frame" x="5" y="343" width="590" height="99"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jt0-mu-Dnf">
+                                <rect key="frame" x="10" y="343" width="255" height="143"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrH-TY-uGR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INO-lF-4xR">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Spot" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOU-6x-1bM">
-                                        <rect key="frame" x="0.0" y="26" width="149" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Building" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt6-6W-jIO" userLabel="Saved Parking Building">
+                                        <rect key="frame" x="0.0" y="26" width="255" height="30"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM2-eJ-ieE">
+                                        <rect key="frame" x="0.0" y="61" width="152" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BV-N9-ciL">
-                                        <rect key="frame" x="0.0" y="52" width="20" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-Kw-3HH">
+                                        <rect key="frame" x="0.0" y="91" width="40" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRM-tx-9ix">
-                                        <rect key="frame" x="0.0" y="78" width="36" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dna-xM-Eeq">
+                                        <rect key="frame" x="0.0" y="122" width="151" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1731,7 +1915,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="i3W-BF-37O" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="118-NQ-33h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pmm-We-pw0" secondAttribute="trailing" constant="-15" id="1oR-Kb-NSX"/>
                             <constraint firstItem="pmm-We-pw0" firstAttribute="top" secondItem="rRB-Xe-inL" secondAttribute="bottom" constant="8" id="6UH-Yc-7Dg"/>
                             <constraint firstItem="A4a-Ke-ZGP" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="6pc-yY-C3e"/>
@@ -1742,16 +1925,16 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstAttribute="trailingMargin" secondItem="O6V-TG-zaK" secondAttribute="trailing" constant="-15" id="FZl-7f-JOK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DhO-sq-oqc" secondAttribute="trailing" constant="-15" id="JX6-uE-2pJ"/>
                             <constraint firstItem="hW6-Nq-jvf" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="PG0-xq-w6r"/>
+                            <constraint firstItem="jt0-mu-Dnf" firstAttribute="top" secondItem="O6V-TG-zaK" secondAttribute="bottom" constant="8" symbolic="YES" id="R7e-u3-yNO"/>
                             <constraint firstItem="EjI-Oc-Q6L" firstAttribute="top" secondItem="K53-kU-tMb" secondAttribute="bottom" constant="13" id="UU9-xw-wEx"/>
                             <constraint firstItem="EjI-Oc-Q6L" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="aW4-Ot-Du8"/>
-                            <constraint firstItem="i3W-BF-37O" firstAttribute="top" secondItem="O6V-TG-zaK" secondAttribute="bottom" constant="8" id="d55-9R-fNt"/>
                             <constraint firstItem="DhO-sq-oqc" firstAttribute="top" secondItem="hW6-Nq-jvf" secondAttribute="bottom" constant="8" id="fpv-jG-Gtf"/>
                             <constraint firstItem="hW6-Nq-jvf" firstAttribute="top" secondItem="CiH-td-16l" secondAttribute="bottom" constant="8" id="gIW-Mz-0k0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CiH-td-16l" secondAttribute="trailing" constant="-15" id="hWF-WO-JDB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i3W-BF-37O" secondAttribute="trailing" constant="-15" id="jfq-v6-Nnb"/>
                             <constraint firstItem="pmm-We-pw0" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="lEf-hz-O5o"/>
                             <constraint firstItem="O6V-TG-zaK" firstAttribute="top" secondItem="A4a-Ke-ZGP" secondAttribute="bottom" constant="12" id="qf5-6w-Qle"/>
                             <constraint firstItem="CiH-td-16l" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="qoK-IL-82G"/>
+                            <constraint firstItem="jt0-mu-Dnf" firstAttribute="leading" secondItem="O6V-TG-zaK" secondAttribute="leading" id="sWD-dd-w20"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EjI-Oc-Q6L" secondAttribute="trailing" constant="-15" id="sqs-2i-XcN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rRB-Xe-inL" secondAttribute="trailing" constant="-15" id="tqB-dw-Nbo"/>
                             <constraint firstItem="rRB-Xe-inL" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="u2t-31-UI1"/>
@@ -1773,8 +1956,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <outlet property="buildingButtons" destination="hW6-Nq-jvf" id="YMP-oq-8MV"/>
                         <outlet property="elevatorButtons" destination="A4a-Ke-ZGP" id="zrp-zf-syy"/>
                         <outlet property="floorButtons" destination="rRB-Xe-inL" id="S2H-T0-ePi"/>
-                        <outlet property="savedParkingDate" destination="fRM-tx-9ix" id="CG5-B2-JS4"/>
-                        <outlet property="savedParkingSpot" destination="WOU-6x-1bM" id="h3O-OD-fkQ"/>
+                        <outlet property="savedParkingDate" destination="ucx-Kw-3HH" id="k6H-UF-BhA"/>
+                        <outlet property="savedParkingFloor" destination="BM2-eJ-ieE" id="a9B-v8-fPN"/>
+                        <outlet property="savedParkingSpot" destination="Vt6-6W-jIO" id="Yka-9p-O0y"/>
+                        <outlet property="savedParkingTime" destination="dna-xM-Eeq" id="8dE-T4-EZf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="te5-HQ-b8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1970,12 +2155,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
         </scene>
     </scenes>
     <resources>
-        <image name="Car.png" width="25" height="25"/>
-        <image name="Home.png" width="25" height="25"/>
+        <image name="ButtonDarkBlue.png" width="40" height="40"/>
+        <image name="Car.png" width="50" height="50"/>
+        <image name="Home.png" width="50" height="50"/>
         <image name="List-100.png" width="100" height="100"/>
-        <image name="Map.png" width="25" height="25"/>
-        <image name="More.png" width="25" height="25"/>
-        <image name="buttonBlue.png" width="40" height="40"/>
+        <image name="Map.png" width="50" height="50"/>
+        <image name="More.png" width="50" height="50"/>
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
