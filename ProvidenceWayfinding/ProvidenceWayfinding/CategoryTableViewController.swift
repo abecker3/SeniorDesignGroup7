@@ -8,15 +8,17 @@
 
 import UIKit
 
-class CategoryTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate{
+class CategoryTableViewController: UITableViewController/*, UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate*/{
     
     //Passed in variables
     var passInTextFieldTag: Int!
+    
     
     //Referencing Outlets
     @IBOutlet var buildingTableView: UITableView!
     
     //Variables
+    var allLocationsClicked: Bool = false
     var resultSearchController = UISearchController()
     var filteredTableData = [String]()
     var options: [String]!
@@ -29,7 +31,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
         initOptions()
         
         definesPresentationContext = true
-        
+        /*
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
@@ -43,25 +45,25 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
         })()
         
         //Reload table
-        self.tableView.reloadData()
+        self.tableView.reloadData()*/
     }
     
-    func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
+    /*func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
         if(!resultSearchController.active)
         {
             return true
         }
         return false
-    }
+    }*/
     
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+    /*func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchActive = true
         //resultSearchController.active = false
         //searchBarCancelButtonClicked(searchBar)
         //resultSearchController.willDismissSearchController(UISearchController)
         performSegueWithIdentifier("buildingToLocation", sender: UISearchBar.self)
         print("Worked!")
-    }
+    }*/
     
     /*func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         //performSegueWithIdentifier("buildingToLocation", sender: resultSearchController.searchBar)
@@ -75,7 +77,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
     //func searchBar(
     
     
-    func updateSearchResultsForSearchController(searchController: UISearchController)
+    /*func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         filteredTableData.removeAll(keepCapacity: false)
         
@@ -92,12 +94,13 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
         filteredTableData = array as! [String]
         
         self.tableView.reloadData()
-    }
+    }*/
     
     func initOptions()
     {
         options = uniqueCategoryArray(locations)
         options.sortInPlace()
+        options.append("All Locations")
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -178,8 +181,19 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
         navController.popToViewController(surveyViewController, animated: true)
     }*/
     
+    /*override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let navController = self.navigationController!
+        let indexOfLocation = navController.viewControllers.count + 1
+        let locationViewController = navController.viewControllers[indexOfLocation] as! LocationTableViewController
+        
+        if(options[indexPath.row] == "All Locations")
+        {
+            allLocationsClicked = true
+        }
+    }*/
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "buildingToLocation" && !searchActive /*&& sender === UITableViewCell()*/)
+        if (segue.identifier == "buildingToLocation" && !allLocationsClicked /*&& sender === UITableViewCell()*/)
         {
             let nextViewController = segue.destinationViewController as! LocationTableViewController
             nextViewController.passInTextFieldTag = self.passInTextFieldTag
@@ -189,6 +203,7 @@ class CategoryTableViewController: UITableViewController, UISearchResultsUpdatin
         else {
             //resultSearchController.active = false
             let nextViewController = segue.destinationViewController as! LocationTableViewController
+            nextViewController.allLocationsClicked = true
             nextViewController.passInTextFieldTag = self.passInTextFieldTag
             nextViewController.passInCategory = "All Locations"
         }

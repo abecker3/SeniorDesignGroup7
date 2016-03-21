@@ -13,6 +13,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     //Passed in variables
     var passInTextFieldTag: Int!
     var passInCategory: String!
+    var allLocationsClicked: Bool = false
     
     //Referencing Outlets
     @IBOutlet var locationTableView: UITableView!
@@ -218,7 +219,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     {
         for location in locations
         {
-            if(location.category == passInCategory)
+            if(location.category == passInCategory && !allLocationsClicked)
             {
                 locationOptions.append(location)
             }
