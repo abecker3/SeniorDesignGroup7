@@ -144,7 +144,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         //Load Saved Parking Spot/Date
         pathFlag = 1
         defaults.setObject(pathFlag, forKey: "pathFlag")
-        
+        /*
         if(defaults.stringForKey("keyNum") != nil){
             keyNum = Int(defaults.stringForKey("keyNum")!)!
         }
@@ -153,12 +153,12 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
             indexFlag = Int(defaults.stringForKey("indexFlag")!)!
         }
         else{ indexFlag = 0 }
-        if (keyNum != 0){
-            building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
-            floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
-            timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
-            dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
-        }
+*/
+        //if (keyNum != 0){ }
+        building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
+        floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
+        timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
+        dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
         
         savedParkingSpot.text = building[0]
         savedParkingDate.text = dateSave[0]

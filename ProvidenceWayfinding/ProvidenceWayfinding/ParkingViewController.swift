@@ -39,11 +39,11 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var savedParkingDate: UILabel!
     @IBOutlet weak var buildingButtons: UISegmentedControl!
     @IBOutlet weak var floorButtons: UISegmentedControl!
-    @IBOutlet weak var elevatorButtons: UISegmentedControl!
+    //@IBOutlet weak var elevatorButtons: UISegmentedControl!
     
     var parkingLocationBuilding = String()
     var parkingLocationFloor = String()
-    var parkingLocationElevator = String()
+    //var parkingLocationElevator = String()
     var parkingLocation = String()
     var pathFlag = Int()
     
@@ -115,7 +115,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         default: parkingLocationFloor = "N/A "
         }
     }
-    
+    /*
     @IBAction func changedElevator(sender: UISegmentedControl) {
         let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
         switch title{
@@ -125,7 +125,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         case "Women's"?: parkingLocationElevator = "Women's Health Elevator "
         default: parkingLocationElevator = "Heart Institute Elevator "
         }
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,7 +140,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         
         // Do any additional setup after loading the view.
         parkingLocationBuilding = "Main Tower "
-        parkingLocationElevator = "Main Elevator "
+        //parkingLocationElevator = "Main Elevator "
         parkingLocationFloor = "L6 "
     }
     
@@ -148,7 +148,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         //Load Saved Parking Spot/Date
         pathFlag = 0
         defaults.setObject(pathFlag, forKey: "pathFlag")
-
+/*
         if(defaults.stringForKey("keyNum") != nil){
             keyNum = Int(defaults.stringForKey("keyNum")!)!
         }
@@ -157,13 +157,14 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
             indexFlag = Int(defaults.stringForKey("indexFlag")!)!
         }
         else{ indexFlag = 0 }
+*/
+        //if (indexFlag != 0){ }
+        building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
+        floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
+        timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
+        dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
         
-        if (keyNum != 0){
-            building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
-            floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
-            timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
-            dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
-        }
+        print(building)
         
         savedParkingSpot.text = building[0]
         savedParkingDate.text = dateSave[0]

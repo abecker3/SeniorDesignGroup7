@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1448,61 +1448,45 @@ Institute </string>
                                     <action selector="changedFloor:" destination="SGN-Ov-oTL" eventType="valueChanged" id="7Sh-gT-tTd"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elevator Used" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLv-GO-hVW" userLabel="Elevator">
-                                <rect key="frame" x="5" y="236" width="590" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WHJ-fP-y3y" userLabel="ElevatorButtons">
-                                <rect key="frame" x="5" y="265" width="590" height="29"/>
-                                <segments>
-                                    <segment title="Main"/>
-                                    <segment title="Star"/>
-                                    <segment title="Fish"/>
-                                    <segment title="Women's"/>
-                                    <segment title="Heart"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changedElevator:" destination="SGN-Ov-oTL" eventType="valueChanged" id="VKk-oK-ENY"/>
-                                </connections>
-                            </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTi-9C-EQT">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTi-9C-EQT">
                                 <rect key="frame" x="10" y="305" width="585" height="30"/>
-                                <state key="normal" title="Save"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="save:" destination="SGN-Ov-oTL" eventType="touchUpInside" id="WZY-yz-psM"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Tj-xVj">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Tj-xVj">
                                 <rect key="frame" x="10" y="343" width="590" height="143"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-cD-9WC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-cD-9WC">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Building" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Pl-uTS" userLabel="Saved Parking Building">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Saved Parking Building" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Pl-uTS" userLabel="Saved Parking Building">
                                         <rect key="frame" x="0.0" y="26" width="255" height="30"/>
                                         <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-CW-vxg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-CW-vxg">
                                         <rect key="frame" x="0.0" y="61" width="152" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
                                         <rect key="frame" x="0.0" y="91" width="40" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-js-Yum">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" ambiguous="YES" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-js-Yum">
                                         <rect key="frame" x="0.0" y="122" width="151" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1516,25 +1500,18 @@ Institute </string>
                             <constraint firstItem="lCb-TT-VeC" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="1kd-tL-LsC"/>
                             <constraint firstItem="0VC-Oy-jwo" firstAttribute="top" secondItem="qrb-6B-eaa" secondAttribute="bottom" constant="13" id="31Y-0w-bFW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xRC-9A-9ee" secondAttribute="trailing" constant="-15" id="3VU-z9-vba"/>
-                            <constraint firstItem="fTi-9C-EQT" firstAttribute="top" secondItem="WHJ-fP-y3y" secondAttribute="bottom" constant="12" id="6XD-VT-FwQ"/>
                             <constraint firstItem="0VC-Oy-jwo" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="7NF-WA-uAy"/>
                             <constraint firstItem="lCb-TT-VeC" firstAttribute="top" secondItem="Zuq-Ix-Bxi" secondAttribute="bottom" constant="8" id="Bxz-7e-bnu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fTi-9C-EQT" secondAttribute="trailing" constant="-15" id="I1x-f5-Xew"/>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="KFE-hI-8k5"/>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="top" secondItem="0VC-Oy-jwo" secondAttribute="bottom" constant="8" id="MYI-9i-YUl"/>
                             <constraint firstItem="cT9-Tj-xVj" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-10" id="MqL-ic-vpH"/>
-                            <constraint firstItem="uLv-GO-hVW" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="Sfq-Na-kg8"/>
                             <constraint firstItem="3dn-G7-aJZ" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="Xuf-ZA-nsL"/>
-                            <constraint firstItem="uLv-GO-hVW" firstAttribute="top" secondItem="3dn-G7-aJZ" secondAttribute="bottom" constant="8" id="aMk-Dg-MUz"/>
                             <constraint firstItem="fTi-9C-EQT" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-10" id="dWa-hP-Z4e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0VC-Oy-jwo" secondAttribute="trailing" constant="-15" id="df1-Xw-Jfm"/>
                             <constraint firstItem="Zuq-Ix-Bxi" firstAttribute="top" secondItem="xRC-9A-9ee" secondAttribute="bottom" constant="8" id="dfe-6x-T5p"/>
-                            <constraint firstItem="WHJ-fP-y3y" firstAttribute="top" secondItem="uLv-GO-hVW" secondAttribute="bottom" constant="8" id="eLO-NE-90o"/>
                             <constraint firstItem="cT9-Tj-xVj" firstAttribute="top" secondItem="fTi-9C-EQT" secondAttribute="bottom" constant="8" id="fEa-4d-gfT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cT9-Tj-xVj" secondAttribute="trailing" constant="-20" id="gyp-Ig-bCU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uLv-GO-hVW" secondAttribute="trailing" constant="-15" id="heM-ub-ajG"/>
-                            <constraint firstItem="WHJ-fP-y3y" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="iuE-Ev-9T3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WHJ-fP-y3y" secondAttribute="trailing" constant="-15" id="j5Y-4L-yUm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3dn-G7-aJZ" secondAttribute="trailing" constant="-15" id="pcU-4w-WSJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zuq-Ix-Bxi" secondAttribute="trailing" constant="-15" id="uEO-uv-4Iy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lCb-TT-VeC" secondAttribute="trailing" constant="-15" id="ufQ-zP-BmU"/>
@@ -1553,7 +1530,6 @@ Institute </string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buildingButtons" destination="Zuq-Ix-Bxi" id="uX2-mE-6ap"/>
-                        <outlet property="elevatorButtons" destination="WHJ-fP-y3y" id="Rxp-t7-RJa"/>
                         <outlet property="floorButtons" destination="3dn-G7-aJZ" id="nnu-yb-hGZ"/>
                         <outlet property="savedParkingDate" destination="YN8-u6-3hX" id="E50-Y8-VK2"/>
                         <outlet property="savedParkingFloor" destination="ucR-CW-vxg" id="cwH-sm-mNV"/>
