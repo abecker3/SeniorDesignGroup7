@@ -401,9 +401,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="Ub4-Sa-2ef">
             <objects>
                 <navigationController id="AdO-fJ-qNo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="More.png" id="Jg0-OT-gPW">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="More" image="MoreTab" id="Jg0-OT-gPW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MCX-yQ-PrL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -652,9 +650,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="PyC-73-uNT">
             <objects>
                 <navigationController title="Home" id="Weh-dA-egp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Home.png" id="ZgA-TI-JB2">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeTab" id="ZgA-TI-JB2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYh-YR-Pi9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1175,9 +1171,7 @@ Institute </string>
         <scene sceneID="mtt-Id-MDm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w0u-Nb-dND" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Directions" image="Map.png" id="IZF-R8-Kpe">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Directions" image="DirectionsTab" id="IZF-R8-Kpe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gC1-PJ-0Z9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1382,9 +1376,7 @@ Institute </string>
         <scene sceneID="dMI-V2-0p0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XCX-NU-mPr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Parking" image="Car.png" id="t3b-ME-Ahh">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Parking" image="ParkingTab" id="t3b-ME-Ahh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1od-qH-4KO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -2156,11 +2148,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
     </scenes>
     <resources>
         <image name="ButtonDarkBlue.png" width="40" height="40"/>
-        <image name="Car.png" width="50" height="50"/>
-        <image name="Home.png" width="50" height="50"/>
+        <image name="DirectionsTab" width="25" height="25"/>
+        <image name="HomeTab" width="25" height="25"/>
         <image name="List-100.png" width="100" height="100"/>
-        <image name="Map.png" width="50" height="50"/>
         <image name="More.png" width="50" height="50"/>
+        <image name="MoreTab" width="25" height="25"/>
+        <image name="ParkingTab" width="25" height="25"/>
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
