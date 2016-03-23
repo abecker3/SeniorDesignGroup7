@@ -19,7 +19,6 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     var timeSave = [String()]
     var keyNum = Int()
     var indexFlag = Int()
-    
     //Variables
     var endLocation: Location!
     var startLocation: Location!
@@ -33,6 +32,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
 
     
     //Outlets
+    @IBOutlet weak var parkView: UIView!
     @IBOutlet weak var savedParkingTime: UILabel!
     @IBOutlet weak var savedParkingFloor: UILabel!
     @IBOutlet weak var savedParkingSpot: UILabel!
@@ -129,7 +129,9 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        parkView.layer.borderWidth = 2
+        parkView.layer.cornerRadius = 10
+        parkView.layer.borderColor = UIColor(red: 6/255.0, green: 56/255.0, blue: 122/255.0, alpha: 1.0).CGColor
         screenEdgeRecognizerRight = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureRight:")
         screenEdgeRecognizerRight.edges = .Right
         view.addGestureRecognizer(screenEdgeRecognizerRight)
@@ -148,7 +150,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         //Load Saved Parking Spot/Date
         pathFlag = 0
         defaults.setObject(pathFlag, forKey: "pathFlag")
-/*
+
         if(defaults.stringForKey("keyNum") != nil){
             keyNum = Int(defaults.stringForKey("keyNum")!)!
         }
@@ -157,15 +159,14 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
             indexFlag = Int(defaults.stringForKey("indexFlag")!)!
         }
         else{ indexFlag = 0 }
-*/
-        //if (indexFlag != 0){ }
-        building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
-        floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
-        timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
-        dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
-        
-        print(building)
-        
+
+        if (defaults.objectForKey("buildingArray") != nil){
+            building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
+            floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
+            timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
+            dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
+        }
+
         savedParkingSpot.text = building[0]
         savedParkingDate.text = dateSave[0]
         savedParkingFloor.text = floor[0]
