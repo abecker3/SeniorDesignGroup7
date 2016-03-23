@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DirectoryBuildingChooserViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate {
+class DirectoryBuildingChooserViewController: UITableViewController/*, UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate*/ {
     
     //let controller = UISearchController(searchResultsController: nil)
     
@@ -18,6 +18,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
     var filteredTableData = [String]()
     var options: [String]!
     var searchActive: Bool = false
+    var allLocationsClicked: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
         controller.searchBar.sizeToFit()
         self.tableView.tableHeaderView = controller.searchBar*/
         
+        /*
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
@@ -46,9 +48,10 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
         })()
         
         //Reload table
-        self.tableView.reloadData()
+        self.tableView.reloadData()*/
     }
     
+    /*
     func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
         if(!resultSearchController.active)
         {
@@ -64,7 +67,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
         //resultSearchController.willDismissSearchController(UISearchController)
         performSegueWithIdentifier("ChooserToSearched", sender: UISearchBar.self)
         print("Worked!")
-    }
+    }*/
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // We are only using one section so we return one
@@ -95,6 +98,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
     func initOptions()
     {
         options = uniqueCategoryArray(directory)
+        //options.append("All Locations")
         options.sortInPlace()
     }
     
@@ -117,9 +121,9 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return options.count
+        return options.count
         
-        //Takes the filtered data and assigns them to the number of rows needed
+        /*//Takes the filtered data and assigns them to the number of rows needed
         if(self.resultSearchController.active) {
             return self.filteredTableData.count
         }
@@ -127,7 +131,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
             // No searching is going on so the table stays regular using the same number of rows as before
         else {
             return self.options.count
-        }
+        }*/
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -139,6 +143,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
         
         return cell*/
         
+        /*
         if(self.resultSearchController.active) {
             cell.textLabel?.text = filteredTableData[indexPath.row]
             //cell.detailTextLabel!.text = "11 AM to 8 PM"
@@ -149,7 +154,11 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
             cell.textLabel?.text = options[indexPath.row]
             //cell.detailTextLabel!.text = "11 AM to 8 PM"
             return cell
-        }
+        }*/
+        
+        cell.textLabel?.text = options[indexPath.row]
+        //cell.detailTextLabel!.text = "11 AM to 8 PM"
+        return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -169,7 +178,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
         //let selectedCellPath = table.indexPathForSelectedRow
         //let cell = table.cellForRowAtIndexPath(selectedCellPath!)
 
-        if (segue.identifier == "ChooserToSearched" && !searchActive /*&& sender === UITableViewCell()*/)
+        if (segue.identifier == "ChooserToSearched" && !allLocationsClicked /*&& sender === UITableViewCell()*/)
         {
             let nextViewController = segue.destinationViewController as! SearchedDirectoryTableViewController
             //nextViewController.passInTextFieldTag = self.passInTextFieldTag
@@ -180,6 +189,7 @@ class DirectoryBuildingChooserViewController: UITableViewController, UISearchRes
             //resultSearchController.active = false
             let nextViewController = segue.destinationViewController as! SearchedDirectoryTableViewController
             //nextViewController.passInTextFieldTag = self.passInTextFieldTag
+            nextViewController.allLocationsClicked = true
             nextViewController.passInBuilding = "All Locations"
             nextViewController.allLocationsTag = true
         }

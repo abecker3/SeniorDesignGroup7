@@ -20,6 +20,7 @@ class DirectorySpecificViewController: UIViewController {
     var floor: String!
     var thisFloor = String()
     var fileExtension = String()
+    var allLocationsClicked: Bool = false
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
