@@ -99,8 +99,8 @@ class CategoryTableViewController: UITableViewController/*, UISearchResultsUpdat
     func initOptions()
     {
         options = uniqueCategoryArray(locations)
-        options.sortInPlace()
         options.append("All Locations")
+        options.sortInPlace()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
