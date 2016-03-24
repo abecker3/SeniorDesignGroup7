@@ -19,6 +19,7 @@ class SearchedDirectoryTableViewController: UITableViewController, UISearchResul
     var passInBuilding: String!
     var selectedCellPath: NSIndexPath!
     var allLocationsTag: Bool = false
+    var allLocationsClicked: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
