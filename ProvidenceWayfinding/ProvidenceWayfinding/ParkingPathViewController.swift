@@ -22,8 +22,8 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     var saved = false
     
     //Variables
-    var endLocation: Location!
-    var startLocation: Location!
+    var endLocation: Directory!
+    var startLocation: Directory!
     
     let defaults = NSUserDefaults.standardUserDefaults()
     let dateFormatter: NSDateFormatter = {
