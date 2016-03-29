@@ -22,7 +22,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     //Variables
     var resultSearchController = UISearchController()
     var filteredTableData = [String]()
-    var locationOptions:[Location] = []
+    var locationOptions:[Directory] = []
     var allLocationsTag: Bool = false
 
     override func viewDidLoad()
@@ -145,15 +145,15 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         return false
     }
     
-    func getLocationFromName(name: String) -> Location
+    func getLocationFromName(name: String) -> Directory
     {
-        for x in locations{
+        for x in directory{
             if(x.name == name)
             {
                 return x
             }
         }
-        return Location(name: "Admitting", category: "Main Tower", floor: "Main")
+        return Directory(name: "Admitting", category: "Main Tower", floor: "Main", hours: "NA", ext: 0)
     }
     
     //Pop back 2 once a row is selected
@@ -217,7 +217,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     
     func initOptions()
     {
-        for location in locations
+        for location in directory
         {
             if(location.category == passInCategory && !allLocationsClicked)
             {

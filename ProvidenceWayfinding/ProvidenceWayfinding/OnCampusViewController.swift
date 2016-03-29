@@ -14,8 +14,8 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var whichFloor: UITextField!
     @IBOutlet weak var scrollCurrent: UIScrollView!
     @IBOutlet weak var currentMap: UIImageView!
-    var startLocation: Location!
-    var endLocation: Location!
+    var startLocation: Directory!
+    var endLocation: Directory!
     
     //Variables for this screen
     var currentFloor = String()
@@ -126,7 +126,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         
     }
     
-    func getFloorChildrens(floorMap: Location) -> String{
+    func getFloorChildrens(floorMap: Directory) -> String{
         switch floorMap.floor{
         //case "2": return "Childrens_2.jpg"
         //case "3": return "Childrens_3.jpg"
@@ -137,7 +137,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         }
     }
     
-    func getFloorHeart(floorMap: Location) -> String{
+    func getFloorHeart(floorMap: Directory) -> String{
         switch floorMap.floor{
         //case "2": return "Heart_2.jpg"
         //case "3": return "Heart_3.jpg"
@@ -148,7 +148,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         }
     }
     
-    func getFloorMain(floorMap: Location) -> String{
+    func getFloorMain(floorMap: Directory) -> String{
         switch floorMap.floor{
         //case "2": return "Main_2.jpg"
         //case "3": return "Main_3.jpg"
@@ -159,7 +159,7 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         }
     }
     
-    func getFloorWomens(floorMap: Location) -> String{
+    func getFloorWomens(floorMap: Directory) -> String{
         switch floorMap.floor{
        // case "2": return "Womens_2.jpg"
         //case "3": return "Womens_3.jpg"

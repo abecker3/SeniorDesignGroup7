@@ -21,8 +21,8 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     
     //Variables
     var passOutTextFieldTag: Int!
-    var startLocation: Location!
-    var endLocation: Location!
+    var startLocation: Directory!
+    var endLocation: Directory!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         destinationTextField.tag = 1
         
         //Init currentLocation
-        startLocation = Location(name: "Off Campus", category: "NA", floor: "NA")
+        startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0)
     }
     
     @IBAction func changedOnOff(sender: UISegmentedControl) {
@@ -53,7 +53,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         {
             currentTextField.placeholder = "Off Campus"
             currentTextField.enabled = false
-            startLocation = Location(name: "Off Campus", category: "NA", floor: "NA")
+            startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0)
         }
         else if(title == "On")
         {
