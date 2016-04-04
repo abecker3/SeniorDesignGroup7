@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor = UIColor(red: 244/255, green: 133/255, blue: 24/255, alpha: 1.0)
         
         UISegmentedControl.appearance().tintColor = UIColor(red: 6/255, green: 56/255, blue: 122/255, alpha: 1.0)
+        UISearchBar.appearance().barTintColor = UIColor(red: 6/255, green: 56/255, blue: 122/255, alpha: 1.0)
         
         let attr = [
             NSFontAttributeName : UIFont(name: "Helvetica-Bold", size: 20)!,

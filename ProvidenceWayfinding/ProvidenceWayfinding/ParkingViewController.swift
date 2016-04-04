@@ -19,7 +19,6 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     var timeSave = [String()]
     var keyNum = Int()
     var indexFlag = Int()
-    
     //Variables
     var endLocation: Location!
     var startLocation: Location!
@@ -33,17 +32,18 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
 
     
     //Outlets
+    @IBOutlet weak var parkView: UIView!
     @IBOutlet weak var savedParkingTime: UILabel!
     @IBOutlet weak var savedParkingFloor: UILabel!
     @IBOutlet weak var savedParkingSpot: UILabel!
     @IBOutlet weak var savedParkingDate: UILabel!
     @IBOutlet weak var buildingButtons: UISegmentedControl!
     @IBOutlet weak var floorButtons: UISegmentedControl!
-    @IBOutlet weak var elevatorButtons: UISegmentedControl!
+    //@IBOutlet weak var elevatorButtons: UISegmentedControl!
     
     var parkingLocationBuilding = String()
     var parkingLocationFloor = String()
-    var parkingLocationElevator = String()
+    //var parkingLocationElevator = String()
     var parkingLocation = String()
     var pathFlag = Int()
     
@@ -115,7 +115,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         default: parkingLocationFloor = "N/A "
         }
     }
-    
+    /*
     @IBAction func changedElevator(sender: UISegmentedControl) {
         let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
         switch title{
@@ -125,11 +125,13 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         case "Women's"?: parkingLocationElevator = "Women's Health Elevator "
         default: parkingLocationElevator = "Heart Institute Elevator "
         }
-    }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        parkView.layer.borderWidth = 2
+        parkView.layer.cornerRadius = 10
+        parkView.layer.borderColor = UIColor(red: 6/255.0, green: 56/255.0, blue: 122/255.0, alpha: 1.0).CGColor
         screenEdgeRecognizerRight = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureRight:")
         screenEdgeRecognizerRight.edges = .Right
         view.addGestureRecognizer(screenEdgeRecognizerRight)
@@ -140,7 +142,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         
         // Do any additional setup after loading the view.
         parkingLocationBuilding = "Main Tower "
-        parkingLocationElevator = "Main Elevator "
+        //parkingLocationElevator = "Main Elevator "
         parkingLocationFloor = "L6 "
     }
     
@@ -157,14 +159,14 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
             indexFlag = Int(defaults.stringForKey("indexFlag")!)!
         }
         else{ indexFlag = 0 }
-        
-        if (keyNum != 0){
+
+        if (defaults.objectForKey("buildingArray") != nil){
             building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
             floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
             timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
             dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
         }
-        
+
         savedParkingSpot.text = building[0]
         savedParkingDate.text = dateSave[0]
         savedParkingFloor.text = floor[0]

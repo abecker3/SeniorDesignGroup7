@@ -19,10 +19,11 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     var timeSave = [String()]
     var keyNum = Int()
     var indexFlag = Int()
+    var saved = false
     
     //Variables
-    var endLocation: Location!
-    var startLocation: Location!
+    var endLocation: Directory!
+    var startLocation: Directory!
     
     let defaults = NSUserDefaults.standardUserDefaults()
     let dateFormatter: NSDateFormatter = {
@@ -33,6 +34,8 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     
     
     //Outlets
+    @IBOutlet weak var nextBut: UIBarButtonItem!
+    @IBOutlet weak var parkView: UIView!
     @IBOutlet weak var savedParkingTime: UILabel!
     @IBOutlet weak var savedParkingFloor: UILabel!
     @IBOutlet weak var savedParkingSpot: UILabel!
@@ -48,6 +51,25 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     var pathFlag = Int()
     
     //Actions
+    @IBAction func nextView(sender: AnyObject) {
+        if (saved == false){
+            let alertTitle = "Caution!"
+            let alertMessage = "Would you like to continue without saving your most current parking location?"
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
+                self.performSegueWithIdentifier("onCampusView", sender: self)
+            }))
+            alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
+                alertController.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            
+            presentViewController(alertController, animated: false, completion: nil)
+        }else{
+            self.performSegueWithIdentifier("onCampusView", sender: self)
+            
+        }
+
+    }
     @IBAction func save(sender: AnyObject) {
         parkingLocation = parkingLocationBuilding + "Floor " + parkingLocationFloor + "using the " + parkingLocationElevator
         if (indexFlag == 0){
@@ -90,6 +112,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         savedParkingDate.text = dateSave[0]
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
+        saved = true
     }
     
     @IBAction func changedBuilding(sender: UISegmentedControl) {
@@ -129,10 +152,13 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        parkView.layer.borderWidth = 2
+        parkView.layer.cornerRadius = 10
+        parkView.layer.borderColor = UIColor(red: 6/255.0, green: 56/255.0, blue: 122/255.0, alpha: 1.0).CGColor
         
-        screenEdgeRecognizerRight = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureRight:")
-        screenEdgeRecognizerRight.edges = .Right
-        view.addGestureRecognizer(screenEdgeRecognizerRight)
+        //screenEdgeRecognizerRight = UIScreenEdgePanGestureRecognizer(target: self, action: "switchScreenGestureRight:")
+        //screenEdgeRecognizerRight.edges = .Right
+        //view.addGestureRecognizer(screenEdgeRecognizerRight)
         
         // Do any additional setup after loading the view.
         parkingLocationBuilding = "Main Tower "
@@ -153,13 +179,13 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
             indexFlag = Int(defaults.stringForKey("indexFlag")!)!
         }
         else{ indexFlag = 0 }
-        if (keyNum != 0){
+
+        if (defaults.objectForKey("buildingArray") != nil){
             building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
             floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
             timeSave = defaults.objectForKey("timeArray")! as! NSArray as! [String]
             dateSave = defaults.objectForKey("dateArray")! as! NSArray as! [String]
         }
-        
         savedParkingSpot.text = building[0]
         savedParkingDate.text = dateSave[0]
         savedParkingFloor.text = floor[0]
@@ -167,17 +193,39 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
 
     }
     
+    /*override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if identifier == "onCampusView"{
+            if (saved == false){
+                let alertTitle = "Caution!"
+                let alertMessage = "Would you like to continue without saving your most current parking location?"
+                let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
+                    return true
+                }))
+                alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
+                    return false
+                    }))
+                
+                presentViewController(alertController, animated: false, completion: nil)
+            }else{
+                return true
+            
+            }
+        }
+        return true //by default
+    }*/
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nextViewController = segue.destinationViewController as! OnCampusViewController
         nextViewController.startLocation = self.startLocation
         nextViewController.endLocation = self.endLocation
+        
     }
-    
+    /*
     func switchScreenGestureRight(sender: UIScreenEdgePanGestureRecognizer) {
         flag = flag + 1
         if (flag % 2 == 1){
             performSegueWithIdentifier("onCampusView", sender: nil)
         }
-    }
+    }*/
 }

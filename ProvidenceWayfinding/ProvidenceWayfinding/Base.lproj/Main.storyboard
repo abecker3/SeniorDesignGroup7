@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -401,9 +401,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="Ub4-Sa-2ef">
             <objects>
                 <navigationController id="AdO-fJ-qNo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="More.png" id="Jg0-OT-gPW">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="More" image="MoreTab" id="Jg0-OT-gPW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MCX-yQ-PrL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -652,9 +650,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <scene sceneID="PyC-73-uNT">
             <objects>
                 <navigationController title="Home" id="Weh-dA-egp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Home.png" id="ZgA-TI-JB2">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeTab" id="ZgA-TI-JB2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XYh-YR-Pi9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1175,9 +1171,7 @@ Institute </string>
         <scene sceneID="mtt-Id-MDm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w0u-Nb-dND" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Directions" image="Map.png" id="IZF-R8-Kpe">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Directions" image="DirectionsTab" id="IZF-R8-Kpe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gC1-PJ-0Z9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1382,9 +1376,7 @@ Institute </string>
         <scene sceneID="dMI-V2-0p0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XCX-NU-mPr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Parking" image="Car.png" id="t3b-ME-Ahh">
-                        <inset key="imageInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Parking" image="ParkingTab" id="t3b-ME-Ahh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1od-qH-4KO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1457,93 +1449,100 @@ Institute </string>
                                     <action selector="changedFloor:" destination="SGN-Ov-oTL" eventType="valueChanged" id="7Sh-gT-tTd"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elevator Used" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLv-GO-hVW" userLabel="Elevator">
-                                <rect key="frame" x="5" y="236" width="590" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WHJ-fP-y3y" userLabel="ElevatorButtons">
-                                <rect key="frame" x="5" y="265" width="590" height="29"/>
-                                <segments>
-                                    <segment title="Main"/>
-                                    <segment title="Star"/>
-                                    <segment title="Fish"/>
-                                    <segment title="Women's"/>
-                                    <segment title="Heart"/>
-                                </segments>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="253-Sg-GG7">
+                                <rect key="frame" x="0.0" y="515" width="600" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="History" backgroundImage="ButtonDarkBlue.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="changedElevator:" destination="SGN-Ov-oTL" eventType="valueChanged" id="VKk-oK-ENY"/>
+                                    <segue destination="odO-hm-Lvz" kind="show" id="n5w-su-Dw8"/>
                                 </connections>
-                            </segmentedControl>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTi-9C-EQT">
-                                <rect key="frame" x="10" y="305" width="585" height="30"/>
-                                <state key="normal" title="Save"/>
+                                <rect key="frame" x="0.0" y="280" width="600" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Save" backgroundImage="ButtonDarkBlue.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="save:" destination="SGN-Ov-oTL" eventType="touchUpInside" id="WZY-yz-psM"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Tj-xVj">
-                                <rect key="frame" x="10" y="343" width="590" height="143"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Kj-xO-ecG">
+                                <rect key="frame" x="11" y="334" width="578" height="161"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-cD-9WC">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Building" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Pl-uTS" userLabel="Saved Parking Building">
-                                        <rect key="frame" x="0.0" y="26" width="255" height="30"/>
-                                        <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-CW-vxg">
-                                        <rect key="frame" x="0.0" y="61" width="152" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
-                                        <rect key="frame" x="0.0" y="91" width="40" height="23"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-js-Yum">
-                                        <rect key="frame" x="0.0" y="122" width="151" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Tj-xVj">
+                                        <rect key="frame" x="25" y="10" width="95" height="143"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-cD-9WC">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Pl-uTS" userLabel="Saved Parking Building">
+                                                <rect key="frame" x="0.0" y="26" width="7" height="30"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-CW-vxg">
+                                                <rect key="frame" x="0.0" y="61" width="5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
+                                                <rect key="frame" x="0.0" y="91" width="5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-js-Yum">
+                                                <rect key="frame" x="0.0" y="122" width="5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ucR-CW-vxg" firstAttribute="centerY" secondItem="cT9-Tj-xVj" secondAttribute="centerY" id="I1i-CM-94f"/>
+                                            <constraint firstItem="Gci-js-Yum" firstAttribute="top" secondItem="YN8-u6-3hX" secondAttribute="bottom" constant="8" symbolic="YES" id="a0w-68-gDh"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="cT9-Tj-xVj" firstAttribute="top" secondItem="7Kj-xO-ecG" secondAttribute="top" constant="10" id="I93-u8-Cq1"/>
+                                    <constraint firstItem="cT9-Tj-xVj" firstAttribute="leading" secondItem="7Kj-xO-ecG" secondAttribute="leading" constant="25" id="Rhj-1H-Qem"/>
+                                    <constraint firstItem="cT9-Tj-xVj" firstAttribute="centerY" secondItem="7Kj-xO-ecG" secondAttribute="centerY" constant="1" id="dmP-Te-j3Z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="253-Sg-GG7" firstAttribute="leading" secondItem="fTi-9C-EQT" secondAttribute="leading" id="0Mz-PQ-rUb"/>
+                            <constraint firstItem="253-Sg-GG7" firstAttribute="trailing" secondItem="fTi-9C-EQT" secondAttribute="trailing" id="0gq-vU-eeS"/>
                             <constraint firstItem="lCb-TT-VeC" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="1kd-tL-LsC"/>
                             <constraint firstItem="0VC-Oy-jwo" firstAttribute="top" secondItem="qrb-6B-eaa" secondAttribute="bottom" constant="13" id="31Y-0w-bFW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xRC-9A-9ee" secondAttribute="trailing" constant="-15" id="3VU-z9-vba"/>
-                            <constraint firstItem="fTi-9C-EQT" firstAttribute="top" secondItem="WHJ-fP-y3y" secondAttribute="bottom" constant="12" id="6XD-VT-FwQ"/>
+                            <constraint firstItem="253-Sg-GG7" firstAttribute="top" secondItem="7Kj-xO-ecG" secondAttribute="bottom" constant="20" id="3fp-Fx-tLR"/>
                             <constraint firstItem="0VC-Oy-jwo" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="7NF-WA-uAy"/>
                             <constraint firstItem="lCb-TT-VeC" firstAttribute="top" secondItem="Zuq-Ix-Bxi" secondAttribute="bottom" constant="8" id="Bxz-7e-bnu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fTi-9C-EQT" secondAttribute="trailing" constant="-15" id="I1x-f5-Xew"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fTi-9C-EQT" secondAttribute="trailing" constant="-20" id="I1x-f5-Xew"/>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="KFE-hI-8k5"/>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="top" secondItem="0VC-Oy-jwo" secondAttribute="bottom" constant="8" id="MYI-9i-YUl"/>
-                            <constraint firstItem="cT9-Tj-xVj" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-10" id="MqL-ic-vpH"/>
-                            <constraint firstItem="uLv-GO-hVW" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="Sfq-Na-kg8"/>
+                            <constraint firstItem="7Kj-xO-ecG" firstAttribute="trailing" secondItem="3dn-G7-aJZ" secondAttribute="trailing" constant="-6" id="MxB-yW-mjO"/>
+                            <constraint firstItem="7Kj-xO-ecG" firstAttribute="leading" secondItem="3dn-G7-aJZ" secondAttribute="leading" constant="6" id="Nda-hx-peo"/>
+                            <constraint firstItem="bEV-I2-gX0" firstAttribute="top" secondItem="253-Sg-GG7" secondAttribute="bottom" constant="1" id="QBQ-bW-OJJ"/>
                             <constraint firstItem="3dn-G7-aJZ" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="Xuf-ZA-nsL"/>
-                            <constraint firstItem="uLv-GO-hVW" firstAttribute="top" secondItem="3dn-G7-aJZ" secondAttribute="bottom" constant="8" id="aMk-Dg-MUz"/>
-                            <constraint firstItem="fTi-9C-EQT" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-10" id="dWa-hP-Z4e"/>
+                            <constraint firstItem="fTi-9C-EQT" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-20" id="dWa-hP-Z4e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0VC-Oy-jwo" secondAttribute="trailing" constant="-15" id="df1-Xw-Jfm"/>
                             <constraint firstItem="Zuq-Ix-Bxi" firstAttribute="top" secondItem="xRC-9A-9ee" secondAttribute="bottom" constant="8" id="dfe-6x-T5p"/>
-                            <constraint firstItem="WHJ-fP-y3y" firstAttribute="top" secondItem="uLv-GO-hVW" secondAttribute="bottom" constant="8" id="eLO-NE-90o"/>
-                            <constraint firstItem="cT9-Tj-xVj" firstAttribute="top" secondItem="fTi-9C-EQT" secondAttribute="bottom" constant="8" id="fEa-4d-gfT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cT9-Tj-xVj" secondAttribute="trailing" constant="-20" id="gyp-Ig-bCU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uLv-GO-hVW" secondAttribute="trailing" constant="-15" id="heM-ub-ajG"/>
-                            <constraint firstItem="WHJ-fP-y3y" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="iuE-Ev-9T3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WHJ-fP-y3y" secondAttribute="trailing" constant="-15" id="j5Y-4L-yUm"/>
+                            <constraint firstItem="fTi-9C-EQT" firstAttribute="centerY" secondItem="8DH-t8-1PM" secondAttribute="centerY" id="kxj-8a-IWE"/>
+                            <constraint firstItem="7Kj-xO-ecG" firstAttribute="top" secondItem="fTi-9C-EQT" secondAttribute="bottom" constant="14" id="nPv-1Q-EEF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3dn-G7-aJZ" secondAttribute="trailing" constant="-15" id="pcU-4w-WSJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zuq-Ix-Bxi" secondAttribute="trailing" constant="-15" id="uEO-uv-4Iy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lCb-TT-VeC" secondAttribute="trailing" constant="-15" id="ufQ-zP-BmU"/>
@@ -1552,18 +1551,12 @@ Institute </string>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Parking" id="p7u-um-xRi">
-                        <barButtonItem key="rightBarButtonItem" title="History" id="Va6-Eh-2vZ">
-                            <connections>
-                                <segue destination="odO-hm-Lvz" kind="show" id="IPA-Yu-X3r"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Parking" id="p7u-um-xRi"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buildingButtons" destination="Zuq-Ix-Bxi" id="uX2-mE-6ap"/>
-                        <outlet property="elevatorButtons" destination="WHJ-fP-y3y" id="Rxp-t7-RJa"/>
                         <outlet property="floorButtons" destination="3dn-G7-aJZ" id="nnu-yb-hGZ"/>
+                        <outlet property="parkView" destination="7Kj-xO-ecG" id="oWE-L4-a5o"/>
                         <outlet property="savedParkingDate" destination="YN8-u6-3hX" id="E50-Y8-VK2"/>
                         <outlet property="savedParkingFloor" destination="ucR-CW-vxg" id="cwH-sm-mNV"/>
                         <outlet property="savedParkingSpot" destination="HPt-Pl-uTS" id="xAo-Bg-tyQ"/>
@@ -1572,7 +1565,7 @@ Institute </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xgO-HW-7CA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2145" y="62"/>
+            <point key="canvasLocation" x="2145" y="70"/>
         </scene>
         <!--History-->
         <scene sceneID="IvO-Ol-bAX">
@@ -1850,95 +1843,88 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <action selector="changedFloor:" destination="B5n-Ui-7sL" eventType="valueChanged" id="1MJ-0r-1Ue"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elevator Used" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmm-We-pw0" userLabel="Elevator">
-                                <rect key="frame" x="5" y="236" width="590" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A4a-Ke-ZGP" userLabel="ElevatorButtons">
-                                <rect key="frame" x="5" y="265" width="590" height="29"/>
-                                <segments>
-                                    <segment title="Main"/>
-                                    <segment title="Star"/>
-                                    <segment title="Fish"/>
-                                    <segment title="Women's"/>
-                                    <segment title="Heart"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changedElevator:" destination="B5n-Ui-7sL" eventType="valueChanged" id="xja-XO-6BO"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6V-TG-zaK">
-                                <rect key="frame" x="10" y="305" width="585" height="30"/>
-                                <state key="normal" title="Save"/>
+                                <rect key="frame" x="0.0" y="260" width="600" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Save" backgroundImage="ButtonDarkBlue.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="save:" destination="B5n-Ui-7sL" eventType="touchUpInside" id="Vlw-lB-E5I"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jt0-mu-Dnf">
-                                <rect key="frame" x="10" y="343" width="255" height="143"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ae-qU-qbM">
+                                <rect key="frame" x="10" y="324" width="580" height="212"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INO-lF-4xR">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Building" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt6-6W-jIO" userLabel="Saved Parking Building">
-                                        <rect key="frame" x="0.0" y="26" width="255" height="30"/>
-                                        <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saved Parking Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM2-eJ-ieE">
-                                        <rect key="frame" x="0.0" y="61" width="152" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-Kw-3HH">
-                                        <rect key="frame" x="0.0" y="91" width="40" height="23"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text="Saved Parking Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dna-xM-Eeq">
-                                        <rect key="frame" x="0.0" y="122" width="151" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jt0-mu-Dnf">
+                                        <rect key="frame" x="25" y="20" width="95" height="143"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INO-lF-4xR">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt6-6W-jIO" userLabel="Saved Parking Building">
+                                                <rect key="frame" x="0.0" y="26" width="7" height="30"/>
+                                                <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM2-eJ-ieE">
+                                                <rect key="frame" x="0.0" y="61" width="5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-Kw-3HH">
+                                                <rect key="frame" x="0.0" y="91" width="5" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dna-xM-Eeq">
+                                                <rect key="frame" x="0.0" y="122" width="5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="dna-xM-Eeq" firstAttribute="top" secondItem="ucx-Kw-3HH" secondAttribute="bottom" constant="8" symbolic="YES" id="Epj-aI-MNG"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jt0-mu-Dnf" firstAttribute="top" secondItem="1ae-qU-qbM" secondAttribute="top" constant="20" id="lWb-yI-faT"/>
+                                    <constraint firstItem="jt0-mu-Dnf" firstAttribute="leading" secondItem="1ae-qU-qbM" secondAttribute="leading" constant="25" id="vfx-Yh-D23"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="pmm-We-pw0" secondAttribute="trailing" constant="-15" id="1oR-Kb-NSX"/>
-                            <constraint firstItem="pmm-We-pw0" firstAttribute="top" secondItem="rRB-Xe-inL" secondAttribute="bottom" constant="8" id="6UH-Yc-7Dg"/>
-                            <constraint firstItem="A4a-Ke-ZGP" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="6pc-yY-C3e"/>
                             <constraint firstItem="rRB-Xe-inL" firstAttribute="top" secondItem="DhO-sq-oqc" secondAttribute="bottom" constant="8" id="9Tt-VZ-WFX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hW6-Nq-jvf" secondAttribute="trailing" constant="-15" id="Chx-Cn-IlW"/>
-                            <constraint firstItem="O6V-TG-zaK" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-10" id="EAv-XU-UCk"/>
-                            <constraint firstItem="A4a-Ke-ZGP" firstAttribute="top" secondItem="pmm-We-pw0" secondAttribute="bottom" constant="8" id="Ej5-ZL-5lj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="O6V-TG-zaK" secondAttribute="trailing" constant="-15" id="FZl-7f-JOK"/>
+                            <constraint firstItem="O6V-TG-zaK" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-20" id="EAv-XU-UCk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O6V-TG-zaK" secondAttribute="trailing" constant="-20" id="FZl-7f-JOK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DhO-sq-oqc" secondAttribute="trailing" constant="-15" id="JX6-uE-2pJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1ae-qU-qbM" secondAttribute="trailing" constant="-10" id="P21-AM-TdX"/>
                             <constraint firstItem="hW6-Nq-jvf" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="PG0-xq-w6r"/>
-                            <constraint firstItem="jt0-mu-Dnf" firstAttribute="top" secondItem="O6V-TG-zaK" secondAttribute="bottom" constant="8" symbolic="YES" id="R7e-u3-yNO"/>
                             <constraint firstItem="EjI-Oc-Q6L" firstAttribute="top" secondItem="K53-kU-tMb" secondAttribute="bottom" constant="13" id="UU9-xw-wEx"/>
+                            <constraint firstItem="1ae-qU-qbM" firstAttribute="top" secondItem="X17-Bh-aJN" secondAttribute="top" constant="324" id="WdJ-hj-nds"/>
                             <constraint firstItem="EjI-Oc-Q6L" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="aW4-Ot-Du8"/>
+                            <constraint firstItem="Des-g1-1sQ" firstAttribute="top" secondItem="1ae-qU-qbM" secondAttribute="bottom" constant="20" id="dsl-ef-yOR"/>
                             <constraint firstItem="DhO-sq-oqc" firstAttribute="top" secondItem="hW6-Nq-jvf" secondAttribute="bottom" constant="8" id="fpv-jG-Gtf"/>
                             <constraint firstItem="hW6-Nq-jvf" firstAttribute="top" secondItem="CiH-td-16l" secondAttribute="bottom" constant="8" id="gIW-Mz-0k0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CiH-td-16l" secondAttribute="trailing" constant="-15" id="hWF-WO-JDB"/>
-                            <constraint firstItem="pmm-We-pw0" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="lEf-hz-O5o"/>
-                            <constraint firstItem="O6V-TG-zaK" firstAttribute="top" secondItem="A4a-Ke-ZGP" secondAttribute="bottom" constant="12" id="qf5-6w-Qle"/>
+                            <constraint firstItem="1ae-qU-qbM" firstAttribute="top" secondItem="O6V-TG-zaK" secondAttribute="bottom" constant="24" id="oV8-oS-FmS"/>
                             <constraint firstItem="CiH-td-16l" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="qoK-IL-82G"/>
-                            <constraint firstItem="jt0-mu-Dnf" firstAttribute="leading" secondItem="O6V-TG-zaK" secondAttribute="leading" id="sWD-dd-w20"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EjI-Oc-Q6L" secondAttribute="trailing" constant="-15" id="sqs-2i-XcN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rRB-Xe-inL" secondAttribute="trailing" constant="-15" id="tqB-dw-Nbo"/>
                             <constraint firstItem="rRB-Xe-inL" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="u2t-31-UI1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="A4a-Ke-ZGP" secondAttribute="trailing" constant="-15" id="vL2-bY-eSR"/>
+                            <constraint firstItem="1ae-qU-qbM" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-10" id="u47-fe-QY0"/>
                             <constraint firstItem="DhO-sq-oqc" firstAttribute="leading" secondItem="X17-Bh-aJN" secondAttribute="leadingMargin" constant="-15" id="vOC-gq-G42"/>
                             <constraint firstItem="CiH-td-16l" firstAttribute="top" secondItem="EjI-Oc-Q6L" secondAttribute="bottom" constant="8" id="yM1-tS-uxA"/>
                         </constraints>
@@ -1947,24 +1933,26 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     <navigationItem key="navigationItem" title="Parking" id="cb6-0s-zNp">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="4gM-Gf-F9O">
                             <connections>
-                                <segue destination="JWc-UJ-WIP" kind="show" identifier="onCampusView" id="SoW-dI-v9z"/>
+                                <action selector="nextView:" destination="B5n-Ui-7sL" id="KY9-tN-lOj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="buildingButtons" destination="hW6-Nq-jvf" id="YMP-oq-8MV"/>
-                        <outlet property="elevatorButtons" destination="A4a-Ke-ZGP" id="zrp-zf-syy"/>
                         <outlet property="floorButtons" destination="rRB-Xe-inL" id="S2H-T0-ePi"/>
+                        <outlet property="nextBut" destination="4gM-Gf-F9O" id="mHj-4Q-MSS"/>
+                        <outlet property="parkView" destination="1ae-qU-qbM" id="Olx-j1-c4K"/>
                         <outlet property="savedParkingDate" destination="ucx-Kw-3HH" id="k6H-UF-BhA"/>
                         <outlet property="savedParkingFloor" destination="BM2-eJ-ieE" id="a9B-v8-fPN"/>
                         <outlet property="savedParkingSpot" destination="Vt6-6W-jIO" id="Yka-9p-O0y"/>
                         <outlet property="savedParkingTime" destination="dna-xM-Eeq" id="8dE-T4-EZf"/>
+                        <segue destination="JWc-UJ-WIP" kind="show" identifier="onCampusView" id="GBK-65-bXX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="te5-HQ-b8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1423" y="2431"/>
+            <point key="canvasLocation" x="1447" y="2463"/>
         </scene>
         <!--DirectorySpecific-->
         <scene sceneID="EqV-uW-CeN">
@@ -2156,14 +2144,15 @@ Personal data should be relevant to the purposes for which it is to be used, and
     </scenes>
     <resources>
         <image name="ButtonDarkBlue.png" width="40" height="40"/>
-        <image name="Car.png" width="50" height="50"/>
-        <image name="Home.png" width="50" height="50"/>
+        <image name="DirectionsTab" width="25" height="25"/>
+        <image name="HomeTab" width="25" height="25"/>
         <image name="List-100.png" width="100" height="100"/>
-        <image name="Map.png" width="50" height="50"/>
         <image name="More.png" width="50" height="50"/>
+        <image name="MoreTab" width="25" height="25"/>
+        <image name="ParkingTab" width="25" height="25"/>
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SoW-dI-v9z"/>
+        <segue reference="YCW-oQ-6O4"/>
     </inferredMetricsTieBreakers>
 </document>
