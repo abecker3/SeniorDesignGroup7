@@ -15,6 +15,7 @@ struct Directory
     var floor: String
     var hours: String
     var ext: Int //phone extension, named ext because extension is a keyword
+    var notes: String //any additional notes about each location, especially about entering restricted areas
 }
 
 
