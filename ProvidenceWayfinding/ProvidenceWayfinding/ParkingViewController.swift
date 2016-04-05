@@ -88,6 +88,8 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         savedParkingDate.text = dateSave[0]
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
+        
+        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0)
 
     }
     
@@ -159,20 +161,18 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         savedParkingDate.text = dateSave[0]
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
+        
+        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0)
 
     }
 
     @IBAction func routeToCar(sender: AnyObject) {
+        routeFromWhichScreen = 1
+        flagForPlace = 1
+        tabBarController?.selectedIndex = 1
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (sender!.tag == 2){
-            let nextViewController = segue.destinationViewController as! SurveyViewController
-            nextViewController.flagFromOther = 1
-            nextViewController.endLocation = Directory(name: "Test", category: "NA", floor: "NA", hours: "NA", ext: 0)
-            let test = SurveyViewController.flagFromOther
-            tabBarController?.selectedIndex = 1
-        }
         if (sender!.tag == 1){
             let nextViewController = segue.destinationViewController as! HistoryViewController
             if (indexFlag == 1){

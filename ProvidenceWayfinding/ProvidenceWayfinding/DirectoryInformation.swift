@@ -15,7 +15,7 @@ struct Directory
     var floor: String
     var hours: String
     var ext: Int //phone extension, named ext because extension is a keyword
-    var notes: String //any additional notes about each location, especially about entering restricted areas
+//    var notes: String //any additional notes about each location, especially about entering restricted areas
 }
 
 
@@ -81,3 +81,5 @@ let directory = [
 ]
 
 var parkingEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA", ext: 0)
+var routeFromWhichScreen = 0
+var flagForPlace = 0
