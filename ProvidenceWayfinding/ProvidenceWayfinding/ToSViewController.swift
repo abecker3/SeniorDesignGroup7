@@ -10,6 +10,7 @@ import UIKit
 
 class ToSViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
+    let defaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -78,3 +78,5 @@ let directory = [
     Directory(name: "Valet Parking", category: "Women's Health Center", floor: "L2", hours: "", ext: 0),
     Directory(name: "Women's Health Center", category: "Women's Health Center", floor: "L2", hours: "9AM to 5PM", ext: 42400),
 ]
+
+var parkingEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA", ext: 0)

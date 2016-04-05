@@ -23,6 +23,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     var passOutTextFieldTag: Int!
     var startLocation: Directory!
     var endLocation: Directory!
+    var flagFromOther = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +44,18 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         currentTextField.tag = 0
         destinationTextField.tag = 1
         
-        //Init currentLocation
-        startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        print(flagFromOther)
+        if (flagFromOther == 0){
+            startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0)
+        }
+        if (flagFromOther == 1){
+            print("Hekki")
+            segmentedControl.selectedSegmentIndex = 1
+            destinationTextField.text = endLocation.name
+        }
     }
     
     @IBAction func changedOnOff(sender: UISegmentedControl) {
