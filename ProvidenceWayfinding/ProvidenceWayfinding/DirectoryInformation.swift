@@ -80,6 +80,7 @@ let directory = [
     Directory(name: "Women's Health Center", category: "Women's Health Center", floor: "L2", hours: "9AM to 5PM", ext: 42400),
 ]
 
+var directoryEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA", ext: 0)
 var parkingEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA", ext: 0)
 var routeFromWhichScreen = 0
 var flagForPlace = 0

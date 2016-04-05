@@ -1460,10 +1460,10 @@ Institute </string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Kj-xO-ecG">
-                                <rect key="frame" x="11" y="334" width="578" height="161"/>
+                                <rect key="frame" x="11" y="334" width="578" height="156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Tj-xVj">
-                                        <rect key="frame" x="25" y="10" width="95" height="142"/>
+                                        <rect key="frame" x="25" y="10" width="95" height="138"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-cD-9WC">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
@@ -1472,26 +1472,26 @@ Institute </string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Pl-uTS" userLabel="Saved Parking Building">
-                                                <rect key="frame" x="0.0" y="26" width="7" height="30"/>
+                                                <rect key="frame" x="0.0" y="26" width="7" height="28"/>
                                                 <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-CW-vxg">
-                                                <rect key="frame" x="0.0" y="61" width="5" height="21"/>
+                                                <rect key="frame" x="0.0" y="59" width="5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
-                                                <rect key="frame" x="0.0" y="90" width="5" height="23"/>
+                                                <rect key="frame" x="0.0" y="86" width="5" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-js-Yum">
-                                                <rect key="frame" x="0.0" y="121" width="5" height="21"/>
+                                                <rect key="frame" x="0.0" y="117" width="5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1511,10 +1511,10 @@ Institute </string>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="b2m-ON-fLm">
-                                <rect key="frame" x="0.0" y="515" width="600" height="40"/>
+                                <rect key="frame" x="0.0" y="510" width="600" height="45"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="253-Sg-GG7">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
                                         <accessibility key="accessibilityConfiguration" identifier="goToHistory"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="History" backgroundImage="ButtonDarkBlue.png">
@@ -1525,8 +1525,11 @@ Institute </string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCO-iv-Gjm">
-                                        <rect key="frame" x="301" y="0.0" width="299" height="40"/>
+                                        <rect key="frame" x="301" y="0.0" width="299" height="45"/>
                                         <accessibility key="accessibilityConfiguration" identifier="routeToCar"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="qeI-Cm-KnA"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Route to Car" backgroundImage="ButtonDarkBlue.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1985,27 +1988,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKJ-1B-1lP">
-                                <rect key="frame" x="1" y="199" width="599" height="352"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZoI-GK-ZyN">
-                                        <rect key="frame" x="0.0" y="0.0" width="599" height="352"/>
-                                    </imageView>
-                                </subviews>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ZoI-GK-ZyN" secondAttribute="trailing" id="AgX-pm-erY"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="centerX" secondItem="RKJ-1B-1lP" secondAttribute="centerX" id="HfX-eM-g9L"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZoI-GK-ZyN" secondAttribute="bottom" id="gWR-WT-zHC"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="leading" secondItem="RKJ-1B-1lP" secondAttribute="leading" id="sz6-3Q-Hmq"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="centerY" secondItem="RKJ-1B-1lP" secondAttribute="centerY" id="wmy-PF-Nz6"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="top" secondItem="RKJ-1B-1lP" secondAttribute="top" id="xhD-IY-ZhV"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="Ako-5N-Tn5" id="0aw-NW-1y3"/>
-                                    <outletCollection property="gestureRecognizers" destination="Hny-37-kOO" appends="YES" id="CHU-ow-5Ro"/>
-                                </connections>
-                            </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-hZ-HD9" userLabel="Left Stack">
                                 <rect key="frame" x="8" y="69" width="150" height="125"/>
                                 <subviews>
@@ -2079,21 +2061,30 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogv-aE-tSg">
+                                <rect key="frame" x="0.0" y="505" width="600" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="jcs-rT-Tq9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Take Me Here" backgroundImage="ButtonDarkBlue.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeMeHere:" destination="Ako-5N-Tn5" eventType="touchUpInside" id="cL4-a8-cN0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0wK-32-ZIC" firstAttribute="top" secondItem="mC7-t3-Uro" secondAttribute="bottom" constant="5" id="3td-Gp-Mb5"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="top" secondItem="zHg-hZ-HD9" secondAttribute="bottom" constant="5" id="65h-2t-OuJ"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-19" id="739-rE-avi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RKJ-1B-1lP" secondAttribute="trailing" constant="-20" id="Arr-LB-ILu"/>
-                            <constraint firstItem="a1b-2S-EkS" firstAttribute="top" secondItem="RKJ-1B-1lP" secondAttribute="bottom" id="LtK-66-Oc0"/>
+                            <constraint firstItem="Ogv-aE-tSg" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-20" id="EQe-0V-HDT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ogv-aE-tSg" secondAttribute="trailing" constant="-20" id="IoO-II-x0q"/>
+                            <constraint firstItem="a1b-2S-EkS" firstAttribute="top" secondItem="Ogv-aE-tSg" secondAttribute="bottom" constant="1" id="Kre-Pg-Xv3"/>
                             <constraint firstItem="zHg-hZ-HD9" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-12" id="QJ5-t3-kTn"/>
                             <constraint firstItem="0wK-32-ZIC" firstAttribute="leading" secondItem="zHg-hZ-HD9" secondAttribute="trailing" id="UlS-9F-ZfL"/>
                             <constraint firstItem="zHg-hZ-HD9" firstAttribute="top" secondItem="mC7-t3-Uro" secondAttribute="bottom" constant="5" id="YCf-75-EmC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0wK-32-ZIC" secondAttribute="trailing" constant="-10" id="cbM-Fv-OkI"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="top" secondItem="0wK-32-ZIC" secondAttribute="bottom" constant="5" id="pNh-3a-DgG"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="top" secondItem="0wK-32-ZIC" secondAttribute="bottom" constant="5" id="u17-74-Otg"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="centerX" secondItem="9aM-U2-xOD" secondAttribute="centerX" id="zeO-BF-1Ea"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Directory" id="Nka-vN-isG">
@@ -2103,15 +2094,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <outlet property="buildingLabel" destination="rw8-w7-jej" id="g3x-6I-aXc"/>
                         <outlet property="directorySpecificTitle" destination="Nka-vN-isG" id="XUa-pr-daI"/>
                         <outlet property="floorLabel" destination="i4y-ja-OJm" id="5MO-aU-JWJ"/>
-                        <outlet property="floorMap" destination="ZoI-GK-ZyN" id="tNb-1P-X84"/>
                         <outlet property="hoursLabel" destination="i1Z-AU-biw" id="658-lz-g8U"/>
                         <outlet property="nameLabel" destination="fgB-7b-7kD" id="aKk-em-1Co"/>
                         <outlet property="phoneLabel" destination="vaF-3c-cpf" id="M1u-z8-ioB"/>
-                        <outlet property="scrollMap" destination="RKJ-1B-1lP" id="qlv-fu-E66"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCF-ZY-EHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Hny-37-kOO"/>
             </objects>
             <point key="canvasLocation" x="3644" y="2381"/>
         </scene>
