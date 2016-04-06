@@ -89,7 +89,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
         
-        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0)
+        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
 
     }
     
@@ -162,7 +162,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
         
-        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0)
+        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
 
     }
 

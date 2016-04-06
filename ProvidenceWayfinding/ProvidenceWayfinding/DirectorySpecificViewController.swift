@@ -20,7 +20,6 @@ class DirectorySpecificViewController: UIViewController {
     var floor: String!
     var notes: String!
     var thisFloor = String()
-    var fileExtension = String()
     var allLocationsClicked: Bool = false
     var phoneNumber = String()
     
@@ -39,31 +38,10 @@ class DirectorySpecificViewController: UIViewController {
         getInfoFromName(directory)
         directorySpecificTitle.title = passInName
         phoneLabel.text = String(phoneExt)
-        //[UIApplication, sharedApplication], openURL,[NSURL, URLWithString,"telprompt:5094743131"];
         hoursLabel.text = hours
         buildingLabel.text = building
         floorLabel.text = floor
         notesLabel.text = notes
-        //phoneLabel.text =
-        fileExtension = ".jpg"
-        
-        //setMap()
-    }
-    
-    func setMap(){
-        switch building{
-        case "Children's Hospital": thisFloor = "Childrens_" + floor + fileExtension
-        case "Main Tower": thisFloor = "Main_" + floor + fileExtension
-        case "Women's Health Center": thisFloor = "Womens_" + floor + fileExtension
-        case "Heart Institute": thisFloor = "Heart_" + floor + fileExtension
-        default: "NotAvailable.jpg"
-        }
-        
-        //floorMap.image = UIImage(named: thisFloor)
-        //floorMap.contentMode = UIViewContentMode.ScaleAspectFit
-        
-        self.scrollMap.maximumZoomScale = 5.0
-        self.scrollMap.clipsToBounds = true
     }
     
     private func callNumber(phoneNumber:String) {
@@ -97,7 +75,7 @@ class DirectorySpecificViewController: UIViewController {
     @IBAction func takeMeHere(sender: AnyObject) {
         routeFromWhichScreen = 2
         flagForPlace = 1
-        directoryEntry = Directory(name: passInName, category: building, floor: floor, hours: hours, ext: phoneExt)
+        directoryEntry = Directory(name: passInName, category: building, floor: floor, hours: hours, ext: phoneExt, notes: notes)
         tabBarController?.selectedIndex = 1
     }
     
