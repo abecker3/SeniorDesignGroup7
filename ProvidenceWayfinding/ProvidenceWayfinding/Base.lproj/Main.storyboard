@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -843,10 +843,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vsP-Uc-7iF" userLabel="SideStackView">
+                            <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vsP-Uc-7iF" userLabel="SideStackView">
                                 <rect key="frame" x="0.0" y="99" width="30" height="374"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L1-pR-4SX">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L1-pR-4SX">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal">
@@ -858,7 +858,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Eh6-Cu-m9C"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeK-KQ-Ieg">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeK-KQ-Ieg">
                                         <rect key="frame" x="0.0" y="37" width="30" height="38"/>
                                         <state key="normal">
                                             <string key="title"> 6 
@@ -869,7 +869,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="K29-AI-zp5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUa-cD-JG4">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUa-cD-JG4">
                                         <rect key="frame" x="0.0" y="75" width="30" height="37"/>
                                         <state key="normal">
                                             <string key="title"> 5 
@@ -880,7 +880,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="kq8-0e-DcP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6K-OE-KfQ">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6K-OE-KfQ">
                                         <rect key="frame" x="0.0" y="112" width="30" height="38"/>
                                         <state key="normal">
                                             <string key="title"> 4 
@@ -891,7 +891,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Zn7-h2-nNs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAe-9M-9JX">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAe-9M-9JX">
                                         <rect key="frame" x="0.0" y="150" width="30" height="37"/>
                                         <state key="normal">
                                             <string key="title"> 3 
@@ -902,7 +902,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="IAN-2p-jc2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTw-aq-VXs">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTw-aq-VXs">
                                         <rect key="frame" x="0.0" y="187" width="30" height="37"/>
                                         <state key="normal">
                                             <string key="title"> 2 
@@ -913,7 +913,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="g8O-Q6-GuX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY6-AL-Qxd">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY6-AL-Qxd">
                                         <rect key="frame" x="0.0" y="224" width="30" height="38"/>
                                         <state key="normal">
                                             <string key="title"> 1 
@@ -924,7 +924,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="OcR-d4-0ND"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvT-JU-Nsn">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvT-JU-Nsn">
                                         <rect key="frame" x="0.0" y="262" width="30" height="37"/>
                                         <state key="normal">
                                             <string key="title"> LL1 
@@ -935,7 +935,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="9rR-7F-adg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-R5-Pb8">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-R5-Pb8">
                                         <rect key="frame" x="0.0" y="299" width="30" height="38"/>
                                         <state key="normal">
                                             <string key="title"> LL2 
@@ -946,7 +946,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Qu0-2A-lc9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZB-YK-zMq">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZB-YK-zMq">
                                         <rect key="frame" x="0.0" y="337" width="30" height="37"/>
                                         <state key="normal">
                                             <string key="title"> LL3   
@@ -1449,19 +1449,9 @@ Institute </string>
                                     <action selector="changedFloor:" destination="SGN-Ov-oTL" eventType="valueChanged" id="7Sh-gT-tTd"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="253-Sg-GG7">
-                                <rect key="frame" x="0.0" y="515" width="600" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="History" backgroundImage="ButtonDarkBlue.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="odO-hm-Lvz" kind="show" id="n5w-su-Dw8"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTi-9C-EQT">
                                 <rect key="frame" x="0.0" y="280" width="600" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Save" backgroundImage="ButtonDarkBlue.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1470,10 +1460,10 @@ Institute </string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Kj-xO-ecG">
-                                <rect key="frame" x="11" y="334" width="578" height="161"/>
+                                <rect key="frame" x="11" y="334" width="578" height="156"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Tj-xVj">
-                                        <rect key="frame" x="25" y="10" width="95" height="143"/>
+                                        <rect key="frame" x="25" y="10" width="95" height="138"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-cD-9WC">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
@@ -1482,26 +1472,26 @@ Institute </string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPt-Pl-uTS" userLabel="Saved Parking Building">
-                                                <rect key="frame" x="0.0" y="26" width="7" height="30"/>
+                                                <rect key="frame" x="0.0" y="26" width="7" height="28"/>
                                                 <edgeInsets key="layoutMargins" top="8" left="12" bottom="8" right="8"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-CW-vxg">
-                                                <rect key="frame" x="0.0" y="61" width="5" height="21"/>
+                                                <rect key="frame" x="0.0" y="59" width="5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN8-u6-3hX">
-                                                <rect key="frame" x="0.0" y="91" width="5" height="23"/>
+                                                <rect key="frame" x="0.0" y="86" width="5" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gci-js-Yum">
-                                                <rect key="frame" x="0.0" y="122" width="5" height="21"/>
+                                                <rect key="frame" x="0.0" y="117" width="5" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1525,15 +1515,42 @@ Institute </string>
                                     <constraint firstItem="cT9-Tj-xVj" firstAttribute="centerY" secondItem="7Kj-xO-ecG" secondAttribute="centerY" constant="1" id="dmP-Te-j3Z"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="b2m-ON-fLm">
+                                <rect key="frame" x="0.0" y="510" width="600" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="253-Sg-GG7">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="goToHistory"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="History" backgroundImage="ButtonDarkBlue.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="odO-hm-Lvz" kind="show" id="n5w-su-Dw8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCO-iv-Gjm">
+                                        <rect key="frame" x="301" y="0.0" width="299" height="45"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="routeToCar"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="qeI-Cm-KnA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Route to Car" backgroundImage="ButtonDarkBlue.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="routeToCar:" destination="SGN-Ov-oTL" eventType="touchUpInside" id="PHn-z5-hk7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="253-Sg-GG7" firstAttribute="leading" secondItem="fTi-9C-EQT" secondAttribute="leading" id="0Mz-PQ-rUb"/>
-                            <constraint firstItem="253-Sg-GG7" firstAttribute="trailing" secondItem="fTi-9C-EQT" secondAttribute="trailing" id="0gq-vU-eeS"/>
                             <constraint firstItem="lCb-TT-VeC" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="1kd-tL-LsC"/>
                             <constraint firstItem="0VC-Oy-jwo" firstAttribute="top" secondItem="qrb-6B-eaa" secondAttribute="bottom" constant="13" id="31Y-0w-bFW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xRC-9A-9ee" secondAttribute="trailing" constant="-15" id="3VU-z9-vba"/>
-                            <constraint firstItem="253-Sg-GG7" firstAttribute="top" secondItem="7Kj-xO-ecG" secondAttribute="bottom" constant="20" id="3fp-Fx-tLR"/>
                             <constraint firstItem="0VC-Oy-jwo" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="7NF-WA-uAy"/>
                             <constraint firstItem="lCb-TT-VeC" firstAttribute="top" secondItem="Zuq-Ix-Bxi" secondAttribute="bottom" constant="8" id="Bxz-7e-bnu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fTi-9C-EQT" secondAttribute="trailing" constant="-20" id="I1x-f5-Xew"/>
@@ -1541,17 +1558,22 @@ Institute </string>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="top" secondItem="0VC-Oy-jwo" secondAttribute="bottom" constant="8" id="MYI-9i-YUl"/>
                             <constraint firstItem="7Kj-xO-ecG" firstAttribute="trailing" secondItem="3dn-G7-aJZ" secondAttribute="trailing" constant="-6" id="MxB-yW-mjO"/>
                             <constraint firstItem="7Kj-xO-ecG" firstAttribute="leading" secondItem="3dn-G7-aJZ" secondAttribute="leading" constant="6" id="Nda-hx-peo"/>
-                            <constraint firstItem="bEV-I2-gX0" firstAttribute="top" secondItem="253-Sg-GG7" secondAttribute="bottom" constant="1" id="QBQ-bW-OJJ"/>
                             <constraint firstItem="3dn-G7-aJZ" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="Xuf-ZA-nsL"/>
                             <constraint firstItem="fTi-9C-EQT" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-20" id="dWa-hP-Z4e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0VC-Oy-jwo" secondAttribute="trailing" constant="-15" id="df1-Xw-Jfm"/>
                             <constraint firstItem="Zuq-Ix-Bxi" firstAttribute="top" secondItem="xRC-9A-9ee" secondAttribute="bottom" constant="8" id="dfe-6x-T5p"/>
+                            <constraint firstItem="b2m-ON-fLm" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-20" id="hjn-kQ-Sgo"/>
+                            <constraint firstItem="b2m-ON-fLm" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-20" id="iHc-fY-Xu0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b2m-ON-fLm" secondAttribute="trailing" constant="-20" id="iuj-Lx-Sl7"/>
                             <constraint firstItem="fTi-9C-EQT" firstAttribute="centerY" secondItem="8DH-t8-1PM" secondAttribute="centerY" id="kxj-8a-IWE"/>
                             <constraint firstItem="7Kj-xO-ecG" firstAttribute="top" secondItem="fTi-9C-EQT" secondAttribute="bottom" constant="14" id="nPv-1Q-EEF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3dn-G7-aJZ" secondAttribute="trailing" constant="-15" id="pcU-4w-WSJ"/>
+                            <constraint firstItem="b2m-ON-fLm" firstAttribute="top" secondItem="7Kj-xO-ecG" secondAttribute="bottom" constant="20" id="rLG-tf-gyl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b2m-ON-fLm" secondAttribute="trailing" constant="-20" id="sHe-mt-cM5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zuq-Ix-Bxi" secondAttribute="trailing" constant="-15" id="uEO-uv-4Iy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lCb-TT-VeC" secondAttribute="trailing" constant="-15" id="ufQ-zP-BmU"/>
                             <constraint firstItem="3dn-G7-aJZ" firstAttribute="top" secondItem="lCb-TT-VeC" secondAttribute="bottom" constant="8" id="vw3-hN-1Sn"/>
+                            <constraint firstItem="bEV-I2-gX0" firstAttribute="top" secondItem="b2m-ON-fLm" secondAttribute="bottom" constant="1" id="yk1-v9-Vmu"/>
                             <constraint firstItem="Zuq-Ix-Bxi" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="ztf-eD-YGw"/>
                         </constraints>
                     </view>
@@ -1971,27 +1993,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKJ-1B-1lP">
-                                <rect key="frame" x="1" y="199" width="599" height="352"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZoI-GK-ZyN">
-                                        <rect key="frame" x="0.0" y="0.0" width="599" height="352"/>
-                                    </imageView>
-                                </subviews>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ZoI-GK-ZyN" secondAttribute="trailing" id="AgX-pm-erY"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="centerX" secondItem="RKJ-1B-1lP" secondAttribute="centerX" id="HfX-eM-g9L"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZoI-GK-ZyN" secondAttribute="bottom" id="gWR-WT-zHC"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="leading" secondItem="RKJ-1B-1lP" secondAttribute="leading" id="sz6-3Q-Hmq"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="centerY" secondItem="RKJ-1B-1lP" secondAttribute="centerY" id="wmy-PF-Nz6"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="top" secondItem="RKJ-1B-1lP" secondAttribute="top" id="xhD-IY-ZhV"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="Ako-5N-Tn5" id="0aw-NW-1y3"/>
-                                    <outletCollection property="gestureRecognizers" destination="Hny-37-kOO" appends="YES" id="CHU-ow-5Ro"/>
-                                </connections>
-                            </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-hZ-HD9" userLabel="Left Stack">
                                 <rect key="frame" x="8" y="69" width="150" height="125"/>
                                 <subviews>
@@ -2065,21 +2066,30 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogv-aE-tSg">
+                                <rect key="frame" x="0.0" y="505" width="600" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="jcs-rT-Tq9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Take Me Here" backgroundImage="ButtonDarkBlue.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takeMeHere:" destination="Ako-5N-Tn5" eventType="touchUpInside" id="cL4-a8-cN0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0wK-32-ZIC" firstAttribute="top" secondItem="mC7-t3-Uro" secondAttribute="bottom" constant="5" id="3td-Gp-Mb5"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="top" secondItem="zHg-hZ-HD9" secondAttribute="bottom" constant="5" id="65h-2t-OuJ"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-19" id="739-rE-avi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RKJ-1B-1lP" secondAttribute="trailing" constant="-20" id="Arr-LB-ILu"/>
-                            <constraint firstItem="a1b-2S-EkS" firstAttribute="top" secondItem="RKJ-1B-1lP" secondAttribute="bottom" id="LtK-66-Oc0"/>
+                            <constraint firstItem="Ogv-aE-tSg" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-20" id="EQe-0V-HDT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ogv-aE-tSg" secondAttribute="trailing" constant="-20" id="IoO-II-x0q"/>
+                            <constraint firstItem="a1b-2S-EkS" firstAttribute="top" secondItem="Ogv-aE-tSg" secondAttribute="bottom" constant="1" id="Kre-Pg-Xv3"/>
                             <constraint firstItem="zHg-hZ-HD9" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-12" id="QJ5-t3-kTn"/>
                             <constraint firstItem="0wK-32-ZIC" firstAttribute="leading" secondItem="zHg-hZ-HD9" secondAttribute="trailing" id="UlS-9F-ZfL"/>
                             <constraint firstItem="zHg-hZ-HD9" firstAttribute="top" secondItem="mC7-t3-Uro" secondAttribute="bottom" constant="5" id="YCf-75-EmC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0wK-32-ZIC" secondAttribute="trailing" constant="-10" id="cbM-Fv-OkI"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="top" secondItem="0wK-32-ZIC" secondAttribute="bottom" constant="5" id="pNh-3a-DgG"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="top" secondItem="0wK-32-ZIC" secondAttribute="bottom" constant="5" id="u17-74-Otg"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="centerX" secondItem="9aM-U2-xOD" secondAttribute="centerX" id="zeO-BF-1Ea"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Directory" id="Nka-vN-isG">
@@ -2089,15 +2099,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <outlet property="buildingLabel" destination="rw8-w7-jej" id="g3x-6I-aXc"/>
                         <outlet property="directorySpecificTitle" destination="Nka-vN-isG" id="XUa-pr-daI"/>
                         <outlet property="floorLabel" destination="i4y-ja-OJm" id="5MO-aU-JWJ"/>
-                        <outlet property="floorMap" destination="ZoI-GK-ZyN" id="tNb-1P-X84"/>
                         <outlet property="hoursLabel" destination="i1Z-AU-biw" id="658-lz-g8U"/>
                         <outlet property="nameLabel" destination="fgB-7b-7kD" id="aKk-em-1Co"/>
                         <outlet property="phoneLabel" destination="vaF-3c-cpf" id="M1u-z8-ioB"/>
-                        <outlet property="scrollMap" destination="RKJ-1B-1lP" id="qlv-fu-E66"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCF-ZY-EHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Hny-37-kOO"/>
             </objects>
             <point key="canvasLocation" x="3644" y="2381"/>
         </scene>

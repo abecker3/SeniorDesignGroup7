@@ -31,8 +31,8 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var mapType: Int!
     var pinAnnotationView:MKPinAnnotationView!
     var locationManager: CLLocationManager?
-    var endLocation: Location!
-    var startLocation: Location!
+    var endLocation: Directory!
+    var startLocation: Directory!
     var counterForCurLocationButton = 0 //counter used in curLocationButton that changes map settings
     var hidden = false //flag used in hideView func
     var regionChangeIsFromUserInteraction = false //bool value for checking if user moved map
