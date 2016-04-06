@@ -18,15 +18,18 @@ class DirectorySpecificViewController: UIViewController {
     var hours: String!
     var building: String!
     var floor: String!
+    var notes: String!
     var thisFloor = String()
     var fileExtension = String()
     var allLocationsClicked: Bool = false
+    var phoneNumber = String()
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var buildingLabel: UILabel!
     @IBOutlet weak var floorLabel: UILabel!
+    @IBOutlet var notesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,13 +42,15 @@ class DirectorySpecificViewController: UIViewController {
         getInfoFromName(directory)
         directorySpecificTitle.title = passInName
         phoneLabel.text = String(phoneExt)
+        //[UIApplication, sharedApplication], openURL,[NSURL, URLWithString,"telprompt:5094743131"];
         hoursLabel.text = hours
         buildingLabel.text = building
         floorLabel.text = floor
+        notesLabel.text = notes
         //phoneLabel.text =
         fileExtension = ".jpg"
         
-        setMap()
+        //setMap()
     }
     
     func setMap(){
@@ -57,11 +62,21 @@ class DirectorySpecificViewController: UIViewController {
         default: "NotAvailable.jpg"
         }
         
-        floorMap.image = UIImage(named: thisFloor)
-        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
+        //floorMap.image = UIImage(named: thisFloor)
+        //floorMap.contentMode = UIViewContentMode.ScaleAspectFit
         
         self.scrollMap.maximumZoomScale = 5.0
         self.scrollMap.clipsToBounds = true
+    }
+    
+    private func callNumber(phoneNumber:String) {
+        let phoneNumber = "5094743131" + phoneLabel.text!
+        if let phoneCallURL:NSURL = NSURL(string: "tel://\(phoneNumber)") {
+            let application:UIApplication = UIApplication.sharedApplication()
+            if (application.canOpenURL(phoneCallURL)) {
+                application.openURL(phoneCallURL);
+            }
+        }
     }
     
     func getInfoFromName(inputArray: [Directory]!) -> [String]!
@@ -76,6 +91,7 @@ class DirectorySpecificViewController: UIViewController {
                 hours = x.hours
                 building = x.category
                 floor = x.floor
+                notes = x.notes
             }
         }
         return newArray

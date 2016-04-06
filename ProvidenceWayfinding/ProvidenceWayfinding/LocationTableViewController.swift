@@ -153,7 +153,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
                 return x
             }
         }
-        return Directory(name: "Admitting", category: "Main Tower", floor: "Main", hours: "NA", ext: 0)
+        return Directory(name: "Admitting", category: "Main Tower", floor: "Main", hours: "NA", ext: 0, notes: "")
     }
     
     //Pop back 2 once a row is selected

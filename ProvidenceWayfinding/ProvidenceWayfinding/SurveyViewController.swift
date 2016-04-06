@@ -44,7 +44,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         destinationTextField.tag = 1
         
         //Init currentLocation
-        startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0)
+        startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
     }
     
     @IBAction func changedOnOff(sender: UISegmentedControl) {
@@ -53,7 +53,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         {
             currentTextField.placeholder = "Off Campus"
             currentTextField.enabled = false
-            startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0)
+            startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
         }
         else if(title == "On")
         {

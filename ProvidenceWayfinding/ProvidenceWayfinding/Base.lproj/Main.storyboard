@@ -1966,27 +1966,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKJ-1B-1lP">
-                                <rect key="frame" x="1" y="199" width="599" height="352"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZoI-GK-ZyN">
-                                        <rect key="frame" x="0.0" y="0.0" width="599" height="352"/>
-                                    </imageView>
-                                </subviews>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ZoI-GK-ZyN" secondAttribute="trailing" id="AgX-pm-erY"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="centerX" secondItem="RKJ-1B-1lP" secondAttribute="centerX" id="HfX-eM-g9L"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZoI-GK-ZyN" secondAttribute="bottom" id="gWR-WT-zHC"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="leading" secondItem="RKJ-1B-1lP" secondAttribute="leading" id="sz6-3Q-Hmq"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="centerY" secondItem="RKJ-1B-1lP" secondAttribute="centerY" id="wmy-PF-Nz6"/>
-                                    <constraint firstItem="ZoI-GK-ZyN" firstAttribute="top" secondItem="RKJ-1B-1lP" secondAttribute="top" id="xhD-IY-ZhV"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="Ako-5N-Tn5" id="0aw-NW-1y3"/>
-                                    <outletCollection property="gestureRecognizers" destination="Hny-37-kOO" appends="YES" id="CHU-ow-5Ro"/>
-                                </connections>
-                            </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-hZ-HD9" userLabel="Left Stack">
                                 <rect key="frame" x="8" y="69" width="150" height="125"/>
                                 <subviews>
@@ -2060,21 +2039,20 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yw7-6i-jJR">
+                                <rect key="frame" x="8" y="194" width="582" height="129"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0wK-32-ZIC" firstAttribute="top" secondItem="mC7-t3-Uro" secondAttribute="bottom" constant="5" id="3td-Gp-Mb5"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="top" secondItem="zHg-hZ-HD9" secondAttribute="bottom" constant="5" id="65h-2t-OuJ"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-19" id="739-rE-avi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RKJ-1B-1lP" secondAttribute="trailing" constant="-20" id="Arr-LB-ILu"/>
-                            <constraint firstItem="a1b-2S-EkS" firstAttribute="top" secondItem="RKJ-1B-1lP" secondAttribute="bottom" id="LtK-66-Oc0"/>
                             <constraint firstItem="zHg-hZ-HD9" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-12" id="QJ5-t3-kTn"/>
                             <constraint firstItem="0wK-32-ZIC" firstAttribute="leading" secondItem="zHg-hZ-HD9" secondAttribute="trailing" id="UlS-9F-ZfL"/>
                             <constraint firstItem="zHg-hZ-HD9" firstAttribute="top" secondItem="mC7-t3-Uro" secondAttribute="bottom" constant="5" id="YCf-75-EmC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0wK-32-ZIC" secondAttribute="trailing" constant="-10" id="cbM-Fv-OkI"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="top" secondItem="0wK-32-ZIC" secondAttribute="bottom" constant="5" id="pNh-3a-DgG"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="top" secondItem="0wK-32-ZIC" secondAttribute="bottom" constant="5" id="u17-74-Otg"/>
-                            <constraint firstItem="RKJ-1B-1lP" firstAttribute="centerX" secondItem="9aM-U2-xOD" secondAttribute="centerX" id="zeO-BF-1Ea"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Directory" id="Nka-vN-isG">
@@ -2084,11 +2062,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <outlet property="buildingLabel" destination="rw8-w7-jej" id="g3x-6I-aXc"/>
                         <outlet property="directorySpecificTitle" destination="Nka-vN-isG" id="XUa-pr-daI"/>
                         <outlet property="floorLabel" destination="i4y-ja-OJm" id="5MO-aU-JWJ"/>
-                        <outlet property="floorMap" destination="ZoI-GK-ZyN" id="tNb-1P-X84"/>
                         <outlet property="hoursLabel" destination="i1Z-AU-biw" id="658-lz-g8U"/>
                         <outlet property="nameLabel" destination="fgB-7b-7kD" id="aKk-em-1Co"/>
+                        <outlet property="notesLabel" destination="Yw7-6i-jJR" id="kA4-q4-3Rd"/>
                         <outlet property="phoneLabel" destination="vaF-3c-cpf" id="M1u-z8-ioB"/>
-                        <outlet property="scrollMap" destination="RKJ-1B-1lP" id="qlv-fu-E66"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCF-ZY-EHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
