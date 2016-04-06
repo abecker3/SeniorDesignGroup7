@@ -113,6 +113,8 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
         saved = true
+        
+        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0)
     }
     
     @IBAction func changedBuilding(sender: UISegmentedControl) {

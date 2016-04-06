@@ -86,7 +86,6 @@ class CategoryTableViewController: UITableViewController/*, UISearchResultsUpdat
         options = uniqueCategoryArray(directory)
         options.append("All Locations")
         options.sortInPlace()
-        
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

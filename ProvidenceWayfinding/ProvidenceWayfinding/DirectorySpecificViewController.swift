@@ -33,10 +33,7 @@ class DirectorySpecificViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tap = UITapGestureRecognizer(target: self, action: "doubleTapped")
-        tap.numberOfTapsRequired = 2
-        view.addGestureRecognizer(tap)
+
         
         nameLabel.text = passInName
         getInfoFromName(directory)
@@ -96,17 +93,13 @@ class DirectorySpecificViewController: UIViewController {
         }
         return newArray
     }
-
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        return self.floorMap
+    
+    @IBAction func takeMeHere(sender: AnyObject) {
+        routeFromWhichScreen = 2
+        flagForPlace = 1
+        directoryEntry = Directory(name: passInName, category: building, floor: floor, hours: hours, ext: phoneExt)
+        tabBarController?.selectedIndex = 1
     }
     
-    func doubleTapped() {
-        if (scrollMap.zoomScale > 1){
-            scrollMap.setZoomScale(0.25, animated: true)
-        }
-        else{
-            scrollMap.setZoomScale(2, animated: true)
-        }
-    }
+
 }
