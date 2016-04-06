@@ -43,8 +43,46 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         currentTextField.tag = 0
         destinationTextField.tag = 1
         
-        //Init currentLocation
+        if (routeFromWhichScreen == 0){
+            startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        //From Parking
+        if (routeFromWhichScreen == 1){
+            if (flagForPlace == 1){
+                setPlaceHolder()
+            }
+            segmentedControl.selectedSegmentIndex = 1
+            destinationTextField.placeholder = parkingEntry.name + "Parking"
+            endLocation = parkingEntry
+            routeFromWhichScreen = 0
+        }
+            //From Directory
+        else if (routeFromWhichScreen == 2){
+            if (flagForPlace == 1){
+                clearPlaceHolder()
+            }
+            segmentedControl.selectedSegmentIndex = 0
+            destinationTextField.placeholder = directoryEntry.name
+            endLocation = directoryEntry
+            routeFromWhichScreen = 0
+        }
+    }
+    
+    func setPlaceHolder(){
+        currentTextField.placeholder = "Select Current Location"
+        currentTextField.enabled = true
+        startLocation = nil
+        flagForPlace = 0
+    }
+    
+    func clearPlaceHolder(){
+        currentTextField.placeholder = "Off Campus"
+        currentTextField.enabled = false
         startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
+        flagForPlace = 0
     }
     
     @IBAction func changedOnOff(sender: UISegmentedControl) {
