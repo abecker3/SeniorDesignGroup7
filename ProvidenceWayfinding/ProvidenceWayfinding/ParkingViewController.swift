@@ -19,6 +19,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     var timeSave = [String()]
     var keyNum = Int()
     var indexFlag = Int()
+    var buttonFlag = 0
     //Variables
     var endLocation: Location!
     var startLocation: Location!
@@ -39,11 +40,9 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var savedParkingDate: UILabel!
     @IBOutlet weak var buildingButtons: UISegmentedControl!
     @IBOutlet weak var floorButtons: UISegmentedControl!
-    //@IBOutlet weak var elevatorButtons: UISegmentedControl!
     
     var parkingLocationBuilding = String()
     var parkingLocationFloor = String()
-    //var parkingLocationElevator = String()
     var parkingLocation = String()
     var pathFlag = Int()
     
@@ -89,6 +88,8 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         savedParkingDate.text = dateSave[0]
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
+        
+        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
 
     }
     
@@ -115,17 +116,6 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         default: parkingLocationFloor = "N/A "
         }
     }
-    /*
-    @IBAction func changedElevator(sender: UISegmentedControl) {
-        let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
-        switch title{
-        case "Main"?: parkingLocationElevator = "Main Elevator "
-        case "Star"?: parkingLocationElevator = "Star Elevator "
-        case "Fish"?: parkingLocationElevator = "Fish Elevator "
-        case "Women's"?: parkingLocationElevator = "Women's Health Elevator "
-        default: parkingLocationElevator = "Heart Institute Elevator "
-        }
-    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -171,24 +161,32 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         savedParkingDate.text = dateSave[0]
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
+        
+        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
 
     }
-    
+
+    @IBAction func routeToCar(sender: AnyObject) {
+        routeFromWhichScreen = 1
+        flagForPlace = 1
+        tabBarController?.selectedIndex = 1
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let nextViewController = segue.destinationViewController as! HistoryViewController
-        if (indexFlag == 1){
-            nextViewController.curIndex = keyNum
-            nextViewController.flag = indexFlag
+        if (sender!.tag == 1){
+            let nextViewController = segue.destinationViewController as! HistoryViewController
+            if (indexFlag == 1){
+                nextViewController.curIndex = keyNum
+                nextViewController.flag = indexFlag
+            }
+            else{
+                nextViewController.flag = indexFlag
+            }
+            nextViewController.building = building
+            nextViewController.floor = floor
+            nextViewController.dateSave = dateSave
+            nextViewController.timeSave = timeSave
         }
-        else{
-            nextViewController.flag = indexFlag
-        }
-        //nextViewController.thisArray = theseSpots
-        nextViewController.building = building
-        nextViewController.floor = floor
-        nextViewController.dateSave = dateSave
-        nextViewController.timeSave = timeSave
     }
     
     func switchScreenGestureRight(sender: UIScreenEdgePanGestureRecognizer) {

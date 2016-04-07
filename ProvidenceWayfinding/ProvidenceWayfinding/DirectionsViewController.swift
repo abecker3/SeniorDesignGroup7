@@ -31,8 +31,8 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var mapType: Int!
     var pinAnnotationView:MKPinAnnotationView!
     var locationManager: CLLocationManager?
-    var endLocation: Location!
-    var startLocation: Location!
+    var endLocation: Directory!
+    var startLocation: Directory!
     var counterForCurLocationButton = 0 //counter used in curLocationButton that changes map settings
     var hidden = false //flag used in hideView func
     var regionChangeIsFromUserInteraction = false //bool value for checking if user moved map
@@ -118,7 +118,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         super.viewDidLoad()
         self.infoView.layer.borderWidth = 0.5
 
-        self.navigationController?.navigationBar.translucent = true //make top bar transluscent
+        self.navigationController?.navigationBar.translucent = false //make top bar transluscent
         self.locationManager?.distanceFilter = kCLDistanceFilterNone
         self.locationManager?.desiredAccuracy = kCLLocationAccuracyBest
         showMapView.showsUserLocation = true
@@ -349,7 +349,11 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
 
     //MARK - Actions
     @IBAction func OpenAppleMaps(sender: AnyObject, forEvent event: UIEvent) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://maps.apple.com/?saddr=\(showMapView.userLocation.coordinate.latitude),\(showMapView.userLocation.coordinate.longitude)&daddr=\(desPlace.coordinate.latitude),\(desPlace.coordinate.longitude)&dirflg=d")!)
+        if CLLocationManager.authorizationStatus() != .Denied && CLLocationManager.authorizationStatus() != .Restricted && CLLocationManager.authorizationStatus() != .NotDetermined{
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://maps.apple.com/?saddr=\(showMapView.userLocation.coordinate.latitude),\(showMapView.userLocation.coordinate.longitude)&daddr=\(desPlace.coordinate.latitude),\(desPlace.coordinate.longitude)&dirflg=d")!)
+        }else {
+            displayAlertWithTitle("Error", message: "Not able to route using Apple Maps without current location. Please insure that current locations are turned on, and the app is allowed to use current location. (Settings -> ProvidenceWayfinding -> Location)")
+        }
     }
     
     //Action for sensing pan gesture on map to tell if UserTrackingMode changed

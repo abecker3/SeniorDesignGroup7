@@ -18,22 +18,22 @@ class DirectorySpecificViewController: UIViewController {
     var hours: String!
     var building: String!
     var floor: String!
+    var notes: String!
     var thisFloor = String()
-    var fileExtension = String()
     var allLocationsClicked: Bool = false
+    var phoneNumber = String()
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var buildingLabel: UILabel!
     @IBOutlet weak var floorLabel: UILabel!
+    @IBOutlet var notesLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tap = UITapGestureRecognizer(target: self, action: "doubleTapped")
-        tap.numberOfTapsRequired = 2
-        view.addGestureRecognizer(tap)
+
         
         nameLabel.text = passInName
         getInfoFromName(directory)
@@ -42,26 +42,17 @@ class DirectorySpecificViewController: UIViewController {
         hoursLabel.text = hours
         buildingLabel.text = building
         floorLabel.text = floor
-        //phoneLabel.text =
-        fileExtension = ".jpg"
-        
-        setMap()
+        notesLabel.text = notes
     }
     
-    func setMap(){
-        switch building{
-        case "Children's Hospital": thisFloor = "Childrens_" + floor + fileExtension
-        case "Main Tower": thisFloor = "Main_" + floor + fileExtension
-        case "Women's Health Center": thisFloor = "Womens_" + floor + fileExtension
-        case "Heart Institute": thisFloor = "Heart_" + floor + fileExtension
-        default: "NotAvailable.jpg"
+    private func callNumber(phoneNumber:String) {
+        let phoneNumber = "5094743131" + phoneLabel.text!
+        if let phoneCallURL:NSURL = NSURL(string: "tel://\(phoneNumber)") {
+            let application:UIApplication = UIApplication.sharedApplication()
+            if (application.canOpenURL(phoneCallURL)) {
+                application.openURL(phoneCallURL);
+            }
         }
-        
-        floorMap.image = UIImage(named: thisFloor)
-        floorMap.contentMode = UIViewContentMode.ScaleAspectFit
-        
-        self.scrollMap.maximumZoomScale = 5.0
-        self.scrollMap.clipsToBounds = true
     }
     
     func getInfoFromName(inputArray: [Directory]!) -> [String]!
@@ -76,21 +67,18 @@ class DirectorySpecificViewController: UIViewController {
                 hours = x.hours
                 building = x.category
                 floor = x.floor
+                notes = x.notes
             }
         }
         return newArray
     }
-
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        return self.floorMap
+    
+    @IBAction func takeMeHere(sender: AnyObject) {
+        routeFromWhichScreen = 2
+        flagForPlace = 1
+        directoryEntry = Directory(name: passInName, category: building, floor: floor, hours: hours, ext: phoneExt, notes: notes)
+        tabBarController?.selectedIndex = 1
     }
     
-    func doubleTapped() {
-        if (scrollMap.zoomScale > 1){
-            scrollMap.setZoomScale(0.25, animated: true)
-        }
-        else{
-            scrollMap.setZoomScale(2, animated: true)
-        }
-    }
+
 }

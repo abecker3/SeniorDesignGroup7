@@ -22,7 +22,7 @@ class CategoryTableViewController: UITableViewController/*, UISearchResultsUpdat
     var resultSearchController = UISearchController()
     var filteredTableData = [String]()
     var options: [String]!
-    var locationOptions:[Location] = []
+    var locationOptions:[Directory] = []
     var searchActive: Bool = false
     var revisitView: Bool = false
     
@@ -31,21 +31,6 @@ class CategoryTableViewController: UITableViewController/*, UISearchResultsUpdat
         initOptions()
         
         definesPresentationContext = true
-        /*
-        self.resultSearchController = ({
-            let controller = UISearchController(searchResultsController: nil)
-            controller.searchResultsUpdater = self
-            controller.dimsBackgroundDuringPresentation = false
-            controller.searchBar.sizeToFit()
-            controller.searchBar.delegate = self
-            //controller.buildingTableView.delegate = self
-            
-            self.tableView.tableHeaderView = controller.searchBar
-            return controller
-        })()
-        
-        //Reload table
-        self.tableView.reloadData()*/
     }
     
     /*func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
@@ -98,17 +83,16 @@ class CategoryTableViewController: UITableViewController/*, UISearchResultsUpdat
     
     func initOptions()
     {
-        options = uniqueCategoryArray(locations)
+        options = uniqueCategoryArray(directory)
         options.append("All Locations")
         options.sortInPlace()
-        
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func uniqueCategoryArray(inputArray: [Location]!) -> [String]!
+    func uniqueCategoryArray(inputArray: [Directory]!) -> [String]!
     {
         var newArray = [String]()
         for x in inputArray
@@ -127,39 +111,17 @@ class CategoryTableViewController: UITableViewController/*, UISearchResultsUpdat
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return options.count
-        
-        //Takes the filtered data and assigns them to the number of rows needed
-        if(self.resultSearchController.active) {
-            return self.filteredTableData.count
-        }
-            
-            // No searching is going on so the table stays regular using the same number of rows as before
-        else {
-            return self.options.count
-        }
+        return options.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("building cell", forIndexPath: indexPath)
         
-        /*// Configure the cell...
+        // Configure the cell...
         let option = options[indexPath.row]
         cell.textLabel!.text = option
         
-        return cell*/
-        
-        if(self.resultSearchController.active) {
-            cell.textLabel?.text = filteredTableData[indexPath.row]
-            //cell.detailTextLabel!.text = "11 AM to 8 PM"
-            return cell
-        }
-            
-        else {
-            cell.textLabel?.text = options[indexPath.row]
-            //cell.detailTextLabel!.text = "11 AM to 8 PM"
-            return cell
-        }
+        return cell
     }
     
 /*   //Pop back 1 once a row is selected
