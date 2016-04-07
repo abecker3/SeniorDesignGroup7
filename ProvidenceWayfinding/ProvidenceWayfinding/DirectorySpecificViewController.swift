@@ -30,6 +30,7 @@ class DirectorySpecificViewController: UIViewController {
     @IBOutlet weak var floorLabel: UILabel!
     @IBOutlet var notesLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

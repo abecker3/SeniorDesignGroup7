@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -2132,12 +2132,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yw7-6i-jJR">
-                                <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeA-Dd-aCv">
                                 <rect key="frame" x="0.0" y="505" width="600" height="45"/>
                                 <constraints>
@@ -2150,6 +2144,12 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <action selector="takeMeHere:" destination="Ako-5N-Tn5" eventType="touchUpInside" id="T0c-eu-LwR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJi-Tx-GCt">
+                                <rect key="frame" x="8" y="202" width="582" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2172,13 +2172,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <outlet property="floorLabel" destination="i4y-ja-OJm" id="5MO-aU-JWJ"/>
                         <outlet property="hoursLabel" destination="i1Z-AU-biw" id="658-lz-g8U"/>
                         <outlet property="nameLabel" destination="fgB-7b-7kD" id="aKk-em-1Co"/>
-                        <outlet property="notesLabel" destination="Yw7-6i-jJR" id="kA4-q4-3Rd"/>
+                        <outlet property="notesLabel" destination="nJi-Tx-GCt" id="gBZ-Z4-3ao"/>
                         <outlet property="phoneLabel" destination="vaF-3c-cpf" id="M1u-z8-ioB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCF-ZY-EHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3644" y="2381"/>
+            <point key="canvasLocation" x="3644" y="2401"/>
         </scene>
         <!--SearchedDirectory-->
         <scene sceneID="qWP-Nk-Tel">
