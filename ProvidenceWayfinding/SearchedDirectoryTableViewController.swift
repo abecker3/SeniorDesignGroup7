@@ -41,6 +41,8 @@ class SearchedDirectoryTableViewController: UITableViewController, UISearchResul
         
         //Reload table
         self.tableView.reloadData()
+        extendedLayoutIncludesOpaqueBars = true; //keeps the search bar from disappearing on tap
+
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController)
