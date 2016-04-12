@@ -96,25 +96,59 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     @IBAction func changedBuilding(sender: UISegmentedControl) {
         let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
         switch title{
-        case "Main"?: parkingLocationBuilding = "Main Tower "
+        case "Doctors"?: parkingLocationBuilding = "Doctors Building "
+                        setFloorOptions(0)
         case "Children's"?: parkingLocationBuilding = "Children's Hospital "
+                        setFloorOptions(1)
         case "Women's"?: parkingLocationBuilding = "Women's Health Center "
+                        setFloorOptions(2)
         default: parkingLocationBuilding = "Heart Institute "
+                        setFloorOptions(3)
+        }
+    }
+    
+    func setFloorOptions(x: Int){
+        turnButtons(0, function: 1)
+        switch x{
+        case 1: floorButtons.setTitle("L6", forSegmentAtIndex: 0)
+                floorButtons.setTitle("L5", forSegmentAtIndex: 1)
+                floorButtons.setTitle("L4", forSegmentAtIndex: 2)
+                floorButtons.setTitle("UL4", forSegmentAtIndex:3)
+                floorButtons.setTitle("L3", forSegmentAtIndex: 4)
+                floorButtons.setTitle("L2", forSegmentAtIndex: 5)
+                floorButtons.setTitle("L1", forSegmentAtIndex: 6)
+                turnButtons(6,function: 0)
+        case 3: floorButtons.setTitle("P1", forSegmentAtIndex: 0)
+                floorButtons.setTitle("P2", forSegmentAtIndex: 1)
+                floorButtons.setTitle("P3", forSegmentAtIndex: 2)
+                floorButtons.setTitle("P4", forSegmentAtIndex: 3)
+                floorButtons.setTitle("P5", forSegmentAtIndex: 4)
+                turnButtons(4,function: 0)
+                turnButtons(5,function: 1)
+        default:floorButtons.setTitle("C", forSegmentAtIndex: 0)
+                turnButtons(0,function: 0)
+                turnButtons(1,function: 1)
+        }
+    }
+    
+    func turnButtons(var amount: Int, function: Int){
+        if function == 0{
+            while amount > -1 {
+                floorButtons.setEnabled(true, forSegmentAtIndex: amount)
+                amount--
+            }
+        }
+        else{
+            while amount < 8 {
+                floorButtons.setEnabled(false, forSegmentAtIndex: amount)
+                floorButtons.setTitle("", forSegmentAtIndex: amount)
+                amount++
+            }
         }
     }
     
     @IBAction func changedFloor(sender: UISegmentedControl) {
-        let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
-        switch title{
-        case "L6"?: parkingLocationFloor = "L6 "
-        case "L5"?: parkingLocationFloor = "L5 "
-        case "L4"?: parkingLocationFloor = "L4 "
-        case "UL4"?: parkingLocationFloor = "UL4 "
-        case "L3"?: parkingLocationFloor = "L3 "
-        case "L2"?: parkingLocationFloor = "L2 "
-        case "L1"?: parkingLocationFloor = "L1 "
-        default: parkingLocationFloor = "N/A "
-        }
+        parkingLocationFloor = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)!
     }
     
     override func viewDidLoad() {
@@ -131,9 +165,10 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         view.addGestureRecognizer(screenEdgeRecognizerLeft)
         
         // Do any additional setup after loading the view.
-        parkingLocationBuilding = "Main Tower "
-        //parkingLocationElevator = "Main Elevator "
-        parkingLocationFloor = "L6 "
+        parkingLocationBuilding = "Doctors Building"
+        parkingLocationFloor = "C"
+        
+        setFloorOptions(0)
     }
     
     override func viewDidAppear(animated: Bool) {
