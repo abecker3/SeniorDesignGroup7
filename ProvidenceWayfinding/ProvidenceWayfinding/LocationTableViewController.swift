@@ -34,6 +34,8 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         initControllerTitle()
         initOptions()
         
+        definesPresentationContext = true
+        
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
@@ -46,6 +48,8 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         
         //Reload table
         self.tableView.reloadData()
+        extendedLayoutIncludesOpaqueBars = true; //keeps the search bar from disappearing on tap
+
     }
     
     func updateSearchResultsForSearchController(searchController: UISearchController)
