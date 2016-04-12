@@ -87,13 +87,13 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func changedOnOff(sender: UISegmentedControl) {
         let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
-        if(title == "Off")
+        if(title == "Off Campus")
         {
             currentTextField.placeholder = "Off Campus"
             currentTextField.enabled = false
             startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
         }
-        else if(title == "On")
+        else if(title == "On Campus")
         {
             currentTextField.placeholder = "Select Current Location"
             currentTextField.enabled = true

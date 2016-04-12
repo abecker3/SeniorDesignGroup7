@@ -736,13 +736,10 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SNK-sc-V39">
-                                <rect key="frame" x="20" y="101" width="121" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="121" id="yTi-os-Xf0"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="101" width="560" height="29"/>
                                 <segments>
-                                    <segment title="Off"/>
-                                    <segment title="On"/>
+                                    <segment title="Off Campus"/>
+                                    <segment title="On Campus"/>
                                 </segments>
                                 <connections>
                                     <action selector="changedOnOff:" destination="mJf-vX-dEY" eventType="valueChanged" id="29Z-Oh-jUj"/>
@@ -808,6 +805,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="SNK-sc-V39" firstAttribute="leading" secondItem="29z-k8-yyW" secondAttribute="leadingMargin" id="bkt-Ju-2kg"/>
                             <constraint firstItem="zoq-YI-r9f" firstAttribute="top" secondItem="aYj-e8-x2Y" secondAttribute="bottom" constant="8" symbolic="YES" id="d75-hc-Xpw"/>
                             <constraint firstItem="CyH-3N-nLp" firstAttribute="top" secondItem="UVi-qD-b81" secondAttribute="bottom" constant="8" id="dSb-jD-wb6"/>
+                            <constraint firstItem="SNK-sc-V39" firstAttribute="width" secondItem="29z-k8-yyW" secondAttribute="width" constant="-40" id="h9M-0y-Rfy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AsR-K3-um2" secondAttribute="trailing" constant="-20" id="q9h-HC-02O"/>
                             <constraint firstItem="yJJ-hT-r7Y" firstAttribute="leading" secondItem="SNK-sc-V39" secondAttribute="leading" id="qKU-Kd-gxH"/>
                             <constraint firstItem="yJJ-hT-r7Y" firstAttribute="leading" secondItem="iWH-GQ-yCc" secondAttribute="leading" id="sZ4-ak-dry"/>
