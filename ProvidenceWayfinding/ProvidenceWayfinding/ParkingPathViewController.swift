@@ -131,23 +131,41 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         turnButtons(0, function: 1)
         switch x{
         case 1: floorButtons.setTitle("L6", forSegmentAtIndex: 0)
-        floorButtons.setTitle("L5", forSegmentAtIndex: 1)
-        floorButtons.setTitle("L4", forSegmentAtIndex: 2)
-        floorButtons.setTitle("UL4", forSegmentAtIndex:3)
-        floorButtons.setTitle("L3", forSegmentAtIndex: 4)
-        floorButtons.setTitle("L2", forSegmentAtIndex: 5)
-        floorButtons.setTitle("L1", forSegmentAtIndex: 6)
-        turnButtons(6,function: 0)
+                floorButtons.setTitle("L5", forSegmentAtIndex: 1)
+                floorButtons.setTitle("L4", forSegmentAtIndex: 2)
+                floorButtons.setTitle("UL4", forSegmentAtIndex:3)
+                floorButtons.setTitle("L3", forSegmentAtIndex: 4)
+                turnButtons(4,function: 0)
+                parkingLocationFloor = "L6"
+                floorButtons.selectedSegmentIndex = 0
+        case 2: floorButtons.setTitle("P2", forSegmentAtIndex: 0)
+                floorButtons.setTitle("P3", forSegmentAtIndex: 1)
+                floorButtons.setTitle("P4", forSegmentAtIndex: 2)
+                floorButtons.setTitle("P5", forSegmentAtIndex: 3)
+                turnButtons(3,function: 0)
+                turnButtons(4,function: 1)
+                parkingLocationFloor = "P2"
+                floorButtons.selectedSegmentIndex = 0
         case 3: floorButtons.setTitle("P1", forSegmentAtIndex: 0)
-        floorButtons.setTitle("P2", forSegmentAtIndex: 1)
-        floorButtons.setTitle("P3", forSegmentAtIndex: 2)
-        floorButtons.setTitle("P4", forSegmentAtIndex: 3)
-        floorButtons.setTitle("P5", forSegmentAtIndex: 4)
-        turnButtons(4,function: 0)
-        turnButtons(5,function: 1)
+                floorButtons.setTitle("P2", forSegmentAtIndex: 1)
+                floorButtons.setTitle("P3", forSegmentAtIndex: 2)
+                floorButtons.setTitle("P4", forSegmentAtIndex: 3)
+                floorButtons.setTitle("P5", forSegmentAtIndex: 4)
+                turnButtons(4,function: 0)
+                turnButtons(5,function: 1)
+                parkingLocationFloor = "P1"
+                floorButtons.selectedSegmentIndex = 0
         default:floorButtons.setTitle("C", forSegmentAtIndex: 0)
-        turnButtons(0,function: 0)
-        turnButtons(1,function: 1)
+                floorButtons.setTitle("D", forSegmentAtIndex: 1)
+                floorButtons.setTitle("E", forSegmentAtIndex: 2)
+                floorButtons.setTitle("F", forSegmentAtIndex: 3)
+                floorButtons.setTitle("5", forSegmentAtIndex: 4)
+                floorButtons.setTitle("6", forSegmentAtIndex: 5)
+                floorButtons.setTitle("7", forSegmentAtIndex: 6)
+                turnButtons(6,function: 0)
+                turnButtons(7,function: 1)
+                parkingLocationFloor = "C"
+                floorButtons.selectedSegmentIndex = 0
         }
     }
     
@@ -159,7 +177,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
             }
         }
         else{
-            while amount < 8 {
+            while amount < 7 {
                 floorButtons.setEnabled(false, forSegmentAtIndex: amount)
                 floorButtons.setTitle("", forSegmentAtIndex: amount)
                 amount++

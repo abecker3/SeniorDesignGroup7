@@ -1443,7 +1443,6 @@ Institute </string>
                                     <segment title=""/>
                                     <segment title=""/>
                                     <segment title=""/>
-                                    <segment title=""/>
                                 </segments>
                                 <connections>
                                     <action selector="changedFloor:" destination="SGN-Ov-oTL" eventType="valueChanged" id="7Sh-gT-tTd"/>
@@ -1894,14 +1893,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rRB-Xe-inL" userLabel="FloorButtons">
                                 <rect key="frame" x="5" y="200" width="590" height="29"/>
                                 <segments>
-                                    <segment title="L6"/>
-                                    <segment title="L5"/>
-                                    <segment title="L4"/>
-                                    <segment title="UL4"/>
-                                    <segment title="L3"/>
-                                    <segment title="L2"/>
-                                    <segment title="L1"/>
-                                    <segment title="N/A"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
                                 </segments>
                                 <connections>
                                     <action selector="changedFloor:" destination="B5n-Ui-7sL" eventType="valueChanged" id="1MJ-0r-1Ue"/>
