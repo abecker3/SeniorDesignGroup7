@@ -44,7 +44,6 @@ let directory = [
     Directory(name: "Gift Shop", category: "Main Tower", floor: "Main", hours: "9:30AM to 5:30PM M-T, 7AM to7:30PM F, 10:30AM to 5PM weekends", ext: 43285, notes: ""),
     Directory(name: "ICU Information", category: "Main Tower", floor: "2", hours: "9AM to 5PM", ext: 43310, notes: "No visitors under 18"),
     Directory(name: "Labor & Delivery", category: "Women's Health Center", floor: "2", hours: "9AM to 5PM", ext: 46460, notes: ""),
-    Directory(name: "Madison Inn", category: "Madison Inn", floor: "n/a", hours: "9AM to 5PM", ext: 4744200, notes: ""),
     Directory(name: "Main Entrance Information", category: "Main Tower", floor: "Main", hours: "9AM to 5PM", ext: 43227, notes: ""),
     Directory(name: "Main Floor Back Entrance Information", category: "Main Tower", floor: "1", hours: "9AM to 5PM", ext: 43226, notes: ""),
     Directory(name: "Maternal-Fetal Medicine", category: "Women's Health Center", floor: "Main", hours: "8AM to 5PM", ext: 44060, notes: ""),
