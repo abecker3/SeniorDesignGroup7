@@ -34,7 +34,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         initControllerTitle()
         initOptions()
         
-        definesPresentationContext = true
+        //definesPresentationContext = true
         
         self.resultSearchController = ({
             let controller = UISearchController(searchResultsController: nil)
