@@ -34,6 +34,15 @@ class HistoryViewController: UITableViewController{
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath)! as! BasicDirectionsCell
+        
+        parkingHistEntry = Directory(name: cell.titleLabel.text!, category: "Parking", floor: cell.subtitleLabel.text!, hours: "NA", ext: 0, notes: "")
+        
+        routeFromWhichScreen = 3
+        flagForPlace = 1
+        tabBarController?.selectedIndex = 1
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -82,5 +82,6 @@ let directory = [
 
 var directoryEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
 var parkingEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
+var parkingHistEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
 var routeFromWhichScreen = 0
 var flagForPlace = 0
