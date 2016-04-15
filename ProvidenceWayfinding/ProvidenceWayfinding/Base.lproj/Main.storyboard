@@ -663,7 +663,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
             </objects>
             <point key="canvasLocation" x="298" y="-871"/>
         </scene>
-        <!--Survey-->
+        <!--Directions-->
         <scene sceneID="9YK-HS-Gg7">
             <objects>
                 <viewController id="mJf-vX-dEY" customClass="SurveyViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
@@ -813,7 +813,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="yJJ-hT-r7Y" firstAttribute="top" secondItem="SNK-sc-V39" secondAttribute="bottom" constant="28" id="wA3-g4-Lun"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Survey" id="XdC-4a-okb"/>
+                    <navigationItem key="navigationItem" title="Directions" id="XdC-4a-okb"/>
                     <connections>
                         <outlet property="currentTextField" destination="XZb-yv-FJr" id="Vdm-kb-3UY"/>
                         <outlet property="destinationTextField" destination="QBs-9j-EE8" id="Ku3-Kp-7fT"/>
@@ -842,114 +842,115 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vsP-Uc-7iF" userLabel="SideStackView">
-                                <rect key="frame" x="0.0" y="99" width="30" height="374"/>
+                                <rect key="frame" x="0.0" y="99" width="40" height="374"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L1-pR-4SX">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal">
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 7
 </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Eh6-Cu-m9C"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeK-KQ-Ieg">
-                                        <rect key="frame" x="0.0" y="37" width="30" height="38"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="0.0" y="37" width="40" height="38"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 6 
 </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="K29-AI-zp5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUa-cD-JG4">
-                                        <rect key="frame" x="0.0" y="75" width="30" height="37"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="0.0" y="75" width="40" height="37"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 5 
 </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="kq8-0e-DcP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6K-OE-KfQ">
-                                        <rect key="frame" x="0.0" y="112" width="30" height="38"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="0.0" y="112" width="40" height="38"/>
+                                        <size key="titleShadowOffset" width="0.0" height="2.2250738585072014e-308"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 4 
 </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Zn7-h2-nNs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAe-9M-9JX">
-                                        <rect key="frame" x="0.0" y="150" width="30" height="37"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="0.0" y="150" width="40" height="37"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 3 
 </string>
-                                            <color key="titleColor" red="0.023529411764705882" green="0.2196078431372549" blue="0.47843137254901957" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="IAN-2p-jc2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTw-aq-VXs">
-                                        <rect key="frame" x="0.0" y="187" width="30" height="37"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="0.0" y="187" width="40" height="37"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 2 
 </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="g8O-Q6-GuX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY6-AL-Qxd">
-                                        <rect key="frame" x="0.0" y="224" width="30" height="38"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="0.0" y="224" width="40" height="38"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 1 
 </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="OcR-d4-0ND"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvT-JU-Nsn">
-                                        <rect key="frame" x="0.0" y="262" width="30" height="37"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="0.0" y="262" width="40" height="37"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> LL1 
 </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="9rR-7F-adg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-R5-Pb8">
-                                        <rect key="frame" x="0.0" y="299" width="30" height="38"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="0.0" y="299" width="40" height="38"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> LL2 
 </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Qu0-2A-lc9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZB-YK-zMq">
-                                        <rect key="frame" x="0.0" y="337" width="30" height="37"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="0.0" y="337" width="40" height="37"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> LL3   
 </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="a68-nP-BC3"/>
@@ -957,49 +958,52 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="AKL-HE-P1D" userLabel="BottomStackView">
-                                <rect key="frame" x="20" y="485" width="560" height="66"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="AKL-HE-P1D" userLabel="BottomStackView">
+                                <rect key="frame" x="20" y="511" width="560" height="54"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2Sr-c1-QWQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="97" height="48"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="54"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> Main 
-Tower </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+Tower 
+</string>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="mainPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="4oA-6e-cva"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="d0D-xd-cqc">
-                                        <rect key="frame" x="97" y="0.0" width="129" height="48"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="97" y="0.0" width="129" height="54"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title">  Heart 
-Institute </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+Institute 
+</string>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="heartPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Hgu-59-Cxo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="iTh-fI-FFl">
-                                        <rect key="frame" x="226" y="0.0" width="177" height="48"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="226" y="0.0" width="177" height="54"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> Children's 
-  Hospital </string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+  Hospital 
+</string>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="childrensPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="xwT-qv-hrL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cQ6-RQ-gTj">
-                                        <rect key="frame" x="403" y="0.0" width="157" height="66"/>
-                                        <state key="normal">
+                                        <rect key="frame" x="403" y="0.0" width="157" height="54"/>
+                                        <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title">Women's 
   Health 
   Center</string>
-                                            <color key="titleColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="womensPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="a1s-WG-mW4"/>
@@ -1016,10 +1020,10 @@ Institute </string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwv-bf-FI8">
-                                <rect key="frame" x="30" y="99" width="570" height="374"/>
+                                <rect key="frame" x="40" y="99" width="560" height="374"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9cv-bu-GbI">
-                                        <rect key="frame" x="0.0" y="0.0" width="570" height="374"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="374"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -1416,7 +1420,7 @@ Institute </string>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zuq-Ix-Bxi" userLabel="BuildingButtons">
                                 <rect key="frame" x="5" y="135" width="590" height="29"/>
                                 <segments>
-                                    <segment title="Main"/>
+                                    <segment title="Doctors"/>
                                     <segment title="Children's"/>
                                     <segment title="Women's"/>
                                     <segment title="Heart"/>
@@ -1434,24 +1438,23 @@ Institute </string>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3dn-G7-aJZ" userLabel="FloorButtons">
                                 <rect key="frame" x="5" y="200" width="590" height="29"/>
                                 <segments>
-                                    <segment title="L6"/>
-                                    <segment title="L5"/>
-                                    <segment title="L4"/>
-                                    <segment title="UL4"/>
-                                    <segment title="L3"/>
-                                    <segment title="L2"/>
-                                    <segment title="L1"/>
-                                    <segment title="N/A"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
                                 </segments>
                                 <connections>
                                     <action selector="changedFloor:" destination="SGN-Ov-oTL" eventType="valueChanged" id="7Sh-gT-tTd"/>
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Kj-xO-ecG">
-                                <rect key="frame" x="11" y="304" width="578" height="191"/>
+                                <rect key="frame" x="11" y="300" width="578" height="195"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-Tj-xVj">
-                                        <rect key="frame" x="25" y="28" width="95" height="136"/>
+                                        <rect key="frame" x="25" y="30" width="95" height="136"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Parked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssf-cD-9WC">
                                                 <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
@@ -1587,6 +1590,7 @@ Institute </string>
                             <constraint firstItem="0VC-Oy-jwo" firstAttribute="top" secondItem="qrb-6B-eaa" secondAttribute="bottom" constant="13" id="31Y-0w-bFW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xRC-9A-9ee" secondAttribute="trailing" constant="-15" id="3VU-z9-vba"/>
                             <constraint firstItem="0VC-Oy-jwo" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="7NF-WA-uAy"/>
+                            <constraint firstItem="fTi-9C-EQT" firstAttribute="top" secondItem="3dn-G7-aJZ" secondAttribute="bottom" constant="20" id="8Qk-rj-1PN"/>
                             <constraint firstItem="lCb-TT-VeC" firstAttribute="top" secondItem="Zuq-Ix-Bxi" secondAttribute="bottom" constant="8" id="Bxz-7e-bnu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fTi-9C-EQT" secondAttribute="trailing" constant="-20" id="I1x-f5-Xew"/>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="KFE-hI-8k5"/>
@@ -1600,8 +1604,7 @@ Institute </string>
                             <constraint firstItem="b2m-ON-fLm" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-20" id="hjn-kQ-Sgo"/>
                             <constraint firstItem="b2m-ON-fLm" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-20" id="iHc-fY-Xu0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b2m-ON-fLm" secondAttribute="trailing" constant="-20" id="iuj-Lx-Sl7"/>
-                            <constraint firstItem="fTi-9C-EQT" firstAttribute="centerY" secondItem="8DH-t8-1PM" secondAttribute="centerY" constant="-32" id="kxj-8a-IWE"/>
-                            <constraint firstItem="7Kj-xO-ecG" firstAttribute="top" secondItem="fTi-9C-EQT" secondAttribute="bottom" priority="251" constant="15" id="nPv-1Q-EEF"/>
+                            <constraint firstItem="7Kj-xO-ecG" firstAttribute="top" secondItem="fTi-9C-EQT" secondAttribute="bottom" constant="11" id="jE2-xf-C0G"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3dn-G7-aJZ" secondAttribute="trailing" constant="-15" id="pcU-4w-WSJ"/>
                             <constraint firstItem="b2m-ON-fLm" firstAttribute="top" secondItem="7Kj-xO-ecG" secondAttribute="bottom" priority="251" constant="15" id="rLG-tf-gyl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b2m-ON-fLm" secondAttribute="trailing" constant="-20" id="sHe-mt-cM5"/>
@@ -1874,7 +1877,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hW6-Nq-jvf" userLabel="BuildingButtons">
                                 <rect key="frame" x="5" y="135" width="590" height="29"/>
                                 <segments>
-                                    <segment title="Main"/>
+                                    <segment title="Doctors"/>
                                     <segment title="Children's"/>
                                     <segment title="Women's"/>
                                     <segment title="Heart"/>
@@ -1892,14 +1895,13 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rRB-Xe-inL" userLabel="FloorButtons">
                                 <rect key="frame" x="5" y="200" width="590" height="29"/>
                                 <segments>
-                                    <segment title="L6"/>
-                                    <segment title="L5"/>
-                                    <segment title="L4"/>
-                                    <segment title="UL4"/>
-                                    <segment title="L3"/>
-                                    <segment title="L2"/>
-                                    <segment title="L1"/>
-                                    <segment title="N/A"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
                                 </segments>
                                 <connections>
                                     <action selector="changedFloor:" destination="B5n-Ui-7sL" eventType="valueChanged" id="1MJ-0r-1Ue"/>
@@ -2142,8 +2144,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <action selector="takeMeHere:" destination="Ako-5N-Tn5" eventType="touchUpInside" id="T0c-eu-LwR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJi-Tx-GCt">
-                                <rect key="frame" x="8" y="202" width="582" height="62"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJi-Tx-GCt">
+                                <rect key="frame" x="8" y="202" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2155,6 +2157,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                             <constraint firstItem="0wK-32-ZIC" firstAttribute="top" secondItem="mC7-t3-Uro" secondAttribute="bottom" constant="5" id="3td-Gp-Mb5"/>
                             <constraint firstItem="aeA-Dd-aCv" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-20" id="5px-k0-3FU"/>
                             <constraint firstItem="QQQ-BI-Atw" firstAttribute="height" secondItem="i1Z-AU-biw" secondAttribute="height" id="DAC-D0-lF3"/>
+                            <constraint firstItem="nJi-Tx-GCt" firstAttribute="top" secondItem="0wK-32-ZIC" secondAttribute="bottom" constant="8" id="F7F-e4-EQN"/>
+                            <constraint firstItem="nJi-Tx-GCt" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-12" id="O6D-2c-etw"/>
                             <constraint firstItem="zHg-hZ-HD9" firstAttribute="leading" secondItem="9aM-U2-xOD" secondAttribute="leadingMargin" constant="-12" id="QJ5-t3-kTn"/>
                             <constraint firstItem="0wK-32-ZIC" firstAttribute="leading" secondItem="zHg-hZ-HD9" secondAttribute="trailing" id="UlS-9F-ZfL"/>
                             <constraint firstItem="zHg-hZ-HD9" firstAttribute="top" secondItem="mC7-t3-Uro" secondAttribute="bottom" constant="5" id="YCf-75-EmC"/>
@@ -2240,6 +2244,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YCW-oQ-6O4"/>
+        <segue reference="GBK-65-bXX"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -69,6 +69,16 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
             endLocation = directoryEntry
             routeFromWhichScreen = 0
         }
+        //From Parking History
+        else if (routeFromWhichScreen == 3){
+            if (flagForPlace == 1){
+                setPlaceHolder()
+            }
+            segmentedControl.selectedSegmentIndex = 1
+            destinationTextField.placeholder = parkingHistEntry.name + "Parking"
+            endLocation = parkingHistEntry
+            routeFromWhichScreen = 0
+        }
     }
     
     func setPlaceHolder(){

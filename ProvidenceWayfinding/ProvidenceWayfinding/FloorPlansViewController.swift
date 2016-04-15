@@ -57,20 +57,24 @@ class FloorPlansViewController: UIViewController {
         return self.floorMap
     }
     
+    func setButtons(a: Bool,b: Bool,c: Bool,d: Bool,e: Bool,f: Bool,g: Bool,h: Bool,i: Bool,j: Bool){
+        floorL3.enabled = a
+        floorL2.enabled = b
+        floorL1.enabled = c
+        floor1.enabled = d
+        floor2.enabled = e
+        floor3.enabled = f
+        floor4.enabled = g
+        floor5.enabled = h
+        floor6.enabled = i
+        floor7.enabled = j
+    }
+    
     func initialize(){
         building = "Main"
         floor = "1"
         textBuilding = "Main Tower"
-        floorL3.enabled = true
-        floorL2.enabled = true
-        floorL1.enabled = true
-        floor1.enabled = true
-        floor2.enabled = true
-        floor3.enabled = true
-        floor4.enabled = true
-        floor5.enabled = true
-        floor6.enabled = true
-        floor7.enabled = true
+        setButtons(true, b: true, c: true, d: true, e: true, f: true, g: true, h: true, i: true, j: true)
         textTitle.text = textBuilding + " Floor " + floor
         imageName = building + underscore + floor + fileExtension
         floorMap.image = UIImage(named: imageName)
@@ -83,16 +87,7 @@ class FloorPlansViewController: UIViewController {
         building = "Main"
         floor = "1"
         textBuilding = "Main Tower"
-        floorL3.enabled = true
-        floorL2.enabled = true
-        floorL1.enabled = true
-        floor1.enabled = true
-        floor2.enabled = true
-        floor3.enabled = true
-        floor4.enabled = true
-        floor5.enabled = true
-        floor6.enabled = true
-        floor7.enabled = true
+        setButtons(true, b: true, c: true, d: true, e: true, f: true, g: true, h: true, i: true, j: true)
         textTitle.text = textBuilding + " Floor " + floor
         imageName = building + underscore + floor + fileExtension
         floorMap.image = UIImage(named: imageName)
@@ -103,16 +98,7 @@ class FloorPlansViewController: UIViewController {
         building = "Heart"
         floor = "1"
         textBuilding = "Heart Institute"
-        floorL3.enabled = false
-        floorL2.enabled = false
-        floorL1.enabled = false
-        floor1.enabled = true
-        floor2.enabled = true
-        floor3.enabled = true
-        floor4.enabled = true
-        floor5.enabled = true
-        floor6.enabled = false
-        floor7.enabled = false
+        setButtons(false, b: false, c: false, d: true, e: true, f: true, g: true, h: true, i: false, j: false)
         textTitle.text = textBuilding + " Floor " + floor
         imageName = building + underscore + floor + fileExtension
         floorMap.image = UIImage(named: imageName)
@@ -123,16 +109,7 @@ class FloorPlansViewController: UIViewController {
         building = "Childrens"
         floor = "1"
         textBuilding = "Children's Hospital"
-        floorL3.enabled = true
-        floorL2.enabled = true
-        floorL1.enabled = true
-        floor1.enabled = true
-        floor2.enabled = true
-        floor3.enabled = true
-        floor4.enabled = true
-        floor5.enabled = false
-        floor6.enabled = false
-        floor7.enabled = false
+        setButtons(true, b: true, c: true, d: true, e: true, f: true, g: true, h: false, i: false, j: false)
         textTitle.text = textBuilding + " Floor " + floor
         imageName = building + underscore + floor + fileExtension
         floorMap.image = UIImage(named: imageName)
@@ -143,16 +120,7 @@ class FloorPlansViewController: UIViewController {
         building = "Womens"
         floor = "1"
         textBuilding = "Womens Health Center"
-        floorL3.enabled = true
-        floorL2.enabled = true
-        floorL1.enabled = true
-        floor1.enabled = true
-        floor2.enabled = true
-        floor3.enabled = true
-        floor4.enabled = true
-        floor5.enabled = false
-        floor6.enabled = false
-        floor7.enabled = false
+        setButtons(true, b: true, c: true, d: true, e: true, f: true, g: true, h: false, i: false, j: false)
         textTitle.text = textBuilding + " Floor " + floor
         imageName = building + underscore + floor + fileExtension
         floorMap.image = UIImage(named: imageName)

@@ -6,6 +6,8 @@
 //  Copyright © 2016 GU. All rights reserved.
 //
 
+var flagTut = 0
+
 import UIKit
 
 class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
@@ -29,9 +31,12 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     @IBAction func restartAction(sender: AnyObject) {
-        var startVC = self.viewControllerAtIndex(0) as ContentViewController
-        var viewControllers = NSArray(object: startVC)
-        self.pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Forward, animated: true, completion: nil)
+        if (flagTut != 0){
+            var startVC = self.viewControllerAtIndex(0) as ContentViewController
+            var viewControllers = NSArray(object: startVC)
+            self.pageViewController.setViewControllers(viewControllers as! [UIViewController], direction: .Reverse, animated: true, completion: nil)
+            flagTut = 0
+        }
     }
     
     func viewControllerAtIndex(index: Int) -> ContentViewController
@@ -57,6 +62,7 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
             return nil
         }
         index--
+        flagTut = index
         return self.viewControllerAtIndex(index)
     }
     
@@ -69,6 +75,7 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
             return nil
         }
         index++
+        flagTut = index
         if (index == self.pageTitles.count)
         {
             return nil
