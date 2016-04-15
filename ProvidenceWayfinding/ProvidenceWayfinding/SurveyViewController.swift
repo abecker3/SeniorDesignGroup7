@@ -49,6 +49,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     }
     
     override func viewDidAppear(animated: Bool) {
+        resetToRootView = 0
         //From Parking
         if (routeFromWhichScreen == 1){
             if (flagForPlace == 1){

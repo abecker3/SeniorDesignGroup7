@@ -36,6 +36,12 @@ class MapDetailsViewController: UIViewController, UITableViewDelegate, UITableVi
         setMapType()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if(resetToRootView == 1){
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+    }
+    
     func setMapType(){
         if mapType == nil {
             mapStyle.selectedSegmentIndex = 0
