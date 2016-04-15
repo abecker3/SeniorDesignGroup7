@@ -85,3 +85,4 @@ var parkingEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA
 var parkingHistEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
 var routeFromWhichScreen = 0
 var flagForPlace = 0
+var resetToRootView = 0

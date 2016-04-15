@@ -33,6 +33,12 @@ class CategoryTableViewController: UITableViewController/*, UISearchResultsUpdat
         definesPresentationContext = true
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if(resetToRootView == 1){
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+    }
+    
     /*func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
         if(!resultSearchController.active)
         {

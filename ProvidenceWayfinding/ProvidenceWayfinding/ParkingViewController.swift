@@ -222,6 +222,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     @IBAction func routeToCar(sender: AnyObject) {
         routeFromWhichScreen = 1
         flagForPlace = 1
+        resetToRootView = 1
         tabBarController?.selectedIndex = 1
     }
     

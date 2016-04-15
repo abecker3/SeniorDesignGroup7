@@ -41,6 +41,7 @@ class HistoryViewController: UITableViewController{
         
         routeFromWhichScreen = 3
         flagForPlace = 1
+        resetToRootView = 1
         tabBarController?.selectedIndex = 1
     }
     

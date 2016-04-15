@@ -126,6 +126,12 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         showMapView.delegate = self
         curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        if(resetToRootView == 1){
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+    }
 
     func changeMapStyle(){
         switch self.mapType{

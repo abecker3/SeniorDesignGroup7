@@ -52,6 +52,12 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
 
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if(resetToRootView == 1){
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+    }
+    
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         filteredTableData.removeAll(keepCapacity: false)
