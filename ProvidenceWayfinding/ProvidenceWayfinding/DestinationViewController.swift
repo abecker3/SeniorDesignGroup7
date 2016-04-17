@@ -36,6 +36,12 @@ class DestinationViewController: UIViewController, UIScrollViewDelegate{
         whichFloor.text = endBuilding + " Floor " + textDestinationFloor
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if(resetToRootView == 1){
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -109,6 +109,12 @@ class OnCampusViewController: UIViewController, UIScrollViewDelegate{
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        if(resetToRootView == 1){
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let nextViewController = segue.destinationViewController as! DestinationViewController;
         nextViewController.destinationFloor = self.destinationFloor

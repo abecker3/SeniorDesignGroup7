@@ -76,6 +76,7 @@ class DirectorySpecificViewController: UIViewController {
     @IBAction func takeMeHere(sender: AnyObject) {
         routeFromWhichScreen = 2
         flagForPlace = 1
+        resetToRootView = 1
         directoryEntry = Directory(name: passInName, category: building, floor: floor, hours: hours, ext: phoneExt, notes: notes)
         tabBarController?.selectedIndex = 1
     }

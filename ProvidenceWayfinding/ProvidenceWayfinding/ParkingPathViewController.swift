@@ -232,6 +232,9 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
 
+        if(resetToRootView == 1){
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
     }
     
     /*override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
