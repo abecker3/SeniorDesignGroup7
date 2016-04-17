@@ -38,7 +38,7 @@ class MoreViewController: UIViewController, UIScrollViewDelegate {
         let imgFour = UIImageView(frame: CGRectMake(scrollViewWidth*1, 0,scrollViewWidth, scrollViewHeight))
         imgThree.contentMode = .ScaleAspectFit
 
-        imgFour.image = UIImage(named: "childrensHospitalAtNight.jpg")
+        imgFour.image = UIImage(named: "ChildrensPicture")
         //print("imgFour.image.size = " + String(imgFour.image!.size))
         
         //4
