@@ -98,9 +98,12 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func changedOnOff(sender: UISegmentedControl) {
         let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
+        //var font: UIFont = currentTextField.font!
         if(title == "Off Campus")
         {
             currentTextField.placeholder = "Off Campus"
+            //currentTextField.font.font =
+            //print("Text field font = " + String(font))
             currentTextField.enabled = false
             startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
         }
