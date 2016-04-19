@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="13x-Rm-ago">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -1281,6 +1281,9 @@ Institute
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3dn-G7-aJZ" userLabel="FloorButtons">
                                 <rect key="frame" x="5" y="200" width="590" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="T3A-gy-aqo"/>
+                                </constraints>
                                 <segments>
                                     <segment title=""/>
                                     <segment title=""/>
@@ -1433,25 +1436,26 @@ Institute
                             <constraint firstItem="lCb-TT-VeC" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="1kd-tL-LsC"/>
                             <constraint firstItem="0VC-Oy-jwo" firstAttribute="top" secondItem="qrb-6B-eaa" secondAttribute="bottom" constant="13" id="31Y-0w-bFW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xRC-9A-9ee" secondAttribute="trailing" constant="-15" id="3VU-z9-vba"/>
-                            <constraint firstItem="7Kj-xO-ecG" firstAttribute="top" secondItem="fTi-9C-EQT" secondAttribute="bottom" constant="11" id="4gG-s0-0a8"/>
                             <constraint firstItem="0VC-Oy-jwo" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="7NF-WA-uAy"/>
                             <constraint firstItem="lCb-TT-VeC" firstAttribute="top" secondItem="Zuq-Ix-Bxi" secondAttribute="bottom" constant="8" id="Bxz-7e-bnu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fTi-9C-EQT" secondAttribute="trailing" constant="-20" id="I1x-f5-Xew"/>
                             <constraint firstItem="xRC-9A-9ee" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="KFE-hI-8k5"/>
-                            <constraint firstItem="xRC-9A-9ee" firstAttribute="top" secondItem="0VC-Oy-jwo" secondAttribute="bottom" constant="8" id="MYI-9i-YUl"/>
                             <constraint firstItem="7Kj-xO-ecG" firstAttribute="trailing" secondItem="3dn-G7-aJZ" secondAttribute="trailing" constant="-6" id="MxB-yW-mjO"/>
                             <constraint firstItem="7Kj-xO-ecG" firstAttribute="leading" secondItem="3dn-G7-aJZ" secondAttribute="leading" constant="6" id="Nda-hx-peo"/>
+                            <constraint firstItem="xRC-9A-9ee" firstAttribute="top" secondItem="0VC-Oy-jwo" secondAttribute="bottom" constant="8" id="QA9-ve-BbX"/>
                             <constraint firstItem="3dn-G7-aJZ" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-15" id="Xuf-ZA-nsL"/>
+                            <constraint firstItem="7Kj-xO-ecG" firstAttribute="top" secondItem="fTi-9C-EQT" secondAttribute="bottom" constant="11" id="cet-wG-JeL"/>
                             <constraint firstItem="fTi-9C-EQT" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-20" id="dWa-hP-Z4e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0VC-Oy-jwo" secondAttribute="trailing" constant="-15" id="df1-Xw-Jfm"/>
                             <constraint firstItem="Zuq-Ix-Bxi" firstAttribute="top" secondItem="xRC-9A-9ee" secondAttribute="bottom" constant="8" id="dfe-6x-T5p"/>
                             <constraint firstItem="b2m-ON-fLm" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-20" id="hjn-kQ-Sgo"/>
                             <constraint firstItem="b2m-ON-fLm" firstAttribute="leading" secondItem="8DH-t8-1PM" secondAttribute="leadingMargin" constant="-20" id="iHc-fY-Xu0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b2m-ON-fLm" secondAttribute="trailing" constant="-20" id="iuj-Lx-Sl7"/>
+                            <constraint firstItem="Zuq-Ix-Bxi" firstAttribute="height" secondItem="3dn-G7-aJZ" secondAttribute="height" id="mBx-UX-2mo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3dn-G7-aJZ" secondAttribute="trailing" constant="-15" id="pcU-4w-WSJ"/>
-                            <constraint firstItem="fTi-9C-EQT" firstAttribute="top" secondItem="3dn-G7-aJZ" secondAttribute="bottom" constant="20" id="qUF-le-bNz"/>
                             <constraint firstItem="b2m-ON-fLm" firstAttribute="top" secondItem="7Kj-xO-ecG" secondAttribute="bottom" priority="251" constant="15" id="rLG-tf-gyl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b2m-ON-fLm" secondAttribute="trailing" constant="-20" id="sHe-mt-cM5"/>
+                            <constraint firstItem="fTi-9C-EQT" firstAttribute="top" secondItem="3dn-G7-aJZ" secondAttribute="bottom" constant="20" id="tea-Cy-kdb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zuq-Ix-Bxi" secondAttribute="trailing" constant="-15" id="uEO-uv-4Iy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lCb-TT-VeC" secondAttribute="trailing" constant="-15" id="ufQ-zP-BmU"/>
                             <constraint firstItem="3dn-G7-aJZ" firstAttribute="top" secondItem="lCb-TT-VeC" secondAttribute="bottom" constant="8" id="vw3-hN-1Sn"/>
@@ -2262,6 +2266,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="19E-Mu-4Od"/>
+        <segue reference="lh4-N2-I7u"/>
     </inferredMetricsTieBreakers>
 </document>
