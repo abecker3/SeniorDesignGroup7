@@ -469,6 +469,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal" title="Completely Lost?" backgroundImage="ButtonDarkBlue.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="pnH-hp-NSH" kind="show" id="FXS-SF-oaq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -663,7 +666,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gI-nA-3Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5557" y="70"/>
+            <point key="canvasLocation" x="5375" y="151"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1Hm-0u-Tzn">
@@ -785,7 +788,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyH-3N-nLp">
-                                <rect key="frame" x="0.0" y="459" width="600" height="45"/>
+                                <rect key="frame" x="0.0" y="505" width="600" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="DrG-xW-7Ae"/>
                                     <constraint firstAttribute="width" constant="600" id="Gd6-kt-fNa"/>
@@ -795,34 +798,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                     <action selector="routeNowEvent:" destination="mJf-vX-dEY" eventType="touchUpInside" id="16M-fa-bOE"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="AsR-K3-um2">
-                                <rect key="frame" x="0.0" y="505" width="600" height="45"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwK-Go-qDv">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="45"/>
-                                        <state key="normal" title="Completely Lost?" backgroundImage="ButtonDarkBlue.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="pnH-hp-NSH" kind="show" id="3yQ-ca-tMq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-Ls-ZTb">
-                                        <rect key="frame" x="301" y="0.0" width="299" height="45"/>
-                                        <state key="normal" title="Floor Maps" backgroundImage="ButtonDarkBlue.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="zem-nh-fd5" kind="show" id="e91-do-FcY"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="fn6-Wd-Hsy"/>
-                                </constraints>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVi-qD-b81">
-                                <rect key="frame" x="20" y="430" width="560" height="21"/>
+                                <rect key="frame" x="20" y="476" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -832,23 +809,20 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <constraints>
                             <constraint firstItem="zoq-YI-r9f" firstAttribute="leading" secondItem="SNK-sc-V39" secondAttribute="leading" id="2dl-wr-B1l"/>
                             <constraint firstItem="CyH-3N-nLp" firstAttribute="centerX" secondItem="29z-k8-yyW" secondAttribute="centerX" id="2hv-vo-mPl"/>
-                            <constraint firstItem="BU5-IL-ijs" firstAttribute="top" secondItem="AsR-K3-um2" secondAttribute="bottom" constant="1" id="3QJ-GM-IY0"/>
                             <constraint firstItem="iWH-GQ-yCc" firstAttribute="leading" secondItem="UVi-qD-b81" secondAttribute="leading" id="4cn-GG-jUQ"/>
                             <constraint firstItem="yJJ-hT-r7Y" firstAttribute="trailing" secondItem="29z-k8-yyW" secondAttribute="trailingMargin" id="6Bz-XU-OHB"/>
                             <constraint firstItem="iWH-GQ-yCc" firstAttribute="trailing" secondItem="yJJ-hT-r7Y" secondAttribute="trailing" id="8gD-p4-Rki"/>
                             <constraint firstItem="SNK-sc-V39" firstAttribute="top" secondItem="zoq-YI-r9f" secondAttribute="bottom" constant="8" symbolic="YES" id="AD2-uc-o8Q"/>
                             <constraint firstItem="iWH-GQ-yCc" firstAttribute="top" secondItem="yJJ-hT-r7Y" secondAttribute="bottom" constant="28" id="LKM-qE-spu"/>
                             <constraint firstItem="yJJ-hT-r7Y" firstAttribute="trailing" secondItem="zoq-YI-r9f" secondAttribute="trailing" id="MeG-qx-6I8"/>
-                            <constraint firstItem="AsR-K3-um2" firstAttribute="leading" secondItem="29z-k8-yyW" secondAttribute="leadingMargin" constant="-20" id="R1w-7o-410"/>
                             <constraint firstItem="UVi-qD-b81" firstAttribute="centerX" secondItem="29z-k8-yyW" secondAttribute="centerX" id="RHT-lA-miO"/>
                             <constraint firstItem="SNK-sc-V39" firstAttribute="leading" secondItem="29z-k8-yyW" secondAttribute="leadingMargin" id="bkt-Ju-2kg"/>
                             <constraint firstItem="zoq-YI-r9f" firstAttribute="top" secondItem="aYj-e8-x2Y" secondAttribute="bottom" constant="8" symbolic="YES" id="d75-hc-Xpw"/>
                             <constraint firstItem="CyH-3N-nLp" firstAttribute="top" secondItem="UVi-qD-b81" secondAttribute="bottom" constant="8" id="dSb-jD-wb6"/>
+                            <constraint firstItem="BU5-IL-ijs" firstAttribute="top" secondItem="CyH-3N-nLp" secondAttribute="bottom" constant="1" id="exU-3E-ZGI"/>
                             <constraint firstItem="SNK-sc-V39" firstAttribute="width" secondItem="29z-k8-yyW" secondAttribute="width" constant="-40" id="h9M-0y-Rfy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AsR-K3-um2" secondAttribute="trailing" constant="-20" id="q9h-HC-02O"/>
                             <constraint firstItem="yJJ-hT-r7Y" firstAttribute="leading" secondItem="SNK-sc-V39" secondAttribute="leading" id="qKU-Kd-gxH"/>
                             <constraint firstItem="yJJ-hT-r7Y" firstAttribute="leading" secondItem="iWH-GQ-yCc" secondAttribute="leading" id="sZ4-ak-dry"/>
-                            <constraint firstItem="AsR-K3-um2" firstAttribute="top" secondItem="CyH-3N-nLp" secondAttribute="bottom" constant="1" id="tsx-7B-2mk"/>
                             <constraint firstItem="yJJ-hT-r7Y" firstAttribute="top" secondItem="SNK-sc-V39" secondAttribute="bottom" constant="28" id="wA3-g4-Lun"/>
                         </constraints>
                     </view>
@@ -877,14 +851,14 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <viewControllerLayoutGuide type="bottom" id="8Dh-nk-cRa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZfB-ED-mZN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vsP-Uc-7iF" userLabel="SideStackView">
-                                <rect key="frame" x="0.0" y="99" width="40" height="374"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vsP-Uc-7iF" userLabel="SideStackView">
+                                <rect key="frame" x="0.0" y="99" width="40" height="467"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L1-pR-4SX">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="47"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 7
@@ -896,7 +870,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeK-KQ-Ieg">
-                                        <rect key="frame" x="0.0" y="37" width="40" height="38"/>
+                                        <rect key="frame" x="0.0" y="47" width="40" height="46"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 6 
 </string>
@@ -907,7 +881,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUa-cD-JG4">
-                                        <rect key="frame" x="0.0" y="75" width="40" height="37"/>
+                                        <rect key="frame" x="0.0" y="93" width="40" height="47"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 5 
 </string>
@@ -918,7 +892,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6K-OE-KfQ">
-                                        <rect key="frame" x="0.0" y="112" width="40" height="38"/>
+                                        <rect key="frame" x="0.0" y="140" width="40" height="47"/>
                                         <size key="titleShadowOffset" width="0.0" height="2.2250738585072014e-308"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 4 
@@ -930,7 +904,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAe-9M-9JX">
-                                        <rect key="frame" x="0.0" y="150" width="40" height="37"/>
+                                        <rect key="frame" x="0.0" y="187" width="40" height="47"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 3 
 </string>
@@ -941,7 +915,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTw-aq-VXs">
-                                        <rect key="frame" x="0.0" y="187" width="40" height="37"/>
+                                        <rect key="frame" x="0.0" y="234" width="40" height="46"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 2 
 </string>
@@ -952,7 +926,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY6-AL-Qxd">
-                                        <rect key="frame" x="0.0" y="224" width="40" height="38"/>
+                                        <rect key="frame" x="0.0" y="280" width="40" height="47"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 1 
 </string>
@@ -963,7 +937,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvT-JU-Nsn">
-                                        <rect key="frame" x="0.0" y="262" width="40" height="37"/>
+                                        <rect key="frame" x="0.0" y="327" width="40" height="47"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> LL1 
 </string>
@@ -974,7 +948,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-R5-Pb8">
-                                        <rect key="frame" x="0.0" y="299" width="40" height="38"/>
+                                        <rect key="frame" x="0.0" y="374" width="40" height="46"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> LL2 
 </string>
@@ -985,7 +959,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZB-YK-zMq">
-                                        <rect key="frame" x="0.0" y="337" width="40" height="37"/>
+                                        <rect key="frame" x="0.0" y="420" width="40" height="47"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> LL3   
 </string>
@@ -1050,7 +1024,7 @@ Institute
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYM-6J-w2L">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYM-6J-w2L">
                                 <rect key="frame" x="0.0" y="64" width="600" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="6bD-fE-tVN"/>
@@ -1058,10 +1032,10 @@ Institute
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwv-bf-FI8">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jwv-bf-FI8">
                                 <rect key="frame" x="40" y="99" width="560" height="374"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9cv-bu-GbI">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cv-bu-GbI">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="374"/>
                                     </imageView>
                                 </subviews>
