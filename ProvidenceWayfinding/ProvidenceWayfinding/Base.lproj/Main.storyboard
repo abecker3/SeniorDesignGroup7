@@ -470,7 +470,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="pnH-hp-NSH" kind="show" id="FXS-SF-oaq"/>
+                                            <segue destination="pnH-hp-NSH" kind="push" id="FXS-SF-oaq"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -666,7 +666,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gI-nA-3Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5375" y="151"/>
+            <point key="canvasLocation" x="5765" y="850"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1Hm-0u-Tzn">
@@ -1096,7 +1096,7 @@ Institute
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8C-Va-Htk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="6mq-Ow-eHy"/>
             </objects>
-            <point key="canvasLocation" x="5557" y="-644"/>
+            <point key="canvasLocation" x="6487" y="850"/>
         </scene>
         <!--Category-->
         <scene sceneID="WZL-Sg-fph">
