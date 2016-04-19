@@ -463,6 +463,9 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                         <state key="normal" title="Floor Maps" backgroundImage="ButtonDarkBlue.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="zem-nh-fd5" kind="push" id="6D1-Xj-chi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVY-Bd-4qh">
                                         <rect key="frame" x="0.0" y="183" width="600" height="45"/>
@@ -851,14 +854,14 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <viewControllerLayoutGuide type="bottom" id="8Dh-nk-cRa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZfB-ED-mZN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vsP-Uc-7iF" userLabel="SideStackView">
-                                <rect key="frame" x="0.0" y="99" width="40" height="467"/>
+                                <rect key="frame" x="0.0" y="99" width="40" height="374"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L1-pR-4SX">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="47"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4L1-pR-4SX">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="37"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 7
@@ -869,8 +872,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Eh6-Cu-m9C"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeK-KQ-Ieg">
-                                        <rect key="frame" x="0.0" y="47" width="40" height="46"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeK-KQ-Ieg">
+                                        <rect key="frame" x="0.0" y="37" width="40" height="38"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 6 
 </string>
@@ -880,8 +883,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="K29-AI-zp5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUa-cD-JG4">
-                                        <rect key="frame" x="0.0" y="93" width="40" height="47"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUa-cD-JG4">
+                                        <rect key="frame" x="0.0" y="75" width="40" height="37"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 5 
 </string>
@@ -891,8 +894,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="kq8-0e-DcP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6K-OE-KfQ">
-                                        <rect key="frame" x="0.0" y="140" width="40" height="47"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6K-OE-KfQ">
+                                        <rect key="frame" x="0.0" y="112" width="40" height="38"/>
                                         <size key="titleShadowOffset" width="0.0" height="2.2250738585072014e-308"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 4 
@@ -903,8 +906,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Zn7-h2-nNs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAe-9M-9JX">
-                                        <rect key="frame" x="0.0" y="187" width="40" height="47"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAe-9M-9JX">
+                                        <rect key="frame" x="0.0" y="150" width="40" height="37"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 3 
 </string>
@@ -914,8 +917,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="IAN-2p-jc2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTw-aq-VXs">
-                                        <rect key="frame" x="0.0" y="234" width="40" height="46"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTw-aq-VXs">
+                                        <rect key="frame" x="0.0" y="187" width="40" height="37"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 2 
 </string>
@@ -925,8 +928,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="g8O-Q6-GuX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY6-AL-Qxd">
-                                        <rect key="frame" x="0.0" y="280" width="40" height="47"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY6-AL-Qxd">
+                                        <rect key="frame" x="0.0" y="224" width="40" height="38"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> 1 
 </string>
@@ -936,8 +939,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="OcR-d4-0ND"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvT-JU-Nsn">
-                                        <rect key="frame" x="0.0" y="327" width="40" height="47"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvT-JU-Nsn">
+                                        <rect key="frame" x="0.0" y="262" width="40" height="37"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> LL1 
 </string>
@@ -947,8 +950,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="9rR-7F-adg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-R5-Pb8">
-                                        <rect key="frame" x="0.0" y="374" width="40" height="46"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO4-R5-Pb8">
+                                        <rect key="frame" x="0.0" y="299" width="40" height="38"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> LL2 
 </string>
@@ -958,8 +961,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                             <action selector="floorPressed:" destination="zem-nh-fd5" eventType="touchUpInside" id="Qu0-2A-lc9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZB-YK-zMq">
-                                        <rect key="frame" x="0.0" y="420" width="40" height="47"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZB-YK-zMq">
+                                        <rect key="frame" x="0.0" y="337" width="40" height="37"/>
                                         <state key="normal" backgroundImage="ButtonDarkBlue.png">
                                             <string key="title"> LL3   
 </string>
@@ -1024,7 +1027,7 @@ Institute
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYM-6J-w2L">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYM-6J-w2L">
                                 <rect key="frame" x="0.0" y="64" width="600" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="6bD-fE-tVN"/>
@@ -1032,10 +1035,10 @@ Institute
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jwv-bf-FI8">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwv-bf-FI8">
                                 <rect key="frame" x="40" y="99" width="560" height="374"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9cv-bu-GbI">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9cv-bu-GbI">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="374"/>
                                     </imageView>
                                 </subviews>
