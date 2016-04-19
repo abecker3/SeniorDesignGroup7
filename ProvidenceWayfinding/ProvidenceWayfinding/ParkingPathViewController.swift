@@ -260,9 +260,9 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     }*/
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let nextViewController = segue.destinationViewController as! OnCampusViewController
-        nextViewController.startLocation = self.startLocation
-        nextViewController.endLocation = self.endLocation
+        let nextViewController = segue.destinationViewController as! OnCampusDirectionsViewController
+        //nextViewController.startLocation = self.startLocation
+        //nextViewController.endLocation = self.endLocation
         
     }
     /*

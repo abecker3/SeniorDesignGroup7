@@ -141,7 +141,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         }
         else if (segue.identifier == "surveyToCampus")
         {
-            let nextViewController = segue.destinationViewController as! OnCampusViewController;
+            let nextViewController = segue.destinationViewController as! OnCampusDirectionsViewController;
             nextViewController.startLocation = self.startLocation
             nextViewController.endLocation = self.endLocation
         }
