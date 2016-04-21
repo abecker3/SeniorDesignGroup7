@@ -19,7 +19,7 @@ struct Directory
 }
 
 
-let directory = [
+/*let directory = [
     Directory(name: "Adolescent Medicine", category: "Children's Hospital", floor: "L1 East", hours: "8AM to 5PM Mon-Fri", ext: 45445, notes: ""),
     Directory(name: "Adult/Geriatric Psychiatry Unit East", category: "Children's Hospital", floor: "Main", hours: "", ext: 44784, notes: "Use phone to call reception"),
     Directory(name: "Adult/Geriatric Psychiatry Unit West", category: "Children's Hospital", floor: "Main", hours: "", ext: 44863, notes: "Use phone to call reception"),
@@ -78,7 +78,41 @@ let directory = [
     Directory(name: "Transplant", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: 0, notes: ""),
     Directory(name: "Valet Parking", category: "Women's Health Center", floor: "L2", hours: "24-hour service", ext: 0, notes: ""),
     Directory(name: "Women's Health Center", category: "Women's Health Center", floor: "L2", hours: "", ext: 42400, notes: ""),
-]
+]*/
+
+var directory = [Directory]();
+
+func loadDirectory()
+{
+    let fileVertices = NSBundle.mainBundle().pathForResource("data/vertices", ofType: "csv")!
+    
+    let error: NSErrorPointer = nil
+    
+    let tableVertices = CSV(contentsOfFile: fileVertices, error: error);
+    
+    //Vertices
+    for row in tableVertices!.rows
+    {
+        let id = row["ID"]!;
+        let name = row["Name"]!;
+        let x = row["X"]!;
+        let y = row["Y"]!;
+        let building = row["Building"]!;
+        let floor = row["Floor"]!;
+        let category = row["Category"]!;
+        let hours = row["Hours"]!;
+        let ext = row["Ext"]!;
+        let notes = row["Notes"]!;
+
+        if(category != "")
+        {
+            directory.append(Directory(name: String(name), category: String(category), floor: String(floor), hours: String(hours), ext: Int(ext)!, notes: String(notes)))
+        }
+    }
+}
+
+
+
 
 var directoryEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
 var parkingEntry = Directory(name: "NA", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
