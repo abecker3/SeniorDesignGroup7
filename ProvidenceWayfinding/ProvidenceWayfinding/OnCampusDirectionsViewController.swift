@@ -50,7 +50,25 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
     var startLocation: Directory!
     var endLocation: Directory!
     
+    var distanceToSurvey: Int = 0
+    
     //Actions
+    
+    
+    @IBAction func end(sender: AnyObject)
+    {
+        let navController = self.navigationController!
+        let indexOfLastViewController = navController.viewControllers.count - 1
+        let indexOfSurvey = indexOfLastViewController - distanceToSurvey
+        let surveyViewController = navController.viewControllers[indexOfSurvey] as! SurveyViewController
+
+        surveyViewController.currentTextField.placeholder = endLocation.name
+        surveyViewController.startLocation = endLocation
+        surveyViewController.destinationTextField.placeholder = "Select Destination"
+        surveyViewController.endLocation = nil
+        
+        navController.popToViewController(surveyViewController, animated: true)
+    }
     
     @IBAction func overview(sender: UIButton) {
         showOverview()
@@ -65,11 +83,6 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
     @IBAction func zoom(sender: AnyObject) {
         showDirection(directionsIndex)
     }
-    
-    
-    @IBAction func end(sender: AnyObject) {
-    }
-    
     
     @IBAction func start(sender: AnyObject) {
         startButton.hidden = true
@@ -274,6 +287,18 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
     {
         graph = Graph();
         loadTables();
+        print(startLocation.name);
+        print(endLocation.name);
+        
+        if(startLocation.category == "Doctors Building")
+        {
+            startLocation.name = "Doctors Main"
+        }
+        if(endLocation.category == "Doctors Building")
+        {
+            endLocation.name = "Doctors Main"
+        }
+        
         startVertex = graph!.getVertexByName(startLocation.name);
         endVertex = graph!.getVertexByName(endLocation.name);
     }
@@ -294,13 +319,21 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
         
         for var i = 1; i < path.count; i++
         {
-            if(path[i].floor != path[i - 1].floor || path[i].building != path[i - 1].building)
+            if(path[i].building != path[i - 1].building)
+            {
+                directions.append(Direction())
+                directionsIndex += 1
+                directions[directionsIndex].text = "Continue to " + path[i].building;
+                directions[directionsIndex].vertices.append(path[i - 1])
+            }
+                
+            else if(path[i].floor != path[i - 1].floor)
             {
                 var lastIndex = i - 1;
                 var nextIndex = i;
-                var counter = 0;
+                var counter = -1;
                 
-                while(path[nextIndex].floor != path[lastIndex].floor || path[nextIndex].building != path[lastIndex].building)
+                while(path[nextIndex].floor != path[lastIndex].floor)
                 {
                     lastIndex = nextIndex;
                     nextIndex += 1;
@@ -309,30 +342,24 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
                 
                 directions.append(Direction())
                 directionsIndex += 1
-                if(path[i].building != path[i - 1].building)
-                {
-                    directions[directionsIndex].text = "Continue to " + path[nextIndex].building + " Building";
-                }
-                else if(path[i].floor != path[i - 1].floor)
-                {
-                    directions[directionsIndex].text = "Take " + path[i - 1].name + " to Floor " +  path[nextIndex].floor;
-                }
+                directions[directionsIndex].text = "Take " + path[i - 1].name + " to Floor " +  path[lastIndex].floor;
                 directions[directionsIndex].vertices.append(path[i - 1])
-                
-                directions.append(Direction())
-                directionsIndex += 1
-                directions[directionsIndex].text = ""
-                directions[directionsIndex].vertices.append(path[lastIndex])
-                directions[directionsIndex].vertices.append(path[nextIndex])
                 
                 i += counter
             }
-                
+            
             else
             {
                 directions.append(Direction())
                 directionsIndex += 1
-                directions[directionsIndex].text = ""
+                if(path[i].name != "")
+                {
+                   directions[directionsIndex].text = "Continue to " + path[i].name
+                }
+                else
+                {
+                    directions[directionsIndex].text = ""
+                }
                 directions[directionsIndex].vertices.append(path[i - 1])
                 directions[directionsIndex].vertices.append(path[i])
             }
@@ -345,7 +372,7 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
         
     }
     
-    func loadDirectionsShort()
+    /*func loadDirectionsShort()
     {
         var directionsIndex = -1;
         
@@ -424,7 +451,7 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
         directionsIndex += 1
         directions[directionsIndex].text = "Arrived at " + path[path.count - 1].name;
         directions[directionsIndex].vertices.append(path[path.count - 1]);
-    }
+    }*/
     
     func loadBuildingVariables()
     {

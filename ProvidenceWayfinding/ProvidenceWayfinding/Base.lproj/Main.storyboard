@@ -1911,7 +1911,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
             </objects>
             <point key="canvasLocation" x="1447" y="2463"/>
         </scene>
-        <!--On Campus-->
+        <!--Navigation-->
         <scene sceneID="cLC-cM-FrO">
             <objects>
                 <viewController id="An8-21-4SF" customClass="OnCampusDirectionsViewController" customModule="ProvidenceWayfinding" customModuleProvider="target" sceneMemberID="viewController">
@@ -1959,19 +1959,19 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </subviews>
                             </stackView>
                             <stackView contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Rtr-qc-zhG">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="491"/>
                                 <subviews>
                                     <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M20-Q3-ncA">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="448"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="451"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </scrollView>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Od2-pC-fRp">
-                                        <rect key="frame" x="0.0" y="448" width="600" height="39"/>
+                                        <rect key="frame" x="0.0" y="451" width="600" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdu-zC-BJD">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="39"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Start">
+                                                <state key="normal" title="Start" backgroundImage="ButtonDarkBlue.png">
                                                     <color key="titleColor" red="0.95686274510000002" green="0.52156862749999999" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
@@ -1979,8 +1979,8 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqX-3g-Ndz">
-                                                <rect key="frame" x="150" y="0.0" width="150" height="39"/>
-                                                <state key="normal" image="back">
+                                                <rect key="frame" x="150" y="0.0" width="150" height="40"/>
+                                                <state key="normal" image="back" backgroundImage="ButtonDarkBlue.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -1988,14 +1988,15 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Steps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xo8-XG-aNU">
-                                                <rect key="frame" x="300" y="0.0" width="150" height="39"/>
+                                                <rect key="frame" x="300" y="0.0" width="150" height="40"/>
+                                                <color key="backgroundColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="0.95686274509803915" green="0.52156862745098043" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lW8-WQ-Ypw">
-                                                <rect key="frame" x="450" y="0.0" width="150" height="39"/>
-                                                <state key="normal" image="next">
+                                                <rect key="frame" x="450" y="0.0" width="150" height="40"/>
+                                                <state key="normal" image="next" backgroundImage="ButtonDarkBlue.png">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -2015,29 +2016,31 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8R-6k-qDW">
-                                <rect key="frame" x="0.0" y="64" width="600" height="48"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="49"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Direction Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNW-bX-oLk">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direction Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="LNW-bX-oLk">
+                                        <rect key="frame" x="30" y="0.0" width="540" height="49"/>
                                         <color key="tintColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="LNW-bX-oLk" firstAttribute="centerY" secondItem="f8R-6k-qDW" secondAttribute="centerY" id="b6h-nm-6Xn"/>
                                     <constraint firstItem="LNW-bX-oLk" firstAttribute="height" secondItem="f8R-6k-qDW" secondAttribute="height" id="jGm-9h-epq"/>
-                                    <constraint firstItem="LNW-bX-oLk" firstAttribute="width" secondItem="f8R-6k-qDW" secondAttribute="width" id="yIn-LR-NhN"/>
+                                    <constraint firstItem="LNW-bX-oLk" firstAttribute="width" secondItem="f8R-6k-qDW" secondAttribute="width" multiplier="0.9" id="yIn-LR-NhN"/>
+                                    <constraint firstItem="LNW-bX-oLk" firstAttribute="centerX" secondItem="f8R-6k-qDW" secondAttribute="centerX" id="zG4-Zl-65F"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rtr-qc-zhG" firstAttribute="width" secondItem="Bd9-bn-xc2" secondAttribute="width" id="0Av-nX-gCe"/>
                             <constraint firstItem="Rtr-qc-zhG" firstAttribute="centerX" secondItem="Bd9-bn-xc2" secondAttribute="centerX" id="6oZ-jW-pXd"/>
                             <constraint firstItem="Rtr-qc-zhG" firstAttribute="top" secondItem="p6N-u0-yN0" secondAttribute="bottom" id="7mF-oe-Gyv"/>
-                            <constraint firstItem="Rtr-qc-zhG" firstAttribute="bottom" secondItem="Z2m-tv-eAx" secondAttribute="top" constant="-5" id="NkI-Vs-bge"/>
+                            <constraint firstItem="Rtr-qc-zhG" firstAttribute="bottom" secondItem="Z2m-tv-eAx" secondAttribute="top" constant="-1" id="NkI-Vs-bge"/>
                             <constraint firstItem="f8R-6k-qDW" firstAttribute="height" secondItem="Rtr-qc-zhG" secondAttribute="height" multiplier="0.1" id="UzQ-Ft-vFm"/>
                             <constraint firstItem="f8R-6k-qDW" firstAttribute="top" secondItem="p6N-u0-yN0" secondAttribute="bottom" id="dEb-Qd-NwV"/>
                             <constraint firstItem="f8R-6k-qDW" firstAttribute="width" secondItem="Bd9-bn-xc2" secondAttribute="width" id="qco-Pa-L5P"/>
@@ -2045,7 +2048,14 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="On Campus" id="rVJ-2J-TRs"/>
+                    <navigationItem key="navigationItem" title="Navigation" id="T4s-aM-G7F">
+                        <barButtonItem key="rightBarButtonItem" title="End" id="sUl-uh-RKt">
+                            <color key="tintColor" red="0.95686274510000002" green="0.52156862749999999" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="end:" destination="An8-21-4SF" id="JhJ-Ag-NPf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backArrow" destination="ZqX-3g-Ndz" id="v2H-88-EGD"/>
@@ -2282,6 +2292,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lh4-N2-I7u"/>
+        <segue reference="19E-Mu-4Od"/>
     </inferredMetricsTieBreakers>
 </document>

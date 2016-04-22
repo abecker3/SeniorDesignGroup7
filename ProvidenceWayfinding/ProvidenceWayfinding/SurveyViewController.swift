@@ -56,7 +56,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
                 setPlaceHolder()
             }
             segmentedControl.selectedSegmentIndex = 1
-            destinationTextField.placeholder = parkingEntry.name + "Parking"
+            destinationTextField.placeholder = parkingEntry.name
             endLocation = parkingEntry
             routeFromWhichScreen = 0
         }
@@ -76,7 +76,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
                 setPlaceHolder()
             }
             segmentedControl.selectedSegmentIndex = 1
-            destinationTextField.placeholder = parkingHistEntry.name + "Parking"
+            destinationTextField.placeholder = parkingHistEntry.name
             endLocation = parkingHistEntry
             routeFromWhichScreen = 0
         }
@@ -147,6 +147,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
             let nextViewController = segue.destinationViewController as! OnCampusDirectionsViewController;
             nextViewController.startLocation = self.startLocation
             nextViewController.endLocation = self.endLocation
+            nextViewController.distanceToSurvey = 1;
         }
         
     }

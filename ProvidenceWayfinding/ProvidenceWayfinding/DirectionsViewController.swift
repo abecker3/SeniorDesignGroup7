@@ -125,6 +125,7 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         showMapView.mapType = .Standard
         showMapView.delegate = self
         curLocationButton.setImage(UIImage(named: "NearMe100.png"), forState: .Normal)
+        setDestination()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -161,20 +162,32 @@ class DirectionsViewController: UIViewController, MKMapViewDelegate, CLLocationM
         switch endLocation.category{
             case "Heart Institute":
                 desPlace = MKPlacemark(coordinate: HeartInst, addressDictionary: nil)
+                startLocation.name = "Heart Parking"
+            
             case "Main Tower":
                 desPlace = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
+                startLocation.name = "Doctors Parking"
+            
             case "Women's Health Center":
                 desPlace = MKPlacemark(coordinate: WomensHealth, addressDictionary: nil)
+                startLocation.name = "Women's Parking"
+            
+            
             case "Doctors Building":
                 desPlace = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
-            case "Surgery Center":
-                desPlace = MKPlacemark(coordinate: WomensHealth, addressDictionary: nil)
-            case "Faith & Healing":
-                desPlace = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
+                startLocation.name = "Doctors Parking"
+            
+            case "Emergency":
+                desPlace = MKPlacemark(coordinate: ER, addressDictionary: nil)
+                startLocation.name = "Emergency Parking"
+            
             case "Children's Hospital":
                 desPlace = MKPlacemark(coordinate: ChildrenHospital, addressDictionary: nil)
+                startLocation.name = "Children's Parking"
+            
             default:
                 desPlace = MKPlacemark(coordinate: DoctorBuilding, addressDictionary: nil)
+                startLocation.name = "Doctors Parking"
         }
     }
     
