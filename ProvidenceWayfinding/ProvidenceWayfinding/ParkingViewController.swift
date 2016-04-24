@@ -95,7 +95,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     @IBAction func changedBuilding(sender: UISegmentedControl) {
         let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
         switch title{
-        case "Doctors"?: parkingLocationBuilding = "Doctor's"
+        case "Doctors"?: parkingLocationBuilding = "Doctors"
                         setFloorOptions(0)
         case "Children's"?: parkingLocationBuilding = "Children's"
                         setFloorOptions(1)
@@ -214,7 +214,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
         
-        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
+        parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
 
     }
 

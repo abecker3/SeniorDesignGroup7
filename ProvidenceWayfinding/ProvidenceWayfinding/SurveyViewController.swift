@@ -18,6 +18,8 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var currentTextField: UITextField!
     @IBOutlet var destinationTextField: UITextField!
+    @IBOutlet var currentStackView: UIStackView!
+    @IBOutlet var spacer: UIView!
     
     //Variables
     var passOutTextFieldTag: Int!
@@ -46,6 +48,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         if (routeFromWhichScreen == 0){
             startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
         }
+        swapOff()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -96,22 +99,34 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         flagForPlace = 0
     }
     
+    func swapOff()
+    {
+        currentTextField.placeholder = "Off Campus"
+        currentTextField.enabled = false
+        startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
+        currentStackView.hidden = true
+        spacer.hidden = true
+    }
+    
+    func swapOn()
+    {
+        currentTextField.placeholder = "Select Current Location"
+        currentTextField.enabled = true
+        startLocation = nil
+        currentStackView.hidden = false
+        spacer.hidden = false
+    }
+    
     @IBAction func changedOnOff(sender: UISegmentedControl) {
         let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
         //var font: UIFont = currentTextField.font!
         if(title == "Off Campus")
         {
-            currentTextField.placeholder = "Off Campus"
-            //currentTextField.font.font =
-            //print("Text field font = " + String(font))
-            currentTextField.enabled = false
-            startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
+            swapOff()
         }
         else if(title == "On Campus")
         {
-            currentTextField.placeholder = "Select Current Location"
-            currentTextField.enabled = true
-            startLocation = nil
+            swapOn()
         }
     }
     
@@ -154,7 +169,23 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func routeNowEvent(sender: AnyObject) {
         
-        if(startLocation != nil && endLocation != nil && startLocation.name != endLocation.name)
+        if(startLocation == nil || endLocation == nil)
+        {
+            let alertTitle = "Error"
+            let alertMessage = "Please select your current location and destination"
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else if(startLocation.name == endLocation.name)
+        {
+            let alertTitle = "Error"
+            let alertMessage = "Locations can't be the same"
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else
         {
             if(startLocation.name == "Off Campus")
             {
@@ -164,14 +195,6 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
             {
                 performSegueWithIdentifier("surveyToCampus", sender: self)
             }
-        }
-        else
-        {
-            let alertTitle = "Error"
-            let alertMessage = "Please select your current location and destination"
-            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)
         }
     }
     

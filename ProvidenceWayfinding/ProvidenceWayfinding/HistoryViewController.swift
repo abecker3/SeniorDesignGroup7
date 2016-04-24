@@ -37,7 +37,7 @@ class HistoryViewController: UITableViewController{
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = tableView.cellForRowAtIndexPath(indexPath)! as! BasicDirectionsCell
         
-        parkingHistEntry = Directory(name: cell.titleLabel.text!, category: "Parking", floor: cell.subtitleLabel.text!, hours: "NA", ext: 0, notes: "")
+        parkingHistEntry = Directory(name: cell.titleLabel.text! + " Parking " + cell.subtitleLabel.text!, category: "Parking", floor: cell.subtitleLabel.text!, hours: "NA", ext: 0, notes: "")
         
         routeFromWhichScreen = 3
         flagForPlace = 1

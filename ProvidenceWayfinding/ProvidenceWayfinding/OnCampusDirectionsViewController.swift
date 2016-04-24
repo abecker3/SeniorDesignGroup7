@@ -26,6 +26,8 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
     @IBOutlet var directionView: UIView!
     
     //Globals
+    var loaded = false
+    
     var graph: Graph?
     var startVertex: Vertex?
     var endVertex: Vertex?
@@ -54,14 +56,67 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
     
     //Actions
     
-    
     @IBAction func end(sender: AnyObject)
+    {
+        presentWhatNextAlert()
+    }
+    
+    func presentWhatNextAlert()
+    {
+        let alertTitle = "Navigation Complete"
+        let alertMessage = "Where would you like to go now?"
+        let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let routeToCarAction = UIAlertAction(title: "Car", style: .Default){ (action) in self.routeToCar()}
+        let newLocationAction = UIAlertAction(title: "New Location", style: .Default){ (action) in self.newLocation()}
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .Destructive){ (action) in alertController.dismissViewControllerAnimated(true, completion: nil)}
+        alertController.addAction(routeToCarAction)
+        alertController.addAction(newLocationAction)
+        alertController.addAction(dismissAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func routeToCar()
+    {
+        if(parkingEntry == nil)
+        {
+            let alertTitle = "Error"
+            let alertMessage = "Parking not saved"
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let continueAction = UIAlertAction(title: "Continue", style: .Destructive){ (action) in alertController.dismissViewControllerAnimated(true, completion: nil)}
+            
+            alertController.addAction(continueAction)
+            presentViewController(alertController, animated: true, completion: nil)
+        }
+            
+        else
+        {
+            let navController = self.navigationController!
+            let indexOfLastViewController = navController.viewControllers.count - 1
+            let indexOfSurvey = indexOfLastViewController - distanceToSurvey
+            let surveyViewController = navController.viewControllers[indexOfSurvey] as! SurveyViewController
+            
+            surveyViewController.segmentedControl.selectedSegmentIndex = 1
+            surveyViewController.swapOn()
+            surveyViewController.currentTextField.placeholder = endLocation.name
+            surveyViewController.startLocation = endLocation
+            surveyViewController.destinationTextField.placeholder = parkingEntry.name
+            surveyViewController.endLocation = parkingEntry
+            
+            navController.popToViewController(surveyViewController, animated: true)
+        }
+    }
+    
+    func newLocation()
     {
         let navController = self.navigationController!
         let indexOfLastViewController = navController.viewControllers.count - 1
         let indexOfSurvey = indexOfLastViewController - distanceToSurvey
         let surveyViewController = navController.viewControllers[indexOfSurvey] as! SurveyViewController
-
+        
+        surveyViewController.segmentedControl.selectedSegmentIndex = 1
+        surveyViewController.swapOn()
         surveyViewController.currentTextField.placeholder = endLocation.name
         surveyViewController.startLocation = endLocation
         surveyViewController.destinationTextField.placeholder = "Select Destination"
@@ -99,6 +154,11 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
     
     @IBAction func nextDirection(sender: AnyObject)
     {
+        if(directionsIndex == directions.count - 2)
+        {
+            presentWhatNextAlert()
+        }
+        
         if(directionsIndex < directions.count - 1)
         {
             directionsIndex = directionsIndex + 1
@@ -120,6 +180,7 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
             swapToOverviewButton()
             showDirection(directionsIndex)
         }
+    
     }
     
     @IBAction func lastDirection(sender: AnyObject)
@@ -269,14 +330,20 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
     
     override func viewDidAppear(animated: Bool)
     {
-        loadFloorView();
-        loadLineView();
-        loadPinsView();
-        scrollView.setZoomScale(scrollView.minimumZoomScale, animated: false)
-        centerScrollViewContents();
+        if(!loaded)
+        {
+            loadFloorView();
+            loadLineView();
+            loadPinsView();
+            scrollView.setZoomScale(scrollView.minimumZoomScale, animated: false)
+            centerScrollViewContents();
         
-        if(resetToRootView == 1){
-            self.navigationController?.popToRootViewControllerAnimated(true)
+            if(resetToRootView == 1)
+            {
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            }
+            
+            loaded = true
         }
     }
     //******************************************************************************************//
@@ -483,7 +550,7 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
         let imageName = "data/" + currentBuilding + "_" + currentFloor + ".png"
         let image = UIImage(named: imageName)!
         floorView = UIImageView(image: image)
-        floorView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size:image.size)
+        floorView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: image.size)
         scrollView.addSubview(floorView)
         scrollView.contentSize = floorView.frame.size
         

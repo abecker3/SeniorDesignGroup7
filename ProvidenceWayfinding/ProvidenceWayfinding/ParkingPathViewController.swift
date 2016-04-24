@@ -71,7 +71,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         if (indexFlag == 0){
 
             building.insert(parkingLocationBuilding, atIndex: 0)
-            floor.insert("Floor: "+parkingLocationFloor, atIndex: 0)
+            floor.insert(parkingLocationFloor, atIndex: 0)
             dateSave.insert(dateFormatter.stringFromDate(NSDate()), atIndex: 0)
             dateFormatter.dateFormat = "h:mm a"
             timeSave.insert(dateFormatter.stringFromDate(NSDate()) , atIndex: 0)
@@ -80,7 +80,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         else{
 
             building.insert(parkingLocationBuilding, atIndex: 0)
-            floor.insert("Floor: "+parkingLocationFloor, atIndex: 0)
+            floor.insert(parkingLocationFloor, atIndex: 0)
             dateSave.insert(dateFormatter.stringFromDate(NSDate()), atIndex: 0)
             dateFormatter.dateFormat = "h:mm a"
             timeSave.insert(dateFormatter.stringFromDate(NSDate()) , atIndex: 0)
@@ -110,13 +110,15 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         savedParkingTime.text = timeSave[0]
         saved = true
         
-        parkingEntry = Directory(name: building[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
+        parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
+        
+        startLocation.name = building[0] + " Parking " + floor[0]
     }
     
     @IBAction func changedBuilding(sender: UISegmentedControl) {
         let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
         switch title{
-        case "Doctors"?: parkingLocationBuilding = "Doctor's"
+        case "Doctors"?: parkingLocationBuilding = "Doctors"
                         setFloorOptions(0)
         case "Children's"?: parkingLocationBuilding = "Children's"
                         setFloorOptions(1)
@@ -201,7 +203,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         //view.addGestureRecognizer(screenEdgeRecognizerRight)
         
         // Do any additional setup after loading the view.
-        parkingLocationBuilding = "Doctors Building"
+        parkingLocationBuilding = "Doctors"
         parkingLocationFloor = "C"
         
         setFloorOptions(0)
