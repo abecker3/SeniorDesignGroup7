@@ -13,6 +13,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     var screenEdgeRecognizerLeft: UIScreenEdgePanGestureRecognizer!
     var screenEdgeRecognizerRight: UIScreenEdgePanGestureRecognizer!
     var flag = 0
+    var flagForWhichScreen = 0
     
     //Referencing Outlets
     @IBOutlet var segmentedControl: UISegmentedControl!
@@ -62,6 +63,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
             swapOn()
             destinationTextField.placeholder = parkingEntry.name
             endLocation = parkingEntry
+            flagForWhichScreen = 1
             routeFromWhichScreen = 0
         }
             //From Directory
@@ -84,6 +86,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
             swapOn()
             destinationTextField.placeholder = parkingHistEntry.name
             endLocation = parkingHistEntry
+            flagForWhichScreen = 1
             routeFromWhichScreen = 0
         }
     }
@@ -104,6 +107,11 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     
     func swapOff()
     {
+        if(flagForWhichScreen == 1){
+            destinationTextField.placeholder = "Select Destination"
+            endLocation = nil
+            flagForWhichScreen = 0
+        }
         currentTextField.placeholder = "Off Campus"
         currentTextField.enabled = false
         startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
