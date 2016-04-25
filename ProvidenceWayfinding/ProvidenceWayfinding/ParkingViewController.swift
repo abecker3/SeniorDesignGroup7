@@ -95,13 +95,13 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     @IBAction func changedBuilding(sender: UISegmentedControl) {
         let title = sender.titleForSegmentAtIndex(sender.selectedSegmentIndex)
         switch title{
-        case "Doctors"?: parkingLocationBuilding = "Doctors"
+        case "Doctors"?: parkingLocationBuilding = "Doctors Building"
                         setFloorOptions(0)
-        case "Children's"?: parkingLocationBuilding = "Children's"
+        case "Children's"?: parkingLocationBuilding = "Children's Hospital"
                         setFloorOptions(1)
-        case "Women's"?: parkingLocationBuilding = "Women's"
+        case "Women's"?: parkingLocationBuilding = "Women's Health Center"
                         setFloorOptions(2)
-        default: parkingLocationBuilding = "Heart"
+        default: parkingLocationBuilding = "Heart Institute"
                         setFloorOptions(3)
         }
     }
@@ -182,7 +182,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         view.addGestureRecognizer(screenEdgeRecognizerLeft)
         
         // Do any additional setup after loading the view.
-        parkingLocationBuilding = "Doctor's"
+        parkingLocationBuilding = "Doctor's Building"
         parkingLocationFloor = "C"
         
         setFloorOptions(0)
