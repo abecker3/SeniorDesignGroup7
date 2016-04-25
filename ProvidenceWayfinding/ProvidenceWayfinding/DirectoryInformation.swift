@@ -122,8 +122,6 @@ func loadAdditional()
 }
 
 
-
-
 var directoryEntry: Directory!
 var parkingEntry: Directory!
 var parkingHistEntry: Directory!
