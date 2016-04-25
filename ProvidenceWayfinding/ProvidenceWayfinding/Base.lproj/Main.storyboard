@@ -1945,7 +1945,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                     <connections>
                         <outlet property="buildingButtons" destination="hW6-Nq-jvf" id="YMP-oq-8MV"/>
                         <outlet property="floorButtons" destination="rRB-Xe-inL" id="S2H-T0-ePi"/>
-                        <outlet property="nextBut" destination="4gM-Gf-F9O" id="mHj-4Q-MSS"/>
                         <outlet property="parkView" destination="1ae-qU-qbM" id="Olx-j1-c4K"/>
                         <outlet property="savedParkingDate" destination="ucx-Kw-3HH" id="k6H-UF-BhA"/>
                         <outlet property="savedParkingFloor" destination="BM2-eJ-ieE" id="a9B-v8-fPN"/>
@@ -2212,6 +2211,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="trn-9O-QQa"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Take Me Here" backgroundImage="ButtonDarkBlue.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2321,6 +2321,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="19E-Mu-4Od"/>
+        <segue reference="lh4-N2-I7u"/>
     </inferredMetricsTieBreakers>
 </document>

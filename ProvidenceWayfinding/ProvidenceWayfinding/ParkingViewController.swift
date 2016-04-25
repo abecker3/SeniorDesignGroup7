@@ -48,7 +48,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     
     //Actions
     @IBAction func save(sender: AnyObject) {
-
+        defaults.setInteger(1, forKey: "savedParkingEver")
         if (indexFlag == 0){
             building.insert(parkingLocationBuilding, atIndex: 0)
             floor.insert(parkingLocationFloor, atIndex: 0)
@@ -219,10 +219,22 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     }
 
     @IBAction func routeToCar(sender: AnyObject) {
-        routeFromWhichScreen = 1
-        flagForPlace = 1
-        resetToRootView = 1
-        tabBarController?.selectedIndex = 1
+        let check = defaults.integerForKey("savedParkingEver")
+        if (check == 1){
+            routeFromWhichScreen = 1
+            flagForPlace = 1
+            resetToRootView = 1
+            tabBarController?.selectedIndex = 1
+        }
+        else{
+            let alertTitle = "Error!"
+            let alertMessage = "There is no saved parking location to route to!"
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
+                alertController.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            presentViewController(alertController, animated: false, completion: nil)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

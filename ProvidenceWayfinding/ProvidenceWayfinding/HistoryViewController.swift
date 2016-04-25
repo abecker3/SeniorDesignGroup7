@@ -22,7 +22,7 @@ class HistoryViewController: UITableViewController{
     var pathFlag = Int()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return building.count
+        return (building.count - 1)
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -35,14 +35,26 @@ class HistoryViewController: UITableViewController{
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath)! as! BasicDirectionsCell
-        
-        parkingHistEntry = Directory(name: cell.titleLabel.text! + " Parking " + cell.subtitleLabel.text!, category: "Parking", floor: cell.subtitleLabel.text!, hours: "NA", ext: 0, notes: "")
-        
-        routeFromWhichScreen = 3
-        flagForPlace = 1
-        resetToRootView = 1
-        tabBarController?.selectedIndex = 1
+        let check = defaults.integerForKey("savedParkingEver")
+        if (check == 1){
+            let cell = tableView.cellForRowAtIndexPath(indexPath)! as! BasicDirectionsCell
+            
+            parkingHistEntry = Directory(name: cell.titleLabel.text! + " Parking " + cell.subtitleLabel.text!, category: "Parking", floor: cell.subtitleLabel.text!, hours: "NA", ext: 0, notes: "")
+            
+            routeFromWhichScreen = 3
+            flagForPlace = 1
+            resetToRootView = 1
+            tabBarController?.selectedIndex = 1
+        }
+        else{
+            let alertTitle = "Error!"
+            let alertMessage = "There is no saved parking location to route to!"
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
+                alertController.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            presentViewController(alertController, animated: false, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
