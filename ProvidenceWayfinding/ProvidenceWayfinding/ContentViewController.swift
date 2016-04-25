@@ -41,7 +41,7 @@ class ContentViewController: UIViewController {
             textField.text = "From the Parking tab you can: \n\n1) Save your parking location \n\n2) View your most recent saved parking location \n\n3) Click on the History button to view the last 10 saved parking locations \n\n4) Click Route to Car to be directed towards your car"
         }
         else if (titleText == "More"){
-            textField.text = "From the More tab you can: \n\n1) View information about all locations supported by this App \n\n2) View a map of the entire campus \n\n3) Read the terms of service  \n\n4) View general tips about navigating the Hospital by clicking the 'Completely Lost?' button \n\n5) View all available floor maps by clicking the 'Floor Maps' button"
+            textField.text = "From the More tab you can: \n\n1) View information about all locations supported by this App \n\n2) View all available floor maps by clicking the 'Floor Maps' button \n\n3) View a map of the entire campus  \n\n4) View general tips about navigating the Hospital by clicking the 'Completely Lost?' button \n\n5) Read the terms of service"
         }
         
         textField.font = UIFont(name: "Helvetica", size: 16)

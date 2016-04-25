@@ -419,7 +419,7 @@ ID,Name,X,Y,Building,Floor,Category,Hours,Ext,Notes
 417,,3369.0,864.0,Main,L3,,,0,
 418,,672.0,249.0,Main,2,,,0,
 419,Women's Main,1041.0,1716.0,Women's Parking,Main,,,0,
-420,Women's Elevator￿,1041.0,1593.0,Women's Parking,Main,,,0,
+420,Women's Elevator,1041.0,1593.0,Women's Parking,Main,,,0,
 421,Heart Parking,1104.0,1530.0,Heart,P1,,,0,
 422,Doctors Parking,1101.0,1458.0,Doctors,C,,,0,
 423,Women's Parking,1134.0,1512.0,Women's Parking,P2,,,0,

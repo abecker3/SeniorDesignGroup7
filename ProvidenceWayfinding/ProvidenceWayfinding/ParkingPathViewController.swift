@@ -34,7 +34,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
     
     
     //Outlets
-    @IBOutlet weak var nextBut: UIBarButtonItem!
+    //@IBOutlet weak var nextBut: UIBarButtonItem!
     @IBOutlet weak var parkView: UIView!
     @IBOutlet weak var savedParkingTime: UILabel!
     @IBOutlet weak var savedParkingFloor: UILabel!
@@ -68,6 +68,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
 
     }
     @IBAction func save(sender: AnyObject) {
+        defaults.setInteger(1, forKey: "savedParkingEver")
         if (indexFlag == 0){
 
             building.insert(parkingLocationBuilding, atIndex: 0)

@@ -28,6 +28,8 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
     //Globals
     var loaded = false
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
     var graph: Graph?
     var startVertex: Vertex?
     var endVertex: Vertex?
@@ -78,20 +80,8 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
     
     func routeToCar()
     {
-        if(parkingEntry == nil)
-        {
-            let alertTitle = "Error"
-            let alertMessage = "Parking not saved"
-            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
-            
-            let continueAction = UIAlertAction(title: "Continue", style: .Destructive){ (action) in alertController.dismissViewControllerAnimated(true, completion: nil)}
-            
-            alertController.addAction(continueAction)
-            presentViewController(alertController, animated: true, completion: nil)
-        }
-            
-        else
-        {
+        let check = defaults.integerForKey("savedParkingEver")
+        if (check == 1){
             let navController = self.navigationController!
             let indexOfLastViewController = navController.viewControllers.count - 1
             let indexOfSurvey = indexOfLastViewController - distanceToSurvey
@@ -105,6 +95,15 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
             surveyViewController.endLocation = parkingEntry
             
             navController.popToViewController(surveyViewController, animated: true)
+        }
+        else{
+            let alertTitle = "Error!"
+            let alertMessage = "There is no saved parking location to route to!"
+            let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
+                alertController.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            presentViewController(alertController, animated: false, completion: nil)
         }
     }
     

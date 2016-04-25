@@ -59,6 +59,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
                 setPlaceHolder()
             }
             segmentedControl.selectedSegmentIndex = 1
+            swapOn()
             destinationTextField.placeholder = parkingEntry.name
             endLocation = parkingEntry
             routeFromWhichScreen = 0
@@ -69,6 +70,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
                 clearPlaceHolder()
             }
             segmentedControl.selectedSegmentIndex = 0
+            swapOff()
             destinationTextField.placeholder = directoryEntry.name
             endLocation = directoryEntry
             routeFromWhichScreen = 0
@@ -79,6 +81,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
                 setPlaceHolder()
             }
             segmentedControl.selectedSegmentIndex = 1
+            swapOn()
             destinationTextField.placeholder = parkingHistEntry.name
             endLocation = parkingHistEntry
             routeFromWhichScreen = 0

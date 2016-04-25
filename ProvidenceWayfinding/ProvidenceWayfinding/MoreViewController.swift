@@ -32,7 +32,7 @@ class MoreViewController: UIViewController, UIScrollViewDelegate {
         screenEdgeRecognizer.edges = .Left
         view.addGestureRecognizer(screenEdgeRecognizer)
         
-        NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
     }
     
     /*
@@ -77,14 +77,17 @@ class MoreViewController: UIViewController, UIScrollViewDelegate {
         let imgFour = UIImageView(frame: CGRectMake(scrollViewWidth*1, 0,scrollViewWidth, scrollViewHeight))
         image2ViewHeight = imgFour.frame.height
         image2ViewWidth = imgFour.frame.width
-
-        
         imgFour.image = UIImage(named: "ChildrensPicture")
         //print("imgFour.image.size = " + String(imgFour.image!.size))
+        
+        let imgFive = UIImageView(frame: CGRectMake(scrollViewWidth*2, 0, scrollViewWidth, scrollViewHeight))
+        imgFive.image = UIImage(named: "DirectionsTab")
+        imgFive.contentMode = .ScaleAspectFit
         
         //4
         self.scrollView.addSubview(imgThree)
         self.scrollView.addSubview(imgFour)
+        self.scrollView.addSubview(imgFive)
         //let constraint = NSLayoutConstraint(item: imgThree, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 1).active = true
         //let constraint2 = NSLayoutConstraint(item: imgThree, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1.0, constant: 1).active = true
        // let constraint3 = NSLayoutConstraint(item: imgThree, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.Right, multiplier: 1.0, constant: 1).active = true
@@ -92,7 +95,7 @@ class MoreViewController: UIViewController, UIScrollViewDelegate {
         //self.view.addConstraint(constraint2)
        // scrollView.addConstraint(constraint3)
         //4
-        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.width * 2, self.scrollView.frame.height)
+        self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.width * 3, self.scrollView.frame.height)
         //self.scrollView.contentSize = CGSizeMake(scrollViewWidthConstraint.constant * 2, scrollViewHeight)
         self.scrollView.delegate = self
     }
@@ -117,7 +120,7 @@ class MoreViewController: UIViewController, UIScrollViewDelegate {
         //print("The complete scrollView frame = " + String(scrollView.frame))
         //let pageWidth:CGFloat = scrollViewWidthConstraint.constant
 
-        let maxWidth:CGFloat = pageWidth * 2
+        let maxWidth:CGFloat = pageWidth * 3
         let contentOffset:CGFloat = self.scrollView.contentOffset.x
         //print("ScrollView height = " + String(scrollView.frame.height))
         print("ImageView3 height = " + String(imageViewHeight))
