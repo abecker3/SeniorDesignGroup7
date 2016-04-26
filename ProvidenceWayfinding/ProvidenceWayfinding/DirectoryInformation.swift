@@ -128,3 +128,15 @@ var parkingHistEntry: Directory!
 var routeFromWhichScreen = 0
 var flagForPlace = 0
 var resetToRootView = 0
+
+func prepParking(){
+    var building = [String()]
+    var floor =  [String()]
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
+    if (defaults.objectForKey("buildingArray") != nil){
+        building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
+        floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
+    }
+    parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
+}
