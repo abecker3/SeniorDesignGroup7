@@ -30,6 +30,10 @@ class TutorialViewController: UIViewController, UIPageViewControllerDataSource {
         self.pageViewController.didMoveToParentViewController(self)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        flagTut = 0
+    }
+    
     @IBAction func restartAction(sender: AnyObject) {
         if (flagTut != 0){
             var startVC = self.viewControllerAtIndex(0) as ContentViewController
