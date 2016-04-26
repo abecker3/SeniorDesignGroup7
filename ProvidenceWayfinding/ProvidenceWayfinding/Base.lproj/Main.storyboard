@@ -1937,7 +1937,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <barButtonItem key="rightBarButtonItem" title="Next" id="4gM-Gf-F9O">
                             <connections>
                                 <action selector="nextView:" destination="B5n-Ui-7sL" id="KY9-tN-lOj"/>
-                                <segue destination="An8-21-4SF" kind="show" id="lh4-N2-I7u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1950,6 +1949,7 @@ Personal data should be relevant to the purposes for which it is to be used, and
                         <outlet property="savedParkingFloor" destination="BM2-eJ-ieE" id="a9B-v8-fPN"/>
                         <outlet property="savedParkingSpot" destination="Vt6-6W-jIO" id="Yka-9p-O0y"/>
                         <outlet property="savedParkingTime" destination="dna-xM-Eeq" id="8dE-T4-EZf"/>
+                        <segue destination="An8-21-4SF" kind="show" identifier="onCampusView" id="2Ta-DM-qBR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="te5-HQ-b8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2321,6 +2321,6 @@ Personal data should be relevant to the purposes for which it is to be used, and
         <image name="providence_logo1.png" width="2009" height="883"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lh4-N2-I7u"/>
+        <segue reference="2Ta-DM-qBR"/>
     </inferredMetricsTieBreakers>
 </document>
