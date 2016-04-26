@@ -53,11 +53,11 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
             let alertTitle = "Caution!"
             let alertMessage = "Would you like to continue without saving your most current parking location?"
             let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
-                self.performSegueWithIdentifier("onCampusView", sender: self)
-            }))
             alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
                 alertController.dismissViewControllerAnimated(true, completion: nil)
+            }))
+            alertController.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) in
+                self.performSegueWithIdentifier("onCampusView", sender: self)
             }))
             
             presentViewController(alertController, animated: false, completion: nil)

@@ -18,6 +18,7 @@
 		A05A93B11C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */; };
 		A06517E11C56CD1800B12A63 /* DirectoryInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */; };
 		A0DD87201C580E0B0071B478 /* DirectorySpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */; };
+		B6678E7A1CD00975004E1CE9 /* data in Resources */ = {isa = PBXBuildFile; fileRef = B6678E791CD00975004E1CE9 /* data */; };
 		B696505A1C04F1EA00C8276A /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */; };
 		B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650581C04F1EA00C8276A /* LocationTableViewController.swift */; };
 		B696505D1C04F1EA00C8276A /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650591C04F1EA00C8276A /* SurveyViewController.swift */; };
@@ -30,7 +31,6 @@
 		B6B73E801CC4D3350088BA86 /* lineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B73E771CC4D3350088BA86 /* lineView.swift */; };
 		B6B73E811CC4D3350088BA86 /* OnCampusDirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B73E781CC4D3350088BA86 /* OnCampusDirectionsViewController.swift */; };
 		B6B73E831CC4D3350088BA86 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B73E7A1CC4D3350088BA86 /* Vertex.swift */; };
-		B6D6363A1CCEF6C10037B568 /* data in Resources */ = {isa = PBXBuildFile; fileRef = B6D636391CCEF6C10037B568 /* data */; };
 		B81F5F801C5867DF00B2D981 /* FloorPlansViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81F5F7F1C5867DF00B2D981 /* FloorPlansViewController.swift */; };
 		B877638E1C9899E300F9032C /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877638D1C9899E300F9032C /* TutorialViewController.swift */; };
 		B87763901C989C7300F9032C /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B877638F1C989C7300F9032C /* ContentViewController.swift */; };
@@ -118,6 +118,7 @@
 		A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchedDirectoryTableViewController.swift; path = ../SearchedDirectoryTableViewController.swift; sourceTree = "<group>"; };
 		A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryInformation.swift; sourceTree = "<group>"; };
 		A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorySpecificViewController.swift; sourceTree = "<group>"; };
+		B6678E791CD00975004E1CE9 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../data; sourceTree = "<group>"; };
 		B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		B69650581C04F1EA00C8276A /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		B69650591C04F1EA00C8276A /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +131,6 @@
 		B6B73E771CC4D3350088BA86 /* lineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lineView.swift; sourceTree = "<group>"; };
 		B6B73E781CC4D3350088BA86 /* OnCampusDirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnCampusDirectionsViewController.swift; sourceTree = "<group>"; };
 		B6B73E7A1CC4D3350088BA86 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
-		B6D636391CCEF6C10037B568 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../data; sourceTree = "<group>"; };
 		B81F5F7F1C5867DF00B2D981 /* FloorPlansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloorPlansViewController.swift; sourceTree = "<group>"; };
 		B877638D1C9899E300F9032C /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		B877638F1C989C7300F9032C /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
@@ -364,7 +364,7 @@
 		D2CA49E51BE2B58B00E79580 /* ProvidenceWayfinding */ = {
 			isa = PBXGroup;
 			children = (
-				B6D636391CCEF6C10037B568 /* data */,
+				B6678E791CD00975004E1CE9 /* data */,
 				D2C12B641CCA8DEB00BDC046 /* Floor Plans */,
 				B6B73E711CC4D2EC0088BA86 /* On Campus */,
 				B6D6363C1CCEF8C50037B568 /* Images */,
@@ -527,6 +527,7 @@
 				D2C12B711CCA902A00BDC046 /* Childrens_L2.jpg in Resources */,
 				B87763A51C98CA6600F9032C /* Car.png in Resources */,
 				D2C12BA11CCA905100BDC046 /* Womens_L2.jpg in Resources */,
+				B6678E7A1CD00975004E1CE9 /* data in Resources */,
 				D2C12B921CCA904700BDC046 /* Main_9.jpg in Resources */,
 				D2C12B6E1CCA902A00BDC046 /* Childrens_3.jpg in Resources */,
 				D2C12B791CCA903A00BDC046 /* Heart_2.jpg in Resources */,
@@ -540,7 +541,6 @@
 				D2C12BA01CCA905100BDC046 /* Womens_L1.jpg in Resources */,
 				D2341F541C11610700F5ACBA /* NearMe100.png in Resources */,
 				D2C12B8D1CCA904700BDC046 /* Main_4.jpg in Resources */,
-				B6D6363A1CCEF6C10037B568 /* data in Resources */,
 				D2C12B931CCA904700BDC046 /* Main_10.jpg in Resources */,
 				D2C12B8E1CCA904700BDC046 /* Main_5.jpg in Resources */,
 				D2C12B911CCA904700BDC046 /* Main_8.jpg in Resources */,

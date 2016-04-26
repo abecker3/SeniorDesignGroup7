@@ -84,7 +84,9 @@ var directory = [Directory]();
 
 func loadDirectory()
 {
+    print("Entered Load")
     let fileVertices = NSBundle.mainBundle().pathForResource("data/vertices", ofType: "csv")!
+    print(fileVertices)
     
     let error: NSErrorPointer = nil
     
@@ -109,6 +111,7 @@ func loadDirectory()
             directory.append(Directory(name: String(name), category: String(category), floor: String(floor), hours: String(hours), ext: Int(ext)!, notes: String(notes)))
         }
     }
+    print(directory.count)
     loadAdditional();
 }
 

@@ -389,7 +389,7 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
             {
                 directions.append(Direction())
                 directionsIndex += 1
-                directions[directionsIndex].text = "Continue to " + path[i].building + " Building";
+                directions[directionsIndex].text = "Continue to " + path[i].building;
                 directions[directionsIndex].vertices.append(path[i - 1])
             }
                 
