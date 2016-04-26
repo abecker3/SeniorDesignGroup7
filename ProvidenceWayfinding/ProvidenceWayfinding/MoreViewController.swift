@@ -71,23 +71,25 @@ class MoreViewController: UIViewController, UIScrollViewDelegate {
         let imgThree = UIImageView(frame: CGRectMake(scrollViewWidth*0, 0, scrollViewWidth, scrollViewHeight))
         //imageViewHeight = imgThree.frame.height
         //imageViewWidth = imgThree.frame.width
-        imgThree.image = UIImage(named: "providence_logo1.png")
-        imgThree.contentMode = .ScaleAspectFit // make's the image fit into the ImageView
+        imgThree.image = UIImage(named: "Emergency")
+        imgThree.contentMode = .ScaleAspectFill // make's the image fit into the ImageView
 
-        let imgFour = UIImageView(frame: CGRectMake(scrollViewWidth*1, 0,scrollViewWidth, scrollViewHeight))
+        let imgFour = UIImageView(frame: CGRectMake(scrollViewWidth*2, 0,scrollViewWidth, scrollViewHeight))
         image2ViewHeight = imgFour.frame.height
         image2ViewWidth = imgFour.frame.width
-        imgFour.image = UIImage(named: "ChildrensPicture")
+        imgFour.contentMode = .ScaleAspectFit
+        imgFour.image = UIImage(named: "providence_logo1.png")
         //print("imgFour.image.size = " + String(imgFour.image!.size))
         
-        let imgFive = UIImageView(frame: CGRectMake(scrollViewWidth*2, 0, scrollViewWidth, scrollViewHeight))
-        imgFive.image = UIImage(named: "DirectionsTab")
-        imgFive.contentMode = .ScaleAspectFit
+        let imgFive = UIImageView(frame: CGRectMake(scrollViewWidth*1, 0, scrollViewWidth, scrollViewHeight))
+        imgFive.image = UIImage(named: "Childrens")
+        //imgFive.contentMode = .ScaleAspectFit
         
         //4
         self.scrollView.addSubview(imgThree)
-        self.scrollView.addSubview(imgFour)
+        
         self.scrollView.addSubview(imgFive)
+        self.scrollView.addSubview(imgFour)
         //let constraint = NSLayoutConstraint(item: imgThree, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: 1).active = true
         //let constraint2 = NSLayoutConstraint(item: imgThree, attribute: NSLayoutAttribute.Left, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1.0, constant: 1).active = true
        // let constraint3 = NSLayoutConstraint(item: imgThree, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: scrollView, attribute: NSLayoutAttribute.Right, multiplier: 1.0, constant: 1).active = true
