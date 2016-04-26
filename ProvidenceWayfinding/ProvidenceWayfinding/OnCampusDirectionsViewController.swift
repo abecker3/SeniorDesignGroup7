@@ -93,6 +93,7 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
             surveyViewController.startLocation = endLocation
             surveyViewController.destinationTextField.placeholder = parkingEntry.name
             surveyViewController.endLocation = parkingEntry
+            routeFromWhichScreen = 1
             
             navController.popToViewController(surveyViewController, animated: true)
         }

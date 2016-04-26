@@ -180,7 +180,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         view.addGestureRecognizer(screenEdgeRecognizerLeft)
         
         // Do any additional setup after loading the view.
-        parkingLocationBuilding = "Doctor's"
+        parkingLocationBuilding = "Doctors"
         parkingLocationFloor = "C"
         
         setFloorOptions(0)

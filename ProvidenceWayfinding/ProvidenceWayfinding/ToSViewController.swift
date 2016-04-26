@@ -18,6 +18,7 @@ class ToSViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         self.textView.scrollRangeToVisible(NSMakeRange(0, 0))
+        prepParking()
     }
     
 }
