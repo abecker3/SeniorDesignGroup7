@@ -14,7 +14,7 @@ struct Directory
     var category: String
     var floor: String
     var hours: String
-    var ext: Int //phone extension, named ext because extension is a keyword
+    var ext: String //phone extension, named ext because extension is a keyword
     var notes: String //any additional notes about each location, especially about entering restricted areas
 }
 
@@ -106,7 +106,7 @@ func loadDirectory()
 
         if(category != "")
         {
-            directory.append(Directory(name: String(name), category: String(category), floor: String(floor), hours: String(hours), ext: Int(ext)!, notes: String(notes)))
+            directory.append(Directory(name: String(name), category: String(category), floor: String(floor), hours: String(hours), ext: String(ext), notes: String(notes)))
         }
     }
     loadAdditional();
@@ -114,11 +114,11 @@ func loadDirectory()
 
 func loadAdditional()
 {
-    directory.append(Directory(name: "Doctors Building Information", category: "Doctors Building", floor: "Main", hours: "9AM to 5PM", ext: 44775, notes: ""))
-    directory.append(Directory(name: "Pediatric Gastroenterology", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: 45437, notes: ""))
-    directory.append(Directory(name: "Pediatric Nephrology", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: 3400930, notes: ""))
-    directory.append(Directory(name: "Pediatric Pulmonology", category: "Doctors Building", floor: "4", hours: "8AM to 5PM Mon-Fri", ext: 46960, notes: ""))
-    directory.append(Directory(name: "Transplant", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: 0, notes: ""))
+    directory.append(Directory(name: "Doctors Building Information", category: "Doctors Building", floor: "Main", hours: "9AM to 5PM", ext: "44775", notes: ""))
+    directory.append(Directory(name: "Pediatric Gastroenterology", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: "45437", notes: ""))
+    directory.append(Directory(name: "Pediatric Nephrology", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: "3400930", notes: ""))
+    directory.append(Directory(name: "Pediatric Pulmonology", category: "Doctors Building", floor: "4", hours: "8AM to 5PM Mon-Fri", ext: "46960", notes: ""))
+    directory.append(Directory(name: "Transplant", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: "", notes: ""))
 }
 
 
@@ -138,5 +138,5 @@ func prepParking(){
         building = defaults.objectForKey("buildingArray")! as! NSArray as! [String]
         floor = defaults.objectForKey("floorArray")! as! NSArray as! [String]
     }
-    parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
+    parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: "", notes: "")
 }

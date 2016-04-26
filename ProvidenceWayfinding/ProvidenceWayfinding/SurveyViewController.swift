@@ -47,7 +47,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         destinationTextField.tag = 1
         
         if (routeFromWhichScreen == 0){
-            startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
+            startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: "", notes: "")
         }
         swapOff()
     }
@@ -101,7 +101,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
     func clearPlaceHolder(){
         currentTextField.placeholder = "Off Campus"
         currentTextField.enabled = false
-        startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
+        startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: "", notes: "")
         flagForPlace = 0
     }
     
@@ -114,7 +114,7 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         }
         currentTextField.placeholder = "Off Campus"
         currentTextField.enabled = false
-        startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
+        startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: "", notes: "")
         currentStackView.hidden = true
         spacer.hidden = true
         

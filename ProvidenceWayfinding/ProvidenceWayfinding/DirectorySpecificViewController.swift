@@ -14,7 +14,7 @@ class DirectorySpecificViewController: UIViewController {
     @IBOutlet weak var directorySpecificTitle: UINavigationItem!
 
     var passInName: String!
-    var phoneExt: Int!
+    var phoneExt: String!
     var hours: String!
     var building: String!
     var floor: String!
@@ -24,11 +24,12 @@ class DirectorySpecificViewController: UIViewController {
     var phoneNumber = String()
     
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
+    //@IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var buildingLabel: UILabel!
     @IBOutlet weak var floorLabel: UILabel!
     @IBOutlet var notesLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UIButton!
     
     
     override func viewDidLoad() {
@@ -38,15 +39,21 @@ class DirectorySpecificViewController: UIViewController {
         nameLabel.text = passInName
         getInfoFromName(directory)
         directorySpecificTitle.title = passInName
-        phoneLabel.text = String(phoneExt)
+        //phoneLabel.setText = String(phoneExt)
+        phoneLabel.setTitle(phoneExt, forState: .Normal)
         hoursLabel.text = hours
         buildingLabel.text = building
         floorLabel.text = floor
         notesLabel.text = notes
     }
     
+    @IBAction func callMeNow(sender: AnyObject) {
+        if (phoneExt != ""){
+            callNumber(phoneExt)
+        }
+    }
+    
     private func callNumber(phoneNumber:String) {
-        let phoneNumber = "5094743131" + phoneLabel.text!
         if let phoneCallURL:NSURL = NSURL(string: "tel://\(phoneNumber)") {
             let application:UIApplication = UIApplication.sharedApplication()
             if (application.canOpenURL(phoneCallURL)) {
