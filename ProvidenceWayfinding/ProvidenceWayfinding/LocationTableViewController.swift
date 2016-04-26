@@ -23,6 +23,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     var resultSearchController = UISearchController()
     var filteredTableData = [String]()
     var locationOptions:[Directory] = []
+    var locationStringOptions = [String]()
     var allLocationsTag: Bool = false
 
     override func viewDidLoad()
@@ -75,6 +76,8 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         let array = (newArray as NSArray).filteredArrayUsingPredicate(searchPredicate)
         filteredTableData = array as! [String]
         
+        filteredTableData.sortInPlace()
+        
         self.tableView.reloadData()
     }
     
@@ -125,15 +128,14 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         return cell*/
         
         if(self.resultSearchController.active) {
-            
             cell.textLabel?.text = filteredTableData[indexPath.row]
             //cell.detailTextLabel!.text = "11 AM to 8 PM"
             return cell
         }
             
         else {
-            let option = locationOptions[indexPath.row]
-            cell.textLabel?.text = option.name
+            let option = locationStringOptions[indexPath.row]
+            cell.textLabel?.text = option
             //cell.detailTextLabel!.text = "11 AM to 8 PM"
             return cell
         }
@@ -207,16 +209,16 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         
         else if(passInTextFieldTag == surveyViewController.currentTextField.tag /*&& !allLocationsTag*/)
         {
-            surveyViewController.currentTextField.placeholder = locationOptions[indexPath.row].name
-            surveyViewController.startLocation = locationOptions[indexPath.row]
+            surveyViewController.currentTextField.placeholder = locationStringOptions[indexPath.row]
+            surveyViewController.startLocation = getLocationFromName(locationStringOptions[indexPath.row])
             print(locationOptions[indexPath.row])
             print("Current: regular cell selection")
         }
         
         else if(passInTextFieldTag == surveyViewController.destinationTextField.tag /*&& !allLocationsTag*/)
         {
-            surveyViewController.destinationTextField.placeholder = locationOptions[indexPath.row].name
-            surveyViewController.endLocation = locationOptions[indexPath.row]
+            surveyViewController.destinationTextField.placeholder = locationStringOptions[indexPath.row]
+            surveyViewController.endLocation = getLocationFromName(locationStringOptions[indexPath.row])
             print(locationOptions[indexPath.row])
             print("Destination: regular cell selection")
         }
@@ -232,6 +234,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
             if(location.category == passInCategory && !allLocationsClicked)
             {
                 locationOptions.append(location)
+                locationStringOptions.append(location.name)
             }
             else if(passInCategory == "All Locations")
             {
@@ -239,9 +242,11 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
                 if(location.category != "All Locations")
                 {
                     locationOptions.append(location)
+                    locationStringOptions.append(location.name)
                 }
             }
         }
+        locationStringOptions.sortInPlace()
     }
     
     func initControllerTitle()

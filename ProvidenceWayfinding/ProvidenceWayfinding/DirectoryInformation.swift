@@ -121,6 +121,7 @@ func loadAdditional()
     directory.append(Directory(name: "Transplant", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: 0, notes: ""))
 }
 
+
 var directoryEntry: Directory!
 var parkingEntry: Directory!
 var parkingHistEntry: Directory!

@@ -117,6 +117,10 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         startLocation = Directory(name: "Off Campus", category: "NA", floor: "NA", hours: "NA", ext: 0, notes: "")
         currentStackView.hidden = true
         spacer.hidden = true
+        
+        destinationTextField.placeholder = "Select Destination"
+        destinationTextField.enabled = true
+        endLocation = nil
     }
     
     func swapOn()
@@ -126,6 +130,10 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         startLocation = nil
         currentStackView.hidden = false
         spacer.hidden = false
+        
+        destinationTextField.placeholder = "Select Destination"
+        destinationTextField.enabled = true
+        endLocation = nil
     }
     
     @IBAction func changedOnOff(sender: UISegmentedControl) {
