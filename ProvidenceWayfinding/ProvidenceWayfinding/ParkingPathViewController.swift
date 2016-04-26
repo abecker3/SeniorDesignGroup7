@@ -111,7 +111,7 @@ class ParkingPathViewController: UIViewController, UITextFieldDelegate {
         savedParkingTime.text = timeSave[0]
         saved = true
         
-        parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
+        parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: "", notes: "")
         
         startLocation.name = building[0] + " Parking " + floor[0]
     }

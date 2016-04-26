@@ -93,6 +93,7 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
             surveyViewController.startLocation = endLocation
             surveyViewController.destinationTextField.placeholder = parkingEntry.name
             surveyViewController.endLocation = parkingEntry
+            routeFromWhichScreen = 1
             
             navController.popToViewController(surveyViewController, animated: true)
         }
@@ -336,13 +337,12 @@ class OnCampusDirectionsViewController: UIViewController, UIScrollViewDelegate
             loadPinsView();
             scrollView.setZoomScale(scrollView.minimumZoomScale, animated: false)
             centerScrollViewContents();
-        
-            if(resetToRootView == 1)
-            {
-                self.navigationController?.popToRootViewControllerAnimated(true)
-            }
             
             loaded = true
+        }
+        if(resetToRootView == 1)
+        {
+            self.navigationController?.popToRootViewControllerAnimated(true)
         }
     }
     //******************************************************************************************//

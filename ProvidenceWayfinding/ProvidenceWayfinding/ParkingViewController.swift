@@ -87,7 +87,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
         
-        parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
+        parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: "", notes: "")
     }
     
     @IBAction func changedBuilding(sender: UISegmentedControl) {
@@ -180,7 +180,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         view.addGestureRecognizer(screenEdgeRecognizerLeft)
         
         // Do any additional setup after loading the view.
-        parkingLocationBuilding = "Doctor's"
+        parkingLocationBuilding = "Doctors"
         parkingLocationFloor = "C"
         
         setFloorOptions(0)
@@ -212,7 +212,7 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
         savedParkingFloor.text = floor[0]
         savedParkingTime.text = timeSave[0]
         
-        parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: 0, notes: "")
+        parkingEntry = Directory(name: building[0] + " Parking " + floor[0], category: "Parking", floor: floor[0], hours: "NA", ext: "", notes: "")
 
     }
 
