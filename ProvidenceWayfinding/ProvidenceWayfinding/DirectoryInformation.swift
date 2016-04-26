@@ -117,10 +117,10 @@ func loadDirectory()
 
 func loadAdditional()
 {
-    directory.append(Directory(name: "Doctors Building Information", category: "Doctors Building", floor: "Main", hours: "9AM to 5PM", ext: "44775", notes: ""))
-    directory.append(Directory(name: "Pediatric Gastroenterology", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: "45437", notes: ""))
-    directory.append(Directory(name: "Pediatric Nephrology", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: "3400930", notes: ""))
-    directory.append(Directory(name: "Pediatric Pulmonology", category: "Doctors Building", floor: "4", hours: "8AM to 5PM Mon-Fri", ext: "46960", notes: ""))
+    directory.append(Directory(name: "Doctors Building Information", category: "Doctors Building", floor: "Main", hours: "9AM to 5PM", ext: "5094744775", notes: ""))
+    directory.append(Directory(name: "Pediatric Gastroenterology", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: "5094745437", notes: ""))
+    directory.append(Directory(name: "Pediatric Nephrology", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: "5093400930", notes: ""))
+    directory.append(Directory(name: "Pediatric Pulmonology", category: "Doctors Building", floor: "4", hours: "8AM to 5PM Mon-Fri", ext: "5094746960", notes: ""))
     directory.append(Directory(name: "Transplant", category: "Doctors Building", floor: "Main", hours: "8AM to 5PM Mon-Fri", ext: "", notes: ""))
 }
 
