@@ -310,7 +310,7 @@ ID,Name,X,Y,Building,Floor,Category,Hours,Ext,Notes
 308,,666.0,363.0,Heart,4,,,0,
 309,,420.0,429.0,Heart,5,,,0,
 310,Center of Gynecology,588.0,398.0,Main,Main,Women's Health Center,8AM - 5PM Mon-Fri,47370,
-311,Care Shop,704.0,444.0,Main,Main,Women's Health Center,"9AM to 5PM Mon-Fri & 11AM to 3PM Sat,44040,",0,
+311,Care Shop,704.0,444.0,Main,Main,Women's Health Center,9AM to 5PM Mon-Fri & 11AM to 3PM Sat,44040,,0,
 312,,660.0,450.0,Main,Main,,,0,
 313,Maternity Clinic,668.0,270.0,Main,Main,Women's Health Center,8:30AM to 5PM Mon-Thurs & 8:30AM to 12:30PM Fri,43170,
 314,Pre-Admission Clinic,843.0,273.0,Main,Main,Women's Health Center,8AM to 5PM Mon-Fri,0,

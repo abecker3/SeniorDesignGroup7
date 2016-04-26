@@ -118,9 +118,9 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         currentStackView.hidden = true
         spacer.hidden = true
         
-        destinationTextField.placeholder = "Select Destination"
+        /*destinationTextField.placeholder = "Select Destination"
         destinationTextField.enabled = true
-        endLocation = nil
+        endLocation = nil*/
     }
     
     func swapOn()
@@ -131,9 +131,9 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
         currentStackView.hidden = false
         spacer.hidden = false
         
-        destinationTextField.placeholder = "Select Destination"
+        /*destinationTextField.placeholder = "Select Destination"
         destinationTextField.enabled = true
-        endLocation = nil
+        endLocation = nil*/
     }
     
     @IBAction func changedOnOff(sender: UISegmentedControl) {
