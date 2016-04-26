@@ -7,24 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0300278C1C0FB29D00BB789F /* Concessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0300278B1C0FB29D00BB789F /* Concessions.swift */; };
 		3501ADD31BF27F6000981151 /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3501ADD21BF27F6000981151 /* ToSViewController.swift */; };
-		351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351906AC1BE9489200F1D343 /* OnCampusViewController.swift */; };
 		354B98DF1C0278470087E67C /* CampusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B98DE1C0278470087E67C /* CampusViewController.swift */; };
 		354B98F81C04EF330087E67C /* Campus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 354B98F01C04EF330087E67C /* Campus.jpg */; };
 		354B99031C121AB90087E67C /* ToSMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B99021C121AB90087E67C /* ToSMoreViewController.swift */; };
 		354B99051C14F6010087E67C /* LostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B99041C14F6010087E67C /* LostViewController.swift */; };
 		35A706D01C4D83B00039F4DC /* providence_logo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A706CF1C4D83B00039F4DC /* providence_logo1.png */; };
-		39DDF7BA1C0D348A00CC63A5 /* HoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */; };
 		39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E909351C0E30F500F81024 /* MoreViewController.swift */; };
 		A05A93AB1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05A93AA1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift */; };
 		A05A93B11C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */; };
 		A06517E11C56CD1800B12A63 /* DirectoryInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */; };
-		A0D264C21C691D260026EB2A /* BuildingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D264C11C691D260026EB2A /* BuildingTableViewController.swift */; };
 		A0DD87201C580E0B0071B478 /* DirectorySpecificViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */; };
-		A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F0AC691C176CB300052430 /* ConcessionsTableViewController.swift */; };
 		B696505A1C04F1EA00C8276A /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */; };
-		B696505B1C04F1EA00C8276A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650571C04F1EA00C8276A /* Location.swift */; };
 		B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650581C04F1EA00C8276A /* LocationTableViewController.swift */; };
 		B696505D1C04F1EA00C8276A /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69650591C04F1EA00C8276A /* SurveyViewController.swift */; };
 		B696505F1C04F7E200C8276A /* ParkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696505E1C04F7E200C8276A /* ParkingViewController.swift */; };
@@ -48,8 +42,6 @@
 		B87C86091C6A46E20091514E /* ParkingPathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C86081C6A46E20091514E /* ParkingPathViewController.swift */; };
 		B87C860B1C6A79720091514E /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87C860A1C6A79720091514E /* HistoryViewController.swift */; };
 		B89D054E1C56F1FD00D81C76 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */; };
-		B89D05501C56F8F800D81C76 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */; };
-		B8EAEFAC1C613E260084A531 /* NotAvailable.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8EAEFAB1C613E260084A531 /* NotAvailable.jpg */; };
 		D227F9911C725E2A0029A5E7 /* List-100.png in Resources */ = {isa = PBXBuildFile; fileRef = D227F9901C725E2A0029A5E7 /* List-100.png */; };
 		D227F9931C725F930029A5E7 /* MapDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D227F9921C725F930029A5E7 /* MapDetailsViewController.swift */; };
 		D2341F541C11610700F5ACBA /* NearMe100.png in Resources */ = {isa = PBXBuildFile; fileRef = D2341F511C11610700F5ACBA /* NearMe100.png */; };
@@ -95,7 +87,6 @@
 		D2CA49FC1BE2B58C00E79580 /* ProvidenceWayfindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA49FB1BE2B58C00E79580 /* ProvidenceWayfindingTests.swift */; };
 		D2CA4A071BE2B58D00E79580 /* ProvidenceWayfindingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA4A061BE2B58D00E79580 /* ProvidenceWayfindingUITests.swift */; };
 		D2CA4A171BE2B72600E79580 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */; };
-		D2CA4A191BE2B72600E79580 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA4A161BE2B72600E79580 /* TransitionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,24 +107,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0300278B1C0FB29D00BB789F /* Concessions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Concessions.swift; sourceTree = "<group>"; };
 		3501ADD21BF27F6000981151 /* ToSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToSViewController.swift; sourceTree = "<group>"; };
-		351906AC1BE9489200F1D343 /* OnCampusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnCampusViewController.swift; sourceTree = "<group>"; };
 		354B98DE1C0278470087E67C /* CampusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusViewController.swift; sourceTree = "<group>"; };
 		354B98F01C04EF330087E67C /* Campus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Campus.jpg; sourceTree = "<group>"; };
 		354B99021C121AB90087E67C /* ToSMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToSMoreViewController.swift; sourceTree = "<group>"; };
 		354B99041C14F6010087E67C /* LostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostViewController.swift; sourceTree = "<group>"; };
 		35A706CF1C4D83B00039F4DC /* providence_logo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = providence_logo1.png; sourceTree = "<group>"; };
-		39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HoursViewController.swift; path = ../HoursViewController.swift; sourceTree = "<group>"; };
 		39E909351C0E30F500F81024 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		A05A93AA1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryBuildingChooserViewController.swift; sourceTree = "<group>"; };
 		A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchedDirectoryTableViewController.swift; path = ../SearchedDirectoryTableViewController.swift; sourceTree = "<group>"; };
 		A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryInformation.swift; sourceTree = "<group>"; };
-		A0D264C11C691D260026EB2A /* BuildingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingTableViewController.swift; sourceTree = "<group>"; };
 		A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectorySpecificViewController.swift; sourceTree = "<group>"; };
-		A0F0AC691C176CB300052430 /* ConcessionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcessionsTableViewController.swift; sourceTree = "<group>"; };
 		B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
-		B69650571C04F1EA00C8276A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		B69650581C04F1EA00C8276A /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		B69650591C04F1EA00C8276A /* SurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		B696505E1C04F7E200C8276A /* ParkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingViewController.swift; sourceTree = "<group>"; };
@@ -157,8 +142,6 @@
 		B87C86081C6A46E20091514E /* ParkingPathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingPathViewController.swift; sourceTree = "<group>"; };
 		B87C860A1C6A79720091514E /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
-		B8EAEFAB1C613E260084A531 /* NotAvailable.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NotAvailable.jpg; sourceTree = "<group>"; };
 		D227F9901C725E2A0029A5E7 /* List-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "List-100.png"; sourceTree = "<group>"; };
 		D227F9921C725F930029A5E7 /* MapDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailsViewController.swift; sourceTree = "<group>"; };
 		D2341F511C11610700F5ACBA /* NearMe100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NearMe100.png; sourceTree = "<group>"; };
@@ -210,7 +193,6 @@
 		D2CA4A061BE2B58D00E79580 /* ProvidenceWayfindingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidenceWayfindingUITests.swift; sourceTree = "<group>"; };
 		D2CA4A081BE2B58D00E79580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
-		D2CA4A161BE2B72600E79580 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +234,72 @@
 				B6B73E7A1CC4D3350088BA86 /* Vertex.swift */,
 			);
 			name = "On Campus";
+			sourceTree = "<group>";
+		};
+		B6D6363C1CCEF8C50037B568 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D227F9901C725E2A0029A5E7 /* List-100.png */,
+				B87763AD1C9E09B400F9032C /* ButtonDarkBlue.png */,
+				D2341F511C11610700F5ACBA /* NearMe100.png */,
+				D2341F521C11610700F5ACBA /* NearMeFilled100.png */,
+				D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */,
+				354B98F01C04EF330087E67C /* Campus.jpg */,
+				35A706CF1C4D83B00039F4DC /* providence_logo1.png */,
+				B87763A11C98CA6600F9032C /* Car.png */,
+				B87763A21C98CA6600F9032C /* Home.png */,
+				B87763A31C98CA6600F9032C /* Map.png */,
+				B87763A41C98CA6600F9032C /* More.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		B6D6363E1CCEF9190037B568 /* Directions */ = {
+			isa = PBXGroup;
+			children = (
+				D227F9921C725F930029A5E7 /* MapDetailsViewController.swift */,
+				D2C7308B1C69473D002AF7CB /* BasicDirectionsCell.swift */,
+				B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */,
+				B87C86081C6A46E20091514E /* ParkingPathViewController.swift */,
+				B69650591C04F1EA00C8276A /* SurveyViewController.swift */,
+				B69650581C04F1EA00C8276A /* LocationTableViewController.swift */,
+				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
+			);
+			name = Directions;
+			sourceTree = "<group>";
+		};
+		B6D6363F1CCEF9620037B568 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */,
+				B877638D1C9899E300F9032C /* TutorialViewController.swift */,
+				B877638F1C989C7300F9032C /* ContentViewController.swift */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		B6D636401CCEF97C0037B568 /* Parking */ = {
+			isa = PBXGroup;
+			children = (
+				B87C860A1C6A79720091514E /* HistoryViewController.swift */,
+				B696505E1C04F7E200C8276A /* ParkingViewController.swift */,
+			);
+			name = Parking;
+			sourceTree = "<group>";
+		};
+		B6D636411CCEF9D90037B568 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */,
+				A05A93AA1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift */,
+				354B98DE1C0278470087E67C /* CampusViewController.swift */,
+				39E909351C0E30F500F81024 /* MoreViewController.swift */,
+				354B99021C121AB90087E67C /* ToSMoreViewController.swift */,
+				354B99041C14F6010087E67C /* LostViewController.swift */,
+				A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */,
+				B81F5F7F1C5867DF00B2D981 /* FloorPlansViewController.swift */,
+			);
+			name = More;
 			sourceTree = "<group>";
 		};
 		D2C12B641CCA8DEB00BDC046 /* Floor Plans */ = {
@@ -319,53 +367,18 @@
 				B6D636391CCEF6C10037B568 /* data */,
 				D2C12B641CCA8DEB00BDC046 /* Floor Plans */,
 				B6B73E711CC4D2EC0088BA86 /* On Campus */,
-				D227F9901C725E2A0029A5E7 /* List-100.png */,
-				B87763AD1C9E09B400F9032C /* ButtonDarkBlue.png */,
-				D2341F511C11610700F5ACBA /* NearMe100.png */,
-				D2341F521C11610700F5ACBA /* NearMeFilled100.png */,
-				D2341F531C11610700F5ACBA /* NorthDirectionFilled100.png */,
-				354B98F01C04EF330087E67C /* Campus.jpg */,
-				B8EAEFAB1C613E260084A531 /* NotAvailable.jpg */,
-				35A706CF1C4D83B00039F4DC /* providence_logo1.png */,
-				B87763A11C98CA6600F9032C /* Car.png */,
-				B87763A21C98CA6600F9032C /* Home.png */,
-				B87763A31C98CA6600F9032C /* Map.png */,
-				B87763A41C98CA6600F9032C /* More.png */,
-				A05A93B01C73B9C90047B5B3 /* SearchedDirectoryTableViewController.swift */,
-				D2CA4A141BE2B72600E79580 /* DirectionsViewController.swift */,
-				B696505E1C04F7E200C8276A /* ParkingViewController.swift */,
-				B87C860A1C6A79720091514E /* HistoryViewController.swift */,
-				B87C86081C6A46E20091514E /* ParkingPathViewController.swift */,
-				D2CA4A161BE2B72600E79580 /* TransitionManager.swift */,
-				D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */,
-				39DDF7B91C0D348A00CC63A5 /* HoursViewController.swift */,
-				351906AC1BE9489200F1D343 /* OnCampusViewController.swift */,
-				B89D054F1C56F8F800D81C76 /* DestinationViewController.swift */,
-				D2CA49EA1BE2B58B00E79580 /* Main.storyboard */,
-				B877638D1C9899E300F9032C /* TutorialViewController.swift */,
-				B877638F1C989C7300F9032C /* ContentViewController.swift */,
-				A05A93AA1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift */,
-				A0D264C11C691D260026EB2A /* BuildingTableViewController.swift */,
-				B81F5F7F1C5867DF00B2D981 /* FloorPlansViewController.swift */,
-				A0DD871F1C580E0B0071B478 /* DirectorySpecificViewController.swift */,
-				354B99041C14F6010087E67C /* LostViewController.swift */,
-				B89D054D1C56F1FD00D81C76 /* HomeViewController.swift */,
-				354B99021C121AB90087E67C /* ToSMoreViewController.swift */,
-				39E909351C0E30F500F81024 /* MoreViewController.swift */,
+				B6D6363C1CCEF8C50037B568 /* Images */,
+				B6D6363F1CCEF9620037B568 /* Tutorial */,
+				B6D6363E1CCEF9190037B568 /* Directions */,
+				B6D636401CCEF97C0037B568 /* Parking */,
+				B6D636411CCEF9D90037B568 /* More */,
 				A06517E01C56CD1800B12A63 /* DirectoryInformation.swift */,
-				B69650561C04F1EA00C8276A /* CategoryTableViewController.swift */,
-				B69650571C04F1EA00C8276A /* Location.swift */,
-				A0F0AC691C176CB300052430 /* ConcessionsTableViewController.swift */,
-				0300278B1C0FB29D00BB789F /* Concessions.swift */,
-				B69650581C04F1EA00C8276A /* LocationTableViewController.swift */,
-				B69650591C04F1EA00C8276A /* SurveyViewController.swift */,
-				354B98DE1C0278470087E67C /* CampusViewController.swift */,
+				D2CA49E61BE2B58B00E79580 /* AppDelegate.swift */,
 				3501ADD21BF27F6000981151 /* ToSViewController.swift */,
+				D2CA49EA1BE2B58B00E79580 /* Main.storyboard */,
 				D2CA49ED1BE2B58C00E79580 /* Assets.xcassets */,
 				D2CA49EF1BE2B58C00E79580 /* LaunchScreen.storyboard */,
 				D2CA49F21BE2B58C00E79580 /* Info.plist */,
-				D2C7308B1C69473D002AF7CB /* BasicDirectionsCell.swift */,
-				D227F9921C725F930029A5E7 /* MapDetailsViewController.swift */,
 			);
 			path = ProvidenceWayfinding;
 			sourceTree = "<group>";
@@ -538,7 +551,6 @@
 				D2CA49EE1BE2B58C00E79580 /* Assets.xcassets in Resources */,
 				B87763A71C98CA6600F9032C /* Map.png in Resources */,
 				D2341F561C11610700F5ACBA /* NorthDirectionFilled100.png in Resources */,
-				B8EAEFAC1C613E260084A531 /* NotAvailable.jpg in Resources */,
 				D2C12B661CCA8E9400BDC046 /* Childrens_1.jpg in Resources */,
 				D2C12B8C1CCA904700BDC046 /* Main_3.jpg in Resources */,
 				D2C12B9D1CCA905100BDC046 /* Womens_1.jpg in Resources */,
@@ -571,18 +583,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B696505B1C04F1EA00C8276A /* Location.swift in Sources */,
-				D2CA4A191BE2B72600E79580 /* TransitionManager.swift in Sources */,
 				D2CA4A171BE2B72600E79580 /* DirectionsViewController.swift in Sources */,
-				0300278C1C0FB29D00BB789F /* Concessions.swift in Sources */,
 				A06517E11C56CD1800B12A63 /* DirectoryInformation.swift in Sources */,
 				39E909361C0E30F500F81024 /* MoreViewController.swift in Sources */,
 				B6B73E811CC4D3350088BA86 /* OnCampusDirectionsViewController.swift in Sources */,
-				B89D05501C56F8F800D81C76 /* DestinationViewController.swift in Sources */,
 				B6B73E7D1CC4D3350088BA86 /* Direction.swift in Sources */,
 				B6B73E7C1CC4D3350088BA86 /* CSwiftV.swift in Sources */,
-				351906AD1BE9489200F1D343 /* OnCampusViewController.swift in Sources */,
-				A0F0AC6A1C176CB300052430 /* ConcessionsTableViewController.swift in Sources */,
 				D2C7308C1C69473D002AF7CB /* BasicDirectionsCell.swift in Sources */,
 				B6B73E831CC4D3350088BA86 /* Vertex.swift in Sources */,
 				A05A93AB1C7129E90047B5B3 /* DirectoryBuildingChooserViewController.swift in Sources */,
@@ -591,7 +597,6 @@
 				B696505C1C04F1EA00C8276A /* LocationTableViewController.swift in Sources */,
 				B87C860B1C6A79720091514E /* HistoryViewController.swift in Sources */,
 				A0DD87201C580E0B0071B478 /* DirectorySpecificViewController.swift in Sources */,
-				39DDF7BA1C0D348A00CC63A5 /* HoursViewController.swift in Sources */,
 				B87763901C989C7300F9032C /* ContentViewController.swift in Sources */,
 				B696505A1C04F1EA00C8276A /* CategoryTableViewController.swift in Sources */,
 				B696505D1C04F1EA00C8276A /* SurveyViewController.swift in Sources */,
@@ -604,7 +609,6 @@
 				B877638E1C9899E300F9032C /* TutorialViewController.swift in Sources */,
 				D227F9931C725F930029A5E7 /* MapDetailsViewController.swift in Sources */,
 				B81F5F801C5867DF00B2D981 /* FloorPlansViewController.swift in Sources */,
-				A0D264C21C691D260026EB2A /* BuildingTableViewController.swift in Sources */,
 				B6B73E7B1CC4D3350088BA86 /* Connection.swift in Sources */,
 				354B98DF1C0278470087E67C /* CampusViewController.swift in Sources */,
 				354B99031C121AB90087E67C /* ToSMoreViewController.swift in Sources */,

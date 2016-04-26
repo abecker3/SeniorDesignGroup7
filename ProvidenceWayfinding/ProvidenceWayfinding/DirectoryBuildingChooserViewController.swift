@@ -81,7 +81,7 @@ class DirectoryBuildingChooserViewController: UITableViewController/*, UISearchR
         let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
         
         var newArray = [String]()
-        for x in locations
+        for x in directory
         {
             newArray.append(x.name)
             print(x.name)

@@ -144,7 +144,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
     //This function checks whether the search bar cell that was clicked is part of Locations
     func checkArrayForMember(tableView: UITableView, indexPath: NSIndexPath) -> Bool
     {
-        for x in locations
+        for x in directory
         {
             if(filteredTableData.count > indexPath.row)
             {

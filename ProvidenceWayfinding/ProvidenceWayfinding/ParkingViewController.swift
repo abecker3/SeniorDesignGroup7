@@ -21,8 +21,6 @@ class ParkingViewController: UIViewController, UITextFieldDelegate{
     var indexFlag = Int()
     var buttonFlag = 0
     //Variables
-    var endLocation: Location!
-    var startLocation: Location!
     
     let defaults = NSUserDefaults.standardUserDefaults()
     let dateFormatter: NSDateFormatter = {
