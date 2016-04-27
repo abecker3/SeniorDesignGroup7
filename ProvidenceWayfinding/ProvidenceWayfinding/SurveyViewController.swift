@@ -89,6 +89,21 @@ class SurveyViewController: UIViewController, UITextFieldDelegate{
             flagForWhichScreen = 1
             routeFromWhichScreen = 0
         }
+        //From Path Car Choice
+        else if (routeFromWhichScreen == 4){
+            if (flagForPlace == 1){
+                setPlaceHolder()
+            }
+            segmentedControl.selectedSegmentIndex = 1
+            currentTextField.enabled = true
+            currentStackView.hidden = false
+            spacer.hidden = false
+            destinationTextField.placeholder = parkingEntry.name
+            endLocation = parkingEntry
+            flagForWhichScreen = 1
+            routeFromWhichScreen = 0
+            
+        }
     }
     
     func setPlaceHolder(){
