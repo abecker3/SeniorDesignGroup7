@@ -49,7 +49,7 @@ class LocationTableViewController: UITableViewController, UISearchResultsUpdatin
         
         //Reload table
         self.tableView.reloadData()
-        extendedLayoutIncludesOpaqueBars = true; //keeps the search bar from disappearing on tap
+        //extendedLayoutIncludesOpaqueBars = true; //keeps the search bar from disappearing on tap
 
     }
     
